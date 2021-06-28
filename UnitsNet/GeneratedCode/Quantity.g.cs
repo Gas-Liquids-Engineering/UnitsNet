@@ -72,6 +72,7 @@ namespace UnitsNet
             { "ElectricResistivity", ElectricResistivity.Info },
             { "ElectricSurfaceChargeDensity", ElectricSurfaceChargeDensity.Info },
             { "Energy", Energy.Info },
+            { "EnergyDensity", EnergyDensity.Info },
             { "Entropy", Entropy.Info },
             { "Force", Force.Info },
             { "ForceChangeRate", ForceChangeRate.Info },
@@ -185,6 +186,7 @@ namespace UnitsNet
             { "ElectricResistivity", QuantityType.ElectricResistivity },
             { "ElectricSurfaceChargeDensity", QuantityType.ElectricSurfaceChargeDensity },
             { "Energy", QuantityType.Energy },
+            { "EnergyDensity", QuantityType.EnergyDensity },
             { "Entropy", QuantityType.Entropy },
             { "Force", QuantityType.Force },
             { "ForceChangeRate", QuantityType.ForceChangeRate },
@@ -339,6 +341,8 @@ namespace UnitsNet
                     return ElectricSurfaceChargeDensity.From(value, ElectricSurfaceChargeDensity.BaseUnit);
                 case QuantityType.Energy:
                     return Energy.From(value, Energy.BaseUnit);
+                case QuantityType.EnergyDensity:
+                    return EnergyDensity.From(value, EnergyDensity.BaseUnit);
                 case QuantityType.Entropy:
                     return Entropy.From(value, Entropy.BaseUnit);
                 case QuantityType.Force:
@@ -568,6 +572,8 @@ namespace UnitsNet
                     return ElectricSurfaceChargeDensity.From(value, ElectricSurfaceChargeDensity.BaseUnit);
                 case "Energy":
                     return Energy.From(value, Energy.BaseUnit);
+                case "EnergyDensity":
+                    return EnergyDensity.From(value, EnergyDensity.BaseUnit);
                 case "Entropy":
                     return Entropy.From(value, Entropy.BaseUnit);
                 case "Force":
@@ -831,6 +837,9 @@ namespace UnitsNet
                     return true;
                 case EnergyUnit energyUnit:
                     quantity = Energy.From(value, energyUnit);
+                    return true;
+                case EnergyDensityUnit energyDensityUnit:
+                    quantity = EnergyDensity.From(value, energyDensityUnit);
                     return true;
                 case EntropyUnit entropyUnit:
                     quantity = Entropy.From(value, entropyUnit);
@@ -1146,6 +1155,8 @@ namespace UnitsNet
                     return parser.TryParse<ElectricSurfaceChargeDensity, ElectricSurfaceChargeDensityUnit>(quantityString, formatProvider, ElectricSurfaceChargeDensity.From, out quantity);
                 case Type _ when quantityType == typeof(Energy):
                     return parser.TryParse<Energy, EnergyUnit>(quantityString, formatProvider, Energy.From, out quantity);
+                case Type _ when quantityType == typeof(EnergyDensity):
+                    return parser.TryParse<EnergyDensity, EnergyDensityUnit>(quantityString, formatProvider, EnergyDensity.From, out quantity);
                 case Type _ when quantityType == typeof(Entropy):
                     return parser.TryParse<Entropy, EntropyUnit>(quantityString, formatProvider, Entropy.From, out quantity);
                 case Type _ when quantityType == typeof(Force):

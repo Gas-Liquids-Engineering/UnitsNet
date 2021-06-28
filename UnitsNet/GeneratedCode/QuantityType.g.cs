@@ -65,6 +65,7 @@ namespace UnitsNet
         ElectricResistivity,
         ElectricSurfaceChargeDensity,
         Energy,
+        EnergyDensity,
         Entropy,
         Force,
         ForceChangeRate,

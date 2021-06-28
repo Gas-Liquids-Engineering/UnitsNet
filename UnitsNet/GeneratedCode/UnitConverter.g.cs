@@ -608,6 +608,17 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<Energy>(EnergyUnit.WattDay, Energy.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Energy>(Energy.BaseUnit, EnergyUnit.WattHour, q => q.ToUnit(EnergyUnit.WattHour));
             unitConverter.SetConversionFunction<Energy>(EnergyUnit.WattHour, Energy.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensity.BaseUnit, EnergyDensityUnit.BtusPerCubicFoot, q => q.ToUnit(EnergyDensityUnit.BtusPerCubicFoot));
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensityUnit.BtusPerCubicFoot, EnergyDensity.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensity.BaseUnit, EnergyDensityUnit.CaloriesPerCubicMeter, q => q.ToUnit(EnergyDensityUnit.CaloriesPerCubicMeter));
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensityUnit.CaloriesPerCubicMeter, EnergyDensity.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensity.BaseUnit, EnergyDensity.BaseUnit, q => q);
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensity.BaseUnit, EnergyDensityUnit.KilocaloriesPerCubicMeter, q => q.ToUnit(EnergyDensityUnit.KilocaloriesPerCubicMeter));
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensityUnit.KilocaloriesPerCubicMeter, EnergyDensity.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensity.BaseUnit, EnergyDensityUnit.KilojoulesPerCubicMeter, q => q.ToUnit(EnergyDensityUnit.KilojoulesPerCubicMeter));
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensityUnit.KilojoulesPerCubicMeter, EnergyDensity.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensity.BaseUnit, EnergyDensityUnit.MegajoulesPerCubicMeter, q => q.ToUnit(EnergyDensityUnit.MegajoulesPerCubicMeter));
+            unitConverter.SetConversionFunction<EnergyDensity>(EnergyDensityUnit.MegajoulesPerCubicMeter, EnergyDensity.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Entropy>(Entropy.BaseUnit, EntropyUnit.CaloriePerKelvin, q => q.ToUnit(EntropyUnit.CaloriePerKelvin));
             unitConverter.SetConversionFunction<Entropy>(EntropyUnit.CaloriePerKelvin, Entropy.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Entropy>(Entropy.BaseUnit, EntropyUnit.JoulePerDegreeCelsius, q => q.ToUnit(EntropyUnit.JoulePerDegreeCelsius));

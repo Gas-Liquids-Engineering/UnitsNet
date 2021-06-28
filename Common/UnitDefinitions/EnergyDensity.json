@@ -1,0 +1,65 @@
+{
+  "Name": "EnergyDensity",
+  "BaseUnit": "JoulesPerCubicMeter",
+  "XmlDoc": "Energy density, in physics, is the amount of energy contained per unit of volume of an object.",
+  "BaseDimensions": {
+    "L": -1,
+	"M": 1,
+    "T": -2
+  },
+  "Units": [
+    {
+      "SingularName": "JoulesPerCubicMeter",
+      "PluralName": "JoulesPerCubicMeter",
+      "BaseUnits": {
+        "L": "Meter",
+		"M": "Gram",
+        "T": "Second"
+      },
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Prefixes": [ "Kilo", "Mega" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "J/m³" ]
+        },
+      ]
+    },
+    {
+      "SingularName": "BtusPerCubicFoot",
+      "PluralName": "BtusPerCubicFeet",
+      "BaseUnits": {
+        "L": "Foot",
+		"M": "Pound",
+        "T": "Second"
+      },
+      "FromUnitToBaseFunc": "x*37258.9",
+      "FromBaseToUnitFunc": "x/37258.9",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "Btu/ft³" ]
+        },
+      ]
+    },
+    {
+      "SingularName": "CaloriesPerCubicMeter",
+      "PluralName": "CaloriesPerCubicMeter",
+      "BaseUnits": {
+        "L": "Meter",
+		"M": "Gram",
+        "T": "Second"
+      },
+      "FromUnitToBaseFunc": "x*4184",
+      "FromBaseToUnitFunc": "x/4184",
+	  "Prefixes": [ "Kilo"],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "Cal/m³" ]
+        },
+      ]
+    },
+  ]
+}
