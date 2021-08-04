@@ -138,6 +138,7 @@ namespace UnitsNet
         VolumeConcentration,
         VolumeFlow,
         VolumePerLength,
+        VolumetricHeatCapacity,
         WarpingMomentOfInertia,
     }
 }
