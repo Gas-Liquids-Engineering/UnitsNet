@@ -60,5 +60,13 @@ namespace UnitsNet.NumberExtensions.NumberToMolarity
         public static Molarity PicomolesPerLiter<T>(this T value) =>
             Molarity.FromPicomolesPerLiter(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="Molarity.FromPoundMolesPerCubicFoot(UnitsNet.QuantityValue)" />
+        public static Molarity PoundMolesPerCubicFoot<T>(this T value) =>
+            Molarity.FromPoundMolesPerCubicFoot(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="Molarity.FromPoundMolesPerCubicMeter(UnitsNet.QuantityValue)" />
+        public static Molarity PoundMolesPerCubicMeter<T>(this T value) =>
+            Molarity.FromPoundMolesPerCubicMeter(Convert.ToDouble(value));
+
     }
 }

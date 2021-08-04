@@ -36,9 +36,21 @@ namespace UnitsNet.NumberExtensions.NumberToSpecificVolume
         public static SpecificVolume CubicMetersPerKilogram<T>(this T value) =>
             SpecificVolume.FromCubicMetersPerKilogram(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="SpecificVolume.FromLitersPerGram(UnitsNet.QuantityValue)" />
+        public static SpecificVolume LitersPerGram<T>(this T value) =>
+            SpecificVolume.FromLitersPerGram(Convert.ToDouble(value));
+
         /// <inheritdoc cref="SpecificVolume.FromMillicubicMetersPerKilogram(UnitsNet.QuantityValue)" />
         public static SpecificVolume MillicubicMetersPerKilogram<T>(this T value) =>
             SpecificVolume.FromMillicubicMetersPerKilogram(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="SpecificVolume.FromMillilitersPerGram(UnitsNet.QuantityValue)" />
+        public static SpecificVolume MillilitersPerGram<T>(this T value) =>
+            SpecificVolume.FromMillilitersPerGram(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="SpecificVolume.FromUSGallonsPerPound(UnitsNet.QuantityValue)" />
+        public static SpecificVolume USGallonsPerPound<T>(this T value) =>
+            SpecificVolume.FromUSGallonsPerPound(Convert.ToDouble(value));
 
     }
 }

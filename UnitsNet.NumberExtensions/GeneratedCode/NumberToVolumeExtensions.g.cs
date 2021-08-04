@@ -88,6 +88,10 @@ namespace UnitsNet.NumberExtensions.NumberToVolume
         public static Volume CubicYards<T>(this T value) =>
             Volume.FromCubicYards(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="Volume.FromDecs(UnitsNet.QuantityValue)" />
+        public static Volume Decs<T>(this T value) =>
+            Volume.FromDecs(Convert.ToDouble(value));
+
         /// <inheritdoc cref="Volume.FromDecausGallons(UnitsNet.QuantityValue)" />
         public static Volume DecausGallons<T>(this T value) =>
             Volume.FromDecausGallons(Convert.ToDouble(value));

@@ -52,9 +52,21 @@ namespace UnitsNet.NumberExtensions.NumberToKinematicViscosity
         public static KinematicViscosity Nanostokes<T>(this T value) =>
             KinematicViscosity.FromNanostokes(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="KinematicViscosity.FromSquareFeetPerHour(UnitsNet.QuantityValue)" />
+        public static KinematicViscosity SquareFeetPerHour<T>(this T value) =>
+            KinematicViscosity.FromSquareFeetPerHour(Convert.ToDouble(value));
+
         /// <inheritdoc cref="KinematicViscosity.FromSquareFeetPerSecond(UnitsNet.QuantityValue)" />
         public static KinematicViscosity SquareFeetPerSecond<T>(this T value) =>
             KinematicViscosity.FromSquareFeetPerSecond(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="KinematicViscosity.FromSquareInchesPerSecond(UnitsNet.QuantityValue)" />
+        public static KinematicViscosity SquareInchesPerSecond<T>(this T value) =>
+            KinematicViscosity.FromSquareInchesPerSecond(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="KinematicViscosity.FromSquareMetersPerHour(UnitsNet.QuantityValue)" />
+        public static KinematicViscosity SquareMetersPerHour<T>(this T value) =>
+            KinematicViscosity.FromSquareMetersPerHour(Convert.ToDouble(value));
 
         /// <inheritdoc cref="KinematicViscosity.FromSquareMetersPerSecond(UnitsNet.QuantityValue)" />
         public static KinematicViscosity SquareMetersPerSecond<T>(this T value) =>

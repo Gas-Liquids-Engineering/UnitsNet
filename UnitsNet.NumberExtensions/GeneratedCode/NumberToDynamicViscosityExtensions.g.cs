@@ -36,6 +36,10 @@ namespace UnitsNet.NumberExtensions.NumberToDynamicViscosity
         public static DynamicViscosity MicropascalSeconds<T>(this T value) =>
             DynamicViscosity.FromMicropascalSeconds(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="DynamicViscosity.FromMicropoise(UnitsNet.QuantityValue)" />
+        public static DynamicViscosity Micropoise<T>(this T value) =>
+            DynamicViscosity.FromMicropoise(Convert.ToDouble(value));
+
         /// <inheritdoc cref="DynamicViscosity.FromMillipascalSeconds(UnitsNet.QuantityValue)" />
         public static DynamicViscosity MillipascalSeconds<T>(this T value) =>
             DynamicViscosity.FromMillipascalSeconds(Convert.ToDouble(value));
@@ -59,6 +63,10 @@ namespace UnitsNet.NumberExtensions.NumberToDynamicViscosity
         /// <inheritdoc cref="DynamicViscosity.FromPoundsForceSecondPerSquareInch(UnitsNet.QuantityValue)" />
         public static DynamicViscosity PoundsForceSecondPerSquareInch<T>(this T value) =>
             DynamicViscosity.FromPoundsForceSecondPerSquareInch(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="DynamicViscosity.FromPoundsPerFootHour(UnitsNet.QuantityValue)" />
+        public static DynamicViscosity PoundsPerFootHour<T>(this T value) =>
+            DynamicViscosity.FromPoundsPerFootHour(Convert.ToDouble(value));
 
         /// <inheritdoc cref="DynamicViscosity.FromPoundsPerFootSecond(UnitsNet.QuantityValue)" />
         public static DynamicViscosity PoundsPerFootSecond<T>(this T value) =>

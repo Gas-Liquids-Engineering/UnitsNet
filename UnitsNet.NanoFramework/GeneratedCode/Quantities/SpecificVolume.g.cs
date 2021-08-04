@@ -88,9 +88,24 @@ namespace UnitsNet
         public double CubicMetersPerKilogram => As(SpecificVolumeUnit.CubicMeterPerKilogram);
 
         /// <summary>
+        ///     Get SpecificVolume in LitersPerGram.
+        /// </summary>
+        public double LitersPerGram => As(SpecificVolumeUnit.LiterPerGram);
+
+        /// <summary>
         ///     Get SpecificVolume in MillicubicMetersPerKilogram.
         /// </summary>
         public double MillicubicMetersPerKilogram => As(SpecificVolumeUnit.MillicubicMeterPerKilogram);
+
+        /// <summary>
+        ///     Get SpecificVolume in MillilitersPerGram.
+        /// </summary>
+        public double MillilitersPerGram => As(SpecificVolumeUnit.MilliliterPerGram);
+
+        /// <summary>
+        ///     Get SpecificVolume in USGallonsPerPound.
+        /// </summary>
+        public double USGallonsPerPound => As(SpecificVolumeUnit.USGallonPerPound);
 
         #endregion
 
@@ -109,10 +124,28 @@ namespace UnitsNet
         public static SpecificVolume FromCubicMetersPerKilogram(double cubicmetersperkilogram) => new SpecificVolume(cubicmetersperkilogram, SpecificVolumeUnit.CubicMeterPerKilogram);
 
         /// <summary>
+        ///     Get SpecificVolume from LitersPerGram.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static SpecificVolume FromLitersPerGram(double literspergram) => new SpecificVolume(literspergram, SpecificVolumeUnit.LiterPerGram);
+
+        /// <summary>
         ///     Get SpecificVolume from MillicubicMetersPerKilogram.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static SpecificVolume FromMillicubicMetersPerKilogram(double millicubicmetersperkilogram) => new SpecificVolume(millicubicmetersperkilogram, SpecificVolumeUnit.MillicubicMeterPerKilogram);
+
+        /// <summary>
+        ///     Get SpecificVolume from MillilitersPerGram.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static SpecificVolume FromMillilitersPerGram(double milliliterspergram) => new SpecificVolume(milliliterspergram, SpecificVolumeUnit.MilliliterPerGram);
+
+        /// <summary>
+        ///     Get SpecificVolume from USGallonsPerPound.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static SpecificVolume FromUSGallonsPerPound(double usgallonsperpound) => new SpecificVolume(usgallonsperpound, SpecificVolumeUnit.USGallonPerPound);
 
 
         /// <summary>
@@ -159,7 +192,10 @@ namespace UnitsNet
             {
                 case SpecificVolumeUnit.CubicFootPerPound: return _value/16.01846353;
                 case SpecificVolumeUnit.CubicMeterPerKilogram: return _value;
+                case SpecificVolumeUnit.LiterPerGram: return _value;
                 case SpecificVolumeUnit.MillicubicMeterPerKilogram: return (_value) * 1e-3d;
+                case SpecificVolumeUnit.MilliliterPerGram: return (_value) * 1e-3d;
+                case SpecificVolumeUnit.USGallonPerPound: return _value*0.008345;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -176,7 +212,10 @@ namespace UnitsNet
             {
                 case SpecificVolumeUnit.CubicFootPerPound: return baseUnitValue*16.01846353;
                 case SpecificVolumeUnit.CubicMeterPerKilogram: return baseUnitValue;
+                case SpecificVolumeUnit.LiterPerGram: return baseUnitValue;
                 case SpecificVolumeUnit.MillicubicMeterPerKilogram: return (baseUnitValue) / 1e-3d;
+                case SpecificVolumeUnit.MilliliterPerGram: return (baseUnitValue) / 1e-3d;
+                case SpecificVolumeUnit.USGallonPerPound: return baseUnitValue/0.008345;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

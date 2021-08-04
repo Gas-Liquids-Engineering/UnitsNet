@@ -61,6 +61,7 @@ namespace UnitsNet
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.CentiliterPerSecond, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.CubicCentimeterPerMinute, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.CubicDecimeterPerMinute, BaseUnits.Undefined),
+                    new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.CubicFootPerDay, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.CubicFootPerHour, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.CubicFootPerMinute, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.CubicFootPerSecond, BaseUnits.Undefined),
@@ -76,6 +77,7 @@ namespace UnitsNet
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.DeciliterPerDay, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.DeciliterPerMinute, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.DeciliterPerSecond, BaseUnits.Undefined),
+                    new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.DecPerDay, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.KiloliterPerDay, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.KiloliterPerMinute, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.KiloliterPerSecond, BaseUnits.Undefined),
@@ -100,6 +102,7 @@ namespace UnitsNet
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.OilBarrelPerHour, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.OilBarrelPerMinute, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.OilBarrelPerSecond, BaseUnits.Undefined),
+                    new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.ThousandCubicFootPerDay, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.UkGallonPerDay, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.UkGallonPerHour, BaseUnits.Undefined),
                     new UnitInfo<VolumeFlowUnit>(VolumeFlowUnit.UkGallonPerMinute, BaseUnits.Undefined),
@@ -269,6 +272,11 @@ namespace UnitsNet
         public double CubicDecimetersPerMinute => As(VolumeFlowUnit.CubicDecimeterPerMinute);
 
         /// <summary>
+        ///     Get VolumeFlow in CubicFeetPerDay.
+        /// </summary>
+        public double CubicFeetPerDay => As(VolumeFlowUnit.CubicFootPerDay);
+
+        /// <summary>
         ///     Get VolumeFlow in CubicFeetPerHour.
         /// </summary>
         public double CubicFeetPerHour => As(VolumeFlowUnit.CubicFootPerHour);
@@ -342,6 +350,11 @@ namespace UnitsNet
         ///     Get VolumeFlow in DecilitersPerSecond.
         /// </summary>
         public double DecilitersPerSecond => As(VolumeFlowUnit.DeciliterPerSecond);
+
+        /// <summary>
+        ///     Get VolumeFlow in DecsPerDay.
+        /// </summary>
+        public double DecsPerDay => As(VolumeFlowUnit.DecPerDay);
 
         /// <summary>
         ///     Get VolumeFlow in KilolitersPerDay.
@@ -462,6 +475,11 @@ namespace UnitsNet
         ///     Get VolumeFlow in OilBarrelsPerSecond.
         /// </summary>
         public double OilBarrelsPerSecond => As(VolumeFlowUnit.OilBarrelPerSecond);
+
+        /// <summary>
+        ///     Get VolumeFlow in ThousandCubicFeetPerDay.
+        /// </summary>
+        public double ThousandCubicFeetPerDay => As(VolumeFlowUnit.ThousandCubicFootPerDay);
 
         /// <summary>
         ///     Get VolumeFlow in UkGallonsPerDay.
@@ -614,6 +632,15 @@ namespace UnitsNet
             return new VolumeFlow(value, VolumeFlowUnit.CubicDecimeterPerMinute);
         }
         /// <summary>
+        ///     Get VolumeFlow from CubicFeetPerDay.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static VolumeFlow FromCubicFeetPerDay(QuantityValue cubicfeetperday)
+        {
+            double value = (double) cubicfeetperday;
+            return new VolumeFlow(value, VolumeFlowUnit.CubicFootPerDay);
+        }
+        /// <summary>
         ///     Get VolumeFlow from CubicFeetPerHour.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
@@ -747,6 +774,15 @@ namespace UnitsNet
         {
             double value = (double) deciliterspersecond;
             return new VolumeFlow(value, VolumeFlowUnit.DeciliterPerSecond);
+        }
+        /// <summary>
+        ///     Get VolumeFlow from DecsPerDay.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static VolumeFlow FromDecsPerDay(QuantityValue decsperday)
+        {
+            double value = (double) decsperday;
+            return new VolumeFlow(value, VolumeFlowUnit.DecPerDay);
         }
         /// <summary>
         ///     Get VolumeFlow from KilolitersPerDay.
@@ -963,6 +999,15 @@ namespace UnitsNet
         {
             double value = (double) oilbarrelspersecond;
             return new VolumeFlow(value, VolumeFlowUnit.OilBarrelPerSecond);
+        }
+        /// <summary>
+        ///     Get VolumeFlow from ThousandCubicFeetPerDay.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static VolumeFlow FromThousandCubicFeetPerDay(QuantityValue thousandcubicfeetperday)
+        {
+            double value = (double) thousandcubicfeetperday;
+            return new VolumeFlow(value, VolumeFlowUnit.ThousandCubicFootPerDay);
         }
         /// <summary>
         ///     Get VolumeFlow from UkGallonsPerDay.
@@ -1474,6 +1519,7 @@ namespace UnitsNet
                 case VolumeFlowUnit.CentiliterPerSecond: return (_value/1000) * 1e-2d;
                 case VolumeFlowUnit.CubicCentimeterPerMinute: return _value*1.6666666666667e-8;
                 case VolumeFlowUnit.CubicDecimeterPerMinute: return _value/60000.00000;
+                case VolumeFlowUnit.CubicFootPerDay: return _value*0.00000032774128;
                 case VolumeFlowUnit.CubicFootPerHour: return _value*7.8657907199999087346816086183876e-6;
                 case VolumeFlowUnit.CubicFootPerMinute: return _value/2118.88000326;
                 case VolumeFlowUnit.CubicFootPerSecond: return _value/35.314666721;
@@ -1489,6 +1535,7 @@ namespace UnitsNet
                 case VolumeFlowUnit.DeciliterPerDay: return (_value/86400000) * 1e-1d;
                 case VolumeFlowUnit.DeciliterPerMinute: return (_value/60000.00000) * 1e-1d;
                 case VolumeFlowUnit.DeciliterPerSecond: return (_value/1000) * 1e-1d;
+                case VolumeFlowUnit.DecPerDay: return _value/86.4;
                 case VolumeFlowUnit.KiloliterPerDay: return (_value/86400000) * 1e3d;
                 case VolumeFlowUnit.KiloliterPerMinute: return (_value/60000.00000) * 1e3d;
                 case VolumeFlowUnit.KiloliterPerSecond: return (_value/1000) * 1e3d;
@@ -1513,6 +1560,7 @@ namespace UnitsNet
                 case VolumeFlowUnit.OilBarrelPerHour: return _value*4.41631375e-5;
                 case VolumeFlowUnit.OilBarrelPerMinute: return _value*2.64978825e-3;
                 case VolumeFlowUnit.OilBarrelPerSecond: return _value/6.28981;
+                case VolumeFlowUnit.ThousandCubicFootPerDay: return _value*0.00032774128;
                 case VolumeFlowUnit.UkGallonPerDay: return _value/19005304;
                 case VolumeFlowUnit.UkGallonPerHour: return _value/791887.667;
                 case VolumeFlowUnit.UkGallonPerMinute: return _value/13198.2;
@@ -1555,6 +1603,7 @@ namespace UnitsNet
                 case VolumeFlowUnit.CentiliterPerSecond: return (baseUnitValue*1000) / 1e-2d;
                 case VolumeFlowUnit.CubicCentimeterPerMinute: return baseUnitValue/1.6666666666667e-8;
                 case VolumeFlowUnit.CubicDecimeterPerMinute: return baseUnitValue*60000.00000;
+                case VolumeFlowUnit.CubicFootPerDay: return baseUnitValue/0.00000032774128;
                 case VolumeFlowUnit.CubicFootPerHour: return baseUnitValue/7.8657907199999087346816086183876e-6;
                 case VolumeFlowUnit.CubicFootPerMinute: return baseUnitValue*2118.88000326;
                 case VolumeFlowUnit.CubicFootPerSecond: return baseUnitValue*35.314666721;
@@ -1570,6 +1619,7 @@ namespace UnitsNet
                 case VolumeFlowUnit.DeciliterPerDay: return (baseUnitValue*86400000) / 1e-1d;
                 case VolumeFlowUnit.DeciliterPerMinute: return (baseUnitValue*60000.00000) / 1e-1d;
                 case VolumeFlowUnit.DeciliterPerSecond: return (baseUnitValue*1000) / 1e-1d;
+                case VolumeFlowUnit.DecPerDay: return baseUnitValue*86.4;
                 case VolumeFlowUnit.KiloliterPerDay: return (baseUnitValue*86400000) / 1e3d;
                 case VolumeFlowUnit.KiloliterPerMinute: return (baseUnitValue*60000.00000) / 1e3d;
                 case VolumeFlowUnit.KiloliterPerSecond: return (baseUnitValue*1000) / 1e3d;
@@ -1594,6 +1644,7 @@ namespace UnitsNet
                 case VolumeFlowUnit.OilBarrelPerHour: return baseUnitValue/4.41631375e-5;
                 case VolumeFlowUnit.OilBarrelPerMinute: return baseUnitValue/2.64978825e-3;
                 case VolumeFlowUnit.OilBarrelPerSecond: return baseUnitValue*6.28981;
+                case VolumeFlowUnit.ThousandCubicFootPerDay: return baseUnitValue/0.00032774128;
                 case VolumeFlowUnit.UkGallonPerDay: return baseUnitValue*19005304;
                 case VolumeFlowUnit.UkGallonPerHour: return baseUnitValue*791887.667;
                 case VolumeFlowUnit.UkGallonPerMinute: return baseUnitValue*13198.2;

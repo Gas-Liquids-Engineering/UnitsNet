@@ -56,5 +56,13 @@ namespace UnitsNet.Tests
         public void NumberToPicomolesPerLiterTest() =>
             Assert.Equal(Molarity.FromPicomolesPerLiter(2), 2.PicomolesPerLiter());
 
+        [Fact]
+        public void NumberToPoundMolesPerCubicFootTest() =>
+            Assert.Equal(Molarity.FromPoundMolesPerCubicFoot(2), 2.PoundMolesPerCubicFoot());
+
+        [Fact]
+        public void NumberToPoundMolesPerCubicMeterTest() =>
+            Assert.Equal(Molarity.FromPoundMolesPerCubicMeter(2), 2.PoundMolesPerCubicMeter());
+
     }
 }

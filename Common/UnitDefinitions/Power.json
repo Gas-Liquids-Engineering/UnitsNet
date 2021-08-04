@@ -107,6 +107,19 @@
           "Abbreviations": [ "J/h" ]
         }
       ]
+    },
+    {
+      "SingularName": "CaloriesPerHour",
+      "PluralName": "CaloriesPerHour",
+      "FromUnitToBaseFunc": "x*0.00162m",
+      "FromBaseToUnitFunc": "x/0.00162m",
+      "Prefixes": [ "Milli", "Kilo", "Mega", "Giga" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "cal/h" ]
+        }
+      ]
     }
   ]
 }

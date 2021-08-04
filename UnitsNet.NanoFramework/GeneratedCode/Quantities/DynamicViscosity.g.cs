@@ -91,6 +91,11 @@ namespace UnitsNet
         public double MicropascalSeconds => As(DynamicViscosityUnit.MicropascalSecond);
 
         /// <summary>
+        ///     Get DynamicViscosity in Micropoise.
+        /// </summary>
+        public double Micropoise => As(DynamicViscosityUnit.Micropoise);
+
+        /// <summary>
         ///     Get DynamicViscosity in MillipascalSeconds.
         /// </summary>
         public double MillipascalSeconds => As(DynamicViscosityUnit.MillipascalSecond);
@@ -121,6 +126,11 @@ namespace UnitsNet
         public double PoundsForceSecondPerSquareInch => As(DynamicViscosityUnit.PoundForceSecondPerSquareInch);
 
         /// <summary>
+        ///     Get DynamicViscosity in PoundsPerFootHour.
+        /// </summary>
+        public double PoundsPerFootHour => As(DynamicViscosityUnit.PoundPerFootHour);
+
+        /// <summary>
         ///     Get DynamicViscosity in PoundsPerFootSecond.
         /// </summary>
         public double PoundsPerFootSecond => As(DynamicViscosityUnit.PoundPerFootSecond);
@@ -145,6 +155,12 @@ namespace UnitsNet
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static DynamicViscosity FromMicropascalSeconds(double micropascalseconds) => new DynamicViscosity(micropascalseconds, DynamicViscosityUnit.MicropascalSecond);
+
+        /// <summary>
+        ///     Get DynamicViscosity from Micropoise.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static DynamicViscosity FromMicropoise(double micropoise) => new DynamicViscosity(micropoise, DynamicViscosityUnit.Micropoise);
 
         /// <summary>
         ///     Get DynamicViscosity from MillipascalSeconds.
@@ -181,6 +197,12 @@ namespace UnitsNet
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static DynamicViscosity FromPoundsForceSecondPerSquareInch(double poundsforcesecondpersquareinch) => new DynamicViscosity(poundsforcesecondpersquareinch, DynamicViscosityUnit.PoundForceSecondPerSquareInch);
+
+        /// <summary>
+        ///     Get DynamicViscosity from PoundsPerFootHour.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static DynamicViscosity FromPoundsPerFootHour(double poundsperfoothour) => new DynamicViscosity(poundsperfoothour, DynamicViscosityUnit.PoundPerFootHour);
 
         /// <summary>
         ///     Get DynamicViscosity from PoundsPerFootSecond.
@@ -239,12 +261,14 @@ namespace UnitsNet
             {
                 case DynamicViscosityUnit.Centipoise: return (_value/10) * 1e-2d;
                 case DynamicViscosityUnit.MicropascalSecond: return (_value) * 1e-6d;
+                case DynamicViscosityUnit.Micropoise: return (_value/10) * 1e-6d;
                 case DynamicViscosityUnit.MillipascalSecond: return (_value) * 1e-3d;
                 case DynamicViscosityUnit.NewtonSecondPerMeterSquared: return _value;
                 case DynamicViscosityUnit.PascalSecond: return _value;
                 case DynamicViscosityUnit.Poise: return _value/10;
                 case DynamicViscosityUnit.PoundForceSecondPerSquareFoot: return _value * 4.7880258980335843e1;
                 case DynamicViscosityUnit.PoundForceSecondPerSquareInch: return _value * 6.8947572931683613e3;
+                case DynamicViscosityUnit.PoundPerFootHour: return _value * 4.134e-4;
                 case DynamicViscosityUnit.PoundPerFootSecond: return _value * 1.4881639;
                 case DynamicViscosityUnit.Reyn: return _value * 6.8947572931683613e3;
                 default:
@@ -263,12 +287,14 @@ namespace UnitsNet
             {
                 case DynamicViscosityUnit.Centipoise: return (baseUnitValue*10) / 1e-2d;
                 case DynamicViscosityUnit.MicropascalSecond: return (baseUnitValue) / 1e-6d;
+                case DynamicViscosityUnit.Micropoise: return (baseUnitValue*10) / 1e-6d;
                 case DynamicViscosityUnit.MillipascalSecond: return (baseUnitValue) / 1e-3d;
                 case DynamicViscosityUnit.NewtonSecondPerMeterSquared: return baseUnitValue;
                 case DynamicViscosityUnit.PascalSecond: return baseUnitValue;
                 case DynamicViscosityUnit.Poise: return baseUnitValue*10;
                 case DynamicViscosityUnit.PoundForceSecondPerSquareFoot: return baseUnitValue / 4.7880258980335843e1;
                 case DynamicViscosityUnit.PoundForceSecondPerSquareInch: return baseUnitValue / 6.8947572931683613e3;
+                case DynamicViscosityUnit.PoundPerFootHour: return baseUnitValue / 4.134e-4;
                 case DynamicViscosityUnit.PoundPerFootSecond: return baseUnitValue / 1.4881639;
                 case DynamicViscosityUnit.Reyn: return baseUnitValue / 6.8947572931683613e3;
                 default:

@@ -28,13 +28,25 @@ namespace UnitsNet.NumberExtensions.NumberToRotationalSpeed
     /// </summary>
     public static class NumberToRotationalSpeedExtensions
     {
+        /// <inheritdoc cref="RotationalSpeed.FromCentiradiansPerMinute(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed CentiradiansPerMinute<T>(this T value) =>
+            RotationalSpeed.FromCentiradiansPerMinute(Convert.ToDouble(value));
+
         /// <inheritdoc cref="RotationalSpeed.FromCentiradiansPerSecond(UnitsNet.QuantityValue)" />
         public static RotationalSpeed CentiradiansPerSecond<T>(this T value) =>
             RotationalSpeed.FromCentiradiansPerSecond(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="RotationalSpeed.FromDeciradiansPerMinute(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed DeciradiansPerMinute<T>(this T value) =>
+            RotationalSpeed.FromDeciradiansPerMinute(Convert.ToDouble(value));
+
         /// <inheritdoc cref="RotationalSpeed.FromDeciradiansPerSecond(UnitsNet.QuantityValue)" />
         public static RotationalSpeed DeciradiansPerSecond<T>(this T value) =>
             RotationalSpeed.FromDeciradiansPerSecond(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="RotationalSpeed.FromDegreesPerHour(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed DegreesPerHour<T>(this T value) =>
+            RotationalSpeed.FromDegreesPerHour(Convert.ToDouble(value));
 
         /// <inheritdoc cref="RotationalSpeed.FromDegreesPerMinute(UnitsNet.QuantityValue)" />
         public static RotationalSpeed DegreesPerMinute<T>(this T value) =>
@@ -44,33 +56,65 @@ namespace UnitsNet.NumberExtensions.NumberToRotationalSpeed
         public static RotationalSpeed DegreesPerSecond<T>(this T value) =>
             RotationalSpeed.FromDegreesPerSecond(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="RotationalSpeed.FromMicrodegreesPerHour(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed MicrodegreesPerHour<T>(this T value) =>
+            RotationalSpeed.FromMicrodegreesPerHour(Convert.ToDouble(value));
+
         /// <inheritdoc cref="RotationalSpeed.FromMicrodegreesPerSecond(UnitsNet.QuantityValue)" />
         public static RotationalSpeed MicrodegreesPerSecond<T>(this T value) =>
             RotationalSpeed.FromMicrodegreesPerSecond(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="RotationalSpeed.FromMicroradiansPerMinute(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed MicroradiansPerMinute<T>(this T value) =>
+            RotationalSpeed.FromMicroradiansPerMinute(Convert.ToDouble(value));
 
         /// <inheritdoc cref="RotationalSpeed.FromMicroradiansPerSecond(UnitsNet.QuantityValue)" />
         public static RotationalSpeed MicroradiansPerSecond<T>(this T value) =>
             RotationalSpeed.FromMicroradiansPerSecond(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="RotationalSpeed.FromMillidegreesPerHour(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed MillidegreesPerHour<T>(this T value) =>
+            RotationalSpeed.FromMillidegreesPerHour(Convert.ToDouble(value));
+
         /// <inheritdoc cref="RotationalSpeed.FromMillidegreesPerSecond(UnitsNet.QuantityValue)" />
         public static RotationalSpeed MillidegreesPerSecond<T>(this T value) =>
             RotationalSpeed.FromMillidegreesPerSecond(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="RotationalSpeed.FromMilliradiansPerMinute(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed MilliradiansPerMinute<T>(this T value) =>
+            RotationalSpeed.FromMilliradiansPerMinute(Convert.ToDouble(value));
 
         /// <inheritdoc cref="RotationalSpeed.FromMilliradiansPerSecond(UnitsNet.QuantityValue)" />
         public static RotationalSpeed MilliradiansPerSecond<T>(this T value) =>
             RotationalSpeed.FromMilliradiansPerSecond(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="RotationalSpeed.FromNanodegreesPerHour(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed NanodegreesPerHour<T>(this T value) =>
+            RotationalSpeed.FromNanodegreesPerHour(Convert.ToDouble(value));
+
         /// <inheritdoc cref="RotationalSpeed.FromNanodegreesPerSecond(UnitsNet.QuantityValue)" />
         public static RotationalSpeed NanodegreesPerSecond<T>(this T value) =>
             RotationalSpeed.FromNanodegreesPerSecond(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="RotationalSpeed.FromNanoradiansPerMinute(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed NanoradiansPerMinute<T>(this T value) =>
+            RotationalSpeed.FromNanoradiansPerMinute(Convert.ToDouble(value));
 
         /// <inheritdoc cref="RotationalSpeed.FromNanoradiansPerSecond(UnitsNet.QuantityValue)" />
         public static RotationalSpeed NanoradiansPerSecond<T>(this T value) =>
             RotationalSpeed.FromNanoradiansPerSecond(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="RotationalSpeed.FromRadiansPerMinute(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed RadiansPerMinute<T>(this T value) =>
+            RotationalSpeed.FromRadiansPerMinute(Convert.ToDouble(value));
+
         /// <inheritdoc cref="RotationalSpeed.FromRadiansPerSecond(UnitsNet.QuantityValue)" />
         public static RotationalSpeed RadiansPerSecond<T>(this T value) =>
             RotationalSpeed.FromRadiansPerSecond(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="RotationalSpeed.FromRevolutionsPerHour(UnitsNet.QuantityValue)" />
+        public static RotationalSpeed RevolutionsPerHour<T>(this T value) =>
+            RotationalSpeed.FromRevolutionsPerHour(Convert.ToDouble(value));
 
         /// <inheritdoc cref="RotationalSpeed.FromRevolutionsPerMinute(UnitsNet.QuantityValue)" />
         public static RotationalSpeed RevolutionsPerMinute<T>(this T value) =>

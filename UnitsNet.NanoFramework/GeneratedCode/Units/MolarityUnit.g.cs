@@ -34,6 +34,8 @@ namespace UnitsNet.Units
         MolesPerLiter,
         NanomolesPerLiter,
         PicomolesPerLiter,
+        PoundMolesPerCubicFoot,
+        PoundMolesPerCubicMeter,
     }
 
     #pragma warning restore 1591

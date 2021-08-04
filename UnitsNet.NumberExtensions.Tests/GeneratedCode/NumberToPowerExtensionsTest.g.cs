@@ -33,6 +33,10 @@ namespace UnitsNet.Tests
             Assert.Equal(Power.FromBritishThermalUnitsPerHour(2), 2.BritishThermalUnitsPerHour());
 
         [Fact]
+        public void NumberToCaloriesPerHourTest() =>
+            Assert.Equal(Power.FromCaloriesPerHour(2), 2.CaloriesPerHour());
+
+        [Fact]
         public void NumberToDecawattsTest() =>
             Assert.Equal(Power.FromDecawatts(2), 2.Decawatts());
 
@@ -47,6 +51,10 @@ namespace UnitsNet.Tests
         [Fact]
         public void NumberToFemtowattsTest() =>
             Assert.Equal(Power.FromFemtowatts(2), 2.Femtowatts());
+
+        [Fact]
+        public void NumberToGigacaloriesPerHourTest() =>
+            Assert.Equal(Power.FromGigacaloriesPerHour(2), 2.GigacaloriesPerHour());
 
         [Fact]
         public void NumberToGigajoulesPerHourTest() =>
@@ -69,6 +77,10 @@ namespace UnitsNet.Tests
             Assert.Equal(Power.FromKilobritishThermalUnitsPerHour(2), 2.KilobritishThermalUnitsPerHour());
 
         [Fact]
+        public void NumberToKilocaloriesPerHourTest() =>
+            Assert.Equal(Power.FromKilocaloriesPerHour(2), 2.KilocaloriesPerHour());
+
+        [Fact]
         public void NumberToKilojoulesPerHourTest() =>
             Assert.Equal(Power.FromKilojoulesPerHour(2), 2.KilojoulesPerHour());
 
@@ -79,6 +91,10 @@ namespace UnitsNet.Tests
         [Fact]
         public void NumberToMechanicalHorsepowerTest() =>
             Assert.Equal(Power.FromMechanicalHorsepower(2), 2.MechanicalHorsepower());
+
+        [Fact]
+        public void NumberToMegacaloriesPerHourTest() =>
+            Assert.Equal(Power.FromMegacaloriesPerHour(2), 2.MegacaloriesPerHour());
 
         [Fact]
         public void NumberToMegajoulesPerHourTest() =>
@@ -95,6 +111,10 @@ namespace UnitsNet.Tests
         [Fact]
         public void NumberToMicrowattsTest() =>
             Assert.Equal(Power.FromMicrowatts(2), 2.Microwatts());
+
+        [Fact]
+        public void NumberToMillicaloriesPerHourTest() =>
+            Assert.Equal(Power.FromMillicaloriesPerHour(2), 2.MillicaloriesPerHour());
 
         [Fact]
         public void NumberToMillijoulesPerHourTest() =>

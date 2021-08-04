@@ -29,6 +29,22 @@ namespace UnitsNet.Tests
             Assert.Equal(HeatTransferCoefficient.FromBtusPerSquareFootDegreeFahrenheit(2), 2.BtusPerSquareFootDegreeFahrenheit());
 
         [Fact]
+        public void NumberToCaloriePerSquareCentimeterKelvinTest() =>
+            Assert.Equal(HeatTransferCoefficient.FromCaloriePerSquareCentimeterKelvin(2), 2.CaloriePerSquareCentimeterKelvin());
+
+        [Fact]
+        public void NumberToKilocaloriesPerSquareMeterKelvinTest() =>
+            Assert.Equal(HeatTransferCoefficient.FromKilocaloriesPerSquareMeterKelvin(2), 2.KilocaloriesPerSquareMeterKelvin());
+
+        [Fact]
+        public void NumberToKilokilocaloriesPerSquareMeterKelvinTest() =>
+            Assert.Equal(HeatTransferCoefficient.FromKilokilocaloriesPerSquareMeterKelvin(2), 2.KilokilocaloriesPerSquareMeterKelvin());
+
+        [Fact]
+        public void NumberToWattsPerSquareCentimeterKelvinTest() =>
+            Assert.Equal(HeatTransferCoefficient.FromWattsPerSquareCentimeterKelvin(2), 2.WattsPerSquareCentimeterKelvin());
+
+        [Fact]
         public void NumberToWattsPerSquareMeterCelsiusTest() =>
             Assert.Equal(HeatTransferCoefficient.FromWattsPerSquareMeterCelsius(2), 2.WattsPerSquareMeterCelsius());
 

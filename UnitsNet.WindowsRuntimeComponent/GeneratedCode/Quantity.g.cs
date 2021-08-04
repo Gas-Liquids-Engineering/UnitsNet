@@ -146,6 +146,9 @@ namespace UnitsNet
                 case EnergyDensityUnit energyDensityUnit:
                     quantity = EnergyDensity.From(value, energyDensityUnit);
                     return true;
+                case EnthalpyMassUnit enthalpyMassUnit:
+                    quantity = EnthalpyMass.From(value, enthalpyMassUnit);
+                    return true;
                 case EntropyUnit entropyUnit:
                     quantity = Entropy.From(value, entropyUnit);
                     return true;
@@ -241,6 +244,9 @@ namespace UnitsNet
                     return true;
                 case MolarEntropyUnit molarEntropyUnit:
                     quantity = MolarEntropy.From(value, molarEntropyUnit);
+                    return true;
+                case MolarFlowUnit molarFlowUnit:
+                    quantity = MolarFlow.From(value, molarFlowUnit);
                     return true;
                 case MolarityUnit molarityUnit:
                     quantity = Molarity.From(value, molarityUnit);
@@ -520,6 +526,9 @@ namespace UnitsNet
             if (quantityType == typeof(EnergyDensity))
                 return parser.TryParse<EnergyDensity, EnergyDensityUnit>(quantityString, formatProvider, EnergyDensity.From, out quantity);
 
+            if (quantityType == typeof(EnthalpyMass))
+                return parser.TryParse<EnthalpyMass, EnthalpyMassUnit>(quantityString, formatProvider, EnthalpyMass.From, out quantity);
+
             if (quantityType == typeof(Entropy))
                 return parser.TryParse<Entropy, EntropyUnit>(quantityString, formatProvider, Entropy.From, out quantity);
 
@@ -615,6 +624,9 @@ namespace UnitsNet
 
             if (quantityType == typeof(MolarEntropy))
                 return parser.TryParse<MolarEntropy, MolarEntropyUnit>(quantityString, formatProvider, MolarEntropy.From, out quantity);
+
+            if (quantityType == typeof(MolarFlow))
+                return parser.TryParse<MolarFlow, MolarFlowUnit>(quantityString, formatProvider, MolarFlow.From, out quantity);
 
             if (quantityType == typeof(Molarity))
                 return parser.TryParse<Molarity, MolarityUnit>(quantityString, formatProvider, Molarity.From, out quantity);

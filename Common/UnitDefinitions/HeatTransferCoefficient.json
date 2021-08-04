@@ -43,6 +43,43 @@
           "Abbreviations": [ "Btu/ft²·hr·°F" ]
         }
       ]
+    },
+    {
+      "SingularName": "CaloriePerSquareCentimeterKelvin",
+      "PluralName": "CaloriePerSquareCentimeterKelvin",
+      "FromUnitToBaseFunc": "x * 41840",
+      "FromBaseToUnitFunc": "x / 41840",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "cal/cm²·s·K" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "WattPerSquareCentimeterKelvin",
+      "PluralName": "WattsPerSquareCentimeterKelvin",
+      "FromUnitToBaseFunc": "x * 10000",
+      "FromBaseToUnitFunc": "x / 10000",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "W/cm²·K" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "KilocaloriePerSquareMeterKelvin",
+      "PluralName": "KilocaloriesPerSquareMeterKelvin",
+      "FromUnitToBaseFunc": "x * (4184/3600)",
+      "FromBaseToUnitFunc": "x / (4184/3600)",
+	  "Prefixes": [ "Kilo" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "kcal/m²·h·K" ]
+        }
+      ]
     }
   ]
 }

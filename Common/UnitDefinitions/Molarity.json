@@ -41,6 +41,41 @@
           "Abbreviations": [ "mol/L", "M"]
         }
       ]
-    }
+    },
+	{
+	  "SingularName": "PoundMolesPerCubicMeter",
+	  "PluralName": "PoundMolesPerCubicMeter", 
+	  "BaseUnits": {
+	    "L": "Meter",
+		"N": "PoundMole"
+	  },
+	  "FromUnitToBaseFunc": "x*453.6",
+	  "FromBaseToUnitFunc": "x/453.6",
+	  "Prefixes": [],
+	  "Localization": [
+	    {
+		  "Culture": "en-US",
+		  "Abbreviations": [ "lb-mol/m³"]
+		}
+	  ]
+	},
+	{
+	  "SingularName": "PoundMolesPerCubicFoot",
+	  "PluralName": "PoundMolesPerCubicFoot", 
+	  "BaseUnits": {
+	    "L": "Foot",
+		"N": "PoundMole"
+	  },
+	  "FromUnitToBaseFunc": "x*16018",
+	  "FromBaseToUnitFunc": "x/16018",
+	  "Prefixes": [],
+	  "Localization": [
+	    {
+		  "Culture": "en-US",
+		  "Abbreviations": [ "lb-mol/ft³"]
+		}
+	  ]
+	},
+	
   ]
 }

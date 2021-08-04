@@ -64,6 +64,10 @@ namespace UnitsNet.NumberExtensions.NumberToVolumeFlow
         public static VolumeFlow CubicDecimetersPerMinute<T>(this T value) =>
             VolumeFlow.FromCubicDecimetersPerMinute(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="VolumeFlow.FromCubicFeetPerDay(UnitsNet.QuantityValue)" />
+        public static VolumeFlow CubicFeetPerDay<T>(this T value) =>
+            VolumeFlow.FromCubicFeetPerDay(Convert.ToDouble(value));
+
         /// <inheritdoc cref="VolumeFlow.FromCubicFeetPerHour(UnitsNet.QuantityValue)" />
         public static VolumeFlow CubicFeetPerHour<T>(this T value) =>
             VolumeFlow.FromCubicFeetPerHour(Convert.ToDouble(value));
@@ -123,6 +127,10 @@ namespace UnitsNet.NumberExtensions.NumberToVolumeFlow
         /// <inheritdoc cref="VolumeFlow.FromDecilitersPerSecond(UnitsNet.QuantityValue)" />
         public static VolumeFlow DecilitersPerSecond<T>(this T value) =>
             VolumeFlow.FromDecilitersPerSecond(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="VolumeFlow.FromDecsPerDay(UnitsNet.QuantityValue)" />
+        public static VolumeFlow DecsPerDay<T>(this T value) =>
+            VolumeFlow.FromDecsPerDay(Convert.ToDouble(value));
 
         /// <inheritdoc cref="VolumeFlow.FromKilolitersPerDay(UnitsNet.QuantityValue)" />
         public static VolumeFlow KilolitersPerDay<T>(this T value) =>
@@ -219,6 +227,10 @@ namespace UnitsNet.NumberExtensions.NumberToVolumeFlow
         /// <inheritdoc cref="VolumeFlow.FromOilBarrelsPerSecond(UnitsNet.QuantityValue)" />
         public static VolumeFlow OilBarrelsPerSecond<T>(this T value) =>
             VolumeFlow.FromOilBarrelsPerSecond(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="VolumeFlow.FromThousandCubicFeetPerDay(UnitsNet.QuantityValue)" />
+        public static VolumeFlow ThousandCubicFeetPerDay<T>(this T value) =>
+            VolumeFlow.FromThousandCubicFeetPerDay(Convert.ToDouble(value));
 
         /// <inheritdoc cref="VolumeFlow.FromUkGallonsPerDay(UnitsNet.QuantityValue)" />
         public static VolumeFlow UkGallonsPerDay<T>(this T value) =>

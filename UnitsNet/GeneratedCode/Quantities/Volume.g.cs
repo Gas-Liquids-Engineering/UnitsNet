@@ -67,6 +67,7 @@ namespace UnitsNet
                     new UnitInfo<VolumeUnit>(VolumeUnit.CubicMile, BaseUnits.Undefined),
                     new UnitInfo<VolumeUnit>(VolumeUnit.CubicMillimeter, BaseUnits.Undefined),
                     new UnitInfo<VolumeUnit>(VolumeUnit.CubicYard, BaseUnits.Undefined),
+                    new UnitInfo<VolumeUnit>(VolumeUnit.Dec, new BaseUnits(length: LengthUnit.Meter)),
                     new UnitInfo<VolumeUnit>(VolumeUnit.DecausGallon, BaseUnits.Undefined),
                     new UnitInfo<VolumeUnit>(VolumeUnit.Deciliter, BaseUnits.Undefined),
                     new UnitInfo<VolumeUnit>(VolumeUnit.DeciusGallon, BaseUnits.Undefined),
@@ -292,6 +293,11 @@ namespace UnitsNet
         ///     Get Volume in CubicYards.
         /// </summary>
         public double CubicYards => As(VolumeUnit.CubicYard);
+
+        /// <summary>
+        ///     Get Volume in Decs.
+        /// </summary>
+        public double Decs => As(VolumeUnit.Dec);
 
         /// <summary>
         ///     Get Volume in DecausGallons.
@@ -636,6 +642,15 @@ namespace UnitsNet
         {
             double value = (double) cubicyards;
             return new Volume(value, VolumeUnit.CubicYard);
+        }
+        /// <summary>
+        ///     Get Volume from Decs.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static Volume FromDecs(QuantityValue decs)
+        {
+            double value = (double) decs;
+            return new Volume(value, VolumeUnit.Dec);
         }
         /// <summary>
         ///     Get Volume from DecausGallons.
@@ -1405,6 +1420,7 @@ namespace UnitsNet
                 case VolumeUnit.CubicMile: return _value*4.16818182544058e9;
                 case VolumeUnit.CubicMillimeter: return _value/1e9;
                 case VolumeUnit.CubicYard: return _value*0.764554858;
+                case VolumeUnit.Dec: return _value/1000;
                 case VolumeUnit.DecausGallon: return (_value*0.00378541) * 1e1d;
                 case VolumeUnit.Deciliter: return (_value/1e3) * 1e-1d;
                 case VolumeUnit.DeciusGallon: return (_value*0.00378541) * 1e-1d;
@@ -1481,6 +1497,7 @@ namespace UnitsNet
                 case VolumeUnit.CubicMile: return baseUnitValue/4.16818182544058e9;
                 case VolumeUnit.CubicMillimeter: return baseUnitValue*1e9;
                 case VolumeUnit.CubicYard: return baseUnitValue/0.764554858;
+                case VolumeUnit.Dec: return baseUnitValue*1000;
                 case VolumeUnit.DecausGallon: return (baseUnitValue/0.00378541) / 1e1d;
                 case VolumeUnit.Deciliter: return (baseUnitValue*1e3) / 1e-1d;
                 case VolumeUnit.DeciusGallon: return (baseUnitValue/0.00378541) / 1e-1d;

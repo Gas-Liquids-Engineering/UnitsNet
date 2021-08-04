@@ -25,6 +25,18 @@
       ]
     },
     {
+      "SingularName": "SquareMeterPerHour",
+      "PluralName": "SquareMetersPerHour",
+      "FromUnitToBaseFunc": "x*3600",
+      "FromBaseToUnitFunc": "x/3600",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "m²/h" ]
+        },
+      ]
+    },
+    {
       "SingularName": "Stokes",
       "PluralName": "Stokes",
       "FromUnitToBaseFunc": "x/1e4",
@@ -52,6 +64,30 @@
           "Abbreviations": [ "ft²/s" ]
         }
       ]
-    }
+    },
+    {
+      "SingularName": "SquareFootPerHour",
+      "PluralName": "SquareFeetPerHour",
+      "FromUnitToBaseFunc": "x * 2.58064e-5",
+      "FromBaseToUnitFunc": "x / 2.58064e-5",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "ft²/h" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "SquareInchPerSecond",
+      "PluralName": "SquareInchesPerSecond",
+      "FromUnitToBaseFunc": "x*0.064516",
+      "FromBaseToUnitFunc": "x/0.064516",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "in²/s" ]
+        },
+      ]
+    },
   ]
 }

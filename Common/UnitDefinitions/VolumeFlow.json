@@ -67,6 +67,18 @@
         }
       ]
     },
+	{
+      "SingularName": "DecPerDay",
+      "PluralName": "DecsPerDay",
+      "FromUnitToBaseFunc": "x/86.4",
+      "FromBaseToUnitFunc": "x*86.4",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "e³m³/d", "decs/d" ]
+        }
+      ]
+    },
     {
       "SingularName": "CubicFootPerSecond",
       "PluralName": "CubicFeetPerSecond",
@@ -87,7 +99,7 @@
       "Localization": [
         {
           "Culture": "en-US",
-          "Abbreviations": [ "ft³/min" ]
+          "Abbreviations": [ "ft³/min", "CFM" ]
         }
       ]
     },
@@ -103,6 +115,30 @@
         }
       ]
     },
+    {
+      "SingularName": "CubicFootPerDay",
+      "PluralName": "CubicFeetPerDay",
+      "FromUnitToBaseFunc": "x*0.00000032774128",
+      "FromBaseToUnitFunc": "x/0.00000032774128",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "ft³/d", "cf/d" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "ThousandCubicFootPerDay",
+      "PluralName": "ThousandCubicFeetPerDay",
+      "FromUnitToBaseFunc": "x*0.00032774128",
+      "FromBaseToUnitFunc": "x/0.00032774128",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "e³ft³/d", "e³cf/d" ]
+        }
+      ]
+    },		
     {
       "SingularName": "CubicYardPerSecond",
       "PluralName": "CubicYardsPerSecond",
@@ -359,7 +395,7 @@
       "Localization": [
         {
           "Culture": "en-US",
-          "Abbreviations": [ "bbl/d", "BOPD" ]
+          "Abbreviations": [ "bbl/d", "BOPD", "BPD" ]
         }
       ]
     },
@@ -478,6 +514,6 @@
           "Abbreviations": [ "см³/мин" ]
         }
       ]
-    }
+    },
   ]
 }

@@ -69,6 +69,7 @@ namespace UnitsNet.Tests
             Assertion(3, ElectricSurfaceChargeDensityUnit.CoulombPerSquareMeter, Quantity.From(3, ElectricSurfaceChargeDensityUnit.CoulombPerSquareMeter));
             Assertion(3, EnergyUnit.WattHour, Quantity.From(3, EnergyUnit.WattHour));
             Assertion(3, EnergyDensityUnit.MegajoulesPerCubicMeter, Quantity.From(3, EnergyDensityUnit.MegajoulesPerCubicMeter));
+            Assertion(3, EnthalpyMassUnit.MegajoulePerKilogram, Quantity.From(3, EnthalpyMassUnit.MegajoulePerKilogram));
             Assertion(3, EntropyUnit.MegajoulePerKelvin, Quantity.From(3, EntropyUnit.MegajoulePerKelvin));
             Assertion(3, ForceUnit.TonneForce, Quantity.From(3, ForceUnit.TonneForce));
             Assertion(3, ForceChangeRateUnit.PoundForcePerSecond, Quantity.From(3, ForceChangeRateUnit.PoundForcePerSecond));
@@ -101,7 +102,8 @@ namespace UnitsNet.Tests
             Assertion(3, MassMomentOfInertiaUnit.TonneSquareMilimeter, Quantity.From(3, MassMomentOfInertiaUnit.TonneSquareMilimeter));
             Assertion(3, MolarEnergyUnit.MegajoulePerMole, Quantity.From(3, MolarEnergyUnit.MegajoulePerMole));
             Assertion(3, MolarEntropyUnit.MegajoulePerMoleKelvin, Quantity.From(3, MolarEntropyUnit.MegajoulePerMoleKelvin));
-            Assertion(3, MolarityUnit.PicomolesPerLiter, Quantity.From(3, MolarityUnit.PicomolesPerLiter));
+            Assertion(3, MolarFlowUnit.PoundMolePerSecond, Quantity.From(3, MolarFlowUnit.PoundMolePerSecond));
+            Assertion(3, MolarityUnit.PoundMolesPerCubicMeter, Quantity.From(3, MolarityUnit.PoundMolesPerCubicMeter));
             Assertion(3, MolarMassUnit.PoundPerMole, Quantity.From(3, MolarMassUnit.PoundPerMole));
             Assertion(3, PermeabilityUnit.HenryPerMeter, Quantity.From(3, PermeabilityUnit.HenryPerMeter));
             Assertion(3, PermittivityUnit.FaradPerMeter, Quantity.From(3, PermittivityUnit.FaradPerMeter));
@@ -124,7 +126,7 @@ namespace UnitsNet.Tests
             Assertion(3, SpecificEnergyUnit.WattHourPerKilogram, Quantity.From(3, SpecificEnergyUnit.WattHourPerKilogram));
             Assertion(3, SpecificEntropyUnit.MegajoulePerKilogramKelvin, Quantity.From(3, SpecificEntropyUnit.MegajoulePerKilogramKelvin));
             Assertion(3, SpecificFuelConsumptionUnit.PoundMassPerPoundForceHour, Quantity.From(3, SpecificFuelConsumptionUnit.PoundMassPerPoundForceHour));
-            Assertion(3, SpecificVolumeUnit.MillicubicMeterPerKilogram, Quantity.From(3, SpecificVolumeUnit.MillicubicMeterPerKilogram));
+            Assertion(3, SpecificVolumeUnit.USGallonPerPound, Quantity.From(3, SpecificVolumeUnit.USGallonPerPound));
             Assertion(3, SpecificWeightUnit.TonneForcePerCubicMillimeter, Quantity.From(3, SpecificWeightUnit.TonneForcePerCubicMillimeter));
             Assertion(3, SpeedUnit.YardPerSecond, Quantity.From(3, SpeedUnit.YardPerSecond));
             Assertion(3, StandardVolumeFlowUnit.StandardLiterPerMinute, Quantity.From(3, StandardVolumeFlowUnit.StandardLiterPerMinute));
@@ -184,6 +186,7 @@ namespace UnitsNet.Tests
             Assertion(ElectricSurfaceChargeDensity.Info, ElectricSurfaceChargeDensity.Zero);
             Assertion(Energy.Info, Energy.Zero);
             Assertion(EnergyDensity.Info, EnergyDensity.Zero);
+            Assertion(EnthalpyMass.Info, EnthalpyMass.Zero);
             Assertion(Entropy.Info, Entropy.Zero);
             Assertion(Force.Info, Force.Zero);
             Assertion(ForceChangeRate.Info, ForceChangeRate.Zero);
@@ -216,6 +219,7 @@ namespace UnitsNet.Tests
             Assertion(MassMomentOfInertia.Info, MassMomentOfInertia.Zero);
             Assertion(MolarEnergy.Info, MolarEnergy.Zero);
             Assertion(MolarEntropy.Info, MolarEntropy.Zero);
+            Assertion(MolarFlow.Info, MolarFlow.Zero);
             Assertion(Molarity.Info, Molarity.Zero);
             Assertion(MolarMass.Info, MolarMass.Zero);
             Assertion(Permeability.Info, Permeability.Zero);
@@ -299,6 +303,7 @@ namespace UnitsNet.Tests
             Assertion(ElectricSurfaceChargeDensity.QuantityType, ElectricSurfaceChargeDensity.Zero);
             Assertion(Energy.QuantityType, Energy.Zero);
             Assertion(EnergyDensity.QuantityType, EnergyDensity.Zero);
+            Assertion(EnthalpyMass.QuantityType, EnthalpyMass.Zero);
             Assertion(Entropy.QuantityType, Entropy.Zero);
             Assertion(Force.QuantityType, Force.Zero);
             Assertion(ForceChangeRate.QuantityType, ForceChangeRate.Zero);
@@ -331,6 +336,7 @@ namespace UnitsNet.Tests
             Assertion(MassMomentOfInertia.QuantityType, MassMomentOfInertia.Zero);
             Assertion(MolarEnergy.QuantityType, MolarEnergy.Zero);
             Assertion(MolarEntropy.QuantityType, MolarEntropy.Zero);
+            Assertion(MolarFlow.QuantityType, MolarFlow.Zero);
             Assertion(Molarity.QuantityType, Molarity.Zero);
             Assertion(MolarMass.QuantityType, MolarMass.Zero);
             Assertion(Permeability.QuantityType, Permeability.Zero);
@@ -414,6 +420,7 @@ namespace UnitsNet.Tests
             Assertion(ElectricSurfaceChargeDensity.BaseDimensions, ElectricSurfaceChargeDensity.Zero);
             Assertion(Energy.BaseDimensions, Energy.Zero);
             Assertion(EnergyDensity.BaseDimensions, EnergyDensity.Zero);
+            Assertion(EnthalpyMass.BaseDimensions, EnthalpyMass.Zero);
             Assertion(Entropy.BaseDimensions, Entropy.Zero);
             Assertion(Force.BaseDimensions, Force.Zero);
             Assertion(ForceChangeRate.BaseDimensions, ForceChangeRate.Zero);
@@ -446,6 +453,7 @@ namespace UnitsNet.Tests
             Assertion(MassMomentOfInertia.BaseDimensions, MassMomentOfInertia.Zero);
             Assertion(MolarEnergy.BaseDimensions, MolarEnergy.Zero);
             Assertion(MolarEntropy.BaseDimensions, MolarEntropy.Zero);
+            Assertion(MolarFlow.BaseDimensions, MolarFlow.Zero);
             Assertion(Molarity.BaseDimensions, Molarity.Zero);
             Assertion(MolarMass.BaseDimensions, MolarMass.Zero);
             Assertion(Permeability.BaseDimensions, Permeability.Zero);

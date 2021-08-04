@@ -33,6 +33,10 @@ namespace UnitsNet.Tests
             Assert.Equal(DynamicViscosity.FromMicropascalSeconds(2), 2.MicropascalSeconds());
 
         [Fact]
+        public void NumberToMicropoiseTest() =>
+            Assert.Equal(DynamicViscosity.FromMicropoise(2), 2.Micropoise());
+
+        [Fact]
         public void NumberToMillipascalSecondsTest() =>
             Assert.Equal(DynamicViscosity.FromMillipascalSeconds(2), 2.MillipascalSeconds());
 
@@ -55,6 +59,10 @@ namespace UnitsNet.Tests
         [Fact]
         public void NumberToPoundsForceSecondPerSquareInchTest() =>
             Assert.Equal(DynamicViscosity.FromPoundsForceSecondPerSquareInch(2), 2.PoundsForceSecondPerSquareInch());
+
+        [Fact]
+        public void NumberToPoundsPerFootHourTest() =>
+            Assert.Equal(DynamicViscosity.FromPoundsPerFootHour(2), 2.PoundsPerFootHour());
 
         [Fact]
         public void NumberToPoundsPerFootSecondTest() =>

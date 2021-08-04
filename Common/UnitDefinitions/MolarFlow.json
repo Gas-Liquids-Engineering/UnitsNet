@@ -1,0 +1,86 @@
+{
+  "Name": "MolarFlow",
+  "BaseUnit": "GramMolePerHour",
+  "XmlDoc": "Molar equivalent to VolumeFlow.",
+  "BaseDimensions": {
+    "N": 1,
+    "T": -1
+  },
+  "Units": [
+    {
+      "SingularName": "GramMolePerHour",
+      "PluralName": "GramMolesPerHour",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+	  "Prefixes": [ "Kilo" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "g-mol/h" ]
+        },
+      ]
+    },
+    {
+      "SingularName": "GramMolePerMinute",
+      "PluralName": "GramMolesPerMinute",
+      "FromUnitToBaseFunc": "x*60",
+      "FromBaseToUnitFunc": "x/60",
+	  "Prefixes": [ "Kilo" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "g-mol/min" ]
+        },
+      ]
+    },
+    {
+      "SingularName": "GramMolePerSecond",
+      "PluralName": "GramMolesPerSecond",
+      "FromUnitToBaseFunc": "x*3600",
+      "FromBaseToUnitFunc": "x/3600",
+	  "Prefixes": [ "Kilo" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "g-mol/s" ]
+        },
+      ]
+    },    
+    {
+      "SingularName": "PoundMolePerHour",
+      "PluralName": "PoundMolesPerHour",
+      "FromUnitToBaseFunc": "x*453.69237",
+      "FromBaseToUnitFunc": "x/453.69237",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "lb-mol/h" ]
+        },
+      ]
+    },    
+    {
+      "SingularName": "PoundMolePerMinute",
+      "PluralName": "PoundMolesPerMinute",
+      "FromUnitToBaseFunc": "x*60*453.69237",
+      "FromBaseToUnitFunc": "x/60/453.69237",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "lb-mol/min" ]
+        },
+      ]
+    },    
+    {
+      "SingularName": "PoundMolePerSecond",
+      "PluralName": "PoundMolesPerSecond",
+      "FromUnitToBaseFunc": "x*3600*453.69237",
+      "FromBaseToUnitFunc": "x/3600/453.69237",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "lb-mol/s" ]
+        },
+      ]
+    }
+  ]
+}

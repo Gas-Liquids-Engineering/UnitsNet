@@ -28,7 +28,10 @@ namespace UnitsNet.Units
         Undefined = 0,
         CubicFootPerPound,
         CubicMeterPerKilogram,
+        LiterPerGram,
         MillicubicMeterPerKilogram,
+        MilliliterPerGram,
+        USGallonPerPound,
     }
 
     #pragma warning restore 1591

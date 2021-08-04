@@ -189,9 +189,24 @@ namespace UnitsNet
         public double Nanostokes => As(KinematicViscosityUnit.Nanostokes);
 
         /// <summary>
+        ///     Get KinematicViscosity in SquareFeetPerHour.
+        /// </summary>
+        public double SquareFeetPerHour => As(KinematicViscosityUnit.SquareFootPerHour);
+
+        /// <summary>
         ///     Get KinematicViscosity in SquareFeetPerSecond.
         /// </summary>
         public double SquareFeetPerSecond => As(KinematicViscosityUnit.SquareFootPerSecond);
+
+        /// <summary>
+        ///     Get KinematicViscosity in SquareInchesPerSecond.
+        /// </summary>
+        public double SquareInchesPerSecond => As(KinematicViscosityUnit.SquareInchPerSecond);
+
+        /// <summary>
+        ///     Get KinematicViscosity in SquareMetersPerHour.
+        /// </summary>
+        public double SquareMetersPerHour => As(KinematicViscosityUnit.SquareMeterPerHour);
 
         /// <summary>
         ///     Get KinematicViscosity in SquareMetersPerSecond.
@@ -294,6 +309,16 @@ namespace UnitsNet
             return new KinematicViscosity(value, KinematicViscosityUnit.Nanostokes);
         }
         /// <summary>
+        ///     Get KinematicViscosity from SquareFeetPerHour.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static KinematicViscosity FromSquareFeetPerHour(double squarefeetperhour)
+        {
+            double value = (double) squarefeetperhour;
+            return new KinematicViscosity(value, KinematicViscosityUnit.SquareFootPerHour);
+        }
+        /// <summary>
         ///     Get KinematicViscosity from SquareFeetPerSecond.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
@@ -302,6 +327,26 @@ namespace UnitsNet
         {
             double value = (double) squarefeetpersecond;
             return new KinematicViscosity(value, KinematicViscosityUnit.SquareFootPerSecond);
+        }
+        /// <summary>
+        ///     Get KinematicViscosity from SquareInchesPerSecond.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static KinematicViscosity FromSquareInchesPerSecond(double squareinchespersecond)
+        {
+            double value = (double) squareinchespersecond;
+            return new KinematicViscosity(value, KinematicViscosityUnit.SquareInchPerSecond);
+        }
+        /// <summary>
+        ///     Get KinematicViscosity from SquareMetersPerHour.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static KinematicViscosity FromSquareMetersPerHour(double squaremetersperhour)
+        {
+            double value = (double) squaremetersperhour;
+            return new KinematicViscosity(value, KinematicViscosityUnit.SquareMeterPerHour);
         }
         /// <summary>
         ///     Get KinematicViscosity from SquareMetersPerSecond.
@@ -620,7 +665,10 @@ namespace UnitsNet
                 case KinematicViscosityUnit.Microstokes: return (_value/1e4) * 1e-6d;
                 case KinematicViscosityUnit.Millistokes: return (_value/1e4) * 1e-3d;
                 case KinematicViscosityUnit.Nanostokes: return (_value/1e4) * 1e-9d;
+                case KinematicViscosityUnit.SquareFootPerHour: return _value * 2.58064e-5;
                 case KinematicViscosityUnit.SquareFootPerSecond: return _value/10.7639;
+                case KinematicViscosityUnit.SquareInchPerSecond: return _value*0.064516;
+                case KinematicViscosityUnit.SquareMeterPerHour: return _value*3600;
                 case KinematicViscosityUnit.SquareMeterPerSecond: return _value;
                 case KinematicViscosityUnit.Stokes: return _value/1e4;
                 default:
@@ -643,7 +691,10 @@ namespace UnitsNet
                 case KinematicViscosityUnit.Microstokes: return (baseUnitValue*1e4) / 1e-6d;
                 case KinematicViscosityUnit.Millistokes: return (baseUnitValue*1e4) / 1e-3d;
                 case KinematicViscosityUnit.Nanostokes: return (baseUnitValue*1e4) / 1e-9d;
+                case KinematicViscosityUnit.SquareFootPerHour: return baseUnitValue / 2.58064e-5;
                 case KinematicViscosityUnit.SquareFootPerSecond: return baseUnitValue*10.7639;
+                case KinematicViscosityUnit.SquareInchPerSecond: return baseUnitValue/0.064516;
+                case KinematicViscosityUnit.SquareMeterPerHour: return baseUnitValue/3600;
                 case KinematicViscosityUnit.SquareMeterPerSecond: return baseUnitValue;
                 case KinematicViscosityUnit.Stokes: return baseUnitValue*1e4;
                 default:

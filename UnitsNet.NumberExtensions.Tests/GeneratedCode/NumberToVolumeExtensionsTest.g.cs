@@ -85,6 +85,10 @@ namespace UnitsNet.Tests
             Assert.Equal(Volume.FromCubicYards(2), 2.CubicYards());
 
         [Fact]
+        public void NumberToDecsTest() =>
+            Assert.Equal(Volume.FromDecs(2), 2.Decs());
+
+        [Fact]
         public void NumberToDecausGallonsTest() =>
             Assert.Equal(Volume.FromDecausGallons(2), 2.DecausGallons());
 

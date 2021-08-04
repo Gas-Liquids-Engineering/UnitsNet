@@ -198,6 +198,16 @@ namespace UnitsNet
         /// </summary>
         public double PicomolesPerLiter => As(MolarityUnit.PicomolesPerLiter);
 
+        /// <summary>
+        ///     Get Molarity in PoundMolesPerCubicFoot.
+        /// </summary>
+        public double PoundMolesPerCubicFoot => As(MolarityUnit.PoundMolesPerCubicFoot);
+
+        /// <summary>
+        ///     Get Molarity in PoundMolesPerCubicMeter.
+        /// </summary>
+        public double PoundMolesPerCubicMeter => As(MolarityUnit.PoundMolesPerCubicMeter);
+
         #endregion
 
         #region Static Methods
@@ -307,6 +317,26 @@ namespace UnitsNet
         {
             double value = (double) picomolesperliter;
             return new Molarity(value, MolarityUnit.PicomolesPerLiter);
+        }
+        /// <summary>
+        ///     Get Molarity from PoundMolesPerCubicFoot.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Molarity FromPoundMolesPerCubicFoot(double poundmolespercubicfoot)
+        {
+            double value = (double) poundmolespercubicfoot;
+            return new Molarity(value, MolarityUnit.PoundMolesPerCubicFoot);
+        }
+        /// <summary>
+        ///     Get Molarity from PoundMolesPerCubicMeter.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Molarity FromPoundMolesPerCubicMeter(double poundmolespercubicmeter)
+        {
+            double value = (double) poundmolespercubicmeter;
+            return new Molarity(value, MolarityUnit.PoundMolesPerCubicMeter);
         }
 
         /// <summary>
@@ -607,6 +637,8 @@ namespace UnitsNet
                 case MolarityUnit.MolesPerLiter: return _value/1e-3;
                 case MolarityUnit.NanomolesPerLiter: return (_value/1e-3) * 1e-9d;
                 case MolarityUnit.PicomolesPerLiter: return (_value/1e-3) * 1e-12d;
+                case MolarityUnit.PoundMolesPerCubicFoot: return _value*16018;
+                case MolarityUnit.PoundMolesPerCubicMeter: return _value*453.6;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -629,6 +661,8 @@ namespace UnitsNet
                 case MolarityUnit.MolesPerLiter: return baseUnitValue*1e-3;
                 case MolarityUnit.NanomolesPerLiter: return (baseUnitValue*1e-3) / 1e-9d;
                 case MolarityUnit.PicomolesPerLiter: return (baseUnitValue*1e-3) / 1e-12d;
+                case MolarityUnit.PoundMolesPerCubicFoot: return baseUnitValue/16018;
+                case MolarityUnit.PoundMolesPerCubicMeter: return baseUnitValue/453.6;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

@@ -27,6 +27,10 @@ namespace UnitsNet.Units
     {
         Undefined = 0,
         BtuPerSquareFootDegreeFahrenheit,
+        CaloriePerSquareCentimeterKelvin,
+        KilocaloriePerSquareMeterKelvin,
+        KilokilocaloriePerSquareMeterKelvin,
+        WattPerSquareCentimeterKelvin,
         WattPerSquareMeterCelsius,
         WattPerSquareMeterKelvin,
     }

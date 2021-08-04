@@ -1,0 +1,49 @@
+{
+  "Name": "EnthalpyMass",
+  "BaseUnit": "JoulePerKilogram",
+  "XmlDoc": "Enthalpy is a measure.",
+  "BaseDimensions": {
+    "L": 2,
+    "T": -2,
+  },
+  "Units": [
+    {
+      "SingularName": "JoulePerKilogram",
+      "PluralName": "JoulesPerKilogram",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Prefixes": [ "Kilo", "Mega" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "J/kg" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "CaloriePerGram",
+      "PluralName": "CaloriesPerGram",
+      "FromUnitToBaseFunc": "x*4184",
+      "FromBaseToUnitFunc": "x/4184",
+      "Prefixes": [ "Kilo" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "cal/g" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "BtuPerPound",
+      "PluralName": "BtusPerPound",
+      "FromUnitToBaseFunc": "x*2326",
+      "FromBaseToUnitFunc": "x/2326",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "btu/lb" ]
+        }
+      ]
+    }
+  ]
+}

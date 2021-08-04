@@ -44,6 +44,22 @@
       ]
     },
     {
+      "SingularName": "Dec",
+      "PluralName": "Decs",
+      "FromUnitToBaseFunc": "x/1000",
+      "FromBaseToUnitFunc": "x*1000",
+      "Prefixes": [],
+      "BaseUnits": {
+        "L": "Meter"
+      },
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "e³m³" ]
+        },
+      ]
+    },
+    {
       "SingularName": "CubicKilometer",
       "PluralName": "CubicKilometers",
       "FromUnitToBaseFunc": "x*1e9",

@@ -61,6 +61,10 @@ namespace UnitsNet.Tests
             Assert.Equal(VolumeFlow.FromCubicDecimetersPerMinute(2), 2.CubicDecimetersPerMinute());
 
         [Fact]
+        public void NumberToCubicFeetPerDayTest() =>
+            Assert.Equal(VolumeFlow.FromCubicFeetPerDay(2), 2.CubicFeetPerDay());
+
+        [Fact]
         public void NumberToCubicFeetPerHourTest() =>
             Assert.Equal(VolumeFlow.FromCubicFeetPerHour(2), 2.CubicFeetPerHour());
 
@@ -119,6 +123,10 @@ namespace UnitsNet.Tests
         [Fact]
         public void NumberToDecilitersPerSecondTest() =>
             Assert.Equal(VolumeFlow.FromDecilitersPerSecond(2), 2.DecilitersPerSecond());
+
+        [Fact]
+        public void NumberToDecsPerDayTest() =>
+            Assert.Equal(VolumeFlow.FromDecsPerDay(2), 2.DecsPerDay());
 
         [Fact]
         public void NumberToKilolitersPerDayTest() =>
@@ -215,6 +223,10 @@ namespace UnitsNet.Tests
         [Fact]
         public void NumberToOilBarrelsPerSecondTest() =>
             Assert.Equal(VolumeFlow.FromOilBarrelsPerSecond(2), 2.OilBarrelsPerSecond());
+
+        [Fact]
+        public void NumberToThousandCubicFeetPerDayTest() =>
+            Assert.Equal(VolumeFlow.FromThousandCubicFeetPerDay(2), 2.ThousandCubicFeetPerDay());
 
         [Fact]
         public void NumberToUkGallonsPerDayTest() =>

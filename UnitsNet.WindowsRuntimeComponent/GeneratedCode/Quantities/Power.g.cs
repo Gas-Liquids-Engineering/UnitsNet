@@ -166,6 +166,11 @@ namespace UnitsNet
         public double BritishThermalUnitsPerHour => As(PowerUnit.BritishThermalUnitPerHour);
 
         /// <summary>
+        ///     Get Power in CaloriesPerHour.
+        /// </summary>
+        public double CaloriesPerHour => As(PowerUnit.CaloriesPerHour);
+
+        /// <summary>
         ///     Get Power in Decawatts.
         /// </summary>
         public double Decawatts => As(PowerUnit.Decawatt);
@@ -184,6 +189,11 @@ namespace UnitsNet
         ///     Get Power in Femtowatts.
         /// </summary>
         public double Femtowatts => As(PowerUnit.Femtowatt);
+
+        /// <summary>
+        ///     Get Power in GigacaloriesPerHour.
+        /// </summary>
+        public double GigacaloriesPerHour => As(PowerUnit.GigacaloriesPerHour);
 
         /// <summary>
         ///     Get Power in GigajoulesPerHour.
@@ -211,6 +221,11 @@ namespace UnitsNet
         public double KilobritishThermalUnitsPerHour => As(PowerUnit.KilobritishThermalUnitPerHour);
 
         /// <summary>
+        ///     Get Power in KilocaloriesPerHour.
+        /// </summary>
+        public double KilocaloriesPerHour => As(PowerUnit.KilocaloriesPerHour);
+
+        /// <summary>
         ///     Get Power in KilojoulesPerHour.
         /// </summary>
         public double KilojoulesPerHour => As(PowerUnit.KilojoulePerHour);
@@ -224,6 +239,11 @@ namespace UnitsNet
         ///     Get Power in MechanicalHorsepower.
         /// </summary>
         public double MechanicalHorsepower => As(PowerUnit.MechanicalHorsepower);
+
+        /// <summary>
+        ///     Get Power in MegacaloriesPerHour.
+        /// </summary>
+        public double MegacaloriesPerHour => As(PowerUnit.MegacaloriesPerHour);
 
         /// <summary>
         ///     Get Power in MegajoulesPerHour.
@@ -244,6 +264,11 @@ namespace UnitsNet
         ///     Get Power in Microwatts.
         /// </summary>
         public double Microwatts => As(PowerUnit.Microwatt);
+
+        /// <summary>
+        ///     Get Power in MillicaloriesPerHour.
+        /// </summary>
+        public double MillicaloriesPerHour => As(PowerUnit.MillicaloriesPerHour);
 
         /// <summary>
         ///     Get Power in MillijoulesPerHour.
@@ -331,6 +356,16 @@ namespace UnitsNet
             return new Power(value, PowerUnit.BritishThermalUnitPerHour);
         }
         /// <summary>
+        ///     Get Power from CaloriesPerHour.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Power FromCaloriesPerHour(double caloriesperhour)
+        {
+            decimal value = (decimal) caloriesperhour;
+            return new Power(value, PowerUnit.CaloriesPerHour);
+        }
+        /// <summary>
         ///     Get Power from Decawatts.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
@@ -369,6 +404,16 @@ namespace UnitsNet
         {
             decimal value = (decimal) femtowatts;
             return new Power(value, PowerUnit.Femtowatt);
+        }
+        /// <summary>
+        ///     Get Power from GigacaloriesPerHour.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Power FromGigacaloriesPerHour(double gigacaloriesperhour)
+        {
+            decimal value = (decimal) gigacaloriesperhour;
+            return new Power(value, PowerUnit.GigacaloriesPerHour);
         }
         /// <summary>
         ///     Get Power from GigajoulesPerHour.
@@ -421,6 +466,16 @@ namespace UnitsNet
             return new Power(value, PowerUnit.KilobritishThermalUnitPerHour);
         }
         /// <summary>
+        ///     Get Power from KilocaloriesPerHour.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Power FromKilocaloriesPerHour(double kilocaloriesperhour)
+        {
+            decimal value = (decimal) kilocaloriesperhour;
+            return new Power(value, PowerUnit.KilocaloriesPerHour);
+        }
+        /// <summary>
         ///     Get Power from KilojoulesPerHour.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
@@ -449,6 +504,16 @@ namespace UnitsNet
         {
             decimal value = (decimal) mechanicalhorsepower;
             return new Power(value, PowerUnit.MechanicalHorsepower);
+        }
+        /// <summary>
+        ///     Get Power from MegacaloriesPerHour.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Power FromMegacaloriesPerHour(double megacaloriesperhour)
+        {
+            decimal value = (decimal) megacaloriesperhour;
+            return new Power(value, PowerUnit.MegacaloriesPerHour);
         }
         /// <summary>
         ///     Get Power from MegajoulesPerHour.
@@ -489,6 +554,16 @@ namespace UnitsNet
         {
             decimal value = (decimal) microwatts;
             return new Power(value, PowerUnit.Microwatt);
+        }
+        /// <summary>
+        ///     Get Power from MillicaloriesPerHour.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Power FromMillicaloriesPerHour(double millicaloriesperhour)
+        {
+            decimal value = (decimal) millicaloriesperhour;
+            return new Power(value, PowerUnit.MillicaloriesPerHour);
         }
         /// <summary>
         ///     Get Power from MillijoulesPerHour.
@@ -853,22 +928,27 @@ namespace UnitsNet
             {
                 case PowerUnit.BoilerHorsepower: return _value*9812.5m;
                 case PowerUnit.BritishThermalUnitPerHour: return _value*0.293071m;
+                case PowerUnit.CaloriesPerHour: return _value*0.00162m;
                 case PowerUnit.Decawatt: return (_value) * 1e1m;
                 case PowerUnit.Deciwatt: return (_value) * 1e-1m;
                 case PowerUnit.ElectricalHorsepower: return _value*746m;
                 case PowerUnit.Femtowatt: return (_value) * 1e-15m;
+                case PowerUnit.GigacaloriesPerHour: return (_value*0.00162m) * 1e9m;
                 case PowerUnit.GigajoulePerHour: return (_value/3600m) * 1e9m;
                 case PowerUnit.Gigawatt: return (_value) * 1e9m;
                 case PowerUnit.HydraulicHorsepower: return _value*745.69988145m;
                 case PowerUnit.JoulePerHour: return _value/3600m;
                 case PowerUnit.KilobritishThermalUnitPerHour: return (_value*0.293071m) * 1e3m;
+                case PowerUnit.KilocaloriesPerHour: return (_value*0.00162m) * 1e3m;
                 case PowerUnit.KilojoulePerHour: return (_value/3600m) * 1e3m;
                 case PowerUnit.Kilowatt: return (_value) * 1e3m;
                 case PowerUnit.MechanicalHorsepower: return _value*745.69m;
+                case PowerUnit.MegacaloriesPerHour: return (_value*0.00162m) * 1e6m;
                 case PowerUnit.MegajoulePerHour: return (_value/3600m) * 1e6m;
                 case PowerUnit.Megawatt: return (_value) * 1e6m;
                 case PowerUnit.MetricHorsepower: return _value*735.49875m;
                 case PowerUnit.Microwatt: return (_value) * 1e-6m;
+                case PowerUnit.MillicaloriesPerHour: return (_value*0.00162m) * 1e-3m;
                 case PowerUnit.MillijoulePerHour: return (_value/3600m) * 1e-3m;
                 case PowerUnit.Milliwatt: return (_value) * 1e-3m;
                 case PowerUnit.Nanowatt: return (_value) * 1e-9m;
@@ -892,22 +972,27 @@ namespace UnitsNet
             {
                 case PowerUnit.BoilerHorsepower: return baseUnitValue/9812.5m;
                 case PowerUnit.BritishThermalUnitPerHour: return baseUnitValue/0.293071m;
+                case PowerUnit.CaloriesPerHour: return baseUnitValue/0.00162m;
                 case PowerUnit.Decawatt: return (baseUnitValue) / 1e1m;
                 case PowerUnit.Deciwatt: return (baseUnitValue) / 1e-1m;
                 case PowerUnit.ElectricalHorsepower: return baseUnitValue/746m;
                 case PowerUnit.Femtowatt: return (baseUnitValue) / 1e-15m;
+                case PowerUnit.GigacaloriesPerHour: return (baseUnitValue/0.00162m) / 1e9m;
                 case PowerUnit.GigajoulePerHour: return (baseUnitValue*3600m) / 1e9m;
                 case PowerUnit.Gigawatt: return (baseUnitValue) / 1e9m;
                 case PowerUnit.HydraulicHorsepower: return baseUnitValue/745.69988145m;
                 case PowerUnit.JoulePerHour: return baseUnitValue*3600m;
                 case PowerUnit.KilobritishThermalUnitPerHour: return (baseUnitValue/0.293071m) / 1e3m;
+                case PowerUnit.KilocaloriesPerHour: return (baseUnitValue/0.00162m) / 1e3m;
                 case PowerUnit.KilojoulePerHour: return (baseUnitValue*3600m) / 1e3m;
                 case PowerUnit.Kilowatt: return (baseUnitValue) / 1e3m;
                 case PowerUnit.MechanicalHorsepower: return baseUnitValue/745.69m;
+                case PowerUnit.MegacaloriesPerHour: return (baseUnitValue/0.00162m) / 1e6m;
                 case PowerUnit.MegajoulePerHour: return (baseUnitValue*3600m) / 1e6m;
                 case PowerUnit.Megawatt: return (baseUnitValue) / 1e6m;
                 case PowerUnit.MetricHorsepower: return baseUnitValue/735.49875m;
                 case PowerUnit.Microwatt: return (baseUnitValue) / 1e-6m;
+                case PowerUnit.MillicaloriesPerHour: return (baseUnitValue/0.00162m) / 1e-3m;
                 case PowerUnit.MillijoulePerHour: return (baseUnitValue*3600m) / 1e-3m;
                 case PowerUnit.Milliwatt: return (baseUnitValue) / 1e-3m;
                 case PowerUnit.Nanowatt: return (baseUnitValue) / 1e-9m;

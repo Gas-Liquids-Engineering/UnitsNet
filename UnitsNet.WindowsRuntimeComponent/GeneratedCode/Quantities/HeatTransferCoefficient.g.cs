@@ -161,6 +161,26 @@ namespace UnitsNet
         public double BtusPerSquareFootDegreeFahrenheit => As(HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit);
 
         /// <summary>
+        ///     Get HeatTransferCoefficient in CaloriePerSquareCentimeterKelvin.
+        /// </summary>
+        public double CaloriePerSquareCentimeterKelvin => As(HeatTransferCoefficientUnit.CaloriePerSquareCentimeterKelvin);
+
+        /// <summary>
+        ///     Get HeatTransferCoefficient in KilocaloriesPerSquareMeterKelvin.
+        /// </summary>
+        public double KilocaloriesPerSquareMeterKelvin => As(HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin);
+
+        /// <summary>
+        ///     Get HeatTransferCoefficient in KilokilocaloriesPerSquareMeterKelvin.
+        /// </summary>
+        public double KilokilocaloriesPerSquareMeterKelvin => As(HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin);
+
+        /// <summary>
+        ///     Get HeatTransferCoefficient in WattsPerSquareCentimeterKelvin.
+        /// </summary>
+        public double WattsPerSquareCentimeterKelvin => As(HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin);
+
+        /// <summary>
         ///     Get HeatTransferCoefficient in WattsPerSquareMeterCelsius.
         /// </summary>
         public double WattsPerSquareMeterCelsius => As(HeatTransferCoefficientUnit.WattPerSquareMeterCelsius);
@@ -209,6 +229,46 @@ namespace UnitsNet
         {
             double value = (double) btuspersquarefootdegreefahrenheit;
             return new HeatTransferCoefficient(value, HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit);
+        }
+        /// <summary>
+        ///     Get HeatTransferCoefficient from CaloriePerSquareCentimeterKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static HeatTransferCoefficient FromCaloriePerSquareCentimeterKelvin(double caloriepersquarecentimeterkelvin)
+        {
+            double value = (double) caloriepersquarecentimeterkelvin;
+            return new HeatTransferCoefficient(value, HeatTransferCoefficientUnit.CaloriePerSquareCentimeterKelvin);
+        }
+        /// <summary>
+        ///     Get HeatTransferCoefficient from KilocaloriesPerSquareMeterKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static HeatTransferCoefficient FromKilocaloriesPerSquareMeterKelvin(double kilocaloriespersquaremeterkelvin)
+        {
+            double value = (double) kilocaloriespersquaremeterkelvin;
+            return new HeatTransferCoefficient(value, HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin);
+        }
+        /// <summary>
+        ///     Get HeatTransferCoefficient from KilokilocaloriesPerSquareMeterKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static HeatTransferCoefficient FromKilokilocaloriesPerSquareMeterKelvin(double kilokilocaloriespersquaremeterkelvin)
+        {
+            double value = (double) kilokilocaloriespersquaremeterkelvin;
+            return new HeatTransferCoefficient(value, HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin);
+        }
+        /// <summary>
+        ///     Get HeatTransferCoefficient from WattsPerSquareCentimeterKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static HeatTransferCoefficient FromWattsPerSquareCentimeterKelvin(double wattspersquarecentimeterkelvin)
+        {
+            double value = (double) wattspersquarecentimeterkelvin;
+            return new HeatTransferCoefficient(value, HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin);
         }
         /// <summary>
         ///     Get HeatTransferCoefficient from WattsPerSquareMeterCelsius.
@@ -522,6 +582,10 @@ namespace UnitsNet
             switch(Unit)
             {
                 case HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit: return _value * 5.6782633411134878;
+                case HeatTransferCoefficientUnit.CaloriePerSquareCentimeterKelvin: return _value * 41840;
+                case HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin: return _value * (4184/3600);
+                case HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin: return (_value * (4184/3600)) * 1e3d;
+                case HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin: return _value * 10000;
                 case HeatTransferCoefficientUnit.WattPerSquareMeterCelsius: return _value;
                 case HeatTransferCoefficientUnit.WattPerSquareMeterKelvin: return _value;
                 default:
@@ -539,6 +603,10 @@ namespace UnitsNet
             switch(unit)
             {
                 case HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit: return baseUnitValue / 5.6782633411134878;
+                case HeatTransferCoefficientUnit.CaloriePerSquareCentimeterKelvin: return baseUnitValue / 41840;
+                case HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin: return baseUnitValue / (4184/3600);
+                case HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin: return (baseUnitValue / (4184/3600)) / 1e3d;
+                case HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin: return baseUnitValue / 10000;
                 case HeatTransferCoefficientUnit.WattPerSquareMeterCelsius: return baseUnitValue;
                 case HeatTransferCoefficientUnit.WattPerSquareMeterKelvin: return baseUnitValue;
                 default:

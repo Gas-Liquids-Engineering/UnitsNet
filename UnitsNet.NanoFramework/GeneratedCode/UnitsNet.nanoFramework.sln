@@ -72,6 +72,8 @@ Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "Energy", "Energy\Energy.nfp
 EndProject
 Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "EnergyDensity", "EnergyDensity\EnergyDensity.nfproj", "{c5025916-5039-97c2-b450-af1420f5fb08}"
 EndProject
+Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "EnthalpyMass", "EnthalpyMass\EnthalpyMass.nfproj", "{02a3d86c-9749-cca5-77fe-52f4579350c2}"
+EndProject
 Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "Entropy", "Entropy\Entropy.nfproj", "{816884bb-a5f6-5c07-967b-bb8f21d724b7}"
 EndProject
 Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "Force", "Force\Force.nfproj", "{5517dacf-b1ff-6515-e5b6-b5081f92f407}"
@@ -135,6 +137,8 @@ EndProject
 Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "MolarEnergy", "MolarEnergy\MolarEnergy.nfproj", "{9b77d4e0-863d-4a74-c30a-56f7b2bb7cb7}"
 EndProject
 Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "MolarEntropy", "MolarEntropy\MolarEntropy.nfproj", "{2053731b-90f5-5141-d15e-8d7be8c2662f}"
+EndProject
+Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "MolarFlow", "MolarFlow\MolarFlow.nfproj", "{49cc942b-d836-a48b-0429-25bf95247759}"
 EndProject
 Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "Molarity", "Molarity\Molarity.nfproj", "{0d21f127-8c25-9b3a-9612-ce2eea6e7ac1}"
 EndProject
@@ -434,6 +438,12 @@ Global
 {c5025916-5039-97c2-b450-af1420f5fb08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 {c5025916-5039-97c2-b450-af1420f5fb08}.Release|Any CPU.Build.0 = Release|Any CPU
 {c5025916-5039-97c2-b450-af1420f5fb08}.Release|Any CPU.Deploy.0 = Release|Any CPU
+{02a3d86c-9749-cca5-77fe-52f4579350c2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{02a3d86c-9749-cca5-77fe-52f4579350c2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{02a3d86c-9749-cca5-77fe-52f4579350c2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+{02a3d86c-9749-cca5-77fe-52f4579350c2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{02a3d86c-9749-cca5-77fe-52f4579350c2}.Release|Any CPU.Build.0 = Release|Any CPU
+{02a3d86c-9749-cca5-77fe-52f4579350c2}.Release|Any CPU.Deploy.0 = Release|Any CPU
 {816884bb-a5f6-5c07-967b-bb8f21d724b7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 {816884bb-a5f6-5c07-967b-bb8f21d724b7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 {816884bb-a5f6-5c07-967b-bb8f21d724b7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -626,6 +636,12 @@ Global
 {2053731b-90f5-5141-d15e-8d7be8c2662f}.Release|Any CPU.ActiveCfg = Release|Any CPU
 {2053731b-90f5-5141-d15e-8d7be8c2662f}.Release|Any CPU.Build.0 = Release|Any CPU
 {2053731b-90f5-5141-d15e-8d7be8c2662f}.Release|Any CPU.Deploy.0 = Release|Any CPU
+{49cc942b-d836-a48b-0429-25bf95247759}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{49cc942b-d836-a48b-0429-25bf95247759}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{49cc942b-d836-a48b-0429-25bf95247759}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+{49cc942b-d836-a48b-0429-25bf95247759}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{49cc942b-d836-a48b-0429-25bf95247759}.Release|Any CPU.Build.0 = Release|Any CPU
+{49cc942b-d836-a48b-0429-25bf95247759}.Release|Any CPU.Deploy.0 = Release|Any CPU
 {0d21f127-8c25-9b3a-9612-ce2eea6e7ac1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 {0d21f127-8c25-9b3a-9612-ce2eea6e7ac1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 {0d21f127-8c25-9b3a-9612-ce2eea6e7ac1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

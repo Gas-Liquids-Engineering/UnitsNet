@@ -448,7 +448,7 @@ namespace UnitsNet.Tests
             var prevCulture = Thread.CurrentThread.CurrentUICulture;
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
             try {
-                Assert.Equal("1 BTU/lb·°F", new SpecificEntropy(1, SpecificEntropyUnit.BtuPerPoundFahrenheit).ToString());
+                Assert.Equal("1 BTU/lb.°F", new SpecificEntropy(1, SpecificEntropyUnit.BtuPerPoundFahrenheit).ToString());
                 Assert.Equal("1 cal/g.K", new SpecificEntropy(1, SpecificEntropyUnit.CaloriePerGramKelvin).ToString());
                 Assert.Equal("1 J/kg.C", new SpecificEntropy(1, SpecificEntropyUnit.JoulePerKilogramDegreeCelsius).ToString());
                 Assert.Equal("1 J/kg.K", new SpecificEntropy(1, SpecificEntropyUnit.JoulePerKilogramKelvin).ToString());
@@ -470,7 +470,7 @@ namespace UnitsNet.Tests
             // Chose this culture, because we don't currently have any abbreviations mapped for that culture and we expect the en-US to be used as fallback.
             var swedishCulture = CultureInfo.GetCultureInfo("sv-SE");
 
-            Assert.Equal("1 BTU/lb·°F", new SpecificEntropy(1, SpecificEntropyUnit.BtuPerPoundFahrenheit).ToString(swedishCulture));
+            Assert.Equal("1 BTU/lb.°F", new SpecificEntropy(1, SpecificEntropyUnit.BtuPerPoundFahrenheit).ToString(swedishCulture));
             Assert.Equal("1 cal/g.K", new SpecificEntropy(1, SpecificEntropyUnit.CaloriePerGramKelvin).ToString(swedishCulture));
             Assert.Equal("1 J/kg.C", new SpecificEntropy(1, SpecificEntropyUnit.JoulePerKilogramDegreeCelsius).ToString(swedishCulture));
             Assert.Equal("1 J/kg.K", new SpecificEntropy(1, SpecificEntropyUnit.JoulePerKilogramKelvin).ToString(swedishCulture));

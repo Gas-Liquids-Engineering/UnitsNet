@@ -24,6 +24,19 @@
       ]
     },
     {
+      "SingularName": "RadianPerMinute",
+      "PluralName": "RadiansPerMinute",
+      "FromUnitToBaseFunc": "x*60",
+      "FromBaseToUnitFunc": "x*60",
+      "Prefixes": [ "Nano", "Micro", "Milli", "Centi", "Deci" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "rad/min" ]
+        },
+      ]
+    },
+    {
       "SingularName": "DegreePerSecond",
       "PluralName": "DegreesPerSecond",
       "FromUnitToBaseFunc": "(Math.PI/180)*x",
@@ -50,6 +63,19 @@
           "Culture": "en-US",
           "Abbreviations": [ "°/min", "deg/min" ]
         }
+      ]
+    },
+    {
+      "SingularName": "DegreePerHour",
+      "PluralName": "DegreesPerHour",
+      "FromUnitToBaseFunc": "(60*Math.PI/180)*x",
+      "FromBaseToUnitFunc": "(180/Math.PI/60)*x",
+      "Prefixes": [ "Nano", "Micro", "Milli" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "°/h", "deg/h" ]
+        },
       ]
     },
     {
@@ -82,6 +108,18 @@
           "Culture": "ru-RU",
           "Abbreviations": [ "об/мин" ]
         }
+      ]
+    },
+    {
+      "SingularName": "RevolutionPerHour",
+      "PluralName": "RevolutionsPerHour",
+      "FromUnitToBaseFunc": "(x*6.2831853072)/3600",
+      "FromBaseToUnitFunc": "(x/6.2831853072)*3600",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "r/h" ]
+        },
       ]
     }
   ]

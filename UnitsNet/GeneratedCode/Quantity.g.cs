@@ -73,6 +73,7 @@ namespace UnitsNet
             { "ElectricSurfaceChargeDensity", ElectricSurfaceChargeDensity.Info },
             { "Energy", Energy.Info },
             { "EnergyDensity", EnergyDensity.Info },
+            { "EnthalpyMass", EnthalpyMass.Info },
             { "Entropy", Entropy.Info },
             { "Force", Force.Info },
             { "ForceChangeRate", ForceChangeRate.Info },
@@ -105,6 +106,7 @@ namespace UnitsNet
             { "MassMomentOfInertia", MassMomentOfInertia.Info },
             { "MolarEnergy", MolarEnergy.Info },
             { "MolarEntropy", MolarEntropy.Info },
+            { "MolarFlow", MolarFlow.Info },
             { "Molarity", Molarity.Info },
             { "MolarMass", MolarMass.Info },
             { "Permeability", Permeability.Info },
@@ -187,6 +189,7 @@ namespace UnitsNet
             { "ElectricSurfaceChargeDensity", QuantityType.ElectricSurfaceChargeDensity },
             { "Energy", QuantityType.Energy },
             { "EnergyDensity", QuantityType.EnergyDensity },
+            { "EnthalpyMass", QuantityType.EnthalpyMass },
             { "Entropy", QuantityType.Entropy },
             { "Force", QuantityType.Force },
             { "ForceChangeRate", QuantityType.ForceChangeRate },
@@ -219,6 +222,7 @@ namespace UnitsNet
             { "MassMomentOfInertia", QuantityType.MassMomentOfInertia },
             { "MolarEnergy", QuantityType.MolarEnergy },
             { "MolarEntropy", QuantityType.MolarEntropy },
+            { "MolarFlow", QuantityType.MolarFlow },
             { "Molarity", QuantityType.Molarity },
             { "MolarMass", QuantityType.MolarMass },
             { "Permeability", QuantityType.Permeability },
@@ -343,6 +347,8 @@ namespace UnitsNet
                     return Energy.From(value, Energy.BaseUnit);
                 case QuantityType.EnergyDensity:
                     return EnergyDensity.From(value, EnergyDensity.BaseUnit);
+                case QuantityType.EnthalpyMass:
+                    return EnthalpyMass.From(value, EnthalpyMass.BaseUnit);
                 case QuantityType.Entropy:
                     return Entropy.From(value, Entropy.BaseUnit);
                 case QuantityType.Force:
@@ -407,6 +413,8 @@ namespace UnitsNet
                     return MolarEnergy.From(value, MolarEnergy.BaseUnit);
                 case QuantityType.MolarEntropy:
                     return MolarEntropy.From(value, MolarEntropy.BaseUnit);
+                case QuantityType.MolarFlow:
+                    return MolarFlow.From(value, MolarFlow.BaseUnit);
                 case QuantityType.Molarity:
                     return Molarity.From(value, Molarity.BaseUnit);
                 case QuantityType.MolarMass:
@@ -574,6 +582,8 @@ namespace UnitsNet
                     return Energy.From(value, Energy.BaseUnit);
                 case "EnergyDensity":
                     return EnergyDensity.From(value, EnergyDensity.BaseUnit);
+                case "EnthalpyMass":
+                    return EnthalpyMass.From(value, EnthalpyMass.BaseUnit);
                 case "Entropy":
                     return Entropy.From(value, Entropy.BaseUnit);
                 case "Force":
@@ -638,6 +648,8 @@ namespace UnitsNet
                     return MolarEnergy.From(value, MolarEnergy.BaseUnit);
                 case "MolarEntropy":
                     return MolarEntropy.From(value, MolarEntropy.BaseUnit);
+                case "MolarFlow":
+                    return MolarFlow.From(value, MolarFlow.BaseUnit);
                 case "Molarity":
                     return Molarity.From(value, Molarity.BaseUnit);
                 case "MolarMass":
@@ -841,6 +853,9 @@ namespace UnitsNet
                 case EnergyDensityUnit energyDensityUnit:
                     quantity = EnergyDensity.From(value, energyDensityUnit);
                     return true;
+                case EnthalpyMassUnit enthalpyMassUnit:
+                    quantity = EnthalpyMass.From(value, enthalpyMassUnit);
+                    return true;
                 case EntropyUnit entropyUnit:
                     quantity = Entropy.From(value, entropyUnit);
                     return true;
@@ -936,6 +951,9 @@ namespace UnitsNet
                     return true;
                 case MolarEntropyUnit molarEntropyUnit:
                     quantity = MolarEntropy.From(value, molarEntropyUnit);
+                    return true;
+                case MolarFlowUnit molarFlowUnit:
+                    quantity = MolarFlow.From(value, molarFlowUnit);
                     return true;
                 case MolarityUnit molarityUnit:
                     quantity = Molarity.From(value, molarityUnit);
@@ -1157,6 +1175,8 @@ namespace UnitsNet
                     return parser.TryParse<Energy, EnergyUnit>(quantityString, formatProvider, Energy.From, out quantity);
                 case Type _ when quantityType == typeof(EnergyDensity):
                     return parser.TryParse<EnergyDensity, EnergyDensityUnit>(quantityString, formatProvider, EnergyDensity.From, out quantity);
+                case Type _ when quantityType == typeof(EnthalpyMass):
+                    return parser.TryParse<EnthalpyMass, EnthalpyMassUnit>(quantityString, formatProvider, EnthalpyMass.From, out quantity);
                 case Type _ when quantityType == typeof(Entropy):
                     return parser.TryParse<Entropy, EntropyUnit>(quantityString, formatProvider, Entropy.From, out quantity);
                 case Type _ when quantityType == typeof(Force):
@@ -1221,6 +1241,8 @@ namespace UnitsNet
                     return parser.TryParse<MolarEnergy, MolarEnergyUnit>(quantityString, formatProvider, MolarEnergy.From, out quantity);
                 case Type _ when quantityType == typeof(MolarEntropy):
                     return parser.TryParse<MolarEntropy, MolarEntropyUnit>(quantityString, formatProvider, MolarEntropy.From, out quantity);
+                case Type _ when quantityType == typeof(MolarFlow):
+                    return parser.TryParse<MolarFlow, MolarFlowUnit>(quantityString, formatProvider, MolarFlow.From, out quantity);
                 case Type _ when quantityType == typeof(Molarity):
                     return parser.TryParse<Molarity, MolarityUnit>(quantityString, formatProvider, Molarity.From, out quantity);
                 case Type _ when quantityType == typeof(MolarMass):

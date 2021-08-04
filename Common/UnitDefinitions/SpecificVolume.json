@@ -32,6 +32,32 @@
           "Abbreviations": [ "ft³/lb" ]
         }
       ]
-    }
+    },
+    {
+      "SingularName": "LiterPerGram",
+      "PluralName": "LitersPerGram",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Prefixes": [ "Milli"],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "L/g" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "USGallonPerPound",
+      "PluralName": "USGallonsPerPound",
+      "FromUnitToBaseFunc": "x*0.008345",
+      "FromBaseToUnitFunc": "x/0.008345",
+      "Prefixes": [],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "gal (U.S.)/lb" ]
+        }
+      ]
+    },
   ]
 }

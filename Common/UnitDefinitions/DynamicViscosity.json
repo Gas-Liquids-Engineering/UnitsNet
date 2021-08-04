@@ -39,7 +39,7 @@
       "PluralName": "Poise",
       "FromUnitToBaseFunc": "x/10",
       "FromBaseToUnitFunc": "x*10",
-      "Prefixes": [ "Centi" ],
+      "Prefixes": [ "Centi", "Micro" ],
       "Localization": [
         {
           "Culture": "en-US",
@@ -92,6 +92,18 @@
         {
           "Culture": "en-US",
           "Abbreviations": [ "lb/ft·s" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "PoundPerFootHour",
+      "PluralName": "PoundsPerFootHour",
+      "FromUnitToBaseFunc": "x * 4.134e-4",
+      "FromBaseToUnitFunc": "x / 4.134e-4",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "lb/ft·h" ]
         }
       ]
     }
