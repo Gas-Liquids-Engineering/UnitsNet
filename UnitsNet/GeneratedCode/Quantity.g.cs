@@ -74,6 +74,7 @@ namespace UnitsNet
             { "Energy", Energy.Info },
             { "EnergyDensity", EnergyDensity.Info },
             { "EnthalpyMass", EnthalpyMass.Info },
+            { "EnthalpyMolar", EnthalpyMolar.Info },
             { "Entropy", Entropy.Info },
             { "Force", Force.Info },
             { "ForceChangeRate", ForceChangeRate.Info },
@@ -129,6 +130,7 @@ namespace UnitsNet
             { "SolidAngle", SolidAngle.Info },
             { "SpecificEnergy", SpecificEnergy.Info },
             { "SpecificEntropy", SpecificEntropy.Info },
+            { "SpecificEntropyMolar", SpecificEntropyMolar.Info },
             { "SpecificFuelConsumption", SpecificFuelConsumption.Info },
             { "SpecificVolume", SpecificVolume.Info },
             { "SpecificWeight", SpecificWeight.Info },
@@ -191,6 +193,7 @@ namespace UnitsNet
             { "Energy", QuantityType.Energy },
             { "EnergyDensity", QuantityType.EnergyDensity },
             { "EnthalpyMass", QuantityType.EnthalpyMass },
+            { "EnthalpyMolar", QuantityType.EnthalpyMolar },
             { "Entropy", QuantityType.Entropy },
             { "Force", QuantityType.Force },
             { "ForceChangeRate", QuantityType.ForceChangeRate },
@@ -246,6 +249,7 @@ namespace UnitsNet
             { "SolidAngle", QuantityType.SolidAngle },
             { "SpecificEnergy", QuantityType.SpecificEnergy },
             { "SpecificEntropy", QuantityType.SpecificEntropy },
+            { "SpecificEntropyMolar", QuantityType.SpecificEntropyMolar },
             { "SpecificFuelConsumption", QuantityType.SpecificFuelConsumption },
             { "SpecificVolume", QuantityType.SpecificVolume },
             { "SpecificWeight", QuantityType.SpecificWeight },
@@ -351,6 +355,8 @@ namespace UnitsNet
                     return EnergyDensity.From(value, EnergyDensity.BaseUnit);
                 case QuantityType.EnthalpyMass:
                     return EnthalpyMass.From(value, EnthalpyMass.BaseUnit);
+                case QuantityType.EnthalpyMolar:
+                    return EnthalpyMolar.From(value, EnthalpyMolar.BaseUnit);
                 case QuantityType.Entropy:
                     return Entropy.From(value, Entropy.BaseUnit);
                 case QuantityType.Force:
@@ -461,6 +467,8 @@ namespace UnitsNet
                     return SpecificEnergy.From(value, SpecificEnergy.BaseUnit);
                 case QuantityType.SpecificEntropy:
                     return SpecificEntropy.From(value, SpecificEntropy.BaseUnit);
+                case QuantityType.SpecificEntropyMolar:
+                    return SpecificEntropyMolar.From(value, SpecificEntropyMolar.BaseUnit);
                 case QuantityType.SpecificFuelConsumption:
                     return SpecificFuelConsumption.From(value, SpecificFuelConsumption.BaseUnit);
                 case QuantityType.SpecificVolume:
@@ -588,6 +596,8 @@ namespace UnitsNet
                     return EnergyDensity.From(value, EnergyDensity.BaseUnit);
                 case "EnthalpyMass":
                     return EnthalpyMass.From(value, EnthalpyMass.BaseUnit);
+                case "EnthalpyMolar":
+                    return EnthalpyMolar.From(value, EnthalpyMolar.BaseUnit);
                 case "Entropy":
                     return Entropy.From(value, Entropy.BaseUnit);
                 case "Force":
@@ -698,6 +708,8 @@ namespace UnitsNet
                     return SpecificEnergy.From(value, SpecificEnergy.BaseUnit);
                 case "SpecificEntropy":
                     return SpecificEntropy.From(value, SpecificEntropy.BaseUnit);
+                case "SpecificEntropyMolar":
+                    return SpecificEntropyMolar.From(value, SpecificEntropyMolar.BaseUnit);
                 case "SpecificFuelConsumption":
                     return SpecificFuelConsumption.From(value, SpecificFuelConsumption.BaseUnit);
                 case "SpecificVolume":
@@ -861,6 +873,9 @@ namespace UnitsNet
                     return true;
                 case EnthalpyMassUnit enthalpyMassUnit:
                     quantity = EnthalpyMass.From(value, enthalpyMassUnit);
+                    return true;
+                case EnthalpyMolarUnit enthalpyMolarUnit:
+                    quantity = EnthalpyMolar.From(value, enthalpyMolarUnit);
                     return true;
                 case EntropyUnit entropyUnit:
                     quantity = Entropy.From(value, entropyUnit);
@@ -1027,6 +1042,9 @@ namespace UnitsNet
                 case SpecificEntropyUnit specificEntropyUnit:
                     quantity = SpecificEntropy.From(value, specificEntropyUnit);
                     return true;
+                case SpecificEntropyMolarUnit specificEntropyMolarUnit:
+                    quantity = SpecificEntropyMolar.From(value, specificEntropyMolarUnit);
+                    return true;
                 case SpecificFuelConsumptionUnit specificFuelConsumptionUnit:
                     quantity = SpecificFuelConsumption.From(value, specificFuelConsumptionUnit);
                     return true;
@@ -1186,6 +1204,8 @@ namespace UnitsNet
                     return parser.TryParse<EnergyDensity, EnergyDensityUnit>(quantityString, formatProvider, EnergyDensity.From, out quantity);
                 case Type _ when quantityType == typeof(EnthalpyMass):
                     return parser.TryParse<EnthalpyMass, EnthalpyMassUnit>(quantityString, formatProvider, EnthalpyMass.From, out quantity);
+                case Type _ when quantityType == typeof(EnthalpyMolar):
+                    return parser.TryParse<EnthalpyMolar, EnthalpyMolarUnit>(quantityString, formatProvider, EnthalpyMolar.From, out quantity);
                 case Type _ when quantityType == typeof(Entropy):
                     return parser.TryParse<Entropy, EntropyUnit>(quantityString, formatProvider, Entropy.From, out quantity);
                 case Type _ when quantityType == typeof(Force):
@@ -1296,6 +1316,8 @@ namespace UnitsNet
                     return parser.TryParse<SpecificEnergy, SpecificEnergyUnit>(quantityString, formatProvider, SpecificEnergy.From, out quantity);
                 case Type _ when quantityType == typeof(SpecificEntropy):
                     return parser.TryParse<SpecificEntropy, SpecificEntropyUnit>(quantityString, formatProvider, SpecificEntropy.From, out quantity);
+                case Type _ when quantityType == typeof(SpecificEntropyMolar):
+                    return parser.TryParse<SpecificEntropyMolar, SpecificEntropyMolarUnit>(quantityString, formatProvider, SpecificEntropyMolar.From, out quantity);
                 case Type _ when quantityType == typeof(SpecificFuelConsumption):
                     return parser.TryParse<SpecificFuelConsumption, SpecificFuelConsumptionUnit>(quantityString, formatProvider, SpecificFuelConsumption.From, out quantity);
                 case Type _ when quantityType == typeof(SpecificVolume):

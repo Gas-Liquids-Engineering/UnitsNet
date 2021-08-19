@@ -70,6 +70,7 @@ namespace UnitsNet.Tests
             Assertion(3, EnergyUnit.WattHour, Quantity.From(3, EnergyUnit.WattHour));
             Assertion(3, EnergyDensityUnit.MegajoulesPerCubicMeter, Quantity.From(3, EnergyDensityUnit.MegajoulesPerCubicMeter));
             Assertion(3, EnthalpyMassUnit.MegajoulePerKilogram, Quantity.From(3, EnthalpyMassUnit.MegajoulePerKilogram));
+            Assertion(3, EnthalpyMolarUnit.MegajoulePerMole, Quantity.From(3, EnthalpyMolarUnit.MegajoulePerMole));
             Assertion(3, EntropyUnit.MegajoulePerKelvin, Quantity.From(3, EntropyUnit.MegajoulePerKelvin));
             Assertion(3, ForceUnit.TonneForce, Quantity.From(3, ForceUnit.TonneForce));
             Assertion(3, ForceChangeRateUnit.PoundForcePerSecond, Quantity.From(3, ForceChangeRateUnit.PoundForcePerSecond));
@@ -125,6 +126,7 @@ namespace UnitsNet.Tests
             Assertion(3, SolidAngleUnit.Steradian, Quantity.From(3, SolidAngleUnit.Steradian));
             Assertion(3, SpecificEnergyUnit.WattHourPerKilogram, Quantity.From(3, SpecificEnergyUnit.WattHourPerKilogram));
             Assertion(3, SpecificEntropyUnit.MegajoulePerKilogramKelvin, Quantity.From(3, SpecificEntropyUnit.MegajoulePerKilogramKelvin));
+            Assertion(3, SpecificEntropyMolarUnit.MegajoulePerMoleKelvin, Quantity.From(3, SpecificEntropyMolarUnit.MegajoulePerMoleKelvin));
             Assertion(3, SpecificFuelConsumptionUnit.PoundMassPerPoundForceHour, Quantity.From(3, SpecificFuelConsumptionUnit.PoundMassPerPoundForceHour));
             Assertion(3, SpecificVolumeUnit.USGallonPerPound, Quantity.From(3, SpecificVolumeUnit.USGallonPerPound));
             Assertion(3, SpecificWeightUnit.TonneForcePerCubicMillimeter, Quantity.From(3, SpecificWeightUnit.TonneForcePerCubicMillimeter));
@@ -188,6 +190,7 @@ namespace UnitsNet.Tests
             Assertion(Energy.Info, Energy.Zero);
             Assertion(EnergyDensity.Info, EnergyDensity.Zero);
             Assertion(EnthalpyMass.Info, EnthalpyMass.Zero);
+            Assertion(EnthalpyMolar.Info, EnthalpyMolar.Zero);
             Assertion(Entropy.Info, Entropy.Zero);
             Assertion(Force.Info, Force.Zero);
             Assertion(ForceChangeRate.Info, ForceChangeRate.Zero);
@@ -243,6 +246,7 @@ namespace UnitsNet.Tests
             Assertion(SolidAngle.Info, SolidAngle.Zero);
             Assertion(SpecificEnergy.Info, SpecificEnergy.Zero);
             Assertion(SpecificEntropy.Info, SpecificEntropy.Zero);
+            Assertion(SpecificEntropyMolar.Info, SpecificEntropyMolar.Zero);
             Assertion(SpecificFuelConsumption.Info, SpecificFuelConsumption.Zero);
             Assertion(SpecificVolume.Info, SpecificVolume.Zero);
             Assertion(SpecificWeight.Info, SpecificWeight.Zero);
@@ -306,6 +310,7 @@ namespace UnitsNet.Tests
             Assertion(Energy.QuantityType, Energy.Zero);
             Assertion(EnergyDensity.QuantityType, EnergyDensity.Zero);
             Assertion(EnthalpyMass.QuantityType, EnthalpyMass.Zero);
+            Assertion(EnthalpyMolar.QuantityType, EnthalpyMolar.Zero);
             Assertion(Entropy.QuantityType, Entropy.Zero);
             Assertion(Force.QuantityType, Force.Zero);
             Assertion(ForceChangeRate.QuantityType, ForceChangeRate.Zero);
@@ -361,6 +366,7 @@ namespace UnitsNet.Tests
             Assertion(SolidAngle.QuantityType, SolidAngle.Zero);
             Assertion(SpecificEnergy.QuantityType, SpecificEnergy.Zero);
             Assertion(SpecificEntropy.QuantityType, SpecificEntropy.Zero);
+            Assertion(SpecificEntropyMolar.QuantityType, SpecificEntropyMolar.Zero);
             Assertion(SpecificFuelConsumption.QuantityType, SpecificFuelConsumption.Zero);
             Assertion(SpecificVolume.QuantityType, SpecificVolume.Zero);
             Assertion(SpecificWeight.QuantityType, SpecificWeight.Zero);
@@ -424,6 +430,7 @@ namespace UnitsNet.Tests
             Assertion(Energy.BaseDimensions, Energy.Zero);
             Assertion(EnergyDensity.BaseDimensions, EnergyDensity.Zero);
             Assertion(EnthalpyMass.BaseDimensions, EnthalpyMass.Zero);
+            Assertion(EnthalpyMolar.BaseDimensions, EnthalpyMolar.Zero);
             Assertion(Entropy.BaseDimensions, Entropy.Zero);
             Assertion(Force.BaseDimensions, Force.Zero);
             Assertion(ForceChangeRate.BaseDimensions, ForceChangeRate.Zero);
@@ -479,6 +486,7 @@ namespace UnitsNet.Tests
             Assertion(SolidAngle.BaseDimensions, SolidAngle.Zero);
             Assertion(SpecificEnergy.BaseDimensions, SpecificEnergy.Zero);
             Assertion(SpecificEntropy.BaseDimensions, SpecificEntropy.Zero);
+            Assertion(SpecificEntropyMolar.BaseDimensions, SpecificEntropyMolar.Zero);
             Assertion(SpecificFuelConsumption.BaseDimensions, SpecificFuelConsumption.Zero);
             Assertion(SpecificVolume.BaseDimensions, SpecificVolume.Zero);
             Assertion(SpecificWeight.BaseDimensions, SpecificWeight.Zero);
