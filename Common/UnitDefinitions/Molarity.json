@@ -17,7 +17,7 @@
       },
       "FromUnitToBaseFunc": "x",
       "FromBaseToUnitFunc": "x",
-      "Prefixes": [],
+      "Prefixes": [ "Kilo" ],
       "Localization": [
         {
           "Culture": "en-US",

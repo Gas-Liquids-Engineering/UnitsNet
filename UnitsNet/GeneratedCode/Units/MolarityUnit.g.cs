@@ -28,6 +28,7 @@ namespace UnitsNet.Units
         Undefined = 0,
         CentimolesPerLiter,
         DecimolesPerLiter,
+        KilomolesPerCubicMeter,
         MicromolesPerLiter,
         MillimolesPerLiter,
         MolesPerCubicMeter,

@@ -1,0 +1,79 @@
+{
+  "Name": "PressureDeltaPerUnitLength",
+  "BaseUnit": "PascalDeltaPerMeter",
+  "XmlDoc": "Pressure delta per unit length is the pressure change(force per unit area) per unit of length.",
+  "BaseDimensions": {
+    "L": -1,
+    "M": 1,
+    "T": -2,
+  },
+  "Units": [
+    {
+      "SingularName": "PascalDeltaPerMeter",
+      "PluralName": "PascalsDeltaPerMeter",
+      "BaseUnits": {
+        "L": "Meter",
+        "M": "Kilogram",
+        "T": "Second",
+      },
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Prefixes": [ "Micro", "Milli", "Deca", "Hecto", "Kilo", "Mega", "Giga" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "Pad/m" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "PascalDeltaPerKilometer",
+      "PluralName": "PascalsDeltaPerKilometer",
+      "FromUnitToBaseFunc": "x*0.001",
+      "FromBaseToUnitFunc": "x/0.001",
+      "Prefixes": [ "Micro", "Milli", "Deca", "Hecto", "Kilo", "Mega", "Giga" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "Pad/km" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "PoundPerSquareInchDeltaPerFoot",
+      "PluralName": "PoundsPerSquareInchDeltaPerFoot",
+      "FromUnitToBaseFunc": "x*6894.757293168*3.28084",
+      "FromBaseToUnitFunc": "x/6894.757293168/3.28084",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "psid/ft" ]
+        }
+      ]
+    }, 
+    {
+      "SingularName": "PoundPerSquareInchDeltaPerHundredFeet",
+      "PluralName": "PoundsPerSquareInchDeltaPerHundredFeet",
+      "FromUnitToBaseFunc": "x*6894.757293168*3.28084/100",
+      "FromBaseToUnitFunc": "x/6894.757293168/3.28084*100",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "psid/100ft" ]
+        }
+      ]
+    },	
+    {
+      "SingularName": "PoundPerSquareInchDeltaPerMile",
+      "PluralName": "PoundsPerSquareInchDeltaPerMile",
+      "FromUnitToBaseFunc": "x*6894.757293168*3.28084/5280",
+      "FromBaseToUnitFunc": "x/6894.757293168/3.28084*5280",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "psid/mi" ]
+        }
+      ]
+    }	
+  ]
+}

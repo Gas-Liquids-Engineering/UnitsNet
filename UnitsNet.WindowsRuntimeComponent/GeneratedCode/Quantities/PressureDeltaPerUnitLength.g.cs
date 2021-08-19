@@ -29,15 +29,12 @@ using UnitsNet.InternalHelpers;
 namespace UnitsNet
 {
     /// <summary>
-    ///     Molar concentration, also called molarity, amount concentration or substance concentration, is a measure of the concentration of a solute in a solution, or of any chemical species, in terms of amount of substance in a given volume. 
+    ///     Pressure delta per unit length is the pressure change(force per unit area) per unit of length.
     /// </summary>
-    /// <remarks>
-    ///     https://en.wikipedia.org/wiki/Molar_concentration
-    /// </remarks>
     // Windows Runtime Component has constraints on public types: https://msdn.microsoft.com/en-us/library/br230301.aspx#Declaring types in Windows Runtime Components
     // Public structures can't have any members other than public fields, and those fields must be value types or strings.
     // Public classes must be sealed (NotInheritable in Visual Basic). If your programming model requires polymorphism, you can create a public interface and implement that interface on the classes that must be polymorphic.
-    public sealed partial class Molarity : IQuantity
+    public sealed partial class PressureDeltaPerUnitLength : IQuantity
     {
         /// <summary>
         ///     The numeric value this quantity was constructed with.
@@ -47,21 +44,21 @@ namespace UnitsNet
         /// <summary>
         ///     The unit this quantity was constructed with.
         /// </summary>
-        private readonly MolarityUnit? _unit;
+        private readonly PressureDeltaPerUnitLengthUnit? _unit;
 
-        static Molarity()
+        static PressureDeltaPerUnitLength()
         {
-            BaseDimensions = new BaseDimensions(-3, 0, 0, 0, 0, 1, 0);
-            Info = new QuantityInfo(QuantityType.Molarity, Units.Cast<Enum>().ToArray(), BaseUnit, Zero, BaseDimensions);
+            BaseDimensions = new BaseDimensions(-1, 1, -2, 0, 0, 0, 0);
+            Info = new QuantityInfo(QuantityType.PressureDeltaPerUnitLength, Units.Cast<Enum>().ToArray(), BaseUnit, Zero, BaseDimensions);
         }
 
         /// <summary>
-        ///     Creates the quantity with a value of 0 in the base unit MolesPerCubicMeter.
+        ///     Creates the quantity with a value of 0 in the base unit PascalDeltaPerMeter.
         /// </summary>
         /// <remarks>
         ///     Windows Runtime Component requires a default constructor.
         /// </remarks>
-        public Molarity()
+        public PressureDeltaPerUnitLength()
         {
             _value = 0;
             _unit = BaseUnit;
@@ -74,9 +71,9 @@ namespace UnitsNet
         /// <param name="unit">The unit representation to construct this quantity with.</param>
         /// <remarks>Value parameter cannot be named 'value' due to constraint when targeting Windows Runtime Component.</remarks>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
-        private Molarity(double value, MolarityUnit unit)
+        private PressureDeltaPerUnitLength(double value, PressureDeltaPerUnitLengthUnit unit)
         {
-            if(unit == MolarityUnit.Undefined)
+            if(unit == PressureDeltaPerUnitLengthUnit.Undefined)
               throw new ArgumentException("The quantity can not be created with an undefined unit.", nameof(unit));
 
             _value = Guard.EnsureValidNumber(value, nameof(value));
@@ -96,34 +93,34 @@ namespace UnitsNet
         public static BaseDimensions BaseDimensions { get; }
 
         /// <summary>
-        ///     The base unit of Molarity, which is MolesPerCubicMeter. All conversions go via this value.
+        ///     The base unit of PressureDeltaPerUnitLength, which is PascalDeltaPerMeter. All conversions go via this value.
         /// </summary>
-        public static MolarityUnit BaseUnit { get; } = MolarityUnit.MolesPerCubicMeter;
+        public static PressureDeltaPerUnitLengthUnit BaseUnit { get; } = PressureDeltaPerUnitLengthUnit.PascalDeltaPerMeter;
 
         /// <summary>
-        /// Represents the largest possible value of Molarity
+        /// Represents the largest possible value of PressureDeltaPerUnitLength
         /// </summary>
-        public static Molarity MaxValue { get; } = new Molarity(double.MaxValue, BaseUnit);
+        public static PressureDeltaPerUnitLength MaxValue { get; } = new PressureDeltaPerUnitLength(double.MaxValue, BaseUnit);
 
         /// <summary>
-        /// Represents the smallest possible value of Molarity
+        /// Represents the smallest possible value of PressureDeltaPerUnitLength
         /// </summary>
-        public static Molarity MinValue { get; } = new Molarity(double.MinValue, BaseUnit);
+        public static PressureDeltaPerUnitLength MinValue { get; } = new PressureDeltaPerUnitLength(double.MinValue, BaseUnit);
 
         /// <summary>
         ///     The <see cref="QuantityType" /> of this quantity.
         /// </summary>
-        public static QuantityType QuantityType { get; } = QuantityType.Molarity;
+        public static QuantityType QuantityType { get; } = QuantityType.PressureDeltaPerUnitLength;
 
         /// <summary>
-        ///     All units of measurement for the Molarity quantity.
+        ///     All units of measurement for the PressureDeltaPerUnitLength quantity.
         /// </summary>
-        public static MolarityUnit[] Units { get; } = Enum.GetValues(typeof(MolarityUnit)).Cast<MolarityUnit>().Except(new MolarityUnit[]{ MolarityUnit.Undefined }).ToArray();
+        public static PressureDeltaPerUnitLengthUnit[] Units { get; } = Enum.GetValues(typeof(PressureDeltaPerUnitLengthUnit)).Cast<PressureDeltaPerUnitLengthUnit>().Except(new PressureDeltaPerUnitLengthUnit[]{ PressureDeltaPerUnitLengthUnit.Undefined }).ToArray();
 
         /// <summary>
-        ///     Gets an instance of this quantity with a value of 0 in the base unit MolesPerCubicMeter.
+        ///     Gets an instance of this quantity with a value of 0 in the base unit PascalDeltaPerMeter.
         /// </summary>
-        public static Molarity Zero { get; } = new Molarity(0, BaseUnit);
+        public static PressureDeltaPerUnitLength Zero { get; } = new PressureDeltaPerUnitLength(0, BaseUnit);
 
         #endregion
 
@@ -140,78 +137,118 @@ namespace UnitsNet
         /// <summary>
         ///     The unit this quantity was constructed with -or- <see cref="BaseUnit" /> if default ctor was used.
         /// </summary>
-        public MolarityUnit Unit => _unit.GetValueOrDefault(BaseUnit);
+        public PressureDeltaPerUnitLengthUnit Unit => _unit.GetValueOrDefault(BaseUnit);
 
         internal QuantityInfo QuantityInfo => Info;
 
         /// <summary>
         ///     The <see cref="QuantityType" /> of this quantity.
         /// </summary>
-        public QuantityType Type => Molarity.QuantityType;
+        public QuantityType Type => PressureDeltaPerUnitLength.QuantityType;
 
         /// <summary>
         ///     The <see cref="BaseDimensions" /> of this quantity.
         /// </summary>
-        public BaseDimensions Dimensions => Molarity.BaseDimensions;
+        public BaseDimensions Dimensions => PressureDeltaPerUnitLength.BaseDimensions;
 
         #endregion
 
         #region Conversion Properties
 
         /// <summary>
-        ///     Get Molarity in CentimolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength in DecapascalsDeltaPerKilometer.
         /// </summary>
-        public double CentimolesPerLiter => As(MolarityUnit.CentimolesPerLiter);
+        public double DecapascalsDeltaPerKilometer => As(PressureDeltaPerUnitLengthUnit.DecapascalDeltaPerKilometer);
 
         /// <summary>
-        ///     Get Molarity in DecimolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength in DecapascalsDeltaPerMeter.
         /// </summary>
-        public double DecimolesPerLiter => As(MolarityUnit.DecimolesPerLiter);
+        public double DecapascalsDeltaPerMeter => As(PressureDeltaPerUnitLengthUnit.DecapascalDeltaPerMeter);
 
         /// <summary>
-        ///     Get Molarity in KilomolesPerCubicMeter.
+        ///     Get PressureDeltaPerUnitLength in GigapascalsDeltaPerKilometer.
         /// </summary>
-        public double KilomolesPerCubicMeter => As(MolarityUnit.KilomolesPerCubicMeter);
+        public double GigapascalsDeltaPerKilometer => As(PressureDeltaPerUnitLengthUnit.GigapascalDeltaPerKilometer);
 
         /// <summary>
-        ///     Get Molarity in MicromolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength in GigapascalsDeltaPerMeter.
         /// </summary>
-        public double MicromolesPerLiter => As(MolarityUnit.MicromolesPerLiter);
+        public double GigapascalsDeltaPerMeter => As(PressureDeltaPerUnitLengthUnit.GigapascalDeltaPerMeter);
 
         /// <summary>
-        ///     Get Molarity in MillimolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength in HectopascalsDeltaPerKilometer.
         /// </summary>
-        public double MillimolesPerLiter => As(MolarityUnit.MillimolesPerLiter);
+        public double HectopascalsDeltaPerKilometer => As(PressureDeltaPerUnitLengthUnit.HectopascalDeltaPerKilometer);
 
         /// <summary>
-        ///     Get Molarity in MolesPerCubicMeter.
+        ///     Get PressureDeltaPerUnitLength in HectopascalsDeltaPerMeter.
         /// </summary>
-        public double MolesPerCubicMeter => As(MolarityUnit.MolesPerCubicMeter);
+        public double HectopascalsDeltaPerMeter => As(PressureDeltaPerUnitLengthUnit.HectopascalDeltaPerMeter);
 
         /// <summary>
-        ///     Get Molarity in MolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength in KilopascalsDeltaPerKilometer.
         /// </summary>
-        public double MolesPerLiter => As(MolarityUnit.MolesPerLiter);
+        public double KilopascalsDeltaPerKilometer => As(PressureDeltaPerUnitLengthUnit.KilopascalDeltaPerKilometer);
 
         /// <summary>
-        ///     Get Molarity in NanomolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength in KilopascalsDeltaPerMeter.
         /// </summary>
-        public double NanomolesPerLiter => As(MolarityUnit.NanomolesPerLiter);
+        public double KilopascalsDeltaPerMeter => As(PressureDeltaPerUnitLengthUnit.KilopascalDeltaPerMeter);
 
         /// <summary>
-        ///     Get Molarity in PicomolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength in MegapascalsDeltaPerKilometer.
         /// </summary>
-        public double PicomolesPerLiter => As(MolarityUnit.PicomolesPerLiter);
+        public double MegapascalsDeltaPerKilometer => As(PressureDeltaPerUnitLengthUnit.MegapascalDeltaPerKilometer);
 
         /// <summary>
-        ///     Get Molarity in PoundMolesPerCubicFoot.
+        ///     Get PressureDeltaPerUnitLength in MegapascalsDeltaPerMeter.
         /// </summary>
-        public double PoundMolesPerCubicFoot => As(MolarityUnit.PoundMolesPerCubicFoot);
+        public double MegapascalsDeltaPerMeter => As(PressureDeltaPerUnitLengthUnit.MegapascalDeltaPerMeter);
 
         /// <summary>
-        ///     Get Molarity in PoundMolesPerCubicMeter.
+        ///     Get PressureDeltaPerUnitLength in MicropascalsDeltaPerKilometer.
         /// </summary>
-        public double PoundMolesPerCubicMeter => As(MolarityUnit.PoundMolesPerCubicMeter);
+        public double MicropascalsDeltaPerKilometer => As(PressureDeltaPerUnitLengthUnit.MicropascalDeltaPerKilometer);
+
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength in MicropascalsDeltaPerMeter.
+        /// </summary>
+        public double MicropascalsDeltaPerMeter => As(PressureDeltaPerUnitLengthUnit.MicropascalDeltaPerMeter);
+
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength in MillipascalsDeltaPerKilometer.
+        /// </summary>
+        public double MillipascalsDeltaPerKilometer => As(PressureDeltaPerUnitLengthUnit.MillipascalDeltaPerKilometer);
+
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength in MillipascalsDeltaPerMeter.
+        /// </summary>
+        public double MillipascalsDeltaPerMeter => As(PressureDeltaPerUnitLengthUnit.MillipascalDeltaPerMeter);
+
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength in PascalsDeltaPerKilometer.
+        /// </summary>
+        public double PascalsDeltaPerKilometer => As(PressureDeltaPerUnitLengthUnit.PascalDeltaPerKilometer);
+
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength in PascalsDeltaPerMeter.
+        /// </summary>
+        public double PascalsDeltaPerMeter => As(PressureDeltaPerUnitLengthUnit.PascalDeltaPerMeter);
+
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength in PoundsPerSquareInchDeltaPerFoot.
+        /// </summary>
+        public double PoundsPerSquareInchDeltaPerFoot => As(PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerFoot);
+
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength in PoundsPerSquareInchDeltaPerHundredFeet.
+        /// </summary>
+        public double PoundsPerSquareInchDeltaPerHundredFeet => As(PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerHundredFeet);
+
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength in PoundsPerSquareInchDeltaPerMile.
+        /// </summary>
+        public double PoundsPerSquareInchDeltaPerMile => As(PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerMile);
 
         #endregion
 
@@ -222,7 +259,7 @@ namespace UnitsNet
         /// </summary>
         /// <param name="unit">Unit to get abbreviation for.</param>
         /// <returns>Unit abbreviation string.</returns>
-        public static string GetAbbreviation(MolarityUnit unit)
+        public static string GetAbbreviation(PressureDeltaPerUnitLengthUnit unit)
         {
             return GetAbbreviation(unit, null);
         }
@@ -233,7 +270,7 @@ namespace UnitsNet
         /// <param name="unit">Unit to get abbreviation for.</param>
         /// <returns>Unit abbreviation string.</returns>
         /// <param name="cultureName">Name of culture (ex: "en-US") to use when parsing number and unit. Defaults to <see cref="GlobalConfiguration.DefaultCulture" /> if null.</param>
-        public static string GetAbbreviation(MolarityUnit unit, [CanBeNull] string cultureName)
+        public static string GetAbbreviation(PressureDeltaPerUnitLengthUnit unit, [CanBeNull] string cultureName)
         {
             IFormatProvider provider = GetFormatProviderFromCultureName(cultureName);
             return UnitAbbreviationsCache.Default.GetDefaultAbbreviation(unit, provider);
@@ -244,127 +281,207 @@ namespace UnitsNet
         #region Static Factory Methods
 
         /// <summary>
-        ///     Get Molarity from CentimolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength from DecapascalsDeltaPerKilometer.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromCentimolesPerLiter(double centimolesperliter)
+        public static PressureDeltaPerUnitLength FromDecapascalsDeltaPerKilometer(double decapascalsdeltaperkilometer)
         {
-            double value = (double) centimolesperliter;
-            return new Molarity(value, MolarityUnit.CentimolesPerLiter);
+            double value = (double) decapascalsdeltaperkilometer;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.DecapascalDeltaPerKilometer);
         }
         /// <summary>
-        ///     Get Molarity from DecimolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength from DecapascalsDeltaPerMeter.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromDecimolesPerLiter(double decimolesperliter)
+        public static PressureDeltaPerUnitLength FromDecapascalsDeltaPerMeter(double decapascalsdeltapermeter)
         {
-            double value = (double) decimolesperliter;
-            return new Molarity(value, MolarityUnit.DecimolesPerLiter);
+            double value = (double) decapascalsdeltapermeter;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.DecapascalDeltaPerMeter);
         }
         /// <summary>
-        ///     Get Molarity from KilomolesPerCubicMeter.
+        ///     Get PressureDeltaPerUnitLength from GigapascalsDeltaPerKilometer.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromKilomolesPerCubicMeter(double kilomolespercubicmeter)
+        public static PressureDeltaPerUnitLength FromGigapascalsDeltaPerKilometer(double gigapascalsdeltaperkilometer)
         {
-            double value = (double) kilomolespercubicmeter;
-            return new Molarity(value, MolarityUnit.KilomolesPerCubicMeter);
+            double value = (double) gigapascalsdeltaperkilometer;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.GigapascalDeltaPerKilometer);
         }
         /// <summary>
-        ///     Get Molarity from MicromolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength from GigapascalsDeltaPerMeter.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromMicromolesPerLiter(double micromolesperliter)
+        public static PressureDeltaPerUnitLength FromGigapascalsDeltaPerMeter(double gigapascalsdeltapermeter)
         {
-            double value = (double) micromolesperliter;
-            return new Molarity(value, MolarityUnit.MicromolesPerLiter);
+            double value = (double) gigapascalsdeltapermeter;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.GigapascalDeltaPerMeter);
         }
         /// <summary>
-        ///     Get Molarity from MillimolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength from HectopascalsDeltaPerKilometer.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromMillimolesPerLiter(double millimolesperliter)
+        public static PressureDeltaPerUnitLength FromHectopascalsDeltaPerKilometer(double hectopascalsdeltaperkilometer)
         {
-            double value = (double) millimolesperliter;
-            return new Molarity(value, MolarityUnit.MillimolesPerLiter);
+            double value = (double) hectopascalsdeltaperkilometer;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.HectopascalDeltaPerKilometer);
         }
         /// <summary>
-        ///     Get Molarity from MolesPerCubicMeter.
+        ///     Get PressureDeltaPerUnitLength from HectopascalsDeltaPerMeter.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromMolesPerCubicMeter(double molespercubicmeter)
+        public static PressureDeltaPerUnitLength FromHectopascalsDeltaPerMeter(double hectopascalsdeltapermeter)
         {
-            double value = (double) molespercubicmeter;
-            return new Molarity(value, MolarityUnit.MolesPerCubicMeter);
+            double value = (double) hectopascalsdeltapermeter;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.HectopascalDeltaPerMeter);
         }
         /// <summary>
-        ///     Get Molarity from MolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength from KilopascalsDeltaPerKilometer.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromMolesPerLiter(double molesperliter)
+        public static PressureDeltaPerUnitLength FromKilopascalsDeltaPerKilometer(double kilopascalsdeltaperkilometer)
         {
-            double value = (double) molesperliter;
-            return new Molarity(value, MolarityUnit.MolesPerLiter);
+            double value = (double) kilopascalsdeltaperkilometer;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.KilopascalDeltaPerKilometer);
         }
         /// <summary>
-        ///     Get Molarity from NanomolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength from KilopascalsDeltaPerMeter.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromNanomolesPerLiter(double nanomolesperliter)
+        public static PressureDeltaPerUnitLength FromKilopascalsDeltaPerMeter(double kilopascalsdeltapermeter)
         {
-            double value = (double) nanomolesperliter;
-            return new Molarity(value, MolarityUnit.NanomolesPerLiter);
+            double value = (double) kilopascalsdeltapermeter;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.KilopascalDeltaPerMeter);
         }
         /// <summary>
-        ///     Get Molarity from PicomolesPerLiter.
+        ///     Get PressureDeltaPerUnitLength from MegapascalsDeltaPerKilometer.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromPicomolesPerLiter(double picomolesperliter)
+        public static PressureDeltaPerUnitLength FromMegapascalsDeltaPerKilometer(double megapascalsdeltaperkilometer)
         {
-            double value = (double) picomolesperliter;
-            return new Molarity(value, MolarityUnit.PicomolesPerLiter);
+            double value = (double) megapascalsdeltaperkilometer;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.MegapascalDeltaPerKilometer);
         }
         /// <summary>
-        ///     Get Molarity from PoundMolesPerCubicFoot.
+        ///     Get PressureDeltaPerUnitLength from MegapascalsDeltaPerMeter.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromPoundMolesPerCubicFoot(double poundmolespercubicfoot)
+        public static PressureDeltaPerUnitLength FromMegapascalsDeltaPerMeter(double megapascalsdeltapermeter)
         {
-            double value = (double) poundmolespercubicfoot;
-            return new Molarity(value, MolarityUnit.PoundMolesPerCubicFoot);
+            double value = (double) megapascalsdeltapermeter;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.MegapascalDeltaPerMeter);
         }
         /// <summary>
-        ///     Get Molarity from PoundMolesPerCubicMeter.
+        ///     Get PressureDeltaPerUnitLength from MicropascalsDeltaPerKilometer.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static Molarity FromPoundMolesPerCubicMeter(double poundmolespercubicmeter)
+        public static PressureDeltaPerUnitLength FromMicropascalsDeltaPerKilometer(double micropascalsdeltaperkilometer)
         {
-            double value = (double) poundmolespercubicmeter;
-            return new Molarity(value, MolarityUnit.PoundMolesPerCubicMeter);
+            double value = (double) micropascalsdeltaperkilometer;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.MicropascalDeltaPerKilometer);
+        }
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength from MicropascalsDeltaPerMeter.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static PressureDeltaPerUnitLength FromMicropascalsDeltaPerMeter(double micropascalsdeltapermeter)
+        {
+            double value = (double) micropascalsdeltapermeter;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.MicropascalDeltaPerMeter);
+        }
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength from MillipascalsDeltaPerKilometer.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static PressureDeltaPerUnitLength FromMillipascalsDeltaPerKilometer(double millipascalsdeltaperkilometer)
+        {
+            double value = (double) millipascalsdeltaperkilometer;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.MillipascalDeltaPerKilometer);
+        }
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength from MillipascalsDeltaPerMeter.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static PressureDeltaPerUnitLength FromMillipascalsDeltaPerMeter(double millipascalsdeltapermeter)
+        {
+            double value = (double) millipascalsdeltapermeter;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.MillipascalDeltaPerMeter);
+        }
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength from PascalsDeltaPerKilometer.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static PressureDeltaPerUnitLength FromPascalsDeltaPerKilometer(double pascalsdeltaperkilometer)
+        {
+            double value = (double) pascalsdeltaperkilometer;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.PascalDeltaPerKilometer);
+        }
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength from PascalsDeltaPerMeter.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static PressureDeltaPerUnitLength FromPascalsDeltaPerMeter(double pascalsdeltapermeter)
+        {
+            double value = (double) pascalsdeltapermeter;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.PascalDeltaPerMeter);
+        }
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength from PoundsPerSquareInchDeltaPerFoot.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static PressureDeltaPerUnitLength FromPoundsPerSquareInchDeltaPerFoot(double poundspersquareinchdeltaperfoot)
+        {
+            double value = (double) poundspersquareinchdeltaperfoot;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerFoot);
+        }
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength from PoundsPerSquareInchDeltaPerHundredFeet.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static PressureDeltaPerUnitLength FromPoundsPerSquareInchDeltaPerHundredFeet(double poundspersquareinchdeltaperhundredfeet)
+        {
+            double value = (double) poundspersquareinchdeltaperhundredfeet;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerHundredFeet);
+        }
+        /// <summary>
+        ///     Get PressureDeltaPerUnitLength from PoundsPerSquareInchDeltaPerMile.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static PressureDeltaPerUnitLength FromPoundsPerSquareInchDeltaPerMile(double poundspersquareinchdeltapermile)
+        {
+            double value = (double) poundspersquareinchdeltapermile;
+            return new PressureDeltaPerUnitLength(value, PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerMile);
         }
 
         /// <summary>
-        ///     Dynamically convert from value and unit enum <see cref="MolarityUnit" /> to <see cref="Molarity" />.
+        ///     Dynamically convert from value and unit enum <see cref="PressureDeltaPerUnitLengthUnit" /> to <see cref="PressureDeltaPerUnitLength" />.
         /// </summary>
         /// <param name="value">Value to convert from.</param>
         /// <param name="fromUnit">Unit to convert from.</param>
-        /// <returns>Molarity unit value.</returns>
+        /// <returns>PressureDeltaPerUnitLength unit value.</returns>
         // Fix name conflict with parameter "value"
         [return: System.Runtime.InteropServices.WindowsRuntime.ReturnValueName("returnValue")]
-        public static Molarity From(double value, MolarityUnit fromUnit)
+        public static PressureDeltaPerUnitLength From(double value, PressureDeltaPerUnitLengthUnit fromUnit)
         {
-            return new Molarity((double)value, fromUnit);
+            return new PressureDeltaPerUnitLength((double)value, fromUnit);
         }
 
         #endregion
@@ -393,7 +510,7 @@ namespace UnitsNet
         ///     We wrap exceptions in <see cref="UnitsNetException" /> to allow you to distinguish
         ///     Units.NET exceptions from other exceptions.
         /// </exception>
-        public static Molarity Parse(string str)
+        public static PressureDeltaPerUnitLength Parse(string str)
         {
             return Parse(str, null);
         }
@@ -421,10 +538,10 @@ namespace UnitsNet
         ///     Units.NET exceptions from other exceptions.
         /// </exception>
         /// <param name="cultureName">Name of culture (ex: "en-US") to use when parsing number and unit. Defaults to <see cref="GlobalConfiguration.DefaultCulture" /> if null.</param>
-        public static Molarity Parse(string str, [CanBeNull] string cultureName)
+        public static PressureDeltaPerUnitLength Parse(string str, [CanBeNull] string cultureName)
         {
             IFormatProvider provider = GetFormatProviderFromCultureName(cultureName);
-            return QuantityParser.Default.Parse<Molarity, MolarityUnit>(
+            return QuantityParser.Default.Parse<PressureDeltaPerUnitLength, PressureDeltaPerUnitLengthUnit>(
                 str,
                 provider,
                 From);
@@ -438,7 +555,7 @@ namespace UnitsNet
         /// <example>
         ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
         /// </example>
-        public static bool TryParse([CanBeNull] string str, out Molarity result)
+        public static bool TryParse([CanBeNull] string str, out PressureDeltaPerUnitLength result)
         {
             return TryParse(str, null, out result);
         }
@@ -453,10 +570,10 @@ namespace UnitsNet
         ///     Length.Parse("5.5 m", new CultureInfo("en-US"));
         /// </example>
         /// <param name="cultureName">Name of culture (ex: "en-US") to use when parsing number and unit. Defaults to <see cref="GlobalConfiguration.DefaultCulture" /> if null.</param>
-        public static bool TryParse([CanBeNull] string str, [CanBeNull] string cultureName, out Molarity result)
+        public static bool TryParse([CanBeNull] string str, [CanBeNull] string cultureName, out PressureDeltaPerUnitLength result)
         {
             IFormatProvider provider = GetFormatProviderFromCultureName(cultureName);
-            return QuantityParser.Default.TryParse<Molarity, MolarityUnit>(
+            return QuantityParser.Default.TryParse<PressureDeltaPerUnitLength, PressureDeltaPerUnitLengthUnit>(
                 str,
                 provider,
                 From,
@@ -472,7 +589,7 @@ namespace UnitsNet
         /// </example>
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="UnitsNetException">Error parsing string.</exception>
-        public static MolarityUnit ParseUnit(string str)
+        public static PressureDeltaPerUnitLengthUnit ParseUnit(string str)
         {
             return ParseUnit(str, null);
         }
@@ -487,13 +604,13 @@ namespace UnitsNet
         /// <exception cref="ArgumentNullException">The value of 'str' cannot be null. </exception>
         /// <exception cref="UnitsNetException">Error parsing string.</exception>
         /// <param name="cultureName">Name of culture (ex: "en-US") to use when parsing number and unit. Defaults to <see cref="GlobalConfiguration.DefaultCulture" /> if null.</param>
-        public static MolarityUnit ParseUnit(string str, [CanBeNull] string cultureName)
+        public static PressureDeltaPerUnitLengthUnit ParseUnit(string str, [CanBeNull] string cultureName)
         {
             IFormatProvider provider = GetFormatProviderFromCultureName(cultureName);
-            return UnitParser.Default.Parse<MolarityUnit>(str, provider);
+            return UnitParser.Default.Parse<PressureDeltaPerUnitLengthUnit>(str, provider);
         }
 
-        public static bool TryParseUnit(string str, out MolarityUnit unit)
+        public static bool TryParseUnit(string str, out PressureDeltaPerUnitLengthUnit unit)
         {
             return TryParseUnit(str, null, out unit);
         }
@@ -508,10 +625,10 @@ namespace UnitsNet
         ///     Length.TryParseUnit("m", new CultureInfo("en-US"));
         /// </example>
         /// <param name="cultureName">Name of culture (ex: "en-US") to use when parsing number and unit. Defaults to <see cref="GlobalConfiguration.DefaultCulture" /> if null.</param>
-        public static bool TryParseUnit(string str, [CanBeNull] string cultureName, out MolarityUnit unit)
+        public static bool TryParseUnit(string str, [CanBeNull] string cultureName, out PressureDeltaPerUnitLengthUnit unit)
         {
             IFormatProvider provider = GetFormatProviderFromCultureName(cultureName);
-            return UnitParser.Default.TryParse<MolarityUnit>(str, provider, out unit);
+            return UnitParser.Default.TryParse<PressureDeltaPerUnitLengthUnit>(str, provider, out unit);
         }
 
         #endregion
@@ -521,13 +638,13 @@ namespace UnitsNet
         public int CompareTo(object obj)
         {
             if(obj is null) throw new ArgumentNullException(nameof(obj));
-            if(!(obj is Molarity objMolarity)) throw new ArgumentException("Expected type Molarity.", nameof(obj));
+            if(!(obj is PressureDeltaPerUnitLength objPressureDeltaPerUnitLength)) throw new ArgumentException("Expected type PressureDeltaPerUnitLength.", nameof(obj));
 
-            return CompareTo(objMolarity);
+            return CompareTo(objPressureDeltaPerUnitLength);
         }
 
         // Windows Runtime Component does not allow public methods/ctors with same number of parameters: https://msdn.microsoft.com/en-us/library/br230301.aspx#Overloaded methods
-        internal int CompareTo(Molarity other)
+        internal int CompareTo(PressureDeltaPerUnitLength other)
         {
             return _value.CompareTo(other.AsBaseNumericType(this.Unit));
         }
@@ -535,20 +652,20 @@ namespace UnitsNet
         [Windows.Foundation.Metadata.DefaultOverload]
         public override bool Equals(object obj)
         {
-            if(obj is null || !(obj is Molarity objMolarity))
+            if(obj is null || !(obj is PressureDeltaPerUnitLength objPressureDeltaPerUnitLength))
                 return false;
 
-            return Equals(objMolarity);
+            return Equals(objPressureDeltaPerUnitLength);
         }
 
-        public bool Equals(Molarity other)
+        public bool Equals(PressureDeltaPerUnitLength other)
         {
             return _value.Equals(other.AsBaseNumericType(this.Unit));
         }
 
         /// <summary>
         ///     <para>
-        ///     Compare equality to another Molarity within the given absolute or relative tolerance.
+        ///     Compare equality to another PressureDeltaPerUnitLength within the given absolute or relative tolerance.
         ///     </para>
         ///     <para>
         ///     Relative tolerance is defined as the maximum allowable absolute difference between this quantity's value and
@@ -586,7 +703,7 @@ namespace UnitsNet
         /// <param name="tolerance">The absolute or relative tolerance value. Must be greater than or equal to 0.</param>
         /// <param name="comparisonType">The comparison type: either relative or absolute.</param>
         /// <returns>True if the absolute difference between the two values is not greater than the specified relative or absolute tolerance.</returns>
-        public bool Equals(Molarity other, double tolerance, ComparisonType comparisonType)
+        public bool Equals(PressureDeltaPerUnitLength other, double tolerance, ComparisonType comparisonType)
         {
             if(tolerance < 0)
                 throw new ArgumentOutOfRangeException("tolerance", "Tolerance must be greater than or equal to 0.");
@@ -600,7 +717,7 @@ namespace UnitsNet
         /// <summary>
         ///     Returns the hash code for this instance.
         /// </summary>
-        /// <returns>A hash code for the current Molarity.</returns>
+        /// <returns>A hash code for the current PressureDeltaPerUnitLength.</returns>
         public override int GetHashCode()
         {
             return new { QuantityType, Value, Unit }.GetHashCode();
@@ -610,13 +727,13 @@ namespace UnitsNet
 
         #region Conversion Methods
 
-        double IQuantity.As(object unit) => As((MolarityUnit)unit);
+        double IQuantity.As(object unit) => As((PressureDeltaPerUnitLengthUnit)unit);
 
         /// <summary>
         ///     Convert to the unit representation <paramref name="unit" />.
         /// </summary>
         /// <returns>Value converted to the specified unit.</returns>
-        public double As(MolarityUnit unit)
+        public double As(PressureDeltaPerUnitLengthUnit unit)
         {
             if(Unit == unit)
                 return Convert.ToDouble(Value);
@@ -626,13 +743,13 @@ namespace UnitsNet
         }
 
         /// <summary>
-        ///     Converts this Molarity to another Molarity with the unit representation <paramref name="unit" />.
+        ///     Converts this PressureDeltaPerUnitLength to another PressureDeltaPerUnitLength with the unit representation <paramref name="unit" />.
         /// </summary>
-        /// <returns>A Molarity with the specified unit.</returns>
-        public Molarity ToUnit(MolarityUnit unit)
+        /// <returns>A PressureDeltaPerUnitLength with the specified unit.</returns>
+        public PressureDeltaPerUnitLength ToUnit(PressureDeltaPerUnitLengthUnit unit)
         {
             var convertedValue = AsBaseNumericType(unit);
-            return new Molarity(convertedValue, unit);
+            return new PressureDeltaPerUnitLength(convertedValue, unit);
         }
 
         /// <summary>
@@ -644,23 +761,31 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case MolarityUnit.CentimolesPerLiter: return (_value/1e-3) * 1e-2d;
-                case MolarityUnit.DecimolesPerLiter: return (_value/1e-3) * 1e-1d;
-                case MolarityUnit.KilomolesPerCubicMeter: return (_value) * 1e3d;
-                case MolarityUnit.MicromolesPerLiter: return (_value/1e-3) * 1e-6d;
-                case MolarityUnit.MillimolesPerLiter: return (_value/1e-3) * 1e-3d;
-                case MolarityUnit.MolesPerCubicMeter: return _value;
-                case MolarityUnit.MolesPerLiter: return _value/1e-3;
-                case MolarityUnit.NanomolesPerLiter: return (_value/1e-3) * 1e-9d;
-                case MolarityUnit.PicomolesPerLiter: return (_value/1e-3) * 1e-12d;
-                case MolarityUnit.PoundMolesPerCubicFoot: return _value*16018;
-                case MolarityUnit.PoundMolesPerCubicMeter: return _value*453.6;
+                case PressureDeltaPerUnitLengthUnit.DecapascalDeltaPerKilometer: return (_value*0.001) * 1e1d;
+                case PressureDeltaPerUnitLengthUnit.DecapascalDeltaPerMeter: return (_value) * 1e1d;
+                case PressureDeltaPerUnitLengthUnit.GigapascalDeltaPerKilometer: return (_value*0.001) * 1e9d;
+                case PressureDeltaPerUnitLengthUnit.GigapascalDeltaPerMeter: return (_value) * 1e9d;
+                case PressureDeltaPerUnitLengthUnit.HectopascalDeltaPerKilometer: return (_value*0.001) * 1e2d;
+                case PressureDeltaPerUnitLengthUnit.HectopascalDeltaPerMeter: return (_value) * 1e2d;
+                case PressureDeltaPerUnitLengthUnit.KilopascalDeltaPerKilometer: return (_value*0.001) * 1e3d;
+                case PressureDeltaPerUnitLengthUnit.KilopascalDeltaPerMeter: return (_value) * 1e3d;
+                case PressureDeltaPerUnitLengthUnit.MegapascalDeltaPerKilometer: return (_value*0.001) * 1e6d;
+                case PressureDeltaPerUnitLengthUnit.MegapascalDeltaPerMeter: return (_value) * 1e6d;
+                case PressureDeltaPerUnitLengthUnit.MicropascalDeltaPerKilometer: return (_value*0.001) * 1e-6d;
+                case PressureDeltaPerUnitLengthUnit.MicropascalDeltaPerMeter: return (_value) * 1e-6d;
+                case PressureDeltaPerUnitLengthUnit.MillipascalDeltaPerKilometer: return (_value*0.001) * 1e-3d;
+                case PressureDeltaPerUnitLengthUnit.MillipascalDeltaPerMeter: return (_value) * 1e-3d;
+                case PressureDeltaPerUnitLengthUnit.PascalDeltaPerKilometer: return _value*0.001;
+                case PressureDeltaPerUnitLengthUnit.PascalDeltaPerMeter: return _value;
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerFoot: return _value*6894.757293168*3.28084;
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerHundredFeet: return _value*6894.757293168*3.28084/100;
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerMile: return _value*6894.757293168*3.28084/5280;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
         }
 
-        private double AsBaseNumericType(MolarityUnit unit)
+        private double AsBaseNumericType(PressureDeltaPerUnitLengthUnit unit)
         {
             if(Unit == unit)
                 return _value;
@@ -669,17 +794,25 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case MolarityUnit.CentimolesPerLiter: return (baseUnitValue*1e-3) / 1e-2d;
-                case MolarityUnit.DecimolesPerLiter: return (baseUnitValue*1e-3) / 1e-1d;
-                case MolarityUnit.KilomolesPerCubicMeter: return (baseUnitValue) / 1e3d;
-                case MolarityUnit.MicromolesPerLiter: return (baseUnitValue*1e-3) / 1e-6d;
-                case MolarityUnit.MillimolesPerLiter: return (baseUnitValue*1e-3) / 1e-3d;
-                case MolarityUnit.MolesPerCubicMeter: return baseUnitValue;
-                case MolarityUnit.MolesPerLiter: return baseUnitValue*1e-3;
-                case MolarityUnit.NanomolesPerLiter: return (baseUnitValue*1e-3) / 1e-9d;
-                case MolarityUnit.PicomolesPerLiter: return (baseUnitValue*1e-3) / 1e-12d;
-                case MolarityUnit.PoundMolesPerCubicFoot: return baseUnitValue/16018;
-                case MolarityUnit.PoundMolesPerCubicMeter: return baseUnitValue/453.6;
+                case PressureDeltaPerUnitLengthUnit.DecapascalDeltaPerKilometer: return (baseUnitValue/0.001) / 1e1d;
+                case PressureDeltaPerUnitLengthUnit.DecapascalDeltaPerMeter: return (baseUnitValue) / 1e1d;
+                case PressureDeltaPerUnitLengthUnit.GigapascalDeltaPerKilometer: return (baseUnitValue/0.001) / 1e9d;
+                case PressureDeltaPerUnitLengthUnit.GigapascalDeltaPerMeter: return (baseUnitValue) / 1e9d;
+                case PressureDeltaPerUnitLengthUnit.HectopascalDeltaPerKilometer: return (baseUnitValue/0.001) / 1e2d;
+                case PressureDeltaPerUnitLengthUnit.HectopascalDeltaPerMeter: return (baseUnitValue) / 1e2d;
+                case PressureDeltaPerUnitLengthUnit.KilopascalDeltaPerKilometer: return (baseUnitValue/0.001) / 1e3d;
+                case PressureDeltaPerUnitLengthUnit.KilopascalDeltaPerMeter: return (baseUnitValue) / 1e3d;
+                case PressureDeltaPerUnitLengthUnit.MegapascalDeltaPerKilometer: return (baseUnitValue/0.001) / 1e6d;
+                case PressureDeltaPerUnitLengthUnit.MegapascalDeltaPerMeter: return (baseUnitValue) / 1e6d;
+                case PressureDeltaPerUnitLengthUnit.MicropascalDeltaPerKilometer: return (baseUnitValue/0.001) / 1e-6d;
+                case PressureDeltaPerUnitLengthUnit.MicropascalDeltaPerMeter: return (baseUnitValue) / 1e-6d;
+                case PressureDeltaPerUnitLengthUnit.MillipascalDeltaPerKilometer: return (baseUnitValue/0.001) / 1e-3d;
+                case PressureDeltaPerUnitLengthUnit.MillipascalDeltaPerMeter: return (baseUnitValue) / 1e-3d;
+                case PressureDeltaPerUnitLengthUnit.PascalDeltaPerKilometer: return baseUnitValue/0.001;
+                case PressureDeltaPerUnitLengthUnit.PascalDeltaPerMeter: return baseUnitValue;
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerFoot: return baseUnitValue/6894.757293168/3.28084;
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerHundredFeet: return baseUnitValue/6894.757293168/3.28084*100;
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerMile: return baseUnitValue/6894.757293168/3.28084*5280;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

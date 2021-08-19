@@ -52,10 +52,10 @@ namespace UnitsNet
 
             Info = new QuantityInfo<InverseTemperatureUnit>("InverseTemperature",
                 new UnitInfo<InverseTemperatureUnit>[] {
-                    new UnitInfo<InverseTemperatureUnit>(InverseTemperatureUnit.InverseDegreeCelsius, new BaseUnits(temperature: TemperatureUnit.InverseDegreeCelsius)),
-                    new UnitInfo<InverseTemperatureUnit>(InverseTemperatureUnit.InverseDegreeFahrenheit, new BaseUnits(temperature: TemperatureUnit.InverseDegreeFahrenheit)),
-                    new UnitInfo<InverseTemperatureUnit>(InverseTemperatureUnit.InverseDegreeRankine, new BaseUnits(temperature: TemperatureUnit.InverseDegreeRankine)),
-                    new UnitInfo<InverseTemperatureUnit>(InverseTemperatureUnit.InverseKelvin, new BaseUnits(temperature: TemperatureUnit.InverseKelvin)),
+                    new UnitInfo<InverseTemperatureUnit>(InverseTemperatureUnit.InverseDegreeCelsius, BaseUnits.Undefined),
+                    new UnitInfo<InverseTemperatureUnit>(InverseTemperatureUnit.InverseDegreeFahrenheit, BaseUnits.Undefined),
+                    new UnitInfo<InverseTemperatureUnit>(InverseTemperatureUnit.InverseDegreeRankine, BaseUnits.Undefined),
+                    new UnitInfo<InverseTemperatureUnit>(InverseTemperatureUnit.InverseKelvin, BaseUnits.Undefined),
                 },
                 BaseUnit, Zero, BaseDimensions, QuantityType.InverseTemperature);
         }

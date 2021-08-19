@@ -10,9 +10,6 @@
     {
       "SingularName": "InverseKelvin",
       "PluralName": "InverseKelvins",
-      "BaseUnits": {
-        "Θ": "InverseKelvin"
-      },
       "FromUnitToBaseFunc": "x",
       "FromBaseToUnitFunc": "x",
       "Localization": [
@@ -25,9 +22,6 @@
     {
       "SingularName": "InverseDegreeCelsius",
       "PluralName": "InverseDegreesCelsius",
-      "BaseUnits": {
-        "Θ": "InverseDegreeCelsius"
-      },
       "FromUnitToBaseFunc": "x * 5/9",
       "FromBaseToUnitFunc": "x / 5/9",
       "Localization": [
@@ -40,9 +34,6 @@
     {
       "SingularName": "InverseDegreeFahrenheit",
       "PluralName": "InverseDegreesFahrenheit",
-      "BaseUnits": {
-        "Θ": "InverseDegreeFahrenheit"
-      },
       "FromUnitToBaseFunc": "x * 9/5",
       "FromBaseToUnitFunc": "x / 9/5",
       "Localization": [
@@ -55,9 +46,6 @@
     {
       "SingularName": "InverseDegreeRankine",
       "PluralName": "InverseDegreesRankine",
-      "BaseUnits": {
-        "Θ": "InverseDegreeRankine"
-      },
       "FromUnitToBaseFunc": "x*9/5",
       "FromBaseToUnitFunc": "x*5/9",
       "Localization": [

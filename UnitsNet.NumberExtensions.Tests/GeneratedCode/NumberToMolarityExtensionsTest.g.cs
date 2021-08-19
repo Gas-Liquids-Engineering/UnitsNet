@@ -33,6 +33,10 @@ namespace UnitsNet.Tests
             Assert.Equal(Molarity.FromDecimolesPerLiter(2), 2.DecimolesPerLiter());
 
         [Fact]
+        public void NumberToKilomolesPerCubicMeterTest() =>
+            Assert.Equal(Molarity.FromKilomolesPerCubicMeter(2), 2.KilomolesPerCubicMeter());
+
+        [Fact]
         public void NumberToMicromolesPerLiterTest() =>
             Assert.Equal(Molarity.FromMicromolesPerLiter(2), 2.MicromolesPerLiter());
 

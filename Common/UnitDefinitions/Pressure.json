@@ -339,6 +339,18 @@
         }
       ]
     },
+	{
+      "SingularName": "MillimeterOfWaterColumn",
+      "PluralName": "MillimetersOfWaterColumn",
+      "FromUnitToBaseFunc": "x*9.80665",
+      "FromBaseToUnitFunc": "x/9.80665",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "mmH2O" ]
+        }
+      ]
+    },
     {
       "SingularName": "InchOfWaterColumn",
       "PluralName": "InchesOfWaterColumn",
@@ -347,7 +359,7 @@
       "Localization": [
         {
           "Culture": "en-US",
-          "Abbreviations": [ "wc" ]
+          "Abbreviations": [ "wc", "inH2O" ]
         }
       ]
     },

@@ -109,6 +109,7 @@ namespace UnitsNet
         PowerRatio,
         Pressure,
         PressureChangeRate,
+        PressureDeltaPerUnitLength,
         Ratio,
         RatioChangeRate,
         ReactiveEnergy,

@@ -23,20 +23,28 @@ namespace UnitsNet.Units
     // Disable missing XML comment warnings for the generated unit enums.
     #pragma warning disable 1591
 
-    public enum MolarityUnit
+    public enum PressureDeltaPerUnitLengthUnit
     {
         Undefined = 0,
-        CentimolesPerLiter,
-        DecimolesPerLiter,
-        KilomolesPerCubicMeter,
-        MicromolesPerLiter,
-        MillimolesPerLiter,
-        MolesPerCubicMeter,
-        MolesPerLiter,
-        NanomolesPerLiter,
-        PicomolesPerLiter,
-        PoundMolesPerCubicFoot,
-        PoundMolesPerCubicMeter,
+        DecapascalDeltaPerKilometer,
+        DecapascalDeltaPerMeter,
+        GigapascalDeltaPerKilometer,
+        GigapascalDeltaPerMeter,
+        HectopascalDeltaPerKilometer,
+        HectopascalDeltaPerMeter,
+        KilopascalDeltaPerKilometer,
+        KilopascalDeltaPerMeter,
+        MegapascalDeltaPerKilometer,
+        MegapascalDeltaPerMeter,
+        MicropascalDeltaPerKilometer,
+        MicropascalDeltaPerMeter,
+        MillipascalDeltaPerKilometer,
+        MillipascalDeltaPerMeter,
+        PascalDeltaPerKilometer,
+        PascalDeltaPerMeter,
+        PoundPerSquareInchDeltaPerFoot,
+        PoundPerSquareInchDeltaPerHundredFeet,
+        PoundPerSquareInchDeltaPerMile,
     }
 
     #pragma warning restore 1591

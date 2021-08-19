@@ -114,6 +114,7 @@ namespace UnitsNet.Tests
             Assertion(3, PowerRatioUnit.DecibelWatt, Quantity.From(3, PowerRatioUnit.DecibelWatt));
             Assertion(3, PressureUnit.Torr, Quantity.From(3, PressureUnit.Torr));
             Assertion(3, PressureChangeRateUnit.PoundForcePerSquareInchPerSecond, Quantity.From(3, PressureChangeRateUnit.PoundForcePerSquareInchPerSecond));
+            Assertion(3, PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerMile, Quantity.From(3, PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerMile));
             Assertion(3, RatioUnit.Percent, Quantity.From(3, RatioUnit.Percent));
             Assertion(3, RatioChangeRateUnit.PercentPerSecond, Quantity.From(3, RatioChangeRateUnit.PercentPerSecond));
             Assertion(3, ReactiveEnergyUnit.VoltampereReactiveHour, Quantity.From(3, ReactiveEnergyUnit.VoltampereReactiveHour));
@@ -235,6 +236,7 @@ namespace UnitsNet.Tests
             Assertion(PowerRatio.Info, PowerRatio.Zero);
             Assertion(Pressure.Info, Pressure.Zero);
             Assertion(PressureChangeRate.Info, PressureChangeRate.Zero);
+            Assertion(PressureDeltaPerUnitLength.Info, PressureDeltaPerUnitLength.Zero);
             Assertion(Ratio.Info, Ratio.Zero);
             Assertion(RatioChangeRate.Info, RatioChangeRate.Zero);
             Assertion(ReactiveEnergy.Info, ReactiveEnergy.Zero);
@@ -356,6 +358,7 @@ namespace UnitsNet.Tests
             Assertion(PowerRatio.QuantityType, PowerRatio.Zero);
             Assertion(Pressure.QuantityType, Pressure.Zero);
             Assertion(PressureChangeRate.QuantityType, PressureChangeRate.Zero);
+            Assertion(PressureDeltaPerUnitLength.QuantityType, PressureDeltaPerUnitLength.Zero);
             Assertion(Ratio.QuantityType, Ratio.Zero);
             Assertion(RatioChangeRate.QuantityType, RatioChangeRate.Zero);
             Assertion(ReactiveEnergy.QuantityType, ReactiveEnergy.Zero);
@@ -477,6 +480,7 @@ namespace UnitsNet.Tests
             Assertion(PowerRatio.BaseDimensions, PowerRatio.Zero);
             Assertion(Pressure.BaseDimensions, Pressure.Zero);
             Assertion(PressureChangeRate.BaseDimensions, PressureChangeRate.Zero);
+            Assertion(PressureDeltaPerUnitLength.BaseDimensions, PressureDeltaPerUnitLength.Zero);
             Assertion(Ratio.BaseDimensions, Ratio.Zero);
             Assertion(RatioChangeRate.BaseDimensions, RatioChangeRate.Zero);
             Assertion(ReactiveEnergy.BaseDimensions, ReactiveEnergy.Zero);
