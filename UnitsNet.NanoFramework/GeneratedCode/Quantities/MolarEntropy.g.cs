@@ -24,7 +24,7 @@ namespace UnitsNet
 {
     /// <inheritdoc />
     /// <summary>
-    ///     Molar entropy is amount of energy required to increase temperature of 1 mole substance by 1 Kelvin.
+    ///     Molar entropy is the amount of energy required to increase the temperature of 1 mole of a substance by 1 kelvin.
     /// </summary>
     public struct  MolarEntropy
     {
@@ -78,14 +78,59 @@ namespace UnitsNet
         #region Conversion Properties
 
         /// <summary>
+        ///     Get MolarEntropy in BtusPerPoundMoleDegreeFahrenheit.
+        /// </summary>
+        public double BtusPerPoundMoleDegreeFahrenheit => As(MolarEntropyUnit.BtuPerPoundMoleDegreeFahrenheit);
+
+        /// <summary>
+        ///     Get MolarEntropy in CaloriePerMoleKelvin.
+        /// </summary>
+        public double CaloriePerMoleKelvin => As(MolarEntropyUnit.CaloriePerMoleKelvin);
+
+        /// <summary>
+        ///     Get MolarEntropy in JoulesPerKilomoleKelvin.
+        /// </summary>
+        public double JoulesPerKilomoleKelvin => As(MolarEntropyUnit.JoulePerKilomoleKelvin);
+
+        /// <summary>
         ///     Get MolarEntropy in JoulesPerMoleKelvin.
         /// </summary>
         public double JoulesPerMoleKelvin => As(MolarEntropyUnit.JoulePerMoleKelvin);
 
         /// <summary>
+        ///     Get MolarEntropy in KilobtusPerPoundMoleDegreeFahrenheit.
+        /// </summary>
+        public double KilobtusPerPoundMoleDegreeFahrenheit => As(MolarEntropyUnit.KilobtuPerPoundMoleDegreeFahrenheit);
+
+        /// <summary>
+        ///     Get MolarEntropy in KilocaloriePerMoleKelvin.
+        /// </summary>
+        public double KilocaloriePerMoleKelvin => As(MolarEntropyUnit.KilocaloriePerMoleKelvin);
+
+        /// <summary>
+        ///     Get MolarEntropy in KilojoulesPerKilomoleKelvin.
+        /// </summary>
+        public double KilojoulesPerKilomoleKelvin => As(MolarEntropyUnit.KilojoulePerKilomoleKelvin);
+
+        /// <summary>
         ///     Get MolarEntropy in KilojoulesPerMoleKelvin.
         /// </summary>
         public double KilojoulesPerMoleKelvin => As(MolarEntropyUnit.KilojoulePerMoleKelvin);
+
+        /// <summary>
+        ///     Get MolarEntropy in MegabtusPerPoundMoleDegreeFahrenheit.
+        /// </summary>
+        public double MegabtusPerPoundMoleDegreeFahrenheit => As(MolarEntropyUnit.MegabtuPerPoundMoleDegreeFahrenheit);
+
+        /// <summary>
+        ///     Get MolarEntropy in MegacaloriePerMoleKelvin.
+        /// </summary>
+        public double MegacaloriePerMoleKelvin => As(MolarEntropyUnit.MegacaloriePerMoleKelvin);
+
+        /// <summary>
+        ///     Get MolarEntropy in MegajoulesPerKilomoleKelvin.
+        /// </summary>
+        public double MegajoulesPerKilomoleKelvin => As(MolarEntropyUnit.MegajoulePerKilomoleKelvin);
 
         /// <summary>
         ///     Get MolarEntropy in MegajoulesPerMoleKelvin.
@@ -97,16 +142,70 @@ namespace UnitsNet
         #region Static Factory Methods
 
         /// <summary>
+        ///     Get MolarEntropy from BtusPerPoundMoleDegreeFahrenheit.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static MolarEntropy FromBtusPerPoundMoleDegreeFahrenheit(double btusperpoundmoledegreefahrenheit) => new MolarEntropy(btusperpoundmoledegreefahrenheit, MolarEntropyUnit.BtuPerPoundMoleDegreeFahrenheit);
+
+        /// <summary>
+        ///     Get MolarEntropy from CaloriePerMoleKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static MolarEntropy FromCaloriePerMoleKelvin(double caloriepermolekelvin) => new MolarEntropy(caloriepermolekelvin, MolarEntropyUnit.CaloriePerMoleKelvin);
+
+        /// <summary>
+        ///     Get MolarEntropy from JoulesPerKilomoleKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static MolarEntropy FromJoulesPerKilomoleKelvin(double joulesperkilomolekelvin) => new MolarEntropy(joulesperkilomolekelvin, MolarEntropyUnit.JoulePerKilomoleKelvin);
+
+        /// <summary>
         ///     Get MolarEntropy from JoulesPerMoleKelvin.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static MolarEntropy FromJoulesPerMoleKelvin(double joulespermolekelvin) => new MolarEntropy(joulespermolekelvin, MolarEntropyUnit.JoulePerMoleKelvin);
 
         /// <summary>
+        ///     Get MolarEntropy from KilobtusPerPoundMoleDegreeFahrenheit.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static MolarEntropy FromKilobtusPerPoundMoleDegreeFahrenheit(double kilobtusperpoundmoledegreefahrenheit) => new MolarEntropy(kilobtusperpoundmoledegreefahrenheit, MolarEntropyUnit.KilobtuPerPoundMoleDegreeFahrenheit);
+
+        /// <summary>
+        ///     Get MolarEntropy from KilocaloriePerMoleKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static MolarEntropy FromKilocaloriePerMoleKelvin(double kilocaloriepermolekelvin) => new MolarEntropy(kilocaloriepermolekelvin, MolarEntropyUnit.KilocaloriePerMoleKelvin);
+
+        /// <summary>
+        ///     Get MolarEntropy from KilojoulesPerKilomoleKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static MolarEntropy FromKilojoulesPerKilomoleKelvin(double kilojoulesperkilomolekelvin) => new MolarEntropy(kilojoulesperkilomolekelvin, MolarEntropyUnit.KilojoulePerKilomoleKelvin);
+
+        /// <summary>
         ///     Get MolarEntropy from KilojoulesPerMoleKelvin.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static MolarEntropy FromKilojoulesPerMoleKelvin(double kilojoulespermolekelvin) => new MolarEntropy(kilojoulespermolekelvin, MolarEntropyUnit.KilojoulePerMoleKelvin);
+
+        /// <summary>
+        ///     Get MolarEntropy from MegabtusPerPoundMoleDegreeFahrenheit.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static MolarEntropy FromMegabtusPerPoundMoleDegreeFahrenheit(double megabtusperpoundmoledegreefahrenheit) => new MolarEntropy(megabtusperpoundmoledegreefahrenheit, MolarEntropyUnit.MegabtuPerPoundMoleDegreeFahrenheit);
+
+        /// <summary>
+        ///     Get MolarEntropy from MegacaloriePerMoleKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static MolarEntropy FromMegacaloriePerMoleKelvin(double megacaloriepermolekelvin) => new MolarEntropy(megacaloriepermolekelvin, MolarEntropyUnit.MegacaloriePerMoleKelvin);
+
+        /// <summary>
+        ///     Get MolarEntropy from MegajoulesPerKilomoleKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static MolarEntropy FromMegajoulesPerKilomoleKelvin(double megajoulesperkilomolekelvin) => new MolarEntropy(megajoulesperkilomolekelvin, MolarEntropyUnit.MegajoulePerKilomoleKelvin);
 
         /// <summary>
         ///     Get MolarEntropy from MegajoulesPerMoleKelvin.
@@ -157,8 +256,17 @@ namespace UnitsNet
         {
             switch(Unit)
             {
+                case MolarEntropyUnit.BtuPerPoundMoleDegreeFahrenheit: return _value*1055*1.8/453.6;
+                case MolarEntropyUnit.CaloriePerMoleKelvin: return _value*4.184;
+                case MolarEntropyUnit.JoulePerKilomoleKelvin: return _value*0.001;
                 case MolarEntropyUnit.JoulePerMoleKelvin: return _value;
+                case MolarEntropyUnit.KilobtuPerPoundMoleDegreeFahrenheit: return (_value*1055*1.8/453.6) * 1e3d;
+                case MolarEntropyUnit.KilocaloriePerMoleKelvin: return (_value*4.184) * 1e3d;
+                case MolarEntropyUnit.KilojoulePerKilomoleKelvin: return (_value*0.001) * 1e3d;
                 case MolarEntropyUnit.KilojoulePerMoleKelvin: return (_value) * 1e3d;
+                case MolarEntropyUnit.MegabtuPerPoundMoleDegreeFahrenheit: return (_value*1055*1.8/453.6) * 1e6d;
+                case MolarEntropyUnit.MegacaloriePerMoleKelvin: return (_value*4.184) * 1e6d;
+                case MolarEntropyUnit.MegajoulePerKilomoleKelvin: return (_value*0.001) * 1e6d;
                 case MolarEntropyUnit.MegajoulePerMoleKelvin: return (_value) * 1e6d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
@@ -174,8 +282,17 @@ namespace UnitsNet
 
             switch(unit)
             {
+                case MolarEntropyUnit.BtuPerPoundMoleDegreeFahrenheit: return baseUnitValue/1055/1.8*453.6;
+                case MolarEntropyUnit.CaloriePerMoleKelvin: return baseUnitValue/4.184;
+                case MolarEntropyUnit.JoulePerKilomoleKelvin: return baseUnitValue/0.001;
                 case MolarEntropyUnit.JoulePerMoleKelvin: return baseUnitValue;
+                case MolarEntropyUnit.KilobtuPerPoundMoleDegreeFahrenheit: return (baseUnitValue/1055/1.8*453.6) / 1e3d;
+                case MolarEntropyUnit.KilocaloriePerMoleKelvin: return (baseUnitValue/4.184) / 1e3d;
+                case MolarEntropyUnit.KilojoulePerKilomoleKelvin: return (baseUnitValue/0.001) / 1e3d;
                 case MolarEntropyUnit.KilojoulePerMoleKelvin: return (baseUnitValue) / 1e3d;
+                case MolarEntropyUnit.MegabtuPerPoundMoleDegreeFahrenheit: return (baseUnitValue/1055/1.8*453.6) / 1e6d;
+                case MolarEntropyUnit.MegacaloriePerMoleKelvin: return (baseUnitValue/4.184) / 1e6d;
+                case MolarEntropyUnit.MegajoulePerKilomoleKelvin: return (baseUnitValue/0.001) / 1e6d;
                 case MolarEntropyUnit.MegajoulePerMoleKelvin: return (baseUnitValue) / 1e6d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
