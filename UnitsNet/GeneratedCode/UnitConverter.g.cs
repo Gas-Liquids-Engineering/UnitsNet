@@ -974,6 +974,11 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<Irradiation>(IrradiationUnit.MillijoulePerSquareCentimeter, Irradiation.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Irradiation>(Irradiation.BaseUnit, IrradiationUnit.WattHourPerSquareMeter, q => q.ToUnit(IrradiationUnit.WattHourPerSquareMeter));
             unitConverter.SetConversionFunction<Irradiation>(IrradiationUnit.WattHourPerSquareMeter, Irradiation.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<JouleThomsonCoefficient>(JouleThomsonCoefficient.BaseUnit, JouleThomsonCoefficientUnit.DegreeFahrenheitPerPoundsForcePerSquareInch, q => q.ToUnit(JouleThomsonCoefficientUnit.DegreeFahrenheitPerPoundsForcePerSquareInch));
+            unitConverter.SetConversionFunction<JouleThomsonCoefficient>(JouleThomsonCoefficientUnit.DegreeFahrenheitPerPoundsForcePerSquareInch, JouleThomsonCoefficient.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<JouleThomsonCoefficient>(JouleThomsonCoefficient.BaseUnit, JouleThomsonCoefficientUnit.KelvinPerBar, q => q.ToUnit(JouleThomsonCoefficientUnit.KelvinPerBar));
+            unitConverter.SetConversionFunction<JouleThomsonCoefficient>(JouleThomsonCoefficientUnit.KelvinPerBar, JouleThomsonCoefficient.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<JouleThomsonCoefficient>(JouleThomsonCoefficient.BaseUnit, JouleThomsonCoefficient.BaseUnit, q => q);
             unitConverter.SetConversionFunction<KinematicViscosity>(KinematicViscosity.BaseUnit, KinematicViscosityUnit.Centistokes, q => q.ToUnit(KinematicViscosityUnit.Centistokes));
             unitConverter.SetConversionFunction<KinematicViscosity>(KinematicViscosityUnit.Centistokes, KinematicViscosity.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<KinematicViscosity>(KinematicViscosity.BaseUnit, KinematicViscosityUnit.Decistokes, q => q.ToUnit(KinematicViscosityUnit.Decistokes));

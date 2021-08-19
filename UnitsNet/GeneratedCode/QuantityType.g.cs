@@ -81,6 +81,7 @@ namespace UnitsNet
         InverseTemperature,
         Irradiance,
         Irradiation,
+        JouleThomsonCoefficient,
         KinematicViscosity,
         LapseRate,
         Length,

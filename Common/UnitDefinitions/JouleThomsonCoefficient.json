@@ -1,0 +1,47 @@
+{
+  "Name": "JouleThomsonCoefficient",
+  "BaseUnit": "KelvinPerKilopascal",
+  "XmlDoc": "Temperature change rate is the ratio of the temperature change to the time during which the change occurred (value of temperature changes per unit time).",
+  "BaseDimensions": {
+    "T": -1,
+    "Θ": 1
+  },
+  "Units": [
+    {
+      "SingularName": "KelvinPerKilopascal",
+      "PluralName": "KelvinsPerKilopascal",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "K/kPa" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "KelvinPerBar",
+      "PluralName": "KelvinsPerBar",
+      "FromUnitToBaseFunc": "x/100",
+      "FromBaseToUnitFunc": "x*100",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "K/bar" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "DegreeFahrenheitPerPoundsForcePerSquareInch",
+      "PluralName": "DegreesFahrenheitPerPoundsForcePerSquareInch",
+      "FromUnitToBaseFunc": "x*5/9/6.895",
+      "FromBaseToUnitFunc": "x/5*9*6.895",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "°F/psi" ]
+        }
+      ]
+    }
+  ]
+}

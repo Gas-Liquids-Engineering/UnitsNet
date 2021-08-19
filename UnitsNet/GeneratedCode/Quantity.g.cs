@@ -88,6 +88,7 @@ namespace UnitsNet
             { "InverseTemperature", InverseTemperature.Info },
             { "Irradiance", Irradiance.Info },
             { "Irradiation", Irradiation.Info },
+            { "JouleThomsonCoefficient", JouleThomsonCoefficient.Info },
             { "KinematicViscosity", KinematicViscosity.Info },
             { "LapseRate", LapseRate.Info },
             { "Length", Length.Info },
@@ -209,6 +210,7 @@ namespace UnitsNet
             { "InverseTemperature", QuantityType.InverseTemperature },
             { "Irradiance", QuantityType.Irradiance },
             { "Irradiation", QuantityType.Irradiation },
+            { "JouleThomsonCoefficient", QuantityType.JouleThomsonCoefficient },
             { "KinematicViscosity", QuantityType.KinematicViscosity },
             { "LapseRate", QuantityType.LapseRate },
             { "Length", QuantityType.Length },
@@ -387,6 +389,8 @@ namespace UnitsNet
                     return Irradiance.From(value, Irradiance.BaseUnit);
                 case QuantityType.Irradiation:
                     return Irradiation.From(value, Irradiation.BaseUnit);
+                case QuantityType.JouleThomsonCoefficient:
+                    return JouleThomsonCoefficient.From(value, JouleThomsonCoefficient.BaseUnit);
                 case QuantityType.KinematicViscosity:
                     return KinematicViscosity.From(value, KinematicViscosity.BaseUnit);
                 case QuantityType.LapseRate:
@@ -632,6 +636,8 @@ namespace UnitsNet
                     return Irradiance.From(value, Irradiance.BaseUnit);
                 case "Irradiation":
                     return Irradiation.From(value, Irradiation.BaseUnit);
+                case "JouleThomsonCoefficient":
+                    return JouleThomsonCoefficient.From(value, JouleThomsonCoefficient.BaseUnit);
                 case "KinematicViscosity":
                     return KinematicViscosity.From(value, KinematicViscosity.BaseUnit);
                 case "LapseRate":
@@ -927,6 +933,9 @@ namespace UnitsNet
                     return true;
                 case IrradiationUnit irradiationUnit:
                     quantity = Irradiation.From(value, irradiationUnit);
+                    return true;
+                case JouleThomsonCoefficientUnit jouleThomsonCoefficientUnit:
+                    quantity = JouleThomsonCoefficient.From(value, jouleThomsonCoefficientUnit);
                     return true;
                 case KinematicViscosityUnit kinematicViscosityUnit:
                     quantity = KinematicViscosity.From(value, kinematicViscosityUnit);
@@ -1250,6 +1259,8 @@ namespace UnitsNet
                     return parser.TryParse<Irradiance, IrradianceUnit>(quantityString, formatProvider, Irradiance.From, out quantity);
                 case Type _ when quantityType == typeof(Irradiation):
                     return parser.TryParse<Irradiation, IrradiationUnit>(quantityString, formatProvider, Irradiation.From, out quantity);
+                case Type _ when quantityType == typeof(JouleThomsonCoefficient):
+                    return parser.TryParse<JouleThomsonCoefficient, JouleThomsonCoefficientUnit>(quantityString, formatProvider, JouleThomsonCoefficient.From, out quantity);
                 case Type _ when quantityType == typeof(KinematicViscosity):
                     return parser.TryParse<KinematicViscosity, KinematicViscosityUnit>(quantityString, formatProvider, KinematicViscosity.From, out quantity);
                 case Type _ when quantityType == typeof(LapseRate):

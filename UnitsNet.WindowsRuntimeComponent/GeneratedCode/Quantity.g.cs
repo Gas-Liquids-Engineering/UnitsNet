@@ -191,6 +191,9 @@ namespace UnitsNet
                 case IrradiationUnit irradiationUnit:
                     quantity = Irradiation.From(value, irradiationUnit);
                     return true;
+                case JouleThomsonCoefficientUnit jouleThomsonCoefficientUnit:
+                    quantity = JouleThomsonCoefficient.From(value, jouleThomsonCoefficientUnit);
+                    return true;
                 case KinematicViscosityUnit kinematicViscosityUnit:
                     quantity = KinematicViscosity.From(value, kinematicViscosityUnit);
                     return true;
@@ -585,6 +588,9 @@ namespace UnitsNet
 
             if (quantityType == typeof(Irradiation))
                 return parser.TryParse<Irradiation, IrradiationUnit>(quantityString, formatProvider, Irradiation.From, out quantity);
+
+            if (quantityType == typeof(JouleThomsonCoefficient))
+                return parser.TryParse<JouleThomsonCoefficient, JouleThomsonCoefficientUnit>(quantityString, formatProvider, JouleThomsonCoefficient.From, out quantity);
 
             if (quantityType == typeof(KinematicViscosity))
                 return parser.TryParse<KinematicViscosity, KinematicViscosityUnit>(quantityString, formatProvider, KinematicViscosity.From, out quantity);
