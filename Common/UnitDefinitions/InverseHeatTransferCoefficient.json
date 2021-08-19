@@ -1,0 +1,85 @@
+{
+  "Name": "InverseHeatTransferCoefficient",
+  "BaseUnit": "SquareMeterKelvinPerWatt",
+  "XmlDoc": "The (inverse) heat transfer coefficient or film coefficient, or film effectiveness, in thermodynamics and in mechanics is the proportionality constant between the heat flux and the thermodynamic driving force for the flow of heat (i.e., the temperature difference, ΔT)",
+  "BaseDimensions": {
+    "M": -1,
+    "T": 3,
+    "Θ": 1
+  },
+  "Units": [
+    {
+      "SingularName": "SquareMeterKelvinPerWatt",
+      "PluralName": "SquareMetersKelvinPerWatt",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "m²·K/W" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "SquareMeterCelsiusPerWatt",
+      "PluralName": "SquareMetersCelsiusPerWatt",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "m²·°C/W" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "SquareFootHourFahrenheitPerBtu",
+      "PluralName": "SquareFootHourFahrenheitsPerBtu",
+      "FromUnitToBaseFunc": "x*(0.3048*0.3048*5/9*3600/1055)",
+      "FromBaseToUnitFunc": "x/(0.3048*0.3048*5/9*3600/1055)",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "ft²·hr·°F/Btu" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "SquareCentimeterSecondKelvinPerCalorie",
+      "PluralName": "SquareCentimeterSecondKelvinsPerCalorie",
+      "FromUnitToBaseFunc": "x*(1/4184)",
+      "FromBaseToUnitFunc": "x/(1/4184)",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "cm²·s·K/cal" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "SquareCentimeterKelvinPerWatt",
+      "PluralName": "SquareCentimeterKelvinsPerWatt",
+      "FromUnitToBaseFunc": "x/10000",
+      "FromBaseToUnitFunc": "x*10000",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "cm²·K/W" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "SquareMeterHourKelvinPerKilocalorie",
+      "PluralName": "SquareMeterHourKelvinsPerKilocalorie",
+      "FromUnitToBaseFunc": "x * (3600/4184)",
+      "FromBaseToUnitFunc": "x / (3600/4184)",
+	  "Prefixes": [  ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "m²·h·K/kcal" ]
+        }
+      ]
+    }
+  ]
+}

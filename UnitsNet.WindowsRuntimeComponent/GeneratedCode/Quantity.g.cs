@@ -182,6 +182,9 @@ namespace UnitsNet
                 case InformationUnit informationUnit:
                     quantity = Information.From(value, informationUnit);
                     return true;
+                case InverseHeatTransferCoefficientUnit inverseHeatTransferCoefficientUnit:
+                    quantity = InverseHeatTransferCoefficient.From(value, inverseHeatTransferCoefficientUnit);
+                    return true;
                 case InverseTemperatureUnit inverseTemperatureUnit:
                     quantity = InverseTemperature.From(value, inverseTemperatureUnit);
                     return true;
@@ -582,6 +585,9 @@ namespace UnitsNet
 
             if (quantityType == typeof(Information))
                 return parser.TryParse<Information, InformationUnit>(quantityString, formatProvider, Information.From, out quantity);
+
+            if (quantityType == typeof(InverseHeatTransferCoefficient))
+                return parser.TryParse<InverseHeatTransferCoefficient, InverseHeatTransferCoefficientUnit>(quantityString, formatProvider, InverseHeatTransferCoefficient.From, out quantity);
 
             if (quantityType == typeof(InverseTemperature))
                 return parser.TryParse<InverseTemperature, InverseTemperatureUnit>(quantityString, formatProvider, InverseTemperature.From, out quantity);

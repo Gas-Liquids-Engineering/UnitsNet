@@ -76,6 +76,7 @@ namespace UnitsNet
         HeatTransferCoefficient,
         Illuminance,
         Information,
+        InverseHeatTransferCoefficient,
         InverseTemperature,
         Irradiance,
         Irradiation,

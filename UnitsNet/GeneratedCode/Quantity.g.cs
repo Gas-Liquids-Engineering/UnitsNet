@@ -85,6 +85,7 @@ namespace UnitsNet
             { "HeatTransferCoefficient", HeatTransferCoefficient.Info },
             { "Illuminance", Illuminance.Info },
             { "Information", Information.Info },
+            { "InverseHeatTransferCoefficient", InverseHeatTransferCoefficient.Info },
             { "InverseTemperature", InverseTemperature.Info },
             { "Irradiance", Irradiance.Info },
             { "Irradiation", Irradiation.Info },
@@ -208,6 +209,7 @@ namespace UnitsNet
             { "HeatTransferCoefficient", QuantityType.HeatTransferCoefficient },
             { "Illuminance", QuantityType.Illuminance },
             { "Information", QuantityType.Information },
+            { "InverseHeatTransferCoefficient", QuantityType.InverseHeatTransferCoefficient },
             { "InverseTemperature", QuantityType.InverseTemperature },
             { "Irradiance", QuantityType.Irradiance },
             { "Irradiation", QuantityType.Irradiation },
@@ -385,6 +387,8 @@ namespace UnitsNet
                     return Illuminance.From(value, Illuminance.BaseUnit);
                 case QuantityType.Information:
                     return Information.From(value, Information.BaseUnit);
+                case QuantityType.InverseHeatTransferCoefficient:
+                    return InverseHeatTransferCoefficient.From(value, InverseHeatTransferCoefficient.BaseUnit);
                 case QuantityType.InverseTemperature:
                     return InverseTemperature.From(value, InverseTemperature.BaseUnit);
                 case QuantityType.Irradiance:
@@ -634,6 +638,8 @@ namespace UnitsNet
                     return Illuminance.From(value, Illuminance.BaseUnit);
                 case "Information":
                     return Information.From(value, Information.BaseUnit);
+                case "InverseHeatTransferCoefficient":
+                    return InverseHeatTransferCoefficient.From(value, InverseHeatTransferCoefficient.BaseUnit);
                 case "InverseTemperature":
                     return InverseTemperature.From(value, InverseTemperature.BaseUnit);
                 case "Irradiance":
@@ -930,6 +936,9 @@ namespace UnitsNet
                     return true;
                 case InformationUnit informationUnit:
                     quantity = Information.From(value, informationUnit);
+                    return true;
+                case InverseHeatTransferCoefficientUnit inverseHeatTransferCoefficientUnit:
+                    quantity = InverseHeatTransferCoefficient.From(value, inverseHeatTransferCoefficientUnit);
                     return true;
                 case InverseTemperatureUnit inverseTemperatureUnit:
                     quantity = InverseTemperature.From(value, inverseTemperatureUnit);
@@ -1262,6 +1271,8 @@ namespace UnitsNet
                     return parser.TryParse<Illuminance, IlluminanceUnit>(quantityString, formatProvider, Illuminance.From, out quantity);
                 case Type _ when quantityType == typeof(Information):
                     return parser.TryParse<Information, InformationUnit>(quantityString, formatProvider, Information.From, out quantity);
+                case Type _ when quantityType == typeof(InverseHeatTransferCoefficient):
+                    return parser.TryParse<InverseHeatTransferCoefficient, InverseHeatTransferCoefficientUnit>(quantityString, formatProvider, InverseHeatTransferCoefficient.From, out quantity);
                 case Type _ when quantityType == typeof(InverseTemperature):
                     return parser.TryParse<InverseTemperature, InverseTemperatureUnit>(quantityString, formatProvider, InverseTemperature.From, out quantity);
                 case Type _ when quantityType == typeof(Irradiance):
