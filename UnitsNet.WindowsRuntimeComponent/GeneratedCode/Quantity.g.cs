@@ -359,6 +359,9 @@ namespace UnitsNet
                 case ThermalResistanceUnit thermalResistanceUnit:
                     quantity = ThermalResistance.From(value, thermalResistanceUnit);
                     return true;
+                case TimeUnit timeUnit:
+                    quantity = Time.From(value, timeUnit);
+                    return true;
                 case TorqueUnit torqueUnit:
                     quantity = Torque.From(value, torqueUnit);
                     return true;
@@ -756,6 +759,9 @@ namespace UnitsNet
 
             if (quantityType == typeof(ThermalResistance))
                 return parser.TryParse<ThermalResistance, ThermalResistanceUnit>(quantityString, formatProvider, ThermalResistance.From, out quantity);
+
+            if (quantityType == typeof(Time))
+                return parser.TryParse<Time, TimeUnit>(quantityString, formatProvider, Time.From, out quantity);
 
             if (quantityType == typeof(Torque))
                 return parser.TryParse<Torque, TorqueUnit>(quantityString, formatProvider, Torque.From, out quantity);

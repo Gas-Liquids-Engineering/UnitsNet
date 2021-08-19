@@ -214,6 +214,8 @@ Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "ThermalConductivity", "Ther
 EndProject
 Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "ThermalResistance", "ThermalResistance\ThermalResistance.nfproj", "{c69bdd4d-3ebd-4b8e-cffb-650903da3872}"
 EndProject
+Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "Time", "Time\Time.nfproj", "{7634b933-59cf-337a-3065-3b66a658983d}"
+EndProject
 Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "Torque", "Torque\Torque.nfproj", "{3b6bbc8a-1b22-deff-2980-53b77b6f3e5f}"
 EndProject
 Project("{d608a2b1-6ead-4383-a205-ad1ce69d9ef7}") = "TorquePerLength", "TorquePerLength\TorquePerLength.nfproj", "{c27e1919-64f1-ce81-c6d9-b46ced745a12}"
@@ -876,6 +878,12 @@ Global
 {c69bdd4d-3ebd-4b8e-cffb-650903da3872}.Release|Any CPU.ActiveCfg = Release|Any CPU
 {c69bdd4d-3ebd-4b8e-cffb-650903da3872}.Release|Any CPU.Build.0 = Release|Any CPU
 {c69bdd4d-3ebd-4b8e-cffb-650903da3872}.Release|Any CPU.Deploy.0 = Release|Any CPU
+{7634b933-59cf-337a-3065-3b66a658983d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{7634b933-59cf-337a-3065-3b66a658983d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{7634b933-59cf-337a-3065-3b66a658983d}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+{7634b933-59cf-337a-3065-3b66a658983d}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{7634b933-59cf-337a-3065-3b66a658983d}.Release|Any CPU.Build.0 = Release|Any CPU
+{7634b933-59cf-337a-3065-3b66a658983d}.Release|Any CPU.Deploy.0 = Release|Any CPU
 {3b6bbc8a-1b22-deff-2980-53b77b6f3e5f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 {3b6bbc8a-1b22-deff-2980-53b77b6f3e5f}.Debug|Any CPU.Build.0 = Debug|Any CPU
 {3b6bbc8a-1b22-deff-2980-53b77b6f3e5f}.Debug|Any CPU.Deploy.0 = Debug|Any CPU

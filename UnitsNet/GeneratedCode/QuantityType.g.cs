@@ -137,6 +137,7 @@ namespace UnitsNet
         TemperatureDelta,
         ThermalConductivity,
         ThermalResistance,
+        Time,
         Torque,
         TorquePerLength,
         Turbidity,

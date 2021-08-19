@@ -144,6 +144,7 @@ namespace UnitsNet
             { "TemperatureDelta", TemperatureDelta.Info },
             { "ThermalConductivity", ThermalConductivity.Info },
             { "ThermalResistance", ThermalResistance.Info },
+            { "Time", Time.Info },
             { "Torque", Torque.Info },
             { "TorquePerLength", TorquePerLength.Info },
             { "Turbidity", Turbidity.Info },
@@ -266,6 +267,7 @@ namespace UnitsNet
             { "TemperatureDelta", QuantityType.TemperatureDelta },
             { "ThermalConductivity", QuantityType.ThermalConductivity },
             { "ThermalResistance", QuantityType.ThermalResistance },
+            { "Time", QuantityType.Time },
             { "Torque", QuantityType.Torque },
             { "TorquePerLength", QuantityType.TorquePerLength },
             { "Turbidity", QuantityType.Turbidity },
@@ -501,6 +503,8 @@ namespace UnitsNet
                     return ThermalConductivity.From(value, ThermalConductivity.BaseUnit);
                 case QuantityType.ThermalResistance:
                     return ThermalResistance.From(value, ThermalResistance.BaseUnit);
+                case QuantityType.Time:
+                    return Time.From(value, Time.BaseUnit);
                 case QuantityType.Torque:
                     return Torque.From(value, Torque.BaseUnit);
                 case QuantityType.TorquePerLength:
@@ -748,6 +752,8 @@ namespace UnitsNet
                     return ThermalConductivity.From(value, ThermalConductivity.BaseUnit);
                 case "ThermalResistance":
                     return ThermalResistance.From(value, ThermalResistance.BaseUnit);
+                case "Time":
+                    return Time.From(value, Time.BaseUnit);
                 case "Torque":
                     return Torque.From(value, Torque.BaseUnit);
                 case "TorquePerLength":
@@ -1102,6 +1108,9 @@ namespace UnitsNet
                 case ThermalResistanceUnit thermalResistanceUnit:
                     quantity = ThermalResistance.From(value, thermalResistanceUnit);
                     return true;
+                case TimeUnit timeUnit:
+                    quantity = Time.From(value, timeUnit);
+                    return true;
                 case TorqueUnit torqueUnit:
                     quantity = Torque.From(value, torqueUnit);
                     return true;
@@ -1371,6 +1380,8 @@ namespace UnitsNet
                     return parser.TryParse<ThermalConductivity, ThermalConductivityUnit>(quantityString, formatProvider, ThermalConductivity.From, out quantity);
                 case Type _ when quantityType == typeof(ThermalResistance):
                     return parser.TryParse<ThermalResistance, ThermalResistanceUnit>(quantityString, formatProvider, ThermalResistance.From, out quantity);
+                case Type _ when quantityType == typeof(Time):
+                    return parser.TryParse<Time, TimeUnit>(quantityString, formatProvider, Time.From, out quantity);
                 case Type _ when quantityType == typeof(Torque):
                     return parser.TryParse<Torque, TorqueUnit>(quantityString, formatProvider, Torque.From, out quantity);
                 case Type _ when quantityType == typeof(TorquePerLength):

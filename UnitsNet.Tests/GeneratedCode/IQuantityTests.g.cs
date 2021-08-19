@@ -140,6 +140,7 @@ namespace UnitsNet.Tests
             Assertion(3, TemperatureDeltaUnit.MillidegreeCelsius, Quantity.From(3, TemperatureDeltaUnit.MillidegreeCelsius));
             Assertion(3, ThermalConductivityUnit.WattPerMeterKelvin, Quantity.From(3, ThermalConductivityUnit.WattPerMeterKelvin));
             Assertion(3, ThermalResistanceUnit.SquareMeterKelvinPerKilowatt, Quantity.From(3, ThermalResistanceUnit.SquareMeterKelvinPerKilowatt));
+            Assertion(3, TimeUnit.Second, Quantity.From(3, TimeUnit.Second));
             Assertion(3, TorqueUnit.TonneForceMillimeter, Quantity.From(3, TorqueUnit.TonneForceMillimeter));
             Assertion(3, TorquePerLengthUnit.TonneForceMillimeterPerMeter, Quantity.From(3, TorquePerLengthUnit.TonneForceMillimeterPerMeter));
             Assertion(3, TurbidityUnit.NTU, Quantity.From(3, TurbidityUnit.NTU));
@@ -263,6 +264,7 @@ namespace UnitsNet.Tests
             Assertion(TemperatureDelta.Info, TemperatureDelta.Zero);
             Assertion(ThermalConductivity.Info, ThermalConductivity.Zero);
             Assertion(ThermalResistance.Info, ThermalResistance.Zero);
+            Assertion(Time.Info, Time.Zero);
             Assertion(Torque.Info, Torque.Zero);
             Assertion(TorquePerLength.Info, TorquePerLength.Zero);
             Assertion(Turbidity.Info, Turbidity.Zero);
@@ -386,6 +388,7 @@ namespace UnitsNet.Tests
             Assertion(TemperatureDelta.QuantityType, TemperatureDelta.Zero);
             Assertion(ThermalConductivity.QuantityType, ThermalConductivity.Zero);
             Assertion(ThermalResistance.QuantityType, ThermalResistance.Zero);
+            Assertion(Time.QuantityType, Time.Zero);
             Assertion(Torque.QuantityType, Torque.Zero);
             Assertion(TorquePerLength.QuantityType, TorquePerLength.Zero);
             Assertion(Turbidity.QuantityType, Turbidity.Zero);
@@ -509,6 +512,7 @@ namespace UnitsNet.Tests
             Assertion(TemperatureDelta.BaseDimensions, TemperatureDelta.Zero);
             Assertion(ThermalConductivity.BaseDimensions, ThermalConductivity.Zero);
             Assertion(ThermalResistance.BaseDimensions, ThermalResistance.Zero);
+            Assertion(Time.BaseDimensions, Time.Zero);
             Assertion(Torque.BaseDimensions, Torque.Zero);
             Assertion(TorquePerLength.BaseDimensions, TorquePerLength.Zero);
             Assertion(Turbidity.BaseDimensions, Turbidity.Zero);
