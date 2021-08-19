@@ -31,6 +31,7 @@ namespace UnitsNet.Units
         SquareFootHourFahrenheitPerBtu,
         SquareMeterCelsiusPerWatt,
         SquareMeterHourKelvinPerKilocalorie,
+        SquareMeterKelvinPerKilowatt,
         SquareMeterKelvinPerWatt,
     }
 

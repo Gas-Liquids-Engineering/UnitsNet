@@ -45,6 +45,10 @@ namespace UnitsNet.Tests
             Assert.Equal(InverseHeatTransferCoefficient.FromSquareMeterHourKelvinsPerKilocalorie(2), 2.SquareMeterHourKelvinsPerKilocalorie());
 
         [Fact]
+        public void NumberToSquareMetersKelvinPerKilowattTest() =>
+            Assert.Equal(InverseHeatTransferCoefficient.FromSquareMetersKelvinPerKilowatt(2), 2.SquareMetersKelvinPerKilowatt());
+
+        [Fact]
         public void NumberToSquareMetersKelvinPerWattTest() =>
             Assert.Equal(InverseHeatTransferCoefficient.FromSquareMetersKelvinPerWatt(2), 2.SquareMetersKelvinPerWatt());
 

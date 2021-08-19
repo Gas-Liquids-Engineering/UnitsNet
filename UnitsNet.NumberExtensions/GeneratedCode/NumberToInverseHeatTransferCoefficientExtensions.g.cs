@@ -48,6 +48,10 @@ namespace UnitsNet.NumberExtensions.NumberToInverseHeatTransferCoefficient
         public static InverseHeatTransferCoefficient SquareMeterHourKelvinsPerKilocalorie<T>(this T value) =>
             InverseHeatTransferCoefficient.FromSquareMeterHourKelvinsPerKilocalorie(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="InverseHeatTransferCoefficient.FromSquareMetersKelvinPerKilowatt(UnitsNet.QuantityValue)" />
+        public static InverseHeatTransferCoefficient SquareMetersKelvinPerKilowatt<T>(this T value) =>
+            InverseHeatTransferCoefficient.FromSquareMetersKelvinPerKilowatt(Convert.ToDouble(value));
+
         /// <inheritdoc cref="InverseHeatTransferCoefficient.FromSquareMetersKelvinPerWatt(UnitsNet.QuantityValue)" />
         public static InverseHeatTransferCoefficient SquareMetersKelvinPerWatt<T>(this T value) =>
             InverseHeatTransferCoefficient.FromSquareMetersKelvinPerWatt(Convert.ToDouble(value));

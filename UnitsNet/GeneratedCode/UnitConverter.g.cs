@@ -935,6 +935,8 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<InverseHeatTransferCoefficient>(InverseHeatTransferCoefficientUnit.SquareMeterCelsiusPerWatt, InverseHeatTransferCoefficient.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<InverseHeatTransferCoefficient>(InverseHeatTransferCoefficient.BaseUnit, InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie, q => q.ToUnit(InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie));
             unitConverter.SetConversionFunction<InverseHeatTransferCoefficient>(InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie, InverseHeatTransferCoefficient.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<InverseHeatTransferCoefficient>(InverseHeatTransferCoefficient.BaseUnit, InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerKilowatt, q => q.ToUnit(InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerKilowatt));
+            unitConverter.SetConversionFunction<InverseHeatTransferCoefficient>(InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerKilowatt, InverseHeatTransferCoefficient.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<InverseHeatTransferCoefficient>(InverseHeatTransferCoefficient.BaseUnit, InverseHeatTransferCoefficient.BaseUnit, q => q);
             unitConverter.SetConversionFunction<InverseTemperature>(InverseTemperature.BaseUnit, InverseTemperatureUnit.InverseDegreeCelsius, q => q.ToUnit(InverseTemperatureUnit.InverseDegreeCelsius));
             unitConverter.SetConversionFunction<InverseTemperature>(InverseTemperatureUnit.InverseDegreeCelsius, InverseTemperature.BaseUnit, q => q.ToBaseUnit());
