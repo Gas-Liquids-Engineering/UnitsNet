@@ -28,6 +28,12 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double SquareFeetPerSecondInOneSquareMeterPerSecond => 10.7639;
 
+        protected override double SquareFeetPerHourInOneSquareMeterPerSecond => throw new NotImplementedException(); //TODO
+
+        protected override double SquareInchesPerSecondInOneSquareMeterPerSecond => throw new NotImplementedException();
+
+        protected override double SquareMetersPerHourInOneSquareMeterPerSecond => throw new NotImplementedException();
+
         [Fact]
         public static void DurationTimesKinematicViscosityEqualsArea()
         {

@@ -35,6 +35,28 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double DegreesPerMinuteInOneRadianPerSecond => 3437.74677;
 
+        protected override double CentiradiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException(); //TODO
+
+        protected override double DeciradiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException();
+
+        protected override double DegreesPerHourInOneRadianPerSecond => throw new NotImplementedException();
+
+        protected override double MicrodegreesPerHourInOneRadianPerSecond => throw new NotImplementedException();
+
+        protected override double MicroradiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException();
+
+        protected override double MillidegreesPerHourInOneRadianPerSecond => throw new NotImplementedException();
+
+        protected override double MilliradiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException();
+
+        protected override double NanodegreesPerHourInOneRadianPerSecond => throw new NotImplementedException();
+
+        protected override double NanoradiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException();
+
+        protected override double RadiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException();
+
+        protected override double RevolutionsPerHourInOneRadianPerSecond => throw new NotImplementedException();
+
         [Fact]
         public void DurationTimesRotationalSpeedEqualsAngle()
         {

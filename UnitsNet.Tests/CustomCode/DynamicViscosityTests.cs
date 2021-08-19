@@ -21,6 +21,10 @@ namespace UnitsNet.Tests.CustomCode
         protected override double PoundsForceSecondPerSquareInchInOneNewtonSecondPerMeterSquared => 1.4503773773020922e-4;
         protected override double PoundsForceSecondPerSquareFootInOneNewtonSecondPerMeterSquared => 2.0885434233150127e-2;
 
+        protected override double MicropoiseInOneNewtonSecondPerMeterSquared => throw new System.NotImplementedException(); //TODO: implement missing
+
+        protected override double PoundsPerFootHourInOneNewtonSecondPerMeterSquared => throw new System.NotImplementedException();
+
         [Fact]
         public static void DynamicViscosityDividedByDensityEqualsKinematicViscosity()
         {
