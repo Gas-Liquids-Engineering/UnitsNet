@@ -927,6 +927,13 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<Information>(InformationUnit.Terabit, Information.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Information>(Information.BaseUnit, InformationUnit.Terabyte, q => q.ToUnit(InformationUnit.Terabyte));
             unitConverter.SetConversionFunction<Information>(InformationUnit.Terabyte, Information.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<InverseTemperature>(InverseTemperature.BaseUnit, InverseTemperatureUnit.InverseDegreeCelsius, q => q.ToUnit(InverseTemperatureUnit.InverseDegreeCelsius));
+            unitConverter.SetConversionFunction<InverseTemperature>(InverseTemperatureUnit.InverseDegreeCelsius, InverseTemperature.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<InverseTemperature>(InverseTemperature.BaseUnit, InverseTemperatureUnit.InverseDegreeFahrenheit, q => q.ToUnit(InverseTemperatureUnit.InverseDegreeFahrenheit));
+            unitConverter.SetConversionFunction<InverseTemperature>(InverseTemperatureUnit.InverseDegreeFahrenheit, InverseTemperature.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<InverseTemperature>(InverseTemperature.BaseUnit, InverseTemperatureUnit.InverseDegreeRankine, q => q.ToUnit(InverseTemperatureUnit.InverseDegreeRankine));
+            unitConverter.SetConversionFunction<InverseTemperature>(InverseTemperatureUnit.InverseDegreeRankine, InverseTemperature.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<InverseTemperature>(InverseTemperature.BaseUnit, InverseTemperature.BaseUnit, q => q);
             unitConverter.SetConversionFunction<Irradiance>(Irradiance.BaseUnit, IrradianceUnit.KilowattPerSquareCentimeter, q => q.ToUnit(IrradianceUnit.KilowattPerSquareCentimeter));
             unitConverter.SetConversionFunction<Irradiance>(IrradianceUnit.KilowattPerSquareCentimeter, Irradiance.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Irradiance>(Irradiance.BaseUnit, IrradianceUnit.KilowattPerSquareMeter, q => q.ToUnit(IrradianceUnit.KilowattPerSquareMeter));

@@ -78,6 +78,7 @@ namespace UnitsNet
         HeatTransferCoefficient,
         Illuminance,
         Information,
+        InverseTemperature,
         Irradiance,
         Irradiation,
         KinematicViscosity,
