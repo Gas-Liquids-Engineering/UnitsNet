@@ -28,13 +28,49 @@ namespace UnitsNet.NumberExtensions.NumberToMolarEntropy
     /// </summary>
     public static class NumberToMolarEntropyExtensions
     {
+        /// <inheritdoc cref="MolarEntropy.FromBtusPerPoundMoleDegreeFahrenheit(UnitsNet.QuantityValue)" />
+        public static MolarEntropy BtusPerPoundMoleDegreeFahrenheit<T>(this T value) =>
+            MolarEntropy.FromBtusPerPoundMoleDegreeFahrenheit(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="MolarEntropy.FromCaloriePerMoleKelvin(UnitsNet.QuantityValue)" />
+        public static MolarEntropy CaloriePerMoleKelvin<T>(this T value) =>
+            MolarEntropy.FromCaloriePerMoleKelvin(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="MolarEntropy.FromJoulesPerKilomoleKelvin(UnitsNet.QuantityValue)" />
+        public static MolarEntropy JoulesPerKilomoleKelvin<T>(this T value) =>
+            MolarEntropy.FromJoulesPerKilomoleKelvin(Convert.ToDouble(value));
+
         /// <inheritdoc cref="MolarEntropy.FromJoulesPerMoleKelvin(UnitsNet.QuantityValue)" />
         public static MolarEntropy JoulesPerMoleKelvin<T>(this T value) =>
             MolarEntropy.FromJoulesPerMoleKelvin(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="MolarEntropy.FromKilobtusPerPoundMoleDegreeFahrenheit(UnitsNet.QuantityValue)" />
+        public static MolarEntropy KilobtusPerPoundMoleDegreeFahrenheit<T>(this T value) =>
+            MolarEntropy.FromKilobtusPerPoundMoleDegreeFahrenheit(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="MolarEntropy.FromKilocaloriePerMoleKelvin(UnitsNet.QuantityValue)" />
+        public static MolarEntropy KilocaloriePerMoleKelvin<T>(this T value) =>
+            MolarEntropy.FromKilocaloriePerMoleKelvin(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="MolarEntropy.FromKilojoulesPerKilomoleKelvin(UnitsNet.QuantityValue)" />
+        public static MolarEntropy KilojoulesPerKilomoleKelvin<T>(this T value) =>
+            MolarEntropy.FromKilojoulesPerKilomoleKelvin(Convert.ToDouble(value));
+
         /// <inheritdoc cref="MolarEntropy.FromKilojoulesPerMoleKelvin(UnitsNet.QuantityValue)" />
         public static MolarEntropy KilojoulesPerMoleKelvin<T>(this T value) =>
             MolarEntropy.FromKilojoulesPerMoleKelvin(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="MolarEntropy.FromMegabtusPerPoundMoleDegreeFahrenheit(UnitsNet.QuantityValue)" />
+        public static MolarEntropy MegabtusPerPoundMoleDegreeFahrenheit<T>(this T value) =>
+            MolarEntropy.FromMegabtusPerPoundMoleDegreeFahrenheit(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="MolarEntropy.FromMegacaloriePerMoleKelvin(UnitsNet.QuantityValue)" />
+        public static MolarEntropy MegacaloriePerMoleKelvin<T>(this T value) =>
+            MolarEntropy.FromMegacaloriePerMoleKelvin(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="MolarEntropy.FromMegajoulesPerKilomoleKelvin(UnitsNet.QuantityValue)" />
+        public static MolarEntropy MegajoulesPerKilomoleKelvin<T>(this T value) =>
+            MolarEntropy.FromMegajoulesPerKilomoleKelvin(Convert.ToDouble(value));
 
         /// <inheritdoc cref="MolarEntropy.FromMegajoulesPerMoleKelvin(UnitsNet.QuantityValue)" />
         public static MolarEntropy MegajoulesPerMoleKelvin<T>(this T value) =>

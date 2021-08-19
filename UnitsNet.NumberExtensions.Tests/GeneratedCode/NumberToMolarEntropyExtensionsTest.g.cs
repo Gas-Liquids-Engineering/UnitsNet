@@ -25,12 +25,48 @@ namespace UnitsNet.Tests
     public class NumberToMolarEntropyExtensionsTests
     {
         [Fact]
+        public void NumberToBtusPerPoundMoleDegreeFahrenheitTest() =>
+            Assert.Equal(MolarEntropy.FromBtusPerPoundMoleDegreeFahrenheit(2), 2.BtusPerPoundMoleDegreeFahrenheit());
+
+        [Fact]
+        public void NumberToCaloriePerMoleKelvinTest() =>
+            Assert.Equal(MolarEntropy.FromCaloriePerMoleKelvin(2), 2.CaloriePerMoleKelvin());
+
+        [Fact]
+        public void NumberToJoulesPerKilomoleKelvinTest() =>
+            Assert.Equal(MolarEntropy.FromJoulesPerKilomoleKelvin(2), 2.JoulesPerKilomoleKelvin());
+
+        [Fact]
         public void NumberToJoulesPerMoleKelvinTest() =>
             Assert.Equal(MolarEntropy.FromJoulesPerMoleKelvin(2), 2.JoulesPerMoleKelvin());
 
         [Fact]
+        public void NumberToKilobtusPerPoundMoleDegreeFahrenheitTest() =>
+            Assert.Equal(MolarEntropy.FromKilobtusPerPoundMoleDegreeFahrenheit(2), 2.KilobtusPerPoundMoleDegreeFahrenheit());
+
+        [Fact]
+        public void NumberToKilocaloriePerMoleKelvinTest() =>
+            Assert.Equal(MolarEntropy.FromKilocaloriePerMoleKelvin(2), 2.KilocaloriePerMoleKelvin());
+
+        [Fact]
+        public void NumberToKilojoulesPerKilomoleKelvinTest() =>
+            Assert.Equal(MolarEntropy.FromKilojoulesPerKilomoleKelvin(2), 2.KilojoulesPerKilomoleKelvin());
+
+        [Fact]
         public void NumberToKilojoulesPerMoleKelvinTest() =>
             Assert.Equal(MolarEntropy.FromKilojoulesPerMoleKelvin(2), 2.KilojoulesPerMoleKelvin());
+
+        [Fact]
+        public void NumberToMegabtusPerPoundMoleDegreeFahrenheitTest() =>
+            Assert.Equal(MolarEntropy.FromMegabtusPerPoundMoleDegreeFahrenheit(2), 2.MegabtusPerPoundMoleDegreeFahrenheit());
+
+        [Fact]
+        public void NumberToMegacaloriePerMoleKelvinTest() =>
+            Assert.Equal(MolarEntropy.FromMegacaloriePerMoleKelvin(2), 2.MegacaloriePerMoleKelvin());
+
+        [Fact]
+        public void NumberToMegajoulesPerKilomoleKelvinTest() =>
+            Assert.Equal(MolarEntropy.FromMegajoulesPerKilomoleKelvin(2), 2.MegajoulesPerKilomoleKelvin());
 
         [Fact]
         public void NumberToMegajoulesPerMoleKelvinTest() =>

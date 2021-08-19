@@ -1,7 +1,7 @@
 {
   "Name": "MolarEntropy",
   "BaseUnit": "JoulePerMoleKelvin",
-  "XmlDoc": "Molar entropy is amount of energy required to increase temperature of 1 mole substance by 1 Kelvin.",
+  "XmlDoc": "Molar entropy is the amount of energy required to increase the temperature of 1 mole of a substance by 1 kelvin.",
   "BaseDimensions": {
     "L": 2,
     "M": 1,
@@ -19,9 +19,48 @@
       "Localization": [
         {
           "Culture": "en-US",
-          "Abbreviations": [ "J/(mol*K)" ]
+          "Abbreviations": [ "J/mol-K" ]
         }
       ]
-    }
+    },
+    {
+      "SingularName": "JoulePerKilomoleKelvin",
+      "PluralName": "JoulesPerKilomoleKelvin",
+      "FromUnitToBaseFunc": "x*0.001",
+      "FromBaseToUnitFunc": "x/0.001",
+      "Prefixes": [ "Kilo", "Mega" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "J/kmol-K" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "BtuPerPoundMoleDegreeFahrenheit",
+      "PluralName": "BtusPerPoundMoleDegreeFahrenheit",
+      "FromUnitToBaseFunc": "x*1055*1.8/453.6",
+      "FromBaseToUnitFunc": "x/1055/1.8*453.6",
+      "Prefixes": [ "Kilo", "Mega" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "Btu/lbmol-°F" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "CaloriePerMoleKelvin",
+      "PluralName": "CaloriePerMoleKelvin",
+      "FromUnitToBaseFunc": "x*4.184",
+      "FromBaseToUnitFunc": "x/4.184",
+      "Prefixes": [ "Kilo", "Mega" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "cal/mol-K" ]
+        }
+      ]
+    },
   ]
 }

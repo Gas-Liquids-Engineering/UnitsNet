@@ -26,8 +26,17 @@ namespace UnitsNet.Units
     public enum MolarEntropyUnit
     {
         Undefined = 0,
+        BtuPerPoundMoleDegreeFahrenheit,
+        CaloriePerMoleKelvin,
+        JoulePerKilomoleKelvin,
         JoulePerMoleKelvin,
+        KilobtuPerPoundMoleDegreeFahrenheit,
+        KilocaloriePerMoleKelvin,
+        KilojoulePerKilomoleKelvin,
         KilojoulePerMoleKelvin,
+        MegabtuPerPoundMoleDegreeFahrenheit,
+        MegacaloriePerMoleKelvin,
+        MegajoulePerKilomoleKelvin,
         MegajoulePerMoleKelvin,
     }
 
