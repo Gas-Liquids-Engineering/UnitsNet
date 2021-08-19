@@ -33,6 +33,30 @@
           "Abbreviations": [ "BTU/h·ft·°F" ]
         }
       ]
+    },
+    {
+      "SingularName": "JoulePerSecondMeterKelvin",
+      "PluralName": "JoulesPerSecondMeterKelvin",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "J/s-m-K" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "CaloriePerSecondCentimeterDegreeCelsius",
+      "PluralName": "CaloriesPerSecondCentimeterDegreeCelsius",
+      "FromUnitToBaseFunc": "x*418.4",
+      "FromBaseToUnitFunc": "x/418.4",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "cal/s-cm-°C" ]
+        }
+      ]
     }
   ]
 }

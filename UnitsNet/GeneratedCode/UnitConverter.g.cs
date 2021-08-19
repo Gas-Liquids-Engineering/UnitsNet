@@ -2333,6 +2333,10 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<TemperatureDelta>(TemperatureDeltaUnit.MillidegreeCelsius, TemperatureDelta.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<ThermalConductivity>(ThermalConductivity.BaseUnit, ThermalConductivityUnit.BtuPerHourFootFahrenheit, q => q.ToUnit(ThermalConductivityUnit.BtuPerHourFootFahrenheit));
             unitConverter.SetConversionFunction<ThermalConductivity>(ThermalConductivityUnit.BtuPerHourFootFahrenheit, ThermalConductivity.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<ThermalConductivity>(ThermalConductivity.BaseUnit, ThermalConductivityUnit.CaloriePerSecondCentimeterDegreeCelsius, q => q.ToUnit(ThermalConductivityUnit.CaloriePerSecondCentimeterDegreeCelsius));
+            unitConverter.SetConversionFunction<ThermalConductivity>(ThermalConductivityUnit.CaloriePerSecondCentimeterDegreeCelsius, ThermalConductivity.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<ThermalConductivity>(ThermalConductivity.BaseUnit, ThermalConductivityUnit.JoulePerSecondMeterKelvin, q => q.ToUnit(ThermalConductivityUnit.JoulePerSecondMeterKelvin));
+            unitConverter.SetConversionFunction<ThermalConductivity>(ThermalConductivityUnit.JoulePerSecondMeterKelvin, ThermalConductivity.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<ThermalConductivity>(ThermalConductivity.BaseUnit, ThermalConductivity.BaseUnit, q => q);
             unitConverter.SetConversionFunction<ThermalResistance>(ThermalResistance.BaseUnit, ThermalResistanceUnit.HourSquareFeetDegreeFahrenheitPerBtu, q => q.ToUnit(ThermalResistanceUnit.HourSquareFeetDegreeFahrenheitPerBtu));
             unitConverter.SetConversionFunction<ThermalResistance>(ThermalResistanceUnit.HourSquareFeetDegreeFahrenheitPerBtu, ThermalResistance.BaseUnit, q => q.ToBaseUnit());

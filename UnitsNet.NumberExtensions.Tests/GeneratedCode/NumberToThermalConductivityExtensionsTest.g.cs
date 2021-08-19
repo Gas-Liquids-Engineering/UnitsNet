@@ -29,6 +29,14 @@ namespace UnitsNet.Tests
             Assert.Equal(ThermalConductivity.FromBtusPerHourFootFahrenheit(2), 2.BtusPerHourFootFahrenheit());
 
         [Fact]
+        public void NumberToCaloriesPerSecondCentimeterDegreeCelsiusTest() =>
+            Assert.Equal(ThermalConductivity.FromCaloriesPerSecondCentimeterDegreeCelsius(2), 2.CaloriesPerSecondCentimeterDegreeCelsius());
+
+        [Fact]
+        public void NumberToJoulesPerSecondMeterKelvinTest() =>
+            Assert.Equal(ThermalConductivity.FromJoulesPerSecondMeterKelvin(2), 2.JoulesPerSecondMeterKelvin());
+
+        [Fact]
         public void NumberToWattsPerMeterKelvinTest() =>
             Assert.Equal(ThermalConductivity.FromWattsPerMeterKelvin(2), 2.WattsPerMeterKelvin());
 

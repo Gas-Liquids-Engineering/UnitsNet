@@ -1520,6 +1520,8 @@ namespace UnitsNet
                 ("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.Kelvin, new string[]{"∆K"}),
                 ("en-US", typeof(TemperatureDeltaUnit), (int)TemperatureDeltaUnit.MillidegreeCelsius, new string[]{"∆m°C"}),
                 ("en-US", typeof(ThermalConductivityUnit), (int)ThermalConductivityUnit.BtuPerHourFootFahrenheit, new string[]{"BTU/h·ft·°F"}),
+                ("en-US", typeof(ThermalConductivityUnit), (int)ThermalConductivityUnit.CaloriePerSecondCentimeterDegreeCelsius, new string[]{"cal/s-cm-°C"}),
+                ("en-US", typeof(ThermalConductivityUnit), (int)ThermalConductivityUnit.JoulePerSecondMeterKelvin, new string[]{"J/s-m-K"}),
                 ("en-US", typeof(ThermalConductivityUnit), (int)ThermalConductivityUnit.WattPerMeterKelvin, new string[]{"W/m·K"}),
                 ("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.HourSquareFeetDegreeFahrenheitPerBtu, new string[]{"Hrft²°F/Btu"}),
                 ("en-US", typeof(ThermalResistanceUnit), (int)ThermalResistanceUnit.SquareCentimeterHourDegreeCelsiusPerKilocalorie, new string[]{"cm²Hr°C/kcal"}),

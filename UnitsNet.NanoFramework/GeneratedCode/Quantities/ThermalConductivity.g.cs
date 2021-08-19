@@ -86,6 +86,16 @@ namespace UnitsNet
         public double BtusPerHourFootFahrenheit => As(ThermalConductivityUnit.BtuPerHourFootFahrenheit);
 
         /// <summary>
+        ///     Get ThermalConductivity in CaloriesPerSecondCentimeterDegreeCelsius.
+        /// </summary>
+        public double CaloriesPerSecondCentimeterDegreeCelsius => As(ThermalConductivityUnit.CaloriePerSecondCentimeterDegreeCelsius);
+
+        /// <summary>
+        ///     Get ThermalConductivity in JoulesPerSecondMeterKelvin.
+        /// </summary>
+        public double JoulesPerSecondMeterKelvin => As(ThermalConductivityUnit.JoulePerSecondMeterKelvin);
+
+        /// <summary>
         ///     Get ThermalConductivity in WattsPerMeterKelvin.
         /// </summary>
         public double WattsPerMeterKelvin => As(ThermalConductivityUnit.WattPerMeterKelvin);
@@ -99,6 +109,18 @@ namespace UnitsNet
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static ThermalConductivity FromBtusPerHourFootFahrenheit(double btusperhourfootfahrenheit) => new ThermalConductivity(btusperhourfootfahrenheit, ThermalConductivityUnit.BtuPerHourFootFahrenheit);
+
+        /// <summary>
+        ///     Get ThermalConductivity from CaloriesPerSecondCentimeterDegreeCelsius.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static ThermalConductivity FromCaloriesPerSecondCentimeterDegreeCelsius(double caloriespersecondcentimeterdegreecelsius) => new ThermalConductivity(caloriespersecondcentimeterdegreecelsius, ThermalConductivityUnit.CaloriePerSecondCentimeterDegreeCelsius);
+
+        /// <summary>
+        ///     Get ThermalConductivity from JoulesPerSecondMeterKelvin.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static ThermalConductivity FromJoulesPerSecondMeterKelvin(double joulespersecondmeterkelvin) => new ThermalConductivity(joulespersecondmeterkelvin, ThermalConductivityUnit.JoulePerSecondMeterKelvin);
 
         /// <summary>
         ///     Get ThermalConductivity from WattsPerMeterKelvin.
@@ -150,6 +172,8 @@ namespace UnitsNet
             switch(Unit)
             {
                 case ThermalConductivityUnit.BtuPerHourFootFahrenheit: return _value*1.73073467;
+                case ThermalConductivityUnit.CaloriePerSecondCentimeterDegreeCelsius: return _value*418.4;
+                case ThermalConductivityUnit.JoulePerSecondMeterKelvin: return _value;
                 case ThermalConductivityUnit.WattPerMeterKelvin: return _value;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
@@ -166,6 +190,8 @@ namespace UnitsNet
             switch(unit)
             {
                 case ThermalConductivityUnit.BtuPerHourFootFahrenheit: return baseUnitValue/1.73073467;
+                case ThermalConductivityUnit.CaloriePerSecondCentimeterDegreeCelsius: return baseUnitValue/418.4;
+                case ThermalConductivityUnit.JoulePerSecondMeterKelvin: return baseUnitValue;
                 case ThermalConductivityUnit.WattPerMeterKelvin: return baseUnitValue;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");

@@ -32,6 +32,14 @@ namespace UnitsNet.NumberExtensions.NumberToThermalConductivity
         public static ThermalConductivity BtusPerHourFootFahrenheit<T>(this T value) =>
             ThermalConductivity.FromBtusPerHourFootFahrenheit(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="ThermalConductivity.FromCaloriesPerSecondCentimeterDegreeCelsius(UnitsNet.QuantityValue)" />
+        public static ThermalConductivity CaloriesPerSecondCentimeterDegreeCelsius<T>(this T value) =>
+            ThermalConductivity.FromCaloriesPerSecondCentimeterDegreeCelsius(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="ThermalConductivity.FromJoulesPerSecondMeterKelvin(UnitsNet.QuantityValue)" />
+        public static ThermalConductivity JoulesPerSecondMeterKelvin<T>(this T value) =>
+            ThermalConductivity.FromJoulesPerSecondMeterKelvin(Convert.ToDouble(value));
+
         /// <inheritdoc cref="ThermalConductivity.FromWattsPerMeterKelvin(UnitsNet.QuantityValue)" />
         public static ThermalConductivity WattsPerMeterKelvin<T>(this T value) =>
             ThermalConductivity.FromWattsPerMeterKelvin(Convert.ToDouble(value));
