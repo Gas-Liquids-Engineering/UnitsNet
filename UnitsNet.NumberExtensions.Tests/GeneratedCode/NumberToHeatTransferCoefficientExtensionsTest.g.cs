@@ -37,10 +37,6 @@ namespace UnitsNet.Tests
             Assert.Equal(HeatTransferCoefficient.FromKilocaloriesPerSquareMeterKelvin(2), 2.KilocaloriesPerSquareMeterKelvin());
 
         [Fact]
-        public void NumberToKilokilocaloriesPerSquareMeterKelvinTest() =>
-            Assert.Equal(HeatTransferCoefficient.FromKilokilocaloriesPerSquareMeterKelvin(2), 2.KilokilocaloriesPerSquareMeterKelvin());
-
-        [Fact]
         public void NumberToWattsPerSquareCentimeterKelvinTest() =>
             Assert.Equal(HeatTransferCoefficient.FromWattsPerSquareCentimeterKelvin(2), 2.WattsPerSquareCentimeterKelvin());
 

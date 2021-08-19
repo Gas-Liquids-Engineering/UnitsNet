@@ -93,11 +93,6 @@ namespace UnitsNet
         public double KilocaloriesPerSquareMeterKelvin => As(HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin);
 
         /// <summary>
-        ///     Get HeatTransferCoefficient in KilokilocaloriesPerSquareMeterKelvin.
-        /// </summary>
-        public double KilokilocaloriesPerSquareMeterKelvin => As(HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin);
-
-        /// <summary>
         ///     Get HeatTransferCoefficient in WattsPerSquareCentimeterKelvin.
         /// </summary>
         public double WattsPerSquareCentimeterKelvin => As(HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin);
@@ -133,12 +128,6 @@ namespace UnitsNet
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         public static HeatTransferCoefficient FromKilocaloriesPerSquareMeterKelvin(double kilocaloriespersquaremeterkelvin) => new HeatTransferCoefficient(kilocaloriespersquaremeterkelvin, HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin);
-
-        /// <summary>
-        ///     Get HeatTransferCoefficient from KilokilocaloriesPerSquareMeterKelvin.
-        /// </summary>
-        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
-        public static HeatTransferCoefficient FromKilokilocaloriesPerSquareMeterKelvin(double kilokilocaloriespersquaremeterkelvin) => new HeatTransferCoefficient(kilokilocaloriespersquaremeterkelvin, HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin);
 
         /// <summary>
         ///     Get HeatTransferCoefficient from WattsPerSquareCentimeterKelvin.
@@ -204,7 +193,6 @@ namespace UnitsNet
                 case HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit: return _value * 5.6782633411134878;
                 case HeatTransferCoefficientUnit.CaloriePerSquareCentimeterKelvin: return _value * 41840;
                 case HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin: return _value * (4184/3600);
-                case HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin: return (_value * (4184/3600)) * 1e3d;
                 case HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin: return _value * 10000;
                 case HeatTransferCoefficientUnit.WattPerSquareMeterCelsius: return _value;
                 case HeatTransferCoefficientUnit.WattPerSquareMeterKelvin: return _value;
@@ -225,7 +213,6 @@ namespace UnitsNet
                 case HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit: return baseUnitValue / 5.6782633411134878;
                 case HeatTransferCoefficientUnit.CaloriePerSquareCentimeterKelvin: return baseUnitValue / 41840;
                 case HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin: return baseUnitValue / (4184/3600);
-                case HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin: return (baseUnitValue / (4184/3600)) / 1e3d;
                 case HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin: return baseUnitValue / 10000;
                 case HeatTransferCoefficientUnit.WattPerSquareMeterCelsius: return baseUnitValue;
                 case HeatTransferCoefficientUnit.WattPerSquareMeterKelvin: return baseUnitValue;

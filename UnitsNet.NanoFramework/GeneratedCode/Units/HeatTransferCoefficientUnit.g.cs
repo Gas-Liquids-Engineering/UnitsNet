@@ -29,7 +29,6 @@ namespace UnitsNet.Units
         BtuPerSquareFootDegreeFahrenheit,
         CaloriePerSquareCentimeterKelvin,
         KilocaloriePerSquareMeterKelvin,
-        KilokilocaloriePerSquareMeterKelvin,
         WattPerSquareCentimeterKelvin,
         WattPerSquareMeterCelsius,
         WattPerSquareMeterKelvin,

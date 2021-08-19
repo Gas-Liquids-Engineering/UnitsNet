@@ -862,8 +862,6 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<HeatTransferCoefficient>(HeatTransferCoefficientUnit.CaloriePerSquareCentimeterKelvin, HeatTransferCoefficient.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<HeatTransferCoefficient>(HeatTransferCoefficient.BaseUnit, HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin, q => q.ToUnit(HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin));
             unitConverter.SetConversionFunction<HeatTransferCoefficient>(HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin, HeatTransferCoefficient.BaseUnit, q => q.ToBaseUnit());
-            unitConverter.SetConversionFunction<HeatTransferCoefficient>(HeatTransferCoefficient.BaseUnit, HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin, q => q.ToUnit(HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin));
-            unitConverter.SetConversionFunction<HeatTransferCoefficient>(HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin, HeatTransferCoefficient.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<HeatTransferCoefficient>(HeatTransferCoefficient.BaseUnit, HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin, q => q.ToUnit(HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin));
             unitConverter.SetConversionFunction<HeatTransferCoefficient>(HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin, HeatTransferCoefficient.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<HeatTransferCoefficient>(HeatTransferCoefficient.BaseUnit, HeatTransferCoefficientUnit.WattPerSquareMeterCelsius, q => q.ToUnit(HeatTransferCoefficientUnit.WattPerSquareMeterCelsius));

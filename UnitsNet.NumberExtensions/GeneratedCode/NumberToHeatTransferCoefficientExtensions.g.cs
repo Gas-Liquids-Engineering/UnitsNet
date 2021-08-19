@@ -40,10 +40,6 @@ namespace UnitsNet.NumberExtensions.NumberToHeatTransferCoefficient
         public static HeatTransferCoefficient KilocaloriesPerSquareMeterKelvin<T>(this T value) =>
             HeatTransferCoefficient.FromKilocaloriesPerSquareMeterKelvin(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="HeatTransferCoefficient.FromKilokilocaloriesPerSquareMeterKelvin(UnitsNet.QuantityValue)" />
-        public static HeatTransferCoefficient KilokilocaloriesPerSquareMeterKelvin<T>(this T value) =>
-            HeatTransferCoefficient.FromKilokilocaloriesPerSquareMeterKelvin(Convert.ToDouble(value));
-
         /// <inheritdoc cref="HeatTransferCoefficient.FromWattsPerSquareCentimeterKelvin(UnitsNet.QuantityValue)" />
         public static HeatTransferCoefficient WattsPerSquareCentimeterKelvin<T>(this T value) =>
             HeatTransferCoefficient.FromWattsPerSquareCentimeterKelvin(Convert.ToDouble(value));

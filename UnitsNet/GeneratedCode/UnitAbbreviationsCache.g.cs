@@ -585,7 +585,6 @@ namespace UnitsNet
                 ("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit, new string[]{"Btu/ft²·hr·°F"}),
                 ("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.CaloriePerSquareCentimeterKelvin, new string[]{"cal/cm²·s·K"}),
                 ("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin, new string[]{"kcal/m²·h·K"}),
-                ("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.KilokilocaloriePerSquareMeterKelvin, new string[]{"kkcal/m²·h·K"}),
                 ("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin, new string[]{"W/cm²·K"}),
                 ("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.WattPerSquareMeterCelsius, new string[]{"W/m²·°C"}),
                 ("en-US", typeof(HeatTransferCoefficientUnit), (int)HeatTransferCoefficientUnit.WattPerSquareMeterKelvin, new string[]{"W/m²·K"}),
