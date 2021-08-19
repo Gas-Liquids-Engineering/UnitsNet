@@ -1,0 +1,63 @@
+{
+  "Name": "EnthalpyMolar",
+  "BaseUnit": "JoulePerMole",
+  "XmlDoc": "Enthalpy is a measure.",
+  "BaseDimensions": {
+	"M": 1,
+    "L": 2,
+    "T": -2,
+	"N": -1,
+  },
+  "Units": [
+    {
+      "SingularName": "JoulePerMole",
+      "PluralName": "JoulesPerMole",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Prefixes": [ "Kilo", "Mega" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "J/mol" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "JoulePerKilomole",
+      "PluralName": "JoulesPerKilomole",
+      "FromUnitToBaseFunc": "x*1000",
+      "FromBaseToUnitFunc": "x/1000",
+      "Prefixes": [ "Kilo" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "J/kmol" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "BtuPerPound",
+      "PluralName": "BtusPerPound",
+      "FromUnitToBaseFunc": "x*2.326",
+      "FromBaseToUnitFunc": "x/2.326",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "btu/lb-mol" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "CaloriesPerMole",
+      "PluralName": "CaloriesPerMole",
+      "FromUnitToBaseFunc": "x*4184",
+      "FromBaseToUnitFunc": "x/4184",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "cal/mol" ]
+        }
+      ]
+    }
+  ]
+}

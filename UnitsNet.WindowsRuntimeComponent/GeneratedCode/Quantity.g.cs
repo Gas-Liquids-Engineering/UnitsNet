@@ -149,6 +149,9 @@ namespace UnitsNet
                 case EnthalpyMassUnit enthalpyMassUnit:
                     quantity = EnthalpyMass.From(value, enthalpyMassUnit);
                     return true;
+                case EnthalpyMolarUnit enthalpyMolarUnit:
+                    quantity = EnthalpyMolar.From(value, enthalpyMolarUnit);
+                    return true;
                 case EntropyUnit entropyUnit:
                     quantity = Entropy.From(value, entropyUnit);
                     return true;
@@ -313,6 +316,9 @@ namespace UnitsNet
                     return true;
                 case SpecificEntropyUnit specificEntropyUnit:
                     quantity = SpecificEntropy.From(value, specificEntropyUnit);
+                    return true;
+                case SpecificEntropyMolarUnit specificEntropyMolarUnit:
+                    quantity = SpecificEntropyMolar.From(value, specificEntropyMolarUnit);
                     return true;
                 case SpecificFuelConsumptionUnit specificFuelConsumptionUnit:
                     quantity = SpecificFuelConsumption.From(value, specificFuelConsumptionUnit);
@@ -532,6 +538,9 @@ namespace UnitsNet
             if (quantityType == typeof(EnthalpyMass))
                 return parser.TryParse<EnthalpyMass, EnthalpyMassUnit>(quantityString, formatProvider, EnthalpyMass.From, out quantity);
 
+            if (quantityType == typeof(EnthalpyMolar))
+                return parser.TryParse<EnthalpyMolar, EnthalpyMolarUnit>(quantityString, formatProvider, EnthalpyMolar.From, out quantity);
+
             if (quantityType == typeof(Entropy))
                 return parser.TryParse<Entropy, EntropyUnit>(quantityString, formatProvider, Entropy.From, out quantity);
 
@@ -696,6 +705,9 @@ namespace UnitsNet
 
             if (quantityType == typeof(SpecificEntropy))
                 return parser.TryParse<SpecificEntropy, SpecificEntropyUnit>(quantityString, formatProvider, SpecificEntropy.From, out quantity);
+
+            if (quantityType == typeof(SpecificEntropyMolar))
+                return parser.TryParse<SpecificEntropyMolar, SpecificEntropyMolarUnit>(quantityString, formatProvider, SpecificEntropyMolar.From, out quantity);
 
             if (quantityType == typeof(SpecificFuelConsumption))
                 return parser.TryParse<SpecificFuelConsumption, SpecificFuelConsumptionUnit>(quantityString, formatProvider, SpecificFuelConsumption.From, out quantity);

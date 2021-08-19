@@ -1,0 +1,64 @@
+{
+  "Name": "SpecificEntropyMolar",
+  "BaseUnit": "JoulePerMoleKelvin",
+  "XmlDoc": "Specific entropy (molar) is an amount of energy required to raise temperature of a substance by 1 Kelvin per unit molar mass.",
+  "BaseDimensions": {
+    "M": 1,	
+    "L": 2,
+    "T": -2,
+	"N": -1,
+    "Θ": -1
+  },
+  "Units": [
+    {
+      "SingularName": "JoulePerMoleKelvin",
+      "PluralName": "JoulesPerMoleKelvin",
+      "FromUnitToBaseFunc": "x",
+      "FromBaseToUnitFunc": "x",
+      "Prefixes": [ "Kilo", "Mega" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "J/mol.K", "J/mol·K" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "JoulePerKilomoleKelvin",
+      "PluralName": "JoulesPerKilomoleKelvin",
+      "FromUnitToBaseFunc": "x*1000",
+      "FromBaseToUnitFunc": "x/1000",
+      "Prefixes": [ "Kilo", "Mega" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "J/kmol.K", "J/kmol·K" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "BtuPerPoundMoleFahrenheit",
+      "PluralName": "BtusPerPoundMoleFahrenheit",
+      "FromUnitToBaseFunc": "x*4.187",
+      "FromBaseToUnitFunc": "x/4.187",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "Btu/lb-mol.°F", "Btu/lb-mol·°F" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "CaloriePerMoleKelvin",
+      "PluralName": "CaloriesPerMoleKelvin",
+      "FromUnitToBaseFunc": "x * 4184",
+      "FromBaseToUnitFunc": "x / 4184",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "cal/mol-K", "cal/mol·K" ]
+        }
+      ]
+    }
+  ]
+}
