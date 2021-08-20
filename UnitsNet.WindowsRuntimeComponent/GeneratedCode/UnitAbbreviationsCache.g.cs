@@ -623,6 +623,7 @@ namespace UnitsNet
                 ("en-US", typeof(InverseHeatTransferCoefficientUnit), (int)InverseHeatTransferCoefficientUnit.SquareFootHourFahrenheitPerBtu, new string[]{"ft²·hr·°F/Btu"}),
                 ("en-US", typeof(InverseHeatTransferCoefficientUnit), (int)InverseHeatTransferCoefficientUnit.SquareMeterCelsiusPerWatt, new string[]{"m²·°C/W"}),
                 ("en-US", typeof(InverseHeatTransferCoefficientUnit), (int)InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie, new string[]{"m²·h·K/kcal"}),
+                ("en-US", typeof(InverseHeatTransferCoefficientUnit), (int)InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerKilowatt, new string[]{"m²·K/kW"}),
                 ("en-US", typeof(InverseHeatTransferCoefficientUnit), (int)InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerWatt, new string[]{"m²·K/W"}),
                 ("en-US", typeof(InverseTemperatureUnit), (int)InverseTemperatureUnit.InverseDegreeCelsius, new string[]{"1/°C"}),
                 ("en-US", typeof(InverseTemperatureUnit), (int)InverseTemperatureUnit.InverseDegreeFahrenheit, new string[]{"1/°F"}),

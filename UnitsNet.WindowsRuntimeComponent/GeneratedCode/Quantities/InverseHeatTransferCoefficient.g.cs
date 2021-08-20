@@ -181,6 +181,11 @@ namespace UnitsNet
         public double SquareMeterHourKelvinsPerKilocalorie => As(InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie);
 
         /// <summary>
+        ///     Get InverseHeatTransferCoefficient in SquareMetersKelvinPerKilowatt.
+        /// </summary>
+        public double SquareMetersKelvinPerKilowatt => As(InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerKilowatt);
+
+        /// <summary>
         ///     Get InverseHeatTransferCoefficient in SquareMetersKelvinPerWatt.
         /// </summary>
         public double SquareMetersKelvinPerWatt => As(InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerWatt);
@@ -264,6 +269,16 @@ namespace UnitsNet
         {
             double value = (double) squaremeterhourkelvinsperkilocalorie;
             return new InverseHeatTransferCoefficient(value, InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie);
+        }
+        /// <summary>
+        ///     Get InverseHeatTransferCoefficient from SquareMetersKelvinPerKilowatt.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static InverseHeatTransferCoefficient FromSquareMetersKelvinPerKilowatt(double squaremeterskelvinperkilowatt)
+        {
+            double value = (double) squaremeterskelvinperkilowatt;
+            return new InverseHeatTransferCoefficient(value, InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerKilowatt);
         }
         /// <summary>
         ///     Get InverseHeatTransferCoefficient from SquareMetersKelvinPerWatt.
@@ -571,6 +586,7 @@ namespace UnitsNet
                 case InverseHeatTransferCoefficientUnit.SquareFootHourFahrenheitPerBtu: return _value*(0.3048*0.3048*5/9*3600/1055);
                 case InverseHeatTransferCoefficientUnit.SquareMeterCelsiusPerWatt: return _value;
                 case InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie: return _value * (3600/4184);
+                case InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerKilowatt: return _value*1000;
                 case InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerWatt: return _value;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
@@ -591,6 +607,7 @@ namespace UnitsNet
                 case InverseHeatTransferCoefficientUnit.SquareFootHourFahrenheitPerBtu: return baseUnitValue/(0.3048*0.3048*5/9*3600/1055);
                 case InverseHeatTransferCoefficientUnit.SquareMeterCelsiusPerWatt: return baseUnitValue;
                 case InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie: return baseUnitValue / (3600/4184);
+                case InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerKilowatt: return baseUnitValue/1000;
                 case InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerWatt: return baseUnitValue;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
