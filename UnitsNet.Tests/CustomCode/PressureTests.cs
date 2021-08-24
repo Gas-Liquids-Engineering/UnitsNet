@@ -98,6 +98,8 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double FeetOfElevationInOnePascal => 129149.976945763;
 
+        protected override double MillimetersOfWaterColumnInOnePascal => throw new NotImplementedException();
+
         [Fact]
         public void Absolute_WithAbsolutePressureReference_IsEqual()
         {

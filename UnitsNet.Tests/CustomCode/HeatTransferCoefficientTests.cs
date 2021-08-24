@@ -36,8 +36,6 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double KilocaloriesPerSquareMeterKelvinInOneWattPerSquareMeterKelvin => throw new NotImplementedException();
 
-        protected override double KilokilocaloriesPerSquareMeterKelvinInOneWattPerSquareMeterKelvin => throw new NotImplementedException();
-
         protected override double WattsPerSquareCentimeterKelvinInOneWattPerSquareMeterKelvin => throw new NotImplementedException();
     }
 }

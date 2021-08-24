@@ -30,5 +30,9 @@ namespace UnitsNet.Tests.CustomCode
         protected override bool SupportsSIUnitSystem => false;
         protected override double WattsPerMeterKelvinInOneWattPerMeterKelvin => 1;
         protected override double BtusPerHourFootFahrenheitInOneWattPerMeterKelvin => 5.77789317e-1;
+
+        protected override double CaloriesPerSecondCentimeterDegreeCelsiusInOneWattPerMeterKelvin => throw new NotImplementedException();
+
+        protected override double JoulesPerSecondMeterKelvinInOneWattPerMeterKelvin => throw new NotImplementedException();
     }
 }

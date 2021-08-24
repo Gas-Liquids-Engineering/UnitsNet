@@ -31,5 +31,23 @@ namespace UnitsNet.Tests.CustomCode
         protected override double JoulesPerMoleKelvinInOneJoulePerMoleKelvin => 1e0;
         protected override double KilojoulesPerMoleKelvinInOneJoulePerMoleKelvin => 1e-3;
         protected override double MegajoulesPerMoleKelvinInOneJoulePerMoleKelvin => 1e-6;
+
+        protected override double BtusPerPoundMoleDegreeFahrenheitInOneJoulePerMoleKelvin => throw new NotImplementedException();
+
+        protected override double CaloriePerMoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+
+        protected override double JoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+
+        protected override double KilobtusPerPoundMoleDegreeFahrenheitInOneJoulePerMoleKelvin => throw new NotImplementedException();
+
+        protected override double KilocaloriePerMoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+
+        protected override double KilojoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+
+        protected override double MegabtusPerPoundMoleDegreeFahrenheitInOneJoulePerMoleKelvin => throw new NotImplementedException();
+
+        protected override double MegacaloriePerMoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+
+        protected override double MegajoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
     }
 }

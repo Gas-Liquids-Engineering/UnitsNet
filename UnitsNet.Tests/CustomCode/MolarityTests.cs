@@ -44,6 +44,8 @@ namespace UnitsNet.Tests.CustomCode
         protected override double PoundMolesPerCubicFootInOneMolesPerCubicMeter => throw new NotImplementedException(); //TODO
 
         protected override double PoundMolesPerCubicMeterInOneMolesPerCubicMeter => throw new NotImplementedException();
+
+        protected override double KilomolesPerCubicMeterInOneMolesPerCubicMeter => throw new NotImplementedException();
         #endregion
 
         [Theory]
