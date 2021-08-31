@@ -73,8 +73,8 @@
     {
       "SingularName": "HydraulicHorsepower",
       "PluralName": "HydraulicHorsepower",
-      "FromUnitToBaseFunc": "x*745.69988145m",
-      "FromBaseToUnitFunc": "x/745.69988145m",
+      "FromUnitToBaseFunc": "x*(550*32.174*0.45359237*0.3048*0.3048)",
+      "FromBaseToUnitFunc": "x/(550*32.174*0.45359237*0.3048*0.3048)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -85,8 +85,8 @@
     {
       "SingularName": "BritishThermalUnitPerHour",
       "PluralName": "BritishThermalUnitsPerHour",
-      "FromUnitToBaseFunc": "x*0.293071m",
-      "FromBaseToUnitFunc": "x/0.293071m",
+      "FromUnitToBaseFunc": "x*(1055.05585262/3600)",
+      "FromBaseToUnitFunc": "x/(1055.05585262/3600)",
       "Prefixes": [ "Kilo" ],
       "Localization": [
         {
@@ -111,8 +111,8 @@
     {
       "SingularName": "CaloriesPerHour",
       "PluralName": "CaloriesPerHour",
-      "FromUnitToBaseFunc": "x*0.00162m",
-      "FromBaseToUnitFunc": "x/0.00162m",
+      "FromUnitToBaseFunc": "x*(4.184/3600)",
+      "FromBaseToUnitFunc": "x/(4.184/3600)",
       "Prefixes": [ "Milli", "Kilo", "Mega", "Giga" ],
       "Localization": [
         {

@@ -50,8 +50,8 @@
     {
       "SingularName": "Reyn",
       "PluralName": "Reyns",
-      "FromUnitToBaseFunc": "x*(0.4535927*12/0.3048*12/0.3048*9.80665)",
-      "FromBaseToUnitFunc": "x/(0.4535927*12/0.3048*12/0.3048*9.80665)",
+      "FromUnitToBaseFunc": "x*(0.45359237*12/0.3048*12/0.3048*9.80665)",
+      "FromBaseToUnitFunc": "x/(0.45359237*12/0.3048*12/0.3048*9.80665)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -62,8 +62,8 @@
     {
       "SingularName": "PoundForceSecondPerSquareInch",
       "PluralName": "PoundsForceSecondPerSquareInch",
-      "FromUnitToBaseFunc":  "x*(0.4535927*12/0.3048*12/0.3048*9.80665)",
-      "FromBaseToUnitFunc":  "x/(0.4535927*12/0.3048*12/0.3048*9.80665)",
+      "FromUnitToBaseFunc":  "x*(0.45359237*12/0.3048*12/0.3048*9.80665)",
+      "FromBaseToUnitFunc":  "x/(0.45359237*12/0.3048*12/0.3048*9.80665)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -74,8 +74,8 @@
     {
       "SingularName": "PoundForceSecondPerSquareFoot",
       "PluralName": "PoundsForceSecondPerSquareFoot",
-      "FromUnitToBaseFunc": "x*(0.4535927*12/0.3048*1/0.3048*9.80665)",
-      "FromBaseToUnitFunc": "x/(0.4535927*12/0.3048*1/0.3048*9.80665)",
+      "FromUnitToBaseFunc": "x*(0.45359237*12/0.3048*1/0.3048*9.80665)",
+      "FromBaseToUnitFunc": "x/(0.45359237*12/0.3048*1/0.3048*9.80665)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -86,8 +86,8 @@
     {
       "SingularName": "PoundPerFootSecond",
       "PluralName": "PoundsPerFootSecond",
-      "FromUnitToBaseFunc": "x * 1.4881639",
-      "FromBaseToUnitFunc": "x / 1.4881639",
+      "FromUnitToBaseFunc": "x*(0.45359237/0.3048)",
+      "FromBaseToUnitFunc": "x/(0.45359237/0.3048)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -98,8 +98,8 @@
     {
       "SingularName": "PoundPerFootHour",
       "PluralName": "PoundsPerFootHour",
-      "FromUnitToBaseFunc": "x * 4.134e-4",
-      "FromBaseToUnitFunc": "x / 4.134e-4",
+      "FromUnitToBaseFunc": "x*(0.4535927/0.3048/3600)",
+      "FromBaseToUnitFunc": "x/(0.4535927/0.3048/3600)",
       "Localization": [
         {
           "Culture": "en-US",

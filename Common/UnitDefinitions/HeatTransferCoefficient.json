@@ -35,8 +35,8 @@
     {
       "SingularName": "BtuPerSquareFootDegreeFahrenheit",
       "PluralName": "BtusPerSquareFootDegreeFahrenheit",
-      "FromUnitToBaseFunc": "x * 5.6782633411134878",
-      "FromBaseToUnitFunc": "x / 5.6782633411134878",
+      "FromUnitToBaseFunc": "x*(1055.05585262*1/0.3048*1/0.3048*1/3600*9/5)",
+      "FromBaseToUnitFunc": "x/(1055.05585262*1/0.3048*1/0.3048*1/3600*9/5)",
       "Localization": [
         {
           "Culture": "en-US",

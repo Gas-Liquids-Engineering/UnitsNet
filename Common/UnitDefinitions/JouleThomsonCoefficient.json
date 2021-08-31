@@ -1,7 +1,7 @@
 {
   "Name": "JouleThomsonCoefficient",
   "BaseUnit": "KelvinPerKilopascal",
-  "XmlDoc": "Temperature change rate is the ratio of the temperature change to the time during which the change occurred (value of temperature changes per unit time).",
+  "XmlDoc": "Joule-Thomson Cofficient is a coefficient relating the change in temperature of a gas resulting from the Joule-Thomson effect.",
   "BaseDimensions": {
     "T": -1,
     "Θ": 1

@@ -25,8 +25,8 @@
     {
       "SingularName": "JoulePerKilomole",
       "PluralName": "JoulesPerKilomole",
-      "FromUnitToBaseFunc": "x*1000",
-      "FromBaseToUnitFunc": "x/1000",
+      "FromUnitToBaseFunc": "x*(1/1000)",
+      "FromBaseToUnitFunc": "x/(1/1000)",
       "Prefixes": [ "Kilo" ],
       "Localization": [
         {
@@ -36,14 +36,14 @@
       ]
     },
     {
-      "SingularName": "BtuPerPound",
-      "PluralName": "BtusPerPound",
-      "FromUnitToBaseFunc": "x*2.326",
-      "FromBaseToUnitFunc": "x/2.326",
+      "SingularName": "BTUPerPound",
+      "PluralName": "BTUsPerPound",
+      "FromUnitToBaseFunc": "x*(1055.05585262/453.59237)",
+      "FromBaseToUnitFunc": "x/(1055.05585262/453.59237)",
       "Localization": [
         {
           "Culture": "en-US",
-          "Abbreviations": [ "btu/lb-mol" ]
+          "Abbreviations": [ "BTU/lbmol" ]
         }
       ]
     },

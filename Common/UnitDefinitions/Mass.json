@@ -135,8 +135,8 @@
       "BaseUnits": {
         "M": "Ounce"
       },
-      "FromUnitToBaseFunc": "x/35.2739619",
-      "FromBaseToUnitFunc": "x*35.2739619",
+      "FromUnitToBaseFunc": "x*(16/0.45359237)",
+      "FromBaseToUnitFunc": "x/(16/0.45359237)",
       "XmlDocSummary": "An ounce (abbreviated oz) is usually the international avoirdupois ounce as used in the United States customary and British imperial systems, which is equal to one-sixteenth of a pound or approximately 28 grams. The abbreviation 'oz' derives from the Italian word onza (now spelled oncia).",
       "XmlDocRemarks": "http://en.wikipedia.org/wiki/Ounce",
       "Localization": [
@@ -156,8 +156,8 @@
       "BaseUnits": {
         "M": "Slug"
       },
-      "FromUnitToBaseFunc": "x/6.852176556196105e-2",
-      "FromBaseToUnitFunc": "x*6.852176556196105e-2",
+      "FromUnitToBaseFunc": "x*(32.174*0.45359237)",
+      "FromBaseToUnitFunc": "x/(32.174*0.45359237)",
       "XmlDocSummary": "The slug (abbreviation slug) is a unit of mass that is accelerated by 1 ft/s² when a force of one pound (lbf) is exerted on it.",
       "XmlDocRemarks": "http://en.wikipedia.org/wiki/Slug_(unit)",
       "Localization": [
@@ -173,8 +173,8 @@
       "BaseUnits": {
         "M": "Stone"
       },
-      "FromUnitToBaseFunc": "x/0.1574731728702698",
-      "FromBaseToUnitFunc": "x*0.1574731728702698",
+      "FromUnitToBaseFunc": "x*(14*0.45359237)",
+      "FromBaseToUnitFunc": "x/(14*0.45359237)",
       "XmlDocSummary": "The stone (abbreviation st) is a unit of mass equal to 14 pounds avoirdupois (about 6.35 kilograms) used in Great Britain and Ireland for measuring human body weight.",
       "XmlDocRemarks": "http://en.wikipedia.org/wiki/Stone_(unit)",
       "Localization": [
@@ -190,8 +190,8 @@
       "BaseUnits": {
         "M": "ShortHundredweight"
       },
-      "FromUnitToBaseFunc": "x/0.022046226218487758",
-      "FromBaseToUnitFunc": "x*0.022046226218487758",
+      "FromUnitToBaseFunc": "x*45.359237",
+      "FromBaseToUnitFunc": "x/45.359237",
       "XmlDocSummary": "The short hundredweight (abbreviation cwt) is a unit of mass equal to 100 pounds in US and Canada. In British English, the short hundredweight is referred to as the \"cental\".",
       "XmlDocRemarks": "https://en.wikipedia.org/wiki/Hundredweight",
       "Localization": [
@@ -207,8 +207,8 @@
       "BaseUnits": {
         "M": "LongHundredweight"
       },
-      "FromUnitToBaseFunc": "x/0.01968413055222121",
-      "FromBaseToUnitFunc": "x*0.01968413055222121",
+      "FromUnitToBaseFunc": "x*(45.359237*1.12)",
+      "FromBaseToUnitFunc": "x/(45.359237*1.12)",
       "XmlDocSummary": "The long or imperial hundredweight (abbreviation cwt) is a unit of mass equal to 112 pounds in US and Canada.",
       "XmlDocRemarks": "https://en.wikipedia.org/wiki/Hundredweight",
       "Localization": [
@@ -224,8 +224,8 @@
       "BaseUnits": {
         "M": "Grain"
       },
-      "FromUnitToBaseFunc": "x/15432.358352941431",
-      "FromBaseToUnitFunc": "x*15432.358352941431",
+      "FromUnitToBaseFunc": "x*(1000/0.0647989)",
+      "FromBaseToUnitFunc": "x/(1000/0.0647989)",
       "XmlDocSummary": "A grain is a unit of measurement of mass, and in the troy weight, avoirdupois, and Apothecaries' system, equal to exactly 64.79891 milligrams.",
       "XmlDocRemarks": "https://en.wikipedia.org/wiki/Grain_(unit)",
       "Localization": [

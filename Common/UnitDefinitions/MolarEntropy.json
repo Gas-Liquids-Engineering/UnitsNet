@@ -39,8 +39,8 @@
     {
       "SingularName": "BtuPerPoundMoleDegreeFahrenheit",
       "PluralName": "BtusPerPoundMoleDegreeFahrenheit",
-      "FromUnitToBaseFunc": "x*1055*1.8/453.6",
-      "FromBaseToUnitFunc": "x/1055/1.8*453.6",
+      "FromUnitToBaseFunc": "x*1055.05585262*1.8/453.6",
+      "FromBaseToUnitFunc": "x/1055.05585262/1.8*453.6",
       "Prefixes": [ "Kilo", "Mega" ],
       "Localization": [
         {

@@ -9,7 +9,7 @@
   },
   "Units": [
     {
-      "SingularName": "JoulesPerCubicMeter",
+      "SingularName": "JoulePerCubicMeter",
       "PluralName": "JoulesPerCubicMeter",
       "BaseUnits": {
         "L": "Meter",
@@ -27,24 +27,24 @@
       ]
     },
     {
-      "SingularName": "BtusPerCubicFoot",
-      "PluralName": "BtusPerCubicFeet",
+      "SingularName": "BTUPerCubicFoot",
+      "PluralName": "BTUsPerCubicFeet",
       "BaseUnits": {
         "L": "Foot",
 		"M": "Pound",
         "T": "Second"
       },
-      "FromUnitToBaseFunc": "x*37258.9",
-      "FromBaseToUnitFunc": "x/37258.9",
+      "FromUnitToBaseFunc": "x*(1055.05585262*1/0.3048*1/0.3048*1/0.3048)",
+      "FromBaseToUnitFunc": "x/(1055.05585262*1/0.3048*1/0.3048*1/0.3048)",
       "Localization": [
         {
           "Culture": "en-US",
-          "Abbreviations": [ "Btu/ft³" ]
+          "Abbreviations": [ "BTU/ft³" ]
         },
       ]
     },
     {
-      "SingularName": "CaloriesPerCubicMeter",
+      "SingularName": "CaloriePerCubicMeter",
       "PluralName": "CaloriesPerCubicMeter",
       "BaseUnits": {
         "L": "Meter",
@@ -57,7 +57,7 @@
       "Localization": [
         {
           "Culture": "en-US",
-          "Abbreviations": [ "Cal/m³" ]
+          "Abbreviations": [ "cal/m³" ]
         },
       ]
     },

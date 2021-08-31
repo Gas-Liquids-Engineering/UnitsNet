@@ -34,14 +34,14 @@
       ]
     },
     {
-      "SingularName": "BtuPerPound",
-      "PluralName": "BtusPerPound",
-      "FromUnitToBaseFunc": "x*2326",
-      "FromBaseToUnitFunc": "x/2326",
+      "SingularName": "BTUPerPound",
+      "PluralName": "BTUsPerPound",
+      "FromUnitToBaseFunc": "x*(1055.05585262/0.4535927)",
+      "FromBaseToUnitFunc": "x/(1055.05585262/0.4535927)",
       "Localization": [
         {
           "Culture": "en-US",
-          "Abbreviations": [ "btu/lb" ]
+          "Abbreviations": [ "BTU/lb" ]
         }
       ]
     }

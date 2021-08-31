@@ -51,8 +51,8 @@
     {
       "SingularName": "WattPerInch",
       "PluralName": "WattsPerInch",
-      "FromUnitToBaseFunc": "x*39.37007874",
-      "FromBaseToUnitFunc": "x/39.37007874",
+      "FromUnitToBaseFunc": "x*(1/0.0254)",
+      "FromBaseToUnitFunc": "x/(1/0.0254)",
 	  "Prefixes": [ "Milli", "Kilo", "Mega", "Giga" ],
       "Localization": [
         {
@@ -64,8 +64,8 @@
     {
       "SingularName": "WattPerFoot",
       "PluralName": "WattsPerFoot",
-      "FromUnitToBaseFunc": "x*3.280839895",
-      "FromBaseToUnitFunc": "x/3.280839895",
+      "FromUnitToBaseFunc": "x*(1/0.3048)",
+      "FromBaseToUnitFunc": "x/(1/0.3048)",
 	  "Prefixes": [ "Milli", "Kilo", "Mega", "Giga" ],
       "Localization": [
         {

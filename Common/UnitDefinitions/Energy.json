@@ -55,8 +55,8 @@
     {
       "SingularName": "ElectronVolt",
       "PluralName": "ElectronVolts",
-      "FromUnitToBaseFunc": "x*1.602176565e-19",
-      "FromBaseToUnitFunc": "x/1.602176565e-19",
+      "FromUnitToBaseFunc": "x*1.602176634e-19",
+      "FromBaseToUnitFunc": "x/1.602176634e-19",
       "Prefixes": [
         "Kilo",
         "Mega",
@@ -77,8 +77,8 @@
     {
       "SingularName": "FootPound",
       "PluralName": "FootPounds",
-      "FromUnitToBaseFunc": "x*1.355817948",
-      "FromBaseToUnitFunc": "x/1.355817948",
+      "FromUnitToBaseFunc": "x*(32.174*0.45359237*0.3048*0.3048)",
+      "FromBaseToUnitFunc": "x/(32.174*0.45359237*0.3048*0.3048)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -192,12 +192,12 @@
     {
       "SingularName": "HorsepowerHour",
       "PluralName": "HorsepowerHours",
-      "FromUnitToBaseFunc": "x*2.6845195377e6",
-      "FromBaseToUnitFunc": "x/2.6845195377e6",
+      "FromUnitToBaseFunc": "x*(745.6998715822702*3600)",
+      "FromBaseToUnitFunc": "x/(745.6998715822702*3600)",
       "Localization": [
         {
           "Culture": "en-US",
-          "Abbreviations": [ "hp·h" ]
+          "Abbreviations": [ "hp·h", "hph" ]
         }
       ]
     }

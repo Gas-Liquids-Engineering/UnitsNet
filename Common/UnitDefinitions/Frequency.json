@@ -26,8 +26,8 @@
     {
       "SingularName": "RadianPerSecond",
       "PluralName": "RadiansPerSecond",
-      "FromUnitToBaseFunc": "x/6.2831853072",
-      "FromBaseToUnitFunc": "x*6.2831853072",
+      "FromUnitToBaseFunc": "x/(2*Math.PI)",
+      "FromBaseToUnitFunc": "x*(2*Math.PI)",
       "OmitExtensionMethod": true,
       "Localization": [
         {
