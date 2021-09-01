@@ -81,8 +81,8 @@
     {
       "SingularName": "RevolutionPerSecond",
       "PluralName": "RevolutionsPerSecond",
-      "FromUnitToBaseFunc": "x*6.2831853072",
-      "FromBaseToUnitFunc": "x/6.2831853072",
+      "FromUnitToBaseFunc": "x*(2*Math.PI)",
+      "FromBaseToUnitFunc": "x/(2*Math.PI)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -97,8 +97,8 @@
     {
       "SingularName": "RevolutionPerMinute",
       "PluralName": "RevolutionsPerMinute",
-      "FromUnitToBaseFunc": "(x*6.2831853072)/60",
-      "FromBaseToUnitFunc": "(x/6.2831853072)*60",
+      "FromUnitToBaseFunc": "x*(2*Math.PI/60)",
+      "FromBaseToUnitFunc": "x/(2*Math.PI/60)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -113,8 +113,8 @@
     {
       "SingularName": "RevolutionPerHour",
       "PluralName": "RevolutionsPerHour",
-      "FromUnitToBaseFunc": "(x*6.2831853072)/3600",
-      "FromBaseToUnitFunc": "(x/6.2831853072)*3600",
+      "FromUnitToBaseFunc": "x*(2*Math.PI/3600)",
+      "FromBaseToUnitFunc": "x*(2*Math.PI/3600)",
       "Localization": [
         {
           "Culture": "en-US",

@@ -42,8 +42,8 @@
     {
       "SingularName": "PoundPerSquareInchDeltaPerFoot",
       "PluralName": "PoundsPerSquareInchDeltaPerFoot",
-      "FromUnitToBaseFunc": "x*6894.757293168*3.28084",
-      "FromBaseToUnitFunc": "x/6894.757293168/3.28084",
+      "FromUnitToBaseFunc": "x*(32.174*0.45359237*1/0.0254*1/0.0254)",
+      "FromBaseToUnitFunc": "x/(32.174*0.45359237*1/0.0254*1/0.0254)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -54,8 +54,8 @@
     {
       "SingularName": "PoundPerSquareInchDeltaPerHundredFeet",
       "PluralName": "PoundsPerSquareInchDeltaPerHundredFeet",
-      "FromUnitToBaseFunc": "x*6894.757293168*3.28084/100",
-      "FromBaseToUnitFunc": "x/6894.757293168/3.28084*100",
+      "FromUnitToBaseFunc": "x*(32.174*0.45359237*1/0.0254*1/0.0254*1/100)",
+      "FromBaseToUnitFunc": "x/(32.174*0.45359237*1/0.0254*1/0.0254*1/100)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -66,8 +66,8 @@
     {
       "SingularName": "PoundPerSquareInchDeltaPerMile",
       "PluralName": "PoundsPerSquareInchDeltaPerMile",
-      "FromUnitToBaseFunc": "x*6894.757293168*3.28084/5280",
-      "FromBaseToUnitFunc": "x/6894.757293168/3.28084*5280",
+      "FromUnitToBaseFunc": "x*(32.174*0.45359237*1/0.0254*1/0.0254*1/5280)",
+      "FromBaseToUnitFunc": "x/(32.174*0.45359237*1/0.0254*1/0.0254*1/5280)",
       "Localization": [
         {
           "Culture": "en-US",

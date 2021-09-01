@@ -89,8 +89,8 @@
     {
       "SingularName": "BtuPerPound",
       "PluralName": "BtuPerPound",
-      "FromUnitToBaseFunc": "x*2326.000075362",
-      "FromBaseToUnitFunc": "x/2326.000075362",
+      "FromUnitToBaseFunc": "x*2326",
+      "FromBaseToUnitFunc": "x/2326",
       "Localization": [
         {
           "Culture": "en-US",

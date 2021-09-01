@@ -23,8 +23,8 @@
     {
       "SingularName": "CubicFootPerPound",
       "PluralName": "CubicFeetPerPound",
-      "FromUnitToBaseFunc": "x/16.01846353",
-      "FromBaseToUnitFunc": "x*16.01846353",
+      "FromUnitToBaseFunc": "x*(0.3048*0.3048*0.3048*1/0.45359237)",
+      "FromBaseToUnitFunc": "x/(0.3048*0.3048*0.3048*1/0.45359237)",
       "Prefixes": [],
       "Localization": [
         {
@@ -49,8 +49,8 @@
     {
       "SingularName": "USGallonPerPound",
       "PluralName": "USGallonsPerPound",
-      "FromUnitToBaseFunc": "x*0.008345",
-      "FromBaseToUnitFunc": "x/0.008345",
+      "FromUnitToBaseFunc": "x*(231*1/0.45359237*0.0254*0.0254*0.0254)",
+      "FromBaseToUnitFunc": "x/(231*1/0.45359237*0.0254*0.0254*0.0254)",
       "Prefixes": [],
       "Localization": [
         {
