@@ -205,8 +205,8 @@
     {
       "SingularName": "PoundPerUSGallon",
       "PluralName": "PoundsPerUSGallon",
-      "FromUnitToBaseFunc": "x*(1/231*1/0.0254*1/0.0254*1/0.0254*0.45359237)",
-      "FromBaseToUnitFunc": "x/(1/231*1/0.0254*1/0.0254*1/0.0254*0.45359237)",
+      "FromUnitToBaseFunc": "x*(1/231.0*1/0.0254*1/0.0254*1/0.0254*0.45359237)",
+      "FromBaseToUnitFunc": "x/(1/231.0*1/0.0254*1/0.0254*1/0.0254*0.45359237)",
       "Localization": [
         {
           "Culture": "en-US",

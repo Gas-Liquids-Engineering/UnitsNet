@@ -602,7 +602,7 @@ namespace UnitsNet
                 case DensityUnit.PoundPerCubicFoot: return _value*(0.45359237*1/0.3048*1/0.3048*1/0.3048);
                 case DensityUnit.PoundPerCubicInch: return _value*(0.45359237*1/0.0254*1/0.0254*1/0.0254);
                 case DensityUnit.PoundPerImperialGallon: return _value*(1/4.54609*1000*0.45359237);
-                case DensityUnit.PoundPerUSGallon: return _value*(1/231*1/0.0254*1/0.0254*1/0.0254*0.45359237);
+                case DensityUnit.PoundPerUSGallon: return _value*(1/231.0*1/0.0254*1/0.0254*1/0.0254*0.45359237);
                 case DensityUnit.SlugPerCubicFoot: return _value*(32.1740*0.45359237*1/0.3048*1/0.3048*1/0.3048);
                 case DensityUnit.TonnePerCubicCentimeter: return _value/1e-9;
                 case DensityUnit.TonnePerCubicMeter: return _value/0.001;
@@ -656,7 +656,7 @@ namespace UnitsNet
                 case DensityUnit.PoundPerCubicFoot: return baseUnitValue/(0.45359237*1/0.3048*1/0.3048*1/0.3048);
                 case DensityUnit.PoundPerCubicInch: return baseUnitValue/(0.45359237*1/0.0254*1/0.0254*1/0.0254);
                 case DensityUnit.PoundPerImperialGallon: return baseUnitValue/(1/4.54609*1000*0.45359237);
-                case DensityUnit.PoundPerUSGallon: return baseUnitValue/(1/231*1/0.0254*1/0.0254*1/0.0254*0.45359237);
+                case DensityUnit.PoundPerUSGallon: return baseUnitValue/(1/231.0*1/0.0254*1/0.0254*1/0.0254*0.45359237);
                 case DensityUnit.SlugPerCubicFoot: return baseUnitValue/(32.1740*0.45359237*1/0.3048*1/0.3048*1/0.3048);
                 case DensityUnit.TonnePerCubicCentimeter: return baseUnitValue*1e-9;
                 case DensityUnit.TonnePerCubicMeter: return baseUnitValue*0.001;

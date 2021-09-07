@@ -36,6 +36,6 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double InverseKelvinInOneInverseKelvin => 1.0;
 
-        protected override double InverseRankineInOneInverseKelvin => throw new NotImplementedException();
+        protected override double InverseRankineInOneInverseKelvin => 0.5555555555555556;
     }
 }

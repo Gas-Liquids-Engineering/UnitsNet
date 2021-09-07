@@ -666,7 +666,7 @@ namespace UnitsNet
                 case DynamicViscosityUnit.NewtonSecondPerMeterSquared: return _value;
                 case DynamicViscosityUnit.PascalSecond: return _value;
                 case DynamicViscosityUnit.Poise: return _value/10;
-                case DynamicViscosityUnit.PoundForceSecondPerSquareFoot: return _value*(0.45359237*12/0.3048*1/0.3048*9.80665);
+                case DynamicViscosityUnit.PoundForceSecondPerSquareFoot: return _value*(0.45359237*1/0.3048*1/0.3048*9.80665);
                 case DynamicViscosityUnit.PoundForceSecondPerSquareInch: return _value*(0.45359237*12/0.3048*12/0.3048*9.80665);
                 case DynamicViscosityUnit.PoundPerFootHour: return _value*(0.4535927/0.3048/3600);
                 case DynamicViscosityUnit.PoundPerFootSecond: return _value*(0.45359237/0.3048);
@@ -692,7 +692,7 @@ namespace UnitsNet
                 case DynamicViscosityUnit.NewtonSecondPerMeterSquared: return baseUnitValue;
                 case DynamicViscosityUnit.PascalSecond: return baseUnitValue;
                 case DynamicViscosityUnit.Poise: return baseUnitValue*10;
-                case DynamicViscosityUnit.PoundForceSecondPerSquareFoot: return baseUnitValue/(0.45359237*12/0.3048*1/0.3048*9.80665);
+                case DynamicViscosityUnit.PoundForceSecondPerSquareFoot: return baseUnitValue/(0.45359237*1/0.3048*1/0.3048*9.80665);
                 case DynamicViscosityUnit.PoundForceSecondPerSquareInch: return baseUnitValue/(0.45359237*12/0.3048*12/0.3048*9.80665);
                 case DynamicViscosityUnit.PoundPerFootHour: return baseUnitValue/(0.4535927/0.3048/3600);
                 case DynamicViscosityUnit.PoundPerFootSecond: return baseUnitValue/(0.45359237/0.3048);
