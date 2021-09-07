@@ -24,18 +24,19 @@ namespace UnitsNet.Tests.CustomCode
     public class EnergyDensityTests : EnergyDensityTestsBase
     {
         // Override properties in base class here
-        protected override double BtusPerCubicFeetInOneJoulesPerCubicMeter => throw new NotImplementedException(); //TODO
-
-        protected override double CaloriesPerCubicMeterInOneJoulesPerCubicMeter => throw new NotImplementedException();
-
-        protected override double JoulesPerCubicMeterInOneJoulesPerCubicMeter => throw new NotImplementedException();
-
-        protected override double KilocaloriesPerCubicMeterInOneJoulesPerCubicMeter => throw new NotImplementedException();
-
-        protected override double KilojoulesPerCubicMeterInOneJoulesPerCubicMeter => throw new NotImplementedException();
-
-        protected override double MegajoulesPerCubicMeterInOneJoulesPerCubicMeter => throw new NotImplementedException();
 
         protected override bool SupportsSIUnitSystem => throw new NotImplementedException();
+
+        protected override double BTUsPerCubicFeetInOneJoulePerCubicMeter => throw new NotImplementedException();
+
+        protected override double CaloriesPerCubicMeterInOneJoulePerCubicMeter => throw new NotImplementedException();
+
+        protected override double JoulesPerCubicMeterInOneJoulePerCubicMeter => throw new NotImplementedException();
+
+        protected override double KilocaloriesPerCubicMeterInOneJoulePerCubicMeter => throw new NotImplementedException();
+
+        protected override double KilojoulesPerCubicMeterInOneJoulePerCubicMeter => throw new NotImplementedException();
+
+        protected override double MegajoulesPerCubicMeterInOneJoulePerCubicMeter => throw new NotImplementedException();
     }
 }

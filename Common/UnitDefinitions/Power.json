@@ -73,8 +73,8 @@
     {
       "SingularName": "HydraulicHorsepower",
       "PluralName": "HydraulicHorsepower",
-      "FromUnitToBaseFunc": "x*(550*32.174*0.45359237*0.3048*0.3048)",
-      "FromBaseToUnitFunc": "x/(550*32.174*0.45359237*0.3048*0.3048)",
+      "FromUnitToBaseFunc": "x*(550m*32.174m*0.45359237m*0.3048m*0.3048m)",
+      "FromBaseToUnitFunc": "x/(550m*32.174m*0.45359237m*0.3048m*0.3048m)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -85,8 +85,8 @@
     {
       "SingularName": "BritishThermalUnitPerHour",
       "PluralName": "BritishThermalUnitsPerHour",
-      "FromUnitToBaseFunc": "x*(1055.05585262/3600)",
-      "FromBaseToUnitFunc": "x/(1055.05585262/3600)",
+      "FromUnitToBaseFunc": "x*(1055.05585262m/3600m)",
+      "FromBaseToUnitFunc": "x/(1055.05585262m/3600m)",
       "Prefixes": [ "Kilo" ],
       "Localization": [
         {
@@ -111,8 +111,8 @@
     {
       "SingularName": "CaloriesPerHour",
       "PluralName": "CaloriesPerHour",
-      "FromUnitToBaseFunc": "x*(4.184/3600)",
-      "FromBaseToUnitFunc": "x/(4.184/3600)",
+      "FromUnitToBaseFunc": "x*(4.184m/3600m)",
+      "FromBaseToUnitFunc": "x/(4.184m/3600m)",
       "Prefixes": [ "Milli", "Kilo", "Mega", "Giga" ],
       "Localization": [
         {

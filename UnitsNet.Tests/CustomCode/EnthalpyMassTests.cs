@@ -24,7 +24,6 @@ namespace UnitsNet.Tests.CustomCode
     public class EnthalpyMassTests : EnthalpyMassTestsBase
     {
         // Override properties in base class here
-        protected override double BtusPerPoundInOneJoulePerKilogram => throw new NotImplementedException(); //TODO
 
         protected override double CaloriesPerGramInOneJoulePerKilogram => throw new NotImplementedException();
 
@@ -37,5 +36,7 @@ namespace UnitsNet.Tests.CustomCode
         protected override double MegajoulesPerKilogramInOneJoulePerKilogram => throw new NotImplementedException();
 
         protected override bool SupportsSIUnitSystem => throw new NotImplementedException();
+
+        protected override double BTUsPerPoundInOneJoulePerKilogram => throw new NotImplementedException();
     }
 }

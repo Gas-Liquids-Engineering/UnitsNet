@@ -94,9 +94,9 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double MillipascalsInOnePascal => 1e3;
 
-        protected override double MetersOfElevationInOnePascal => 39364.9129730686;
+        //protected override double MetersOfElevationInOnePascal => 39364.9129730686;
 
-        protected override double FeetOfElevationInOnePascal => 129149.976945763;
+        //protected override double FeetOfElevationInOnePascal => 129149.976945763;
 
         protected override double MillimetersOfWaterColumnInOnePascal => throw new NotImplementedException();
 

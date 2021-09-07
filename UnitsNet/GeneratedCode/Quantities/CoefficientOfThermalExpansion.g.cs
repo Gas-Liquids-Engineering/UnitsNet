@@ -55,7 +55,7 @@ namespace UnitsNet
                     new UnitInfo<CoefficientOfThermalExpansionUnit>(CoefficientOfThermalExpansionUnit.InverseDegreeCelsius, new BaseUnits(temperature: TemperatureUnit.DegreeCelsius)),
                     new UnitInfo<CoefficientOfThermalExpansionUnit>(CoefficientOfThermalExpansionUnit.InverseDegreeFahrenheit, new BaseUnits(temperature: TemperatureUnit.DegreeFahrenheit)),
                     new UnitInfo<CoefficientOfThermalExpansionUnit>(CoefficientOfThermalExpansionUnit.InverseKelvin, new BaseUnits(temperature: TemperatureUnit.Kelvin)),
-                    new UnitInfo<CoefficientOfThermalExpansionUnit>(CoefficientOfThermalExpansionUnit.InverseRankine, new BaseUnits(temperature: TemperatureUnit.Rankine)),
+                    new UnitInfo<CoefficientOfThermalExpansionUnit>(CoefficientOfThermalExpansionUnit.InverseRankine, new BaseUnits(temperature: TemperatureUnit.DegreeRankine)),
                 },
                 BaseUnit, Zero, BaseDimensions, QuantityType.CoefficientOfThermalExpansion);
         }

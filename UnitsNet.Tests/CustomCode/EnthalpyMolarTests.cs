@@ -24,7 +24,8 @@ namespace UnitsNet.Tests.CustomCode
     public class EnthalpyMolarTests : EnthalpyMolarTestsBase
     {
         // Override properties in base class here
-        protected override double BtusPerPoundInOneJoulePerMole => throw new NotImplementedException();
+
+        protected override double BTUsPerPoundInOneJoulePerMole => throw new NotImplementedException();
 
         protected override double CaloriesPerMoleInOneJoulePerMole => throw new NotImplementedException();
 

@@ -219,7 +219,7 @@
         "L": "Foot"
       },
       "FromUnitToBaseFunc": "x*(32.174*0.45359237*1/0.3048*1/0.3048*1/0.3048)",
-      "FromBaseToUnitFunc": "x/(32.174*(0.45359237*1/0.3048*1/0.3048*1/0.3048)",
+      "FromBaseToUnitFunc": "x/(32.174*0.45359237*1/0.3048*1/0.3048*1/0.3048)",
       "Localization": [
         {
           "Culture": "en-US",

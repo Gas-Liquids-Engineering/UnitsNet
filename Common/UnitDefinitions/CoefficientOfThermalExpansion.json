@@ -55,7 +55,7 @@
       "SingularName": "InverseRankine",
       "PluralName": "InverseRankine",
       "BaseUnits": {
-        "Θ": "Rankine"
+        "Θ": "DegreeRankine"
       },
       "FromUnitToBaseFunc": "x*9/5",
       "FromBaseToUnitFunc": "x*5/9",

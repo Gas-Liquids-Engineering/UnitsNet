@@ -748,7 +748,7 @@ namespace UnitsNet
                 case MassConcentrationUnit.PoundPerCubicInch: return baseUnitValue/(0.45359237*1/0.0254*1/0.0254*1/0.0254);
                 case MassConcentrationUnit.PoundPerImperialGallon: return baseUnitValue/(0.45359237*1/4.54609*1000);
                 case MassConcentrationUnit.PoundPerUSGallon: return baseUnitValue/(0.45359237*1/231*1/0.0254*1/0.0254*1/0.0254);
-                case MassConcentrationUnit.SlugPerCubicFoot: return baseUnitValue/(32.174*(0.45359237*1/0.3048*1/0.3048*1/0.3048);
+                case MassConcentrationUnit.SlugPerCubicFoot: return baseUnitValue/(32.174*0.45359237*1/0.3048*1/0.3048*1/0.3048);
                 case MassConcentrationUnit.TonnePerCubicCentimeter: return baseUnitValue*1e-9;
                 case MassConcentrationUnit.TonnePerCubicMeter: return baseUnitValue*0.001;
                 case MassConcentrationUnit.TonnePerCubicMillimeter: return baseUnitValue*1e-12;
