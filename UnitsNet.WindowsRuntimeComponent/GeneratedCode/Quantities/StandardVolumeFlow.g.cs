@@ -612,9 +612,9 @@ namespace UnitsNet
             switch(Unit)
             {
                 case StandardVolumeFlowUnit.StandardCubicCentimeterPerMinute: return _value/6e7;
-                case StandardVolumeFlowUnit.StandardCubicFootPerHour: return _value*7.8657907199999087346816086183876e-6;
-                case StandardVolumeFlowUnit.StandardCubicFootPerMinute: return _value/2118.88000326;
-                case StandardVolumeFlowUnit.StandardCubicFootPerSecond: return _value/35.314666721;
+                case StandardVolumeFlowUnit.StandardCubicFootPerHour: return _value*(0.3048*0.3048*0.3048*1/3600);
+                case StandardVolumeFlowUnit.StandardCubicFootPerMinute: return _value*(0.3048*0.3048*0.3048*1/60);
+                case StandardVolumeFlowUnit.StandardCubicFootPerSecond: return _value*(0.3048*0.3048*0.3048);
                 case StandardVolumeFlowUnit.StandardCubicMeterPerDay: return _value/86400;
                 case StandardVolumeFlowUnit.StandardCubicMeterPerHour: return _value/3600;
                 case StandardVolumeFlowUnit.StandardCubicMeterPerMinute: return _value/60;
@@ -635,9 +635,9 @@ namespace UnitsNet
             switch(unit)
             {
                 case StandardVolumeFlowUnit.StandardCubicCentimeterPerMinute: return baseUnitValue*6e7;
-                case StandardVolumeFlowUnit.StandardCubicFootPerHour: return baseUnitValue/7.8657907199999087346816086183876e-6;
-                case StandardVolumeFlowUnit.StandardCubicFootPerMinute: return baseUnitValue*2118.88000326;
-                case StandardVolumeFlowUnit.StandardCubicFootPerSecond: return baseUnitValue*35.314666721;
+                case StandardVolumeFlowUnit.StandardCubicFootPerHour: return baseUnitValue/(0.3048*0.3048*0.3048*1/3600);
+                case StandardVolumeFlowUnit.StandardCubicFootPerMinute: return baseUnitValue/(0.3048*0.3048*0.3048*1/60);
+                case StandardVolumeFlowUnit.StandardCubicFootPerSecond: return baseUnitValue/(0.3048*0.3048*0.3048);
                 case StandardVolumeFlowUnit.StandardCubicMeterPerDay: return baseUnitValue*86400;
                 case StandardVolumeFlowUnit.StandardCubicMeterPerHour: return baseUnitValue*3600;
                 case StandardVolumeFlowUnit.StandardCubicMeterPerMinute: return baseUnitValue*60;

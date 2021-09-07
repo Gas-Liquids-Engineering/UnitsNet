@@ -256,15 +256,15 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case MolarEntropyUnit.BtuPerPoundMoleDegreeFahrenheit: return _value*1055*1.8/453.6;
+                case MolarEntropyUnit.BtuPerPoundMoleDegreeFahrenheit: return _value*1055.05585262*1.8/453.6;
                 case MolarEntropyUnit.CaloriePerMoleKelvin: return _value*4.184;
                 case MolarEntropyUnit.JoulePerKilomoleKelvin: return _value*0.001;
                 case MolarEntropyUnit.JoulePerMoleKelvin: return _value;
-                case MolarEntropyUnit.KilobtuPerPoundMoleDegreeFahrenheit: return (_value*1055*1.8/453.6) * 1e3d;
+                case MolarEntropyUnit.KilobtuPerPoundMoleDegreeFahrenheit: return (_value*1055.05585262*1.8/453.6) * 1e3d;
                 case MolarEntropyUnit.KilocaloriePerMoleKelvin: return (_value*4.184) * 1e3d;
                 case MolarEntropyUnit.KilojoulePerKilomoleKelvin: return (_value*0.001) * 1e3d;
                 case MolarEntropyUnit.KilojoulePerMoleKelvin: return (_value) * 1e3d;
-                case MolarEntropyUnit.MegabtuPerPoundMoleDegreeFahrenheit: return (_value*1055*1.8/453.6) * 1e6d;
+                case MolarEntropyUnit.MegabtuPerPoundMoleDegreeFahrenheit: return (_value*1055.05585262*1.8/453.6) * 1e6d;
                 case MolarEntropyUnit.MegacaloriePerMoleKelvin: return (_value*4.184) * 1e6d;
                 case MolarEntropyUnit.MegajoulePerKilomoleKelvin: return (_value*0.001) * 1e6d;
                 case MolarEntropyUnit.MegajoulePerMoleKelvin: return (_value) * 1e6d;
@@ -282,15 +282,15 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case MolarEntropyUnit.BtuPerPoundMoleDegreeFahrenheit: return baseUnitValue/1055/1.8*453.6;
+                case MolarEntropyUnit.BtuPerPoundMoleDegreeFahrenheit: return baseUnitValue/1055.05585262/1.8*453.6;
                 case MolarEntropyUnit.CaloriePerMoleKelvin: return baseUnitValue/4.184;
                 case MolarEntropyUnit.JoulePerKilomoleKelvin: return baseUnitValue/0.001;
                 case MolarEntropyUnit.JoulePerMoleKelvin: return baseUnitValue;
-                case MolarEntropyUnit.KilobtuPerPoundMoleDegreeFahrenheit: return (baseUnitValue/1055/1.8*453.6) / 1e3d;
+                case MolarEntropyUnit.KilobtuPerPoundMoleDegreeFahrenheit: return (baseUnitValue/1055.05585262/1.8*453.6) / 1e3d;
                 case MolarEntropyUnit.KilocaloriePerMoleKelvin: return (baseUnitValue/4.184) / 1e3d;
                 case MolarEntropyUnit.KilojoulePerKilomoleKelvin: return (baseUnitValue/0.001) / 1e3d;
                 case MolarEntropyUnit.KilojoulePerMoleKelvin: return (baseUnitValue) / 1e3d;
-                case MolarEntropyUnit.MegabtuPerPoundMoleDegreeFahrenheit: return (baseUnitValue/1055/1.8*453.6) / 1e6d;
+                case MolarEntropyUnit.MegabtuPerPoundMoleDegreeFahrenheit: return (baseUnitValue/1055.05585262/1.8*453.6) / 1e6d;
                 case MolarEntropyUnit.MegacaloriePerMoleKelvin: return (baseUnitValue/4.184) / 1e6d;
                 case MolarEntropyUnit.MegajoulePerKilomoleKelvin: return (baseUnitValue/0.001) / 1e6d;
                 case MolarEntropyUnit.MegajoulePerMoleKelvin: return (baseUnitValue) / 1e6d;

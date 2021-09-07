@@ -29,6 +29,7 @@ namespace UnitsNet.Units
         InverseDegreeCelsius,
         InverseDegreeFahrenheit,
         InverseKelvin,
+        InverseRankine,
     }
 
     #pragma warning restore 1591

@@ -170,6 +170,11 @@ namespace UnitsNet
         /// </summary>
         public double InverseKelvin => As(CoefficientOfThermalExpansionUnit.InverseKelvin);
 
+        /// <summary>
+        ///     Get CoefficientOfThermalExpansion in InverseRankine.
+        /// </summary>
+        public double InverseRankine => As(CoefficientOfThermalExpansionUnit.InverseRankine);
+
         #endregion
 
         #region Static Methods
@@ -229,6 +234,16 @@ namespace UnitsNet
         {
             double value = (double) inversekelvin;
             return new CoefficientOfThermalExpansion(value, CoefficientOfThermalExpansionUnit.InverseKelvin);
+        }
+        /// <summary>
+        ///     Get CoefficientOfThermalExpansion from InverseRankine.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static CoefficientOfThermalExpansion FromInverseRankine(double inverserankine)
+        {
+            double value = (double) inverserankine;
+            return new CoefficientOfThermalExpansion(value, CoefficientOfThermalExpansionUnit.InverseRankine);
         }
 
         /// <summary>
@@ -524,6 +539,7 @@ namespace UnitsNet
                 case CoefficientOfThermalExpansionUnit.InverseDegreeCelsius: return _value;
                 case CoefficientOfThermalExpansionUnit.InverseDegreeFahrenheit: return _value*9/5;
                 case CoefficientOfThermalExpansionUnit.InverseKelvin: return _value;
+                case CoefficientOfThermalExpansionUnit.InverseRankine: return _value*9/5;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -541,6 +557,7 @@ namespace UnitsNet
                 case CoefficientOfThermalExpansionUnit.InverseDegreeCelsius: return baseUnitValue;
                 case CoefficientOfThermalExpansionUnit.InverseDegreeFahrenheit: return baseUnitValue*5/9;
                 case CoefficientOfThermalExpansionUnit.InverseKelvin: return baseUnitValue;
+                case CoefficientOfThermalExpansionUnit.InverseRankine: return baseUnitValue*5/9;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

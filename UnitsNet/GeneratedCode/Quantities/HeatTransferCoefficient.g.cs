@@ -715,7 +715,7 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit: return _value * 5.6782633411134878;
+                case HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit: return _value*(1055.05585262*1/0.3048*1/0.3048*1/3600*9/5);
                 case HeatTransferCoefficientUnit.CaloriePerSquareCentimeterKelvin: return _value * 41840;
                 case HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin: return _value * (4184/3600);
                 case HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin: return _value * 10000;
@@ -746,7 +746,7 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit: return baseUnitValue / 5.6782633411134878;
+                case HeatTransferCoefficientUnit.BtuPerSquareFootDegreeFahrenheit: return baseUnitValue/(1055.05585262*1/0.3048*1/0.3048*1/3600*9/5);
                 case HeatTransferCoefficientUnit.CaloriePerSquareCentimeterKelvin: return baseUnitValue / 41840;
                 case HeatTransferCoefficientUnit.KilocaloriePerSquareMeterKelvin: return baseUnitValue / (4184/3600);
                 case HeatTransferCoefficientUnit.WattPerSquareCentimeterKelvin: return baseUnitValue / 10000;

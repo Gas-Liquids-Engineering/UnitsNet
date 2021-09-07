@@ -145,7 +145,7 @@
       "FromUnitToBaseFunc": "x*(32.174*0.45359237*0.3048/16)",
       "FromBaseToUnitFunc": "x/(32.174*0.45359237*0.3048/16)",
       "Localization": [
-        {x
+        {
           "Culture": "en-US",
           "Abbreviations": [ "ozf" ]
         }

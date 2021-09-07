@@ -58,7 +58,6 @@ namespace UnitsNet
                     new UnitInfo<PressureUnit>(PressureUnit.Decapascal, BaseUnits.Undefined),
                     new UnitInfo<PressureUnit>(PressureUnit.Decibar, BaseUnits.Undefined),
                     new UnitInfo<PressureUnit>(PressureUnit.DynePerSquareCentimeter, BaseUnits.Undefined),
-                    new UnitInfo<PressureUnit>(PressureUnit.FootOfElevation, BaseUnits.Undefined),
                     new UnitInfo<PressureUnit>(PressureUnit.FootOfHead, BaseUnits.Undefined),
                     new UnitInfo<PressureUnit>(PressureUnit.Gigapascal, BaseUnits.Undefined),
                     new UnitInfo<PressureUnit>(PressureUnit.Hectopascal, BaseUnits.Undefined),
@@ -77,7 +76,6 @@ namespace UnitsNet
                     new UnitInfo<PressureUnit>(PressureUnit.Megabar, BaseUnits.Undefined),
                     new UnitInfo<PressureUnit>(PressureUnit.MeganewtonPerSquareMeter, BaseUnits.Undefined),
                     new UnitInfo<PressureUnit>(PressureUnit.Megapascal, BaseUnits.Undefined),
-                    new UnitInfo<PressureUnit>(PressureUnit.MeterOfElevation, BaseUnits.Undefined),
                     new UnitInfo<PressureUnit>(PressureUnit.MeterOfHead, BaseUnits.Undefined),
                     new UnitInfo<PressureUnit>(PressureUnit.Microbar, BaseUnits.Undefined),
                     new UnitInfo<PressureUnit>(PressureUnit.Micropascal, BaseUnits.Undefined),
@@ -243,11 +241,6 @@ namespace UnitsNet
         public double DynesPerSquareCentimeter => As(PressureUnit.DynePerSquareCentimeter);
 
         /// <summary>
-        ///     Get Pressure in FeetOfElevation.
-        /// </summary>
-        public double FeetOfElevation => As(PressureUnit.FootOfElevation);
-
-        /// <summary>
         ///     Get Pressure in FeetOfHead.
         /// </summary>
         public double FeetOfHead => As(PressureUnit.FootOfHead);
@@ -336,11 +329,6 @@ namespace UnitsNet
         ///     Get Pressure in Megapascals.
         /// </summary>
         public double Megapascals => As(PressureUnit.Megapascal);
-
-        /// <summary>
-        ///     Get Pressure in MetersOfElevation.
-        /// </summary>
-        public double MetersOfElevation => As(PressureUnit.MeterOfElevation);
 
         /// <summary>
         ///     Get Pressure in MetersOfHead.
@@ -521,15 +509,6 @@ namespace UnitsNet
             return new Pressure(value, PressureUnit.DynePerSquareCentimeter);
         }
         /// <summary>
-        ///     Get Pressure from FeetOfElevation.
-        /// </summary>
-        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
-        public static Pressure FromFeetOfElevation(QuantityValue feetofelevation)
-        {
-            double value = (double) feetofelevation;
-            return new Pressure(value, PressureUnit.FootOfElevation);
-        }
-        /// <summary>
         ///     Get Pressure from FeetOfHead.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
@@ -690,15 +669,6 @@ namespace UnitsNet
         {
             double value = (double) megapascals;
             return new Pressure(value, PressureUnit.Megapascal);
-        }
-        /// <summary>
-        ///     Get Pressure from MetersOfElevation.
-        /// </summary>
-        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
-        public static Pressure FromMetersOfElevation(QuantityValue metersofelevation)
-        {
-            double value = (double) metersofelevation;
-            return new Pressure(value, PressureUnit.MeterOfElevation);
         }
         /// <summary>
         ///     Get Pressure from MetersOfHead.
@@ -1306,45 +1276,43 @@ namespace UnitsNet
                 case PressureUnit.Decapascal: return (_value) * 1e1d;
                 case PressureUnit.Decibar: return (_value*1e5) * 1e-1d;
                 case PressureUnit.DynePerSquareCentimeter: return _value*1.0e-1;
-                case PressureUnit.FootOfElevation: return Math.Pow(1.0 - (_value / 145366.45), 5.2553026003237266401799415610351) * 101325.0;
-                case PressureUnit.FootOfHead: return _value*2989.0669;
+                case PressureUnit.FootOfHead: return _value*(9806.65*0.3048);
                 case PressureUnit.Gigapascal: return (_value) * 1e9d;
                 case PressureUnit.Hectopascal: return (_value) * 1e2d;
-                case PressureUnit.InchOfMercury: return _value/2.95299830714159e-4;
-                case PressureUnit.InchOfWaterColumn: return _value*249.08890833333;
+                case PressureUnit.InchOfMercury: return _value*(133.322387415*25.4);
+                case PressureUnit.InchOfWaterColumn: return _value*(98066.5*0.0254);
                 case PressureUnit.Kilobar: return (_value*1e5) * 1e3d;
                 case PressureUnit.KilogramForcePerSquareCentimeter: return _value*9.80665e4;
-                case PressureUnit.KilogramForcePerSquareMeter: return _value*9.80665019960652;
+                case PressureUnit.KilogramForcePerSquareMeter: return _value*9.80665;
                 case PressureUnit.KilogramForcePerSquareMillimeter: return _value*9.80665e6;
                 case PressureUnit.KilonewtonPerSquareCentimeter: return (_value*1e4) * 1e3d;
                 case PressureUnit.KilonewtonPerSquareMeter: return (_value) * 1e3d;
                 case PressureUnit.KilonewtonPerSquareMillimeter: return (_value*1e6) * 1e3d;
                 case PressureUnit.Kilopascal: return (_value) * 1e3d;
-                case PressureUnit.KilopoundForcePerSquareFoot: return (_value*4.788025898033584e1) * 1e3d;
-                case PressureUnit.KilopoundForcePerSquareInch: return (_value*6.894757293168361e3) * 1e3d;
+                case PressureUnit.KilopoundForcePerSquareFoot: return (_value*(32.174*1/0.3048*0.45359237)) * 1e3d;
+                case PressureUnit.KilopoundForcePerSquareInch: return (_value*(32.174*0.3048*1/0.0254*1/0.0254*0.45359237)) * 1e3d;
                 case PressureUnit.Megabar: return (_value*1e5) * 1e6d;
                 case PressureUnit.MeganewtonPerSquareMeter: return (_value) * 1e6d;
                 case PressureUnit.Megapascal: return (_value) * 1e6d;
-                case PressureUnit.MeterOfElevation: return Math.Pow(1.0 - (_value / 44307.69396), 5.2553026003237266401799415610351) * 101325.0;
-                case PressureUnit.MeterOfHead: return _value*9804.139432;
+                case PressureUnit.MeterOfHead: return _value*9806.65;
                 case PressureUnit.Microbar: return (_value*1e5) * 1e-6d;
                 case PressureUnit.Micropascal: return (_value) * 1e-6d;
                 case PressureUnit.Millibar: return (_value*1e5) * 1e-3d;
-                case PressureUnit.MillimeterOfMercury: return _value/7.50061561302643e-3;
+                case PressureUnit.MillimeterOfMercury: return _value*133.322387415;
                 case PressureUnit.MillimeterOfWaterColumn: return _value*9.80665;
                 case PressureUnit.Millipascal: return (_value) * 1e-3d;
                 case PressureUnit.NewtonPerSquareCentimeter: return _value*1e4;
                 case PressureUnit.NewtonPerSquareMeter: return _value;
                 case PressureUnit.NewtonPerSquareMillimeter: return _value*1e6;
                 case PressureUnit.Pascal: return _value;
-                case PressureUnit.PoundForcePerSquareFoot: return _value*4.788025898033584e1;
-                case PressureUnit.PoundForcePerSquareInch: return _value*6.894757293168361e3;
-                case PressureUnit.PoundPerInchSecondSquared: return _value*1.785796732283465e1;
-                case PressureUnit.TechnicalAtmosphere: return _value*9.80680592331*1e4;
+                case PressureUnit.PoundForcePerSquareFoot: return _value*(32.174*1/0.3048*0.45359237);
+                case PressureUnit.PoundForcePerSquareInch: return _value*(32.174*0.3048*1/0.0254*1/0.0254*0.45359237);
+                case PressureUnit.PoundPerInchSecondSquared: return _value*(0.45359237*1/0.0254);
+                case PressureUnit.TechnicalAtmosphere: return _value*(9.80665*1e4);
                 case PressureUnit.TonneForcePerSquareCentimeter: return _value*9.80665e7;
                 case PressureUnit.TonneForcePerSquareMeter: return _value*9.80665e3;
                 case PressureUnit.TonneForcePerSquareMillimeter: return _value*9.80665e9;
-                case PressureUnit.Torr: return _value*1.3332266752*1e2;
+                case PressureUnit.Torr: return _value*(101325/760);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -1376,45 +1344,43 @@ namespace UnitsNet
                 case PressureUnit.Decapascal: return (baseUnitValue) / 1e1d;
                 case PressureUnit.Decibar: return (baseUnitValue/1e5) / 1e-1d;
                 case PressureUnit.DynePerSquareCentimeter: return baseUnitValue/1.0e-1;
-                case PressureUnit.FootOfElevation: return (1.0 - Math.Pow(baseUnitValue / 101325.0, 0.190284)) * 145366.45;
-                case PressureUnit.FootOfHead: return baseUnitValue*0.000334552565551;
+                case PressureUnit.FootOfHead: return baseUnitValue/(9806.65*0.3048);
                 case PressureUnit.Gigapascal: return (baseUnitValue) / 1e9d;
                 case PressureUnit.Hectopascal: return (baseUnitValue) / 1e2d;
-                case PressureUnit.InchOfMercury: return baseUnitValue*2.95299830714159e-4;
-                case PressureUnit.InchOfWaterColumn: return baseUnitValue/249.08890833333;
+                case PressureUnit.InchOfMercury: return baseUnitValue/(133.322387415*25.4);
+                case PressureUnit.InchOfWaterColumn: return baseUnitValue/(98066.5*0.0254);
                 case PressureUnit.Kilobar: return (baseUnitValue/1e5) / 1e3d;
                 case PressureUnit.KilogramForcePerSquareCentimeter: return baseUnitValue/9.80665e4;
-                case PressureUnit.KilogramForcePerSquareMeter: return baseUnitValue*0.101971619222242;
+                case PressureUnit.KilogramForcePerSquareMeter: return baseUnitValue/9.80665;
                 case PressureUnit.KilogramForcePerSquareMillimeter: return baseUnitValue/9.80665e6;
                 case PressureUnit.KilonewtonPerSquareCentimeter: return (baseUnitValue/1e4) / 1e3d;
                 case PressureUnit.KilonewtonPerSquareMeter: return (baseUnitValue) / 1e3d;
                 case PressureUnit.KilonewtonPerSquareMillimeter: return (baseUnitValue/1e6) / 1e3d;
                 case PressureUnit.Kilopascal: return (baseUnitValue) / 1e3d;
-                case PressureUnit.KilopoundForcePerSquareFoot: return (baseUnitValue/4.788025898033584e1) / 1e3d;
-                case PressureUnit.KilopoundForcePerSquareInch: return (baseUnitValue/6.894757293168361e3) / 1e3d;
+                case PressureUnit.KilopoundForcePerSquareFoot: return (baseUnitValue/(32.174*1/0.3048*0.45359237)) / 1e3d;
+                case PressureUnit.KilopoundForcePerSquareInch: return (baseUnitValue/(32.174*0.3048*1/0.0254*1/0.0254*0.45359237)) / 1e3d;
                 case PressureUnit.Megabar: return (baseUnitValue/1e5) / 1e6d;
                 case PressureUnit.MeganewtonPerSquareMeter: return (baseUnitValue) / 1e6d;
                 case PressureUnit.Megapascal: return (baseUnitValue) / 1e6d;
-                case PressureUnit.MeterOfElevation: return (1.0 - Math.Pow(baseUnitValue / 101325.0, 0.190284)) * 44307.69396;
-                case PressureUnit.MeterOfHead: return baseUnitValue*0.0001019977334;
+                case PressureUnit.MeterOfHead: return baseUnitValue/9806.65;
                 case PressureUnit.Microbar: return (baseUnitValue/1e5) / 1e-6d;
                 case PressureUnit.Micropascal: return (baseUnitValue) / 1e-6d;
                 case PressureUnit.Millibar: return (baseUnitValue/1e5) / 1e-3d;
-                case PressureUnit.MillimeterOfMercury: return baseUnitValue*7.50061561302643e-3;
+                case PressureUnit.MillimeterOfMercury: return baseUnitValue/133.322387415;
                 case PressureUnit.MillimeterOfWaterColumn: return baseUnitValue/9.80665;
                 case PressureUnit.Millipascal: return (baseUnitValue) / 1e-3d;
                 case PressureUnit.NewtonPerSquareCentimeter: return baseUnitValue/1e4;
                 case PressureUnit.NewtonPerSquareMeter: return baseUnitValue;
                 case PressureUnit.NewtonPerSquareMillimeter: return baseUnitValue/1e6;
                 case PressureUnit.Pascal: return baseUnitValue;
-                case PressureUnit.PoundForcePerSquareFoot: return baseUnitValue/4.788025898033584e1;
-                case PressureUnit.PoundForcePerSquareInch: return baseUnitValue/6.894757293168361e3;
-                case PressureUnit.PoundPerInchSecondSquared: return baseUnitValue/1.785796732283465e1;
-                case PressureUnit.TechnicalAtmosphere: return baseUnitValue/(9.80680592331*1e4);
+                case PressureUnit.PoundForcePerSquareFoot: return baseUnitValue/(32.174*1/0.3048*0.45359237);
+                case PressureUnit.PoundForcePerSquareInch: return baseUnitValue/(32.174*0.3048*1/0.0254*1/0.0254*0.45359237);
+                case PressureUnit.PoundPerInchSecondSquared: return baseUnitValue/(0.45359237*1/0.0254);
+                case PressureUnit.TechnicalAtmosphere: return baseUnitValue/(9.80665*1e4);
                 case PressureUnit.TonneForcePerSquareCentimeter: return baseUnitValue/9.80665e7;
                 case PressureUnit.TonneForcePerSquareMeter: return baseUnitValue/9.80665e3;
                 case PressureUnit.TonneForcePerSquareMillimeter: return baseUnitValue/9.80665e9;
-                case PressureUnit.Torr: return baseUnitValue/(1.3332266752*1e2);
+                case PressureUnit.Torr: return baseUnitValue/(101325/760);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

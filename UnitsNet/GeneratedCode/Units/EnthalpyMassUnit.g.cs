@@ -26,7 +26,7 @@ namespace UnitsNet.Units
     public enum EnthalpyMassUnit
     {
         Undefined = 0,
-        BtuPerPound,
+        BTUPerPound,
         CaloriePerGram,
         JoulePerKilogram,
         KilocaloriePerGram,

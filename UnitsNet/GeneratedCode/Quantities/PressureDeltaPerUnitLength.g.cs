@@ -926,9 +926,9 @@ namespace UnitsNet
                 case PressureDeltaPerUnitLengthUnit.MillipascalDeltaPerMeter: return (_value) * 1e-3d;
                 case PressureDeltaPerUnitLengthUnit.PascalDeltaPerKilometer: return _value*0.001;
                 case PressureDeltaPerUnitLengthUnit.PascalDeltaPerMeter: return _value;
-                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerFoot: return _value*6894.757293168*3.28084;
-                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerHundredFeet: return _value*6894.757293168*3.28084/100;
-                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerMile: return _value*6894.757293168*3.28084/5280;
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerFoot: return _value*(32.174*0.45359237*1/0.0254*1/0.0254);
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerHundredFeet: return _value*(32.174*0.45359237*1/0.0254*1/0.0254*1/100);
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerMile: return _value*(32.174*0.45359237*1/0.0254*1/0.0254*1/5280);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -970,9 +970,9 @@ namespace UnitsNet
                 case PressureDeltaPerUnitLengthUnit.MillipascalDeltaPerMeter: return (baseUnitValue) / 1e-3d;
                 case PressureDeltaPerUnitLengthUnit.PascalDeltaPerKilometer: return baseUnitValue/0.001;
                 case PressureDeltaPerUnitLengthUnit.PascalDeltaPerMeter: return baseUnitValue;
-                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerFoot: return baseUnitValue/6894.757293168/3.28084;
-                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerHundredFeet: return baseUnitValue/6894.757293168/3.28084*100;
-                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerMile: return baseUnitValue/6894.757293168/3.28084*5280;
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerFoot: return baseUnitValue/(32.174*0.45359237*1/0.0254*1/0.0254);
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerHundredFeet: return baseUnitValue/(32.174*0.45359237*1/0.0254*1/0.0254*1/100);
+                case PressureDeltaPerUnitLengthUnit.PoundPerSquareInchDeltaPerMile: return baseUnitValue/(32.174*0.45359237*1/0.0254*1/0.0254*1/5280);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

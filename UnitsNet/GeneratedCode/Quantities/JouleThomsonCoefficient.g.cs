@@ -32,7 +32,7 @@ namespace UnitsNet
 {
     /// <inheritdoc />
     /// <summary>
-    ///     Temperature change rate is the ratio of the temperature change to the time during which the change occurred (value of temperature changes per unit time).
+    ///     Joule-Thomson Cofficient is a coefficient relating the change in temperature of a gas resulting from the Joule-Thomson effect.
     /// </summary>
     public partial struct JouleThomsonCoefficient : IQuantity<JouleThomsonCoefficientUnit>, IEquatable<JouleThomsonCoefficient>, IComparable, IComparable<JouleThomsonCoefficient>, IConvertible, IFormattable
     {

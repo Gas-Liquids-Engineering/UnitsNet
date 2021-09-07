@@ -46,7 +46,7 @@ namespace UnitsNet.Tests
             Assertion(3, BitRateUnit.TerabytePerSecond, Quantity.From(3, BitRateUnit.TerabytePerSecond));
             Assertion(3, BrakeSpecificFuelConsumptionUnit.PoundPerMechanicalHorsepowerHour, Quantity.From(3, BrakeSpecificFuelConsumptionUnit.PoundPerMechanicalHorsepowerHour));
             Assertion(3, CapacitanceUnit.Picofarad, Quantity.From(3, CapacitanceUnit.Picofarad));
-            Assertion(3, CoefficientOfThermalExpansionUnit.InverseKelvin, Quantity.From(3, CoefficientOfThermalExpansionUnit.InverseKelvin));
+            Assertion(3, CoefficientOfThermalExpansionUnit.InverseRankine, Quantity.From(3, CoefficientOfThermalExpansionUnit.InverseRankine));
             Assertion(3, DensityUnit.TonnePerCubicMillimeter, Quantity.From(3, DensityUnit.TonnePerCubicMillimeter));
             Assertion(3, DurationUnit.Year365, Quantity.From(3, DurationUnit.Year365));
             Assertion(3, DynamicViscosityUnit.Reyn, Quantity.From(3, DynamicViscosityUnit.Reyn));
@@ -68,7 +68,7 @@ namespace UnitsNet.Tests
             Assertion(3, ElectricResistivityUnit.PicoohmMeter, Quantity.From(3, ElectricResistivityUnit.PicoohmMeter));
             Assertion(3, ElectricSurfaceChargeDensityUnit.CoulombPerSquareMeter, Quantity.From(3, ElectricSurfaceChargeDensityUnit.CoulombPerSquareMeter));
             Assertion(3, EnergyUnit.WattHour, Quantity.From(3, EnergyUnit.WattHour));
-            Assertion(3, EnergyDensityUnit.MegajoulesPerCubicMeter, Quantity.From(3, EnergyDensityUnit.MegajoulesPerCubicMeter));
+            Assertion(3, EnergyDensityUnit.MegajoulePerCubicMeter, Quantity.From(3, EnergyDensityUnit.MegajoulePerCubicMeter));
             Assertion(3, EnthalpyMassUnit.MegajoulePerKilogram, Quantity.From(3, EnthalpyMassUnit.MegajoulePerKilogram));
             Assertion(3, EnthalpyMolarUnit.MegajoulePerMole, Quantity.From(3, EnthalpyMolarUnit.MegajoulePerMole));
             Assertion(3, EntropyUnit.MegajoulePerKelvin, Quantity.From(3, EntropyUnit.MegajoulePerKelvin));
@@ -82,7 +82,6 @@ namespace UnitsNet.Tests
             Assertion(3, IlluminanceUnit.Millilux, Quantity.From(3, IlluminanceUnit.Millilux));
             Assertion(3, InformationUnit.Terabyte, Quantity.From(3, InformationUnit.Terabyte));
             Assertion(3, InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerWatt, Quantity.From(3, InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerWatt));
-            Assertion(3, InverseTemperatureUnit.InverseKelvin, Quantity.From(3, InverseTemperatureUnit.InverseKelvin));
             Assertion(3, IrradianceUnit.WattPerSquareMeter, Quantity.From(3, IrradianceUnit.WattPerSquareMeter));
             Assertion(3, IrradiationUnit.WattHourPerSquareMeter, Quantity.From(3, IrradiationUnit.WattHourPerSquareMeter));
             Assertion(3, JouleThomsonCoefficientUnit.KelvinPerKilopascal, Quantity.From(3, JouleThomsonCoefficientUnit.KelvinPerKilopascal));
@@ -141,7 +140,6 @@ namespace UnitsNet.Tests
             Assertion(3, TemperatureDeltaUnit.MillidegreeCelsius, Quantity.From(3, TemperatureDeltaUnit.MillidegreeCelsius));
             Assertion(3, ThermalConductivityUnit.WattPerMeterKelvin, Quantity.From(3, ThermalConductivityUnit.WattPerMeterKelvin));
             Assertion(3, ThermalResistanceUnit.SquareMeterKelvinPerKilowatt, Quantity.From(3, ThermalResistanceUnit.SquareMeterKelvinPerKilowatt));
-            Assertion(3, TimeUnit.Second, Quantity.From(3, TimeUnit.Second));
             Assertion(3, TorqueUnit.TonneForceMillimeter, Quantity.From(3, TorqueUnit.TonneForceMillimeter));
             Assertion(3, TorquePerLengthUnit.TonneForceMillimeterPerMeter, Quantity.From(3, TorquePerLengthUnit.TonneForceMillimeterPerMeter));
             Assertion(3, TurbidityUnit.NTU, Quantity.From(3, TurbidityUnit.NTU));
@@ -207,7 +205,6 @@ namespace UnitsNet.Tests
             Assertion(Illuminance.Info, Illuminance.Zero);
             Assertion(Information.Info, Information.Zero);
             Assertion(InverseHeatTransferCoefficient.Info, InverseHeatTransferCoefficient.Zero);
-            Assertion(InverseTemperature.Info, InverseTemperature.Zero);
             Assertion(Irradiance.Info, Irradiance.Zero);
             Assertion(Irradiation.Info, Irradiation.Zero);
             Assertion(JouleThomsonCoefficient.Info, JouleThomsonCoefficient.Zero);
@@ -266,7 +263,6 @@ namespace UnitsNet.Tests
             Assertion(TemperatureDelta.Info, TemperatureDelta.Zero);
             Assertion(ThermalConductivity.Info, ThermalConductivity.Zero);
             Assertion(ThermalResistance.Info, ThermalResistance.Zero);
-            Assertion(Time.Info, Time.Zero);
             Assertion(Torque.Info, Torque.Zero);
             Assertion(TorquePerLength.Info, TorquePerLength.Zero);
             Assertion(Turbidity.Info, Turbidity.Zero);
@@ -332,7 +328,6 @@ namespace UnitsNet.Tests
             Assertion(Illuminance.QuantityType, Illuminance.Zero);
             Assertion(Information.QuantityType, Information.Zero);
             Assertion(InverseHeatTransferCoefficient.QuantityType, InverseHeatTransferCoefficient.Zero);
-            Assertion(InverseTemperature.QuantityType, InverseTemperature.Zero);
             Assertion(Irradiance.QuantityType, Irradiance.Zero);
             Assertion(Irradiation.QuantityType, Irradiation.Zero);
             Assertion(JouleThomsonCoefficient.QuantityType, JouleThomsonCoefficient.Zero);
@@ -391,7 +386,6 @@ namespace UnitsNet.Tests
             Assertion(TemperatureDelta.QuantityType, TemperatureDelta.Zero);
             Assertion(ThermalConductivity.QuantityType, ThermalConductivity.Zero);
             Assertion(ThermalResistance.QuantityType, ThermalResistance.Zero);
-            Assertion(Time.QuantityType, Time.Zero);
             Assertion(Torque.QuantityType, Torque.Zero);
             Assertion(TorquePerLength.QuantityType, TorquePerLength.Zero);
             Assertion(Turbidity.QuantityType, Turbidity.Zero);
@@ -457,7 +451,6 @@ namespace UnitsNet.Tests
             Assertion(Illuminance.BaseDimensions, Illuminance.Zero);
             Assertion(Information.BaseDimensions, Information.Zero);
             Assertion(InverseHeatTransferCoefficient.BaseDimensions, InverseHeatTransferCoefficient.Zero);
-            Assertion(InverseTemperature.BaseDimensions, InverseTemperature.Zero);
             Assertion(Irradiance.BaseDimensions, Irradiance.Zero);
             Assertion(Irradiation.BaseDimensions, Irradiation.Zero);
             Assertion(JouleThomsonCoefficient.BaseDimensions, JouleThomsonCoefficient.Zero);
@@ -516,7 +509,6 @@ namespace UnitsNet.Tests
             Assertion(TemperatureDelta.BaseDimensions, TemperatureDelta.Zero);
             Assertion(ThermalConductivity.BaseDimensions, ThermalConductivity.Zero);
             Assertion(ThermalResistance.BaseDimensions, ThermalResistance.Zero);
-            Assertion(Time.BaseDimensions, Time.Zero);
             Assertion(Torque.BaseDimensions, Torque.Zero);
             Assertion(TorquePerLength.BaseDimensions, TorquePerLength.Zero);
             Assertion(Turbidity.BaseDimensions, Turbidity.Zero);

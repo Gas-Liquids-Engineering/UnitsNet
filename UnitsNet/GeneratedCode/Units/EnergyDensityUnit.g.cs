@@ -26,12 +26,12 @@ namespace UnitsNet.Units
     public enum EnergyDensityUnit
     {
         Undefined = 0,
-        BtusPerCubicFoot,
-        CaloriesPerCubicMeter,
-        JoulesPerCubicMeter,
-        KilocaloriesPerCubicMeter,
-        KilojoulesPerCubicMeter,
-        MegajoulesPerCubicMeter,
+        BTUPerCubicFoot,
+        CaloriePerCubicMeter,
+        JoulePerCubicMeter,
+        KilocaloriePerCubicMeter,
+        KilojoulePerCubicMeter,
+        MegajoulePerCubicMeter,
     }
 
     #pragma warning restore 1591

@@ -185,9 +185,6 @@ namespace UnitsNet
                 case InverseHeatTransferCoefficientUnit inverseHeatTransferCoefficientUnit:
                     quantity = InverseHeatTransferCoefficient.From(value, inverseHeatTransferCoefficientUnit);
                     return true;
-                case InverseTemperatureUnit inverseTemperatureUnit:
-                    quantity = InverseTemperature.From(value, inverseTemperatureUnit);
-                    return true;
                 case IrradianceUnit irradianceUnit:
                     quantity = Irradiance.From(value, irradianceUnit);
                     return true;
@@ -361,9 +358,6 @@ namespace UnitsNet
                     return true;
                 case ThermalResistanceUnit thermalResistanceUnit:
                     quantity = ThermalResistance.From(value, thermalResistanceUnit);
-                    return true;
-                case TimeUnit timeUnit:
-                    quantity = Time.From(value, timeUnit);
                     return true;
                 case TorqueUnit torqueUnit:
                     quantity = Torque.From(value, torqueUnit);
@@ -589,9 +583,6 @@ namespace UnitsNet
             if (quantityType == typeof(InverseHeatTransferCoefficient))
                 return parser.TryParse<InverseHeatTransferCoefficient, InverseHeatTransferCoefficientUnit>(quantityString, formatProvider, InverseHeatTransferCoefficient.From, out quantity);
 
-            if (quantityType == typeof(InverseTemperature))
-                return parser.TryParse<InverseTemperature, InverseTemperatureUnit>(quantityString, formatProvider, InverseTemperature.From, out quantity);
-
             if (quantityType == typeof(Irradiance))
                 return parser.TryParse<Irradiance, IrradianceUnit>(quantityString, formatProvider, Irradiance.From, out quantity);
 
@@ -765,9 +756,6 @@ namespace UnitsNet
 
             if (quantityType == typeof(ThermalResistance))
                 return parser.TryParse<ThermalResistance, ThermalResistanceUnit>(quantityString, formatProvider, ThermalResistance.From, out quantity);
-
-            if (quantityType == typeof(Time))
-                return parser.TryParse<Time, TimeUnit>(quantityString, formatProvider, Time.From, out quantity);
 
             if (quantityType == typeof(Torque))
                 return parser.TryParse<Torque, TorqueUnit>(quantityString, formatProvider, Torque.From, out quantity);

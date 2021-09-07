@@ -551,14 +551,14 @@ namespace UnitsNet
                 case ForcePerLengthUnit.DecinewtonPerCentimeter: return (_value*1e2) * 1e-1d;
                 case ForcePerLengthUnit.DecinewtonPerMeter: return (_value) * 1e-1d;
                 case ForcePerLengthUnit.DecinewtonPerMillimeter: return (_value*1e3) * 1e-1d;
-                case ForcePerLengthUnit.KilogramForcePerCentimeter: return _value*980.665002864;
-                case ForcePerLengthUnit.KilogramForcePerMeter: return _value*9.80665002864;
-                case ForcePerLengthUnit.KilogramForcePerMillimeter: return _value*9.80665002864e3;
+                case ForcePerLengthUnit.KilogramForcePerCentimeter: return _value*980.665;
+                case ForcePerLengthUnit.KilogramForcePerMeter: return _value*9.80665;
+                case ForcePerLengthUnit.KilogramForcePerMillimeter: return _value*9806.65;
                 case ForcePerLengthUnit.KilonewtonPerCentimeter: return (_value*1e2) * 1e3d;
                 case ForcePerLengthUnit.KilonewtonPerMeter: return (_value) * 1e3d;
                 case ForcePerLengthUnit.KilonewtonPerMillimeter: return (_value*1e3) * 1e3d;
-                case ForcePerLengthUnit.KilopoundForcePerFoot: return _value*14593.90292;
-                case ForcePerLengthUnit.KilopoundForcePerInch: return _value*1.75126835e5;
+                case ForcePerLengthUnit.KilopoundForcePerFoot: return _value*(32.174*0.45359237*1000);
+                case ForcePerLengthUnit.KilopoundForcePerInch: return _value*(32.174*0.45359237*1000*12);
                 case ForcePerLengthUnit.MeganewtonPerCentimeter: return (_value*1e2) * 1e6d;
                 case ForcePerLengthUnit.MeganewtonPerMeter: return (_value) * 1e6d;
                 case ForcePerLengthUnit.MeganewtonPerMillimeter: return (_value*1e3) * 1e6d;
@@ -574,12 +574,12 @@ namespace UnitsNet
                 case ForcePerLengthUnit.NewtonPerCentimeter: return _value*1e2;
                 case ForcePerLengthUnit.NewtonPerMeter: return _value;
                 case ForcePerLengthUnit.NewtonPerMillimeter: return _value*1e3;
-                case ForcePerLengthUnit.PoundForcePerFoot: return _value*14.59390292;
-                case ForcePerLengthUnit.PoundForcePerInch: return _value*1.75126835e2;
-                case ForcePerLengthUnit.PoundForcePerYard: return _value*4.864634307;
-                case ForcePerLengthUnit.TonneForcePerCentimeter: return _value*9.80665002864e5;
-                case ForcePerLengthUnit.TonneForcePerMeter: return _value*9.80665002864e3;
-                case ForcePerLengthUnit.TonneForcePerMillimeter: return _value*9.80665002864e6;
+                case ForcePerLengthUnit.PoundForcePerFoot: return _value*(32.174*0.45359237);
+                case ForcePerLengthUnit.PoundForcePerInch: return _value*(32.174*0.45359237*0.3048*12/0.3048);
+                case ForcePerLengthUnit.PoundForcePerYard: return _value*(32.174*0.45359237*0.3048*12/0.3048)/36;
+                case ForcePerLengthUnit.TonneForcePerCentimeter: return _value*980665;
+                case ForcePerLengthUnit.TonneForcePerMeter: return _value*9806.65;
+                case ForcePerLengthUnit.TonneForcePerMillimeter: return _value*980665.0;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -603,14 +603,14 @@ namespace UnitsNet
                 case ForcePerLengthUnit.DecinewtonPerCentimeter: return (baseUnitValue/1e2) / 1e-1d;
                 case ForcePerLengthUnit.DecinewtonPerMeter: return (baseUnitValue) / 1e-1d;
                 case ForcePerLengthUnit.DecinewtonPerMillimeter: return (baseUnitValue/1e3) / 1e-1d;
-                case ForcePerLengthUnit.KilogramForcePerCentimeter: return baseUnitValue/980.665002864;
-                case ForcePerLengthUnit.KilogramForcePerMeter: return baseUnitValue/9.80665002864;
-                case ForcePerLengthUnit.KilogramForcePerMillimeter: return baseUnitValue/9.80665002864e3;
+                case ForcePerLengthUnit.KilogramForcePerCentimeter: return baseUnitValue/980.665;
+                case ForcePerLengthUnit.KilogramForcePerMeter: return baseUnitValue/9.80665;
+                case ForcePerLengthUnit.KilogramForcePerMillimeter: return baseUnitValue/9806.65;
                 case ForcePerLengthUnit.KilonewtonPerCentimeter: return (baseUnitValue/1e2) / 1e3d;
                 case ForcePerLengthUnit.KilonewtonPerMeter: return (baseUnitValue) / 1e3d;
                 case ForcePerLengthUnit.KilonewtonPerMillimeter: return (baseUnitValue/1e3) / 1e3d;
-                case ForcePerLengthUnit.KilopoundForcePerFoot: return baseUnitValue/14593.90292;
-                case ForcePerLengthUnit.KilopoundForcePerInch: return baseUnitValue/1.75126835e5;
+                case ForcePerLengthUnit.KilopoundForcePerFoot: return baseUnitValue/(32.174*0.45359237*1000);
+                case ForcePerLengthUnit.KilopoundForcePerInch: return baseUnitValue/(32.174*0.45359237*1000*12);
                 case ForcePerLengthUnit.MeganewtonPerCentimeter: return (baseUnitValue/1e2) / 1e6d;
                 case ForcePerLengthUnit.MeganewtonPerMeter: return (baseUnitValue) / 1e6d;
                 case ForcePerLengthUnit.MeganewtonPerMillimeter: return (baseUnitValue/1e3) / 1e6d;
@@ -626,12 +626,12 @@ namespace UnitsNet
                 case ForcePerLengthUnit.NewtonPerCentimeter: return baseUnitValue/1e2;
                 case ForcePerLengthUnit.NewtonPerMeter: return baseUnitValue;
                 case ForcePerLengthUnit.NewtonPerMillimeter: return baseUnitValue/1e3;
-                case ForcePerLengthUnit.PoundForcePerFoot: return baseUnitValue/14.59390292;
-                case ForcePerLengthUnit.PoundForcePerInch: return baseUnitValue/1.75126835e2;
-                case ForcePerLengthUnit.PoundForcePerYard: return baseUnitValue/4.864634307;
-                case ForcePerLengthUnit.TonneForcePerCentimeter: return baseUnitValue/9.80665002864e5;
-                case ForcePerLengthUnit.TonneForcePerMeter: return baseUnitValue/9.80665002864e3;
-                case ForcePerLengthUnit.TonneForcePerMillimeter: return baseUnitValue/9.80665002864e6;
+                case ForcePerLengthUnit.PoundForcePerFoot: return baseUnitValue/(32.174*0.45359237);
+                case ForcePerLengthUnit.PoundForcePerInch: return baseUnitValue/(32.174*0.45359237*0.3048*12/0.3048);
+                case ForcePerLengthUnit.PoundForcePerYard: return baseUnitValue/(32.174*0.45359237*0.3048*12/0.3048)*36;
+                case ForcePerLengthUnit.TonneForcePerCentimeter: return baseUnitValue/980665;
+                case ForcePerLengthUnit.TonneForcePerMeter: return baseUnitValue/9806.65;
+                case ForcePerLengthUnit.TonneForcePerMillimeter: return baseUnitValue/980665.0;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

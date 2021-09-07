@@ -257,8 +257,8 @@ namespace UnitsNet
                 case MolarityUnit.MolesPerLiter: return _value/1e-3;
                 case MolarityUnit.NanomolesPerLiter: return (_value/1e-3) * 1e-9d;
                 case MolarityUnit.PicomolesPerLiter: return (_value/1e-3) * 1e-12d;
-                case MolarityUnit.PoundMolesPerCubicFoot: return _value*16018;
-                case MolarityUnit.PoundMolesPerCubicMeter: return _value*453.6;
+                case MolarityUnit.PoundMolesPerCubicFoot: return _value*(453.59237*1/0.3048*1/0.3048*1/0.3048);
+                case MolarityUnit.PoundMolesPerCubicMeter: return _value*453.59237;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -282,8 +282,8 @@ namespace UnitsNet
                 case MolarityUnit.MolesPerLiter: return baseUnitValue*1e-3;
                 case MolarityUnit.NanomolesPerLiter: return (baseUnitValue*1e-3) / 1e-9d;
                 case MolarityUnit.PicomolesPerLiter: return (baseUnitValue*1e-3) / 1e-12d;
-                case MolarityUnit.PoundMolesPerCubicFoot: return baseUnitValue/16018;
-                case MolarityUnit.PoundMolesPerCubicMeter: return baseUnitValue/453.6;
+                case MolarityUnit.PoundMolesPerCubicFoot: return baseUnitValue/(453.59237*1/0.3048*1/0.3048*1/0.3048);
+                case MolarityUnit.PoundMolesPerCubicMeter: return baseUnitValue/453.59237;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

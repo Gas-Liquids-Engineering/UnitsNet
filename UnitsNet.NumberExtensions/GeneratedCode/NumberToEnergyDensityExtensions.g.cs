@@ -28,9 +28,9 @@ namespace UnitsNet.NumberExtensions.NumberToEnergyDensity
     /// </summary>
     public static class NumberToEnergyDensityExtensions
     {
-        /// <inheritdoc cref="EnergyDensity.FromBtusPerCubicFeet(UnitsNet.QuantityValue)" />
-        public static EnergyDensity BtusPerCubicFeet<T>(this T value) =>
-            EnergyDensity.FromBtusPerCubicFeet(Convert.ToDouble(value));
+        /// <inheritdoc cref="EnergyDensity.FromBTUsPerCubicFeet(UnitsNet.QuantityValue)" />
+        public static EnergyDensity BTUsPerCubicFeet<T>(this T value) =>
+            EnergyDensity.FromBTUsPerCubicFeet(Convert.ToDouble(value));
 
         /// <inheritdoc cref="EnergyDensity.FromCaloriesPerCubicMeter(UnitsNet.QuantityValue)" />
         public static EnergyDensity CaloriesPerCubicMeter<T>(this T value) =>

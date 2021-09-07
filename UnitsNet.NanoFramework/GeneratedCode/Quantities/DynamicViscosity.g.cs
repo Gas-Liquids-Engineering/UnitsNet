@@ -266,11 +266,11 @@ namespace UnitsNet
                 case DynamicViscosityUnit.NewtonSecondPerMeterSquared: return _value;
                 case DynamicViscosityUnit.PascalSecond: return _value;
                 case DynamicViscosityUnit.Poise: return _value/10;
-                case DynamicViscosityUnit.PoundForceSecondPerSquareFoot: return _value * 4.7880258980335843e1;
-                case DynamicViscosityUnit.PoundForceSecondPerSquareInch: return _value * 6.8947572931683613e3;
-                case DynamicViscosityUnit.PoundPerFootHour: return _value * 4.134e-4;
-                case DynamicViscosityUnit.PoundPerFootSecond: return _value * 1.4881639;
-                case DynamicViscosityUnit.Reyn: return _value * 6.8947572931683613e3;
+                case DynamicViscosityUnit.PoundForceSecondPerSquareFoot: return _value*(0.45359237*12/0.3048*1/0.3048*9.80665);
+                case DynamicViscosityUnit.PoundForceSecondPerSquareInch: return _value*(0.45359237*12/0.3048*12/0.3048*9.80665);
+                case DynamicViscosityUnit.PoundPerFootHour: return _value*(0.4535927/0.3048/3600);
+                case DynamicViscosityUnit.PoundPerFootSecond: return _value*(0.45359237/0.3048);
+                case DynamicViscosityUnit.Reyn: return _value*(0.45359237*12/0.3048*12/0.3048*9.80665);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -292,11 +292,11 @@ namespace UnitsNet
                 case DynamicViscosityUnit.NewtonSecondPerMeterSquared: return baseUnitValue;
                 case DynamicViscosityUnit.PascalSecond: return baseUnitValue;
                 case DynamicViscosityUnit.Poise: return baseUnitValue*10;
-                case DynamicViscosityUnit.PoundForceSecondPerSquareFoot: return baseUnitValue / 4.7880258980335843e1;
-                case DynamicViscosityUnit.PoundForceSecondPerSquareInch: return baseUnitValue / 6.8947572931683613e3;
-                case DynamicViscosityUnit.PoundPerFootHour: return baseUnitValue / 4.134e-4;
-                case DynamicViscosityUnit.PoundPerFootSecond: return baseUnitValue / 1.4881639;
-                case DynamicViscosityUnit.Reyn: return baseUnitValue / 6.8947572931683613e3;
+                case DynamicViscosityUnit.PoundForceSecondPerSquareFoot: return baseUnitValue/(0.45359237*12/0.3048*1/0.3048*9.80665);
+                case DynamicViscosityUnit.PoundForceSecondPerSquareInch: return baseUnitValue/(0.45359237*12/0.3048*12/0.3048*9.80665);
+                case DynamicViscosityUnit.PoundPerFootHour: return baseUnitValue/(0.4535927/0.3048/3600);
+                case DynamicViscosityUnit.PoundPerFootSecond: return baseUnitValue/(0.45359237/0.3048);
+                case DynamicViscosityUnit.Reyn: return baseUnitValue/(0.45359237*12/0.3048*12/0.3048*9.80665);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

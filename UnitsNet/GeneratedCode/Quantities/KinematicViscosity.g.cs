@@ -814,9 +814,9 @@ namespace UnitsNet
                 case KinematicViscosityUnit.Microstokes: return (_value/1e4) * 1e-6d;
                 case KinematicViscosityUnit.Millistokes: return (_value/1e4) * 1e-3d;
                 case KinematicViscosityUnit.Nanostokes: return (_value/1e4) * 1e-9d;
-                case KinematicViscosityUnit.SquareFootPerHour: return _value * 2.58064e-5;
-                case KinematicViscosityUnit.SquareFootPerSecond: return _value/10.7639;
-                case KinematicViscosityUnit.SquareInchPerSecond: return _value*0.064516;
+                case KinematicViscosityUnit.SquareFootPerHour: return _value*(0.3048*0.3048*1/3600);
+                case KinematicViscosityUnit.SquareFootPerSecond: return _value*(0.3048*0.3048);
+                case KinematicViscosityUnit.SquareInchPerSecond: return _value*(0.0254*0.0254);
                 case KinematicViscosityUnit.SquareMeterPerHour: return _value*3600;
                 case KinematicViscosityUnit.SquareMeterPerSecond: return _value;
                 case KinematicViscosityUnit.Stokes: return _value/1e4;
@@ -851,9 +851,9 @@ namespace UnitsNet
                 case KinematicViscosityUnit.Microstokes: return (baseUnitValue*1e4) / 1e-6d;
                 case KinematicViscosityUnit.Millistokes: return (baseUnitValue*1e4) / 1e-3d;
                 case KinematicViscosityUnit.Nanostokes: return (baseUnitValue*1e4) / 1e-9d;
-                case KinematicViscosityUnit.SquareFootPerHour: return baseUnitValue / 2.58064e-5;
-                case KinematicViscosityUnit.SquareFootPerSecond: return baseUnitValue*10.7639;
-                case KinematicViscosityUnit.SquareInchPerSecond: return baseUnitValue/0.064516;
+                case KinematicViscosityUnit.SquareFootPerHour: return baseUnitValue/(0.3048*0.3048*1/3600);
+                case KinematicViscosityUnit.SquareFootPerSecond: return baseUnitValue/(0.3048*0.3048);
+                case KinematicViscosityUnit.SquareInchPerSecond: return baseUnitValue/(0.0254*0.0254);
                 case KinematicViscosityUnit.SquareMeterPerHour: return baseUnitValue/3600;
                 case KinematicViscosityUnit.SquareMeterPerSecond: return baseUnitValue;
                 case KinematicViscosityUnit.Stokes: return baseUnitValue*1e4;

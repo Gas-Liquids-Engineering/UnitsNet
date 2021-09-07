@@ -37,7 +37,7 @@ namespace UnitsNet.Tests
 // ReSharper disable once PartialTypeWithSinglePart
     public abstract partial class EnthalpyMassTestsBase : QuantityTestsBase
     {
-        protected abstract double BtusPerPoundInOneJoulePerKilogram { get; }
+        protected abstract double BTUsPerPoundInOneJoulePerKilogram { get; }
         protected abstract double CaloriesPerGramInOneJoulePerKilogram { get; }
         protected abstract double JoulesPerKilogramInOneJoulePerKilogram { get; }
         protected abstract double KilocaloriesPerGramInOneJoulePerKilogram { get; }
@@ -45,7 +45,7 @@ namespace UnitsNet.Tests
         protected abstract double MegajoulesPerKilogramInOneJoulePerKilogram { get; }
 
 // ReSharper disable VirtualMemberNeverOverriden.Global
-        protected virtual double BtusPerPoundTolerance { get { return 1e-5; } }
+        protected virtual double BTUsPerPoundTolerance { get { return 1e-5; } }
         protected virtual double CaloriesPerGramTolerance { get { return 1e-5; } }
         protected virtual double JoulesPerKilogramTolerance { get { return 1e-5; } }
         protected virtual double KilocaloriesPerGramTolerance { get { return 1e-5; } }
@@ -125,7 +125,7 @@ namespace UnitsNet.Tests
         public void JoulePerKilogramToEnthalpyMassUnits()
         {
             EnthalpyMass jouleperkilogram = EnthalpyMass.FromJoulesPerKilogram(1);
-            AssertEx.EqualTolerance(BtusPerPoundInOneJoulePerKilogram, jouleperkilogram.BtusPerPound, BtusPerPoundTolerance);
+            AssertEx.EqualTolerance(BTUsPerPoundInOneJoulePerKilogram, jouleperkilogram.BTUsPerPound, BTUsPerPoundTolerance);
             AssertEx.EqualTolerance(CaloriesPerGramInOneJoulePerKilogram, jouleperkilogram.CaloriesPerGram, CaloriesPerGramTolerance);
             AssertEx.EqualTolerance(JoulesPerKilogramInOneJoulePerKilogram, jouleperkilogram.JoulesPerKilogram, JoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(KilocaloriesPerGramInOneJoulePerKilogram, jouleperkilogram.KilocaloriesPerGram, KilocaloriesPerGramTolerance);
@@ -136,9 +136,9 @@ namespace UnitsNet.Tests
         [Fact]
         public void From_ValueAndUnit_ReturnsQuantityWithSameValueAndUnit()
         {
-            var quantity00 = EnthalpyMass.From(1, EnthalpyMassUnit.BtuPerPound);
-            AssertEx.EqualTolerance(1, quantity00.BtusPerPound, BtusPerPoundTolerance);
-            Assert.Equal(EnthalpyMassUnit.BtuPerPound, quantity00.Unit);
+            var quantity00 = EnthalpyMass.From(1, EnthalpyMassUnit.BTUPerPound);
+            AssertEx.EqualTolerance(1, quantity00.BTUsPerPound, BTUsPerPoundTolerance);
+            Assert.Equal(EnthalpyMassUnit.BTUPerPound, quantity00.Unit);
 
             var quantity01 = EnthalpyMass.From(1, EnthalpyMassUnit.CaloriePerGram);
             AssertEx.EqualTolerance(1, quantity01.CaloriesPerGram, CaloriesPerGramTolerance);
@@ -179,7 +179,7 @@ namespace UnitsNet.Tests
         public void As()
         {
             var jouleperkilogram = EnthalpyMass.FromJoulesPerKilogram(1);
-            AssertEx.EqualTolerance(BtusPerPoundInOneJoulePerKilogram, jouleperkilogram.As(EnthalpyMassUnit.BtuPerPound), BtusPerPoundTolerance);
+            AssertEx.EqualTolerance(BTUsPerPoundInOneJoulePerKilogram, jouleperkilogram.As(EnthalpyMassUnit.BTUPerPound), BTUsPerPoundTolerance);
             AssertEx.EqualTolerance(CaloriesPerGramInOneJoulePerKilogram, jouleperkilogram.As(EnthalpyMassUnit.CaloriePerGram), CaloriesPerGramTolerance);
             AssertEx.EqualTolerance(JoulesPerKilogramInOneJoulePerKilogram, jouleperkilogram.As(EnthalpyMassUnit.JoulePerKilogram), JoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(KilocaloriesPerGramInOneJoulePerKilogram, jouleperkilogram.As(EnthalpyMassUnit.KilocaloriePerGram), KilocaloriesPerGramTolerance);
@@ -209,9 +209,9 @@ namespace UnitsNet.Tests
         {
             var jouleperkilogram = EnthalpyMass.FromJoulesPerKilogram(1);
 
-            var btuperpoundQuantity = jouleperkilogram.ToUnit(EnthalpyMassUnit.BtuPerPound);
-            AssertEx.EqualTolerance(BtusPerPoundInOneJoulePerKilogram, (double)btuperpoundQuantity.Value, BtusPerPoundTolerance);
-            Assert.Equal(EnthalpyMassUnit.BtuPerPound, btuperpoundQuantity.Unit);
+            var btuperpoundQuantity = jouleperkilogram.ToUnit(EnthalpyMassUnit.BTUPerPound);
+            AssertEx.EqualTolerance(BTUsPerPoundInOneJoulePerKilogram, (double)btuperpoundQuantity.Value, BTUsPerPoundTolerance);
+            Assert.Equal(EnthalpyMassUnit.BTUPerPound, btuperpoundQuantity.Unit);
 
             var caloriepergramQuantity = jouleperkilogram.ToUnit(EnthalpyMassUnit.CaloriePerGram);
             AssertEx.EqualTolerance(CaloriesPerGramInOneJoulePerKilogram, (double)caloriepergramQuantity.Value, CaloriesPerGramTolerance);
@@ -245,7 +245,7 @@ namespace UnitsNet.Tests
         public void ConversionRoundTrip()
         {
             EnthalpyMass jouleperkilogram = EnthalpyMass.FromJoulesPerKilogram(1);
-            AssertEx.EqualTolerance(1, EnthalpyMass.FromBtusPerPound(jouleperkilogram.BtusPerPound).JoulesPerKilogram, BtusPerPoundTolerance);
+            AssertEx.EqualTolerance(1, EnthalpyMass.FromBTUsPerPound(jouleperkilogram.BTUsPerPound).JoulesPerKilogram, BTUsPerPoundTolerance);
             AssertEx.EqualTolerance(1, EnthalpyMass.FromCaloriesPerGram(jouleperkilogram.CaloriesPerGram).JoulesPerKilogram, CaloriesPerGramTolerance);
             AssertEx.EqualTolerance(1, EnthalpyMass.FromJoulesPerKilogram(jouleperkilogram.JoulesPerKilogram).JoulesPerKilogram, JoulesPerKilogramTolerance);
             AssertEx.EqualTolerance(1, EnthalpyMass.FromKilocaloriesPerGram(jouleperkilogram.KilocaloriesPerGram).JoulesPerKilogram, KilocaloriesPerGramTolerance);
@@ -409,7 +409,7 @@ namespace UnitsNet.Tests
             var prevCulture = Thread.CurrentThread.CurrentUICulture;
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
             try {
-                Assert.Equal("1 btu/lb", new EnthalpyMass(1, EnthalpyMassUnit.BtuPerPound).ToString());
+                Assert.Equal("1 BTU/lb", new EnthalpyMass(1, EnthalpyMassUnit.BTUPerPound).ToString());
                 Assert.Equal("1 cal/g", new EnthalpyMass(1, EnthalpyMassUnit.CaloriePerGram).ToString());
                 Assert.Equal("1 J/kg", new EnthalpyMass(1, EnthalpyMassUnit.JoulePerKilogram).ToString());
                 Assert.Equal("1 kcal/g", new EnthalpyMass(1, EnthalpyMassUnit.KilocaloriePerGram).ToString());
@@ -428,7 +428,7 @@ namespace UnitsNet.Tests
             // Chose this culture, because we don't currently have any abbreviations mapped for that culture and we expect the en-US to be used as fallback.
             var swedishCulture = CultureInfo.GetCultureInfo("sv-SE");
 
-            Assert.Equal("1 btu/lb", new EnthalpyMass(1, EnthalpyMassUnit.BtuPerPound).ToString(swedishCulture));
+            Assert.Equal("1 BTU/lb", new EnthalpyMass(1, EnthalpyMassUnit.BTUPerPound).ToString(swedishCulture));
             Assert.Equal("1 cal/g", new EnthalpyMass(1, EnthalpyMassUnit.CaloriePerGram).ToString(swedishCulture));
             Assert.Equal("1 J/kg", new EnthalpyMass(1, EnthalpyMassUnit.JoulePerKilogram).ToString(swedishCulture));
             Assert.Equal("1 kcal/g", new EnthalpyMass(1, EnthalpyMassUnit.KilocaloriePerGram).ToString(swedishCulture));

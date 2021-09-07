@@ -52,7 +52,7 @@ namespace UnitsNet
 
             Info = new QuantityInfo<EnthalpyMolarUnit>("EnthalpyMolar",
                 new UnitInfo<EnthalpyMolarUnit>[] {
-                    new UnitInfo<EnthalpyMolarUnit>(EnthalpyMolarUnit.BtuPerPound, BaseUnits.Undefined),
+                    new UnitInfo<EnthalpyMolarUnit>(EnthalpyMolarUnit.BTUPerPound, BaseUnits.Undefined),
                     new UnitInfo<EnthalpyMolarUnit>(EnthalpyMolarUnit.CaloriesPerMole, BaseUnits.Undefined),
                     new UnitInfo<EnthalpyMolarUnit>(EnthalpyMolarUnit.JoulePerKilomole, BaseUnits.Undefined),
                     new UnitInfo<EnthalpyMolarUnit>(EnthalpyMolarUnit.JoulePerMole, BaseUnits.Undefined),
@@ -175,9 +175,9 @@ namespace UnitsNet
         #region Conversion Properties
 
         /// <summary>
-        ///     Get EnthalpyMolar in BtusPerPound.
+        ///     Get EnthalpyMolar in BTUsPerPound.
         /// </summary>
-        public double BtusPerPound => As(EnthalpyMolarUnit.BtuPerPound);
+        public double BTUsPerPound => As(EnthalpyMolarUnit.BTUPerPound);
 
         /// <summary>
         ///     Get EnthalpyMolar in CaloriesPerMole.
@@ -239,13 +239,13 @@ namespace UnitsNet
         #region Static Factory Methods
 
         /// <summary>
-        ///     Get EnthalpyMolar from BtusPerPound.
+        ///     Get EnthalpyMolar from BTUsPerPound.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
-        public static EnthalpyMolar FromBtusPerPound(QuantityValue btusperpound)
+        public static EnthalpyMolar FromBTUsPerPound(QuantityValue btusperpound)
         {
             double value = (double) btusperpound;
-            return new EnthalpyMolar(value, EnthalpyMolarUnit.BtuPerPound);
+            return new EnthalpyMolar(value, EnthalpyMolarUnit.BTUPerPound);
         }
         /// <summary>
         ///     Get EnthalpyMolar from CaloriesPerMole.
@@ -730,11 +730,11 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case EnthalpyMolarUnit.BtuPerPound: return _value*2.326;
+                case EnthalpyMolarUnit.BTUPerPound: return _value*(1055.05585262/453.59237);
                 case EnthalpyMolarUnit.CaloriesPerMole: return _value*4184;
-                case EnthalpyMolarUnit.JoulePerKilomole: return _value*1000;
+                case EnthalpyMolarUnit.JoulePerKilomole: return _value*(1/1000);
                 case EnthalpyMolarUnit.JoulePerMole: return _value;
-                case EnthalpyMolarUnit.KilojoulePerKilomole: return (_value*1000) * 1e3d;
+                case EnthalpyMolarUnit.KilojoulePerKilomole: return (_value*(1/1000)) * 1e3d;
                 case EnthalpyMolarUnit.KilojoulePerMole: return (_value) * 1e3d;
                 case EnthalpyMolarUnit.MegajoulePerMole: return (_value) * 1e6d;
                 default:
@@ -762,11 +762,11 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case EnthalpyMolarUnit.BtuPerPound: return baseUnitValue/2.326;
+                case EnthalpyMolarUnit.BTUPerPound: return baseUnitValue/(1055.05585262/453.59237);
                 case EnthalpyMolarUnit.CaloriesPerMole: return baseUnitValue/4184;
-                case EnthalpyMolarUnit.JoulePerKilomole: return baseUnitValue/1000;
+                case EnthalpyMolarUnit.JoulePerKilomole: return baseUnitValue/(1/1000);
                 case EnthalpyMolarUnit.JoulePerMole: return baseUnitValue;
-                case EnthalpyMolarUnit.KilojoulePerKilomole: return (baseUnitValue/1000) / 1e3d;
+                case EnthalpyMolarUnit.KilojoulePerKilomole: return (baseUnitValue/(1/1000)) / 1e3d;
                 case EnthalpyMolarUnit.KilojoulePerMole: return (baseUnitValue) / 1e3d;
                 case EnthalpyMolarUnit.MegajoulePerMole: return (baseUnitValue) / 1e6d;
                 default:

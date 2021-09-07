@@ -36,5 +36,9 @@ namespace UnitsNet.Tests
         public void NumberToInverseKelvinTest() =>
             Assert.Equal(CoefficientOfThermalExpansion.FromInverseKelvin(2), 2.InverseKelvin());
 
+        [Fact]
+        public void NumberToInverseRankineTest() =>
+            Assert.Equal(CoefficientOfThermalExpansion.FromInverseRankine(2), 2.InverseRankine());
+
     }
 }

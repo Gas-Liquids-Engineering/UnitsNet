@@ -293,8 +293,8 @@ namespace UnitsNet
                 case LinearDensityUnit.MilligramPerCentimeter: return (_value*1e-1) * 1e-3d;
                 case LinearDensityUnit.MilligramPerMeter: return (_value*1e-3) * 1e-3d;
                 case LinearDensityUnit.MilligramPerMillimeter: return (_value) * 1e-3d;
-                case LinearDensityUnit.PoundPerFoot: return _value*1.48816394;
-                case LinearDensityUnit.PoundPerInch: return _value/5.5997415e-2;
+                case LinearDensityUnit.PoundPerFoot: return _value*(453.59237/304.8);
+                case LinearDensityUnit.PoundPerInch: return _value*(453.59237*1/25.4);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -321,8 +321,8 @@ namespace UnitsNet
                 case LinearDensityUnit.MilligramPerCentimeter: return (baseUnitValue/1e-1) / 1e-3d;
                 case LinearDensityUnit.MilligramPerMeter: return (baseUnitValue/1e-3) / 1e-3d;
                 case LinearDensityUnit.MilligramPerMillimeter: return (baseUnitValue) / 1e-3d;
-                case LinearDensityUnit.PoundPerFoot: return baseUnitValue/1.48816394;
-                case LinearDensityUnit.PoundPerInch: return baseUnitValue*5.5997415e-2;
+                case LinearDensityUnit.PoundPerFoot: return baseUnitValue/(453.59237/304.8);
+                case LinearDensityUnit.PoundPerInch: return baseUnitValue/(453.59237*1/25.4);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

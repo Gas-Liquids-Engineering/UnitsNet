@@ -1006,9 +1006,9 @@ namespace UnitsNet
                 case RotationalSpeedUnit.NanoradianPerSecond: return (_value) * 1e-9d;
                 case RotationalSpeedUnit.RadianPerMinute: return _value*60;
                 case RotationalSpeedUnit.RadianPerSecond: return _value;
-                case RotationalSpeedUnit.RevolutionPerHour: return (_value*6.2831853072)/3600;
-                case RotationalSpeedUnit.RevolutionPerMinute: return (_value*6.2831853072)/60;
-                case RotationalSpeedUnit.RevolutionPerSecond: return _value*6.2831853072;
+                case RotationalSpeedUnit.RevolutionPerHour: return _value*(2*Math.PI/3600);
+                case RotationalSpeedUnit.RevolutionPerMinute: return _value*(2*Math.PI/60);
+                case RotationalSpeedUnit.RevolutionPerSecond: return _value*(2*Math.PI);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -1055,9 +1055,9 @@ namespace UnitsNet
                 case RotationalSpeedUnit.NanoradianPerSecond: return (baseUnitValue) / 1e-9d;
                 case RotationalSpeedUnit.RadianPerMinute: return baseUnitValue*60;
                 case RotationalSpeedUnit.RadianPerSecond: return baseUnitValue;
-                case RotationalSpeedUnit.RevolutionPerHour: return (baseUnitValue/6.2831853072)*3600;
-                case RotationalSpeedUnit.RevolutionPerMinute: return (baseUnitValue/6.2831853072)*60;
-                case RotationalSpeedUnit.RevolutionPerSecond: return baseUnitValue/6.2831853072;
+                case RotationalSpeedUnit.RevolutionPerHour: return baseUnitValue*(2*Math.PI/3600);
+                case RotationalSpeedUnit.RevolutionPerMinute: return baseUnitValue/(2*Math.PI/60);
+                case RotationalSpeedUnit.RevolutionPerSecond: return baseUnitValue/(2*Math.PI);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

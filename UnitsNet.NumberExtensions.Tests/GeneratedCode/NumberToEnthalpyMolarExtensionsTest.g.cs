@@ -25,8 +25,8 @@ namespace UnitsNet.Tests
     public class NumberToEnthalpyMolarExtensionsTests
     {
         [Fact]
-        public void NumberToBtusPerPoundTest() =>
-            Assert.Equal(EnthalpyMolar.FromBtusPerPound(2), 2.BtusPerPound());
+        public void NumberToBTUsPerPoundTest() =>
+            Assert.Equal(EnthalpyMolar.FromBTUsPerPound(2), 2.BTUsPerPound());
 
         [Fact]
         public void NumberToCaloriesPerMoleTest() =>

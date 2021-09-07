@@ -650,7 +650,7 @@ namespace UnitsNet
                 case FrequencyUnit.Kilohertz: return (_value) * 1e3d;
                 case FrequencyUnit.Megahertz: return (_value) * 1e6d;
                 case FrequencyUnit.PerSecond: return _value;
-                case FrequencyUnit.RadianPerSecond: return _value/6.2831853072;
+                case FrequencyUnit.RadianPerSecond: return _value/(2*Math.PI);
                 case FrequencyUnit.Terahertz: return (_value) * 1e12d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
@@ -675,7 +675,7 @@ namespace UnitsNet
                 case FrequencyUnit.Kilohertz: return (baseUnitValue) / 1e3d;
                 case FrequencyUnit.Megahertz: return (baseUnitValue) / 1e6d;
                 case FrequencyUnit.PerSecond: return baseUnitValue;
-                case FrequencyUnit.RadianPerSecond: return baseUnitValue*6.2831853072;
+                case FrequencyUnit.RadianPerSecond: return baseUnitValue*(2*Math.PI);
                 case FrequencyUnit.Terahertz: return (baseUnitValue) / 1e12d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");

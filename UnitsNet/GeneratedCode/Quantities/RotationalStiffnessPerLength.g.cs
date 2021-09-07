@@ -701,10 +701,10 @@ namespace UnitsNet
             switch(Unit)
             {
                 case RotationalStiffnessPerLengthUnit.KilonewtonMeterPerRadianPerMeter: return (_value) * 1e3d;
-                case RotationalStiffnessPerLengthUnit.KilopoundForceFootPerDegreesPerFoot: return _value*254864.324570;
+                case RotationalStiffnessPerLengthUnit.KilopoundForceFootPerDegreesPerFoot: return _value*(1000*32.174*0.45359237*0.3048*180/Math.PI);
                 case RotationalStiffnessPerLengthUnit.MeganewtonMeterPerRadianPerMeter: return (_value) * 1e6d;
                 case RotationalStiffnessPerLengthUnit.NewtonMeterPerRadianPerMeter: return _value;
-                case RotationalStiffnessPerLengthUnit.PoundForceFootPerDegreesPerFoot: return _value*254.864324570;
+                case RotationalStiffnessPerLengthUnit.PoundForceFootPerDegreesPerFoot: return _value*(32.174*0.45359237*0.3048*180/Math.PI);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -731,10 +731,10 @@ namespace UnitsNet
             switch(unit)
             {
                 case RotationalStiffnessPerLengthUnit.KilonewtonMeterPerRadianPerMeter: return (baseUnitValue) / 1e3d;
-                case RotationalStiffnessPerLengthUnit.KilopoundForceFootPerDegreesPerFoot: return baseUnitValue/254864.324570;
+                case RotationalStiffnessPerLengthUnit.KilopoundForceFootPerDegreesPerFoot: return baseUnitValue/(1000*32.174*0.45359237*0.3048*180/Math.PI);
                 case RotationalStiffnessPerLengthUnit.MeganewtonMeterPerRadianPerMeter: return (baseUnitValue) / 1e6d;
                 case RotationalStiffnessPerLengthUnit.NewtonMeterPerRadianPerMeter: return baseUnitValue;
-                case RotationalStiffnessPerLengthUnit.PoundForceFootPerDegreesPerFoot: return baseUnitValue/254.864324570;
+                case RotationalStiffnessPerLengthUnit.PoundForceFootPerDegreesPerFoot: return baseUnitValue/(32.174*0.45359237*0.3048*180/Math.PI);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

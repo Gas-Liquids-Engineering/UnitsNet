@@ -86,7 +86,6 @@ namespace UnitsNet
             { "Illuminance", Illuminance.Info },
             { "Information", Information.Info },
             { "InverseHeatTransferCoefficient", InverseHeatTransferCoefficient.Info },
-            { "InverseTemperature", InverseTemperature.Info },
             { "Irradiance", Irradiance.Info },
             { "Irradiation", Irradiation.Info },
             { "JouleThomsonCoefficient", JouleThomsonCoefficient.Info },
@@ -145,7 +144,6 @@ namespace UnitsNet
             { "TemperatureDelta", TemperatureDelta.Info },
             { "ThermalConductivity", ThermalConductivity.Info },
             { "ThermalResistance", ThermalResistance.Info },
-            { "Time", Time.Info },
             { "Torque", Torque.Info },
             { "TorquePerLength", TorquePerLength.Info },
             { "Turbidity", Turbidity.Info },
@@ -210,7 +208,6 @@ namespace UnitsNet
             { "Illuminance", QuantityType.Illuminance },
             { "Information", QuantityType.Information },
             { "InverseHeatTransferCoefficient", QuantityType.InverseHeatTransferCoefficient },
-            { "InverseTemperature", QuantityType.InverseTemperature },
             { "Irradiance", QuantityType.Irradiance },
             { "Irradiation", QuantityType.Irradiation },
             { "JouleThomsonCoefficient", QuantityType.JouleThomsonCoefficient },
@@ -269,7 +266,6 @@ namespace UnitsNet
             { "TemperatureDelta", QuantityType.TemperatureDelta },
             { "ThermalConductivity", QuantityType.ThermalConductivity },
             { "ThermalResistance", QuantityType.ThermalResistance },
-            { "Time", QuantityType.Time },
             { "Torque", QuantityType.Torque },
             { "TorquePerLength", QuantityType.TorquePerLength },
             { "Turbidity", QuantityType.Turbidity },
@@ -389,8 +385,6 @@ namespace UnitsNet
                     return Information.From(value, Information.BaseUnit);
                 case QuantityType.InverseHeatTransferCoefficient:
                     return InverseHeatTransferCoefficient.From(value, InverseHeatTransferCoefficient.BaseUnit);
-                case QuantityType.InverseTemperature:
-                    return InverseTemperature.From(value, InverseTemperature.BaseUnit);
                 case QuantityType.Irradiance:
                     return Irradiance.From(value, Irradiance.BaseUnit);
                 case QuantityType.Irradiation:
@@ -507,8 +501,6 @@ namespace UnitsNet
                     return ThermalConductivity.From(value, ThermalConductivity.BaseUnit);
                 case QuantityType.ThermalResistance:
                     return ThermalResistance.From(value, ThermalResistance.BaseUnit);
-                case QuantityType.Time:
-                    return Time.From(value, Time.BaseUnit);
                 case QuantityType.Torque:
                     return Torque.From(value, Torque.BaseUnit);
                 case QuantityType.TorquePerLength:
@@ -640,8 +632,6 @@ namespace UnitsNet
                     return Information.From(value, Information.BaseUnit);
                 case "InverseHeatTransferCoefficient":
                     return InverseHeatTransferCoefficient.From(value, InverseHeatTransferCoefficient.BaseUnit);
-                case "InverseTemperature":
-                    return InverseTemperature.From(value, InverseTemperature.BaseUnit);
                 case "Irradiance":
                     return Irradiance.From(value, Irradiance.BaseUnit);
                 case "Irradiation":
@@ -758,8 +748,6 @@ namespace UnitsNet
                     return ThermalConductivity.From(value, ThermalConductivity.BaseUnit);
                 case "ThermalResistance":
                     return ThermalResistance.From(value, ThermalResistance.BaseUnit);
-                case "Time":
-                    return Time.From(value, Time.BaseUnit);
                 case "Torque":
                     return Torque.From(value, Torque.BaseUnit);
                 case "TorquePerLength":
@@ -940,9 +928,6 @@ namespace UnitsNet
                 case InverseHeatTransferCoefficientUnit inverseHeatTransferCoefficientUnit:
                     quantity = InverseHeatTransferCoefficient.From(value, inverseHeatTransferCoefficientUnit);
                     return true;
-                case InverseTemperatureUnit inverseTemperatureUnit:
-                    quantity = InverseTemperature.From(value, inverseTemperatureUnit);
-                    return true;
                 case IrradianceUnit irradianceUnit:
                     quantity = Irradiance.From(value, irradianceUnit);
                     return true;
@@ -1117,9 +1102,6 @@ namespace UnitsNet
                 case ThermalResistanceUnit thermalResistanceUnit:
                     quantity = ThermalResistance.From(value, thermalResistanceUnit);
                     return true;
-                case TimeUnit timeUnit:
-                    quantity = Time.From(value, timeUnit);
-                    return true;
                 case TorqueUnit torqueUnit:
                     quantity = Torque.From(value, torqueUnit);
                     return true;
@@ -1273,8 +1255,6 @@ namespace UnitsNet
                     return parser.TryParse<Information, InformationUnit>(quantityString, formatProvider, Information.From, out quantity);
                 case Type _ when quantityType == typeof(InverseHeatTransferCoefficient):
                     return parser.TryParse<InverseHeatTransferCoefficient, InverseHeatTransferCoefficientUnit>(quantityString, formatProvider, InverseHeatTransferCoefficient.From, out quantity);
-                case Type _ when quantityType == typeof(InverseTemperature):
-                    return parser.TryParse<InverseTemperature, InverseTemperatureUnit>(quantityString, formatProvider, InverseTemperature.From, out quantity);
                 case Type _ when quantityType == typeof(Irradiance):
                     return parser.TryParse<Irradiance, IrradianceUnit>(quantityString, formatProvider, Irradiance.From, out quantity);
                 case Type _ when quantityType == typeof(Irradiation):
@@ -1391,8 +1371,6 @@ namespace UnitsNet
                     return parser.TryParse<ThermalConductivity, ThermalConductivityUnit>(quantityString, formatProvider, ThermalConductivity.From, out quantity);
                 case Type _ when quantityType == typeof(ThermalResistance):
                     return parser.TryParse<ThermalResistance, ThermalResistanceUnit>(quantityString, formatProvider, ThermalResistance.From, out quantity);
-                case Type _ when quantityType == typeof(Time):
-                    return parser.TryParse<Time, TimeUnit>(quantityString, formatProvider, Time.From, out quantity);
                 case Type _ when quantityType == typeof(Torque):
                     return parser.TryParse<Torque, TorqueUnit>(quantityString, formatProvider, Torque.From, out quantity);
                 case Type _ when quantityType == typeof(TorquePerLength):

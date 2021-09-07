@@ -29,7 +29,7 @@ using UnitsNet.InternalHelpers;
 namespace UnitsNet
 {
     /// <summary>
-    ///     Temperature change rate is the ratio of the temperature change to the time during which the change occurred (value of temperature changes per unit time).
+    ///     Joule-Thomson Cofficient is a coefficient relating the change in temperature of a gas resulting from the Joule-Thomson effect.
     /// </summary>
     // Windows Runtime Component has constraints on public types: https://msdn.microsoft.com/en-us/library/br230301.aspx#Declaring types in Windows Runtime Components
     // Public structures can't have any members other than public fields, and those fields must be value types or strings.

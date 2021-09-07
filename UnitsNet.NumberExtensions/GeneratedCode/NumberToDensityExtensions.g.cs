@@ -28,9 +28,9 @@ namespace UnitsNet.NumberExtensions.NumberToDensity
     /// </summary>
     public static class NumberToDensityExtensions
     {
-        /// <inheritdoc cref="Density.FromCentigramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density CentigramsPerDeciLiter<T>(this T value) =>
-            Density.FromCentigramsPerDeciLiter(Convert.ToDouble(value));
+        /// <inheritdoc cref="Density.FromCentigramsPerDeciliter(UnitsNet.QuantityValue)" />
+        public static Density CentigramsPerDeciliter<T>(this T value) =>
+            Density.FromCentigramsPerDeciliter(Convert.ToDouble(value));
 
         /// <inheritdoc cref="Density.FromCentigramsPerLiter(UnitsNet.QuantityValue)" />
         public static Density CentigramsPerLiter<T>(this T value) =>
@@ -40,9 +40,9 @@ namespace UnitsNet.NumberExtensions.NumberToDensity
         public static Density CentigramsPerMilliliter<T>(this T value) =>
             Density.FromCentigramsPerMilliliter(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Density.FromDecigramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density DecigramsPerDeciLiter<T>(this T value) =>
-            Density.FromDecigramsPerDeciLiter(Convert.ToDouble(value));
+        /// <inheritdoc cref="Density.FromDecigramsPerDeciliter(UnitsNet.QuantityValue)" />
+        public static Density DecigramsPerDeciliter<T>(this T value) =>
+            Density.FromDecigramsPerDeciliter(Convert.ToDouble(value));
 
         /// <inheritdoc cref="Density.FromDecigramsPerLiter(UnitsNet.QuantityValue)" />
         public static Density DecigramsPerLiter<T>(this T value) =>
@@ -64,9 +64,9 @@ namespace UnitsNet.NumberExtensions.NumberToDensity
         public static Density GramsPerCubicMillimeter<T>(this T value) =>
             Density.FromGramsPerCubicMillimeter(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Density.FromGramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density GramsPerDeciLiter<T>(this T value) =>
-            Density.FromGramsPerDeciLiter(Convert.ToDouble(value));
+        /// <inheritdoc cref="Density.FromGramsPerDeciliter(UnitsNet.QuantityValue)" />
+        public static Density GramsPerDeciliter<T>(this T value) =>
+            Density.FromGramsPerDeciliter(Convert.ToDouble(value));
 
         /// <inheritdoc cref="Density.FromGramsPerLiter(UnitsNet.QuantityValue)" />
         public static Density GramsPerLiter<T>(this T value) =>
@@ -104,9 +104,9 @@ namespace UnitsNet.NumberExtensions.NumberToDensity
         public static Density MicrogramsPerCubicMeter<T>(this T value) =>
             Density.FromMicrogramsPerCubicMeter(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Density.FromMicrogramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density MicrogramsPerDeciLiter<T>(this T value) =>
-            Density.FromMicrogramsPerDeciLiter(Convert.ToDouble(value));
+        /// <inheritdoc cref="Density.FromMicrogramsPerDeciliter(UnitsNet.QuantityValue)" />
+        public static Density MicrogramsPerDeciliter<T>(this T value) =>
+            Density.FromMicrogramsPerDeciliter(Convert.ToDouble(value));
 
         /// <inheritdoc cref="Density.FromMicrogramsPerLiter(UnitsNet.QuantityValue)" />
         public static Density MicrogramsPerLiter<T>(this T value) =>
@@ -120,9 +120,9 @@ namespace UnitsNet.NumberExtensions.NumberToDensity
         public static Density MilligramsPerCubicMeter<T>(this T value) =>
             Density.FromMilligramsPerCubicMeter(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Density.FromMilligramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density MilligramsPerDeciLiter<T>(this T value) =>
-            Density.FromMilligramsPerDeciLiter(Convert.ToDouble(value));
+        /// <inheritdoc cref="Density.FromMilligramsPerDeciliter(UnitsNet.QuantityValue)" />
+        public static Density MilligramsPerDeciliter<T>(this T value) =>
+            Density.FromMilligramsPerDeciliter(Convert.ToDouble(value));
 
         /// <inheritdoc cref="Density.FromMilligramsPerLiter(UnitsNet.QuantityValue)" />
         public static Density MilligramsPerLiter<T>(this T value) =>
@@ -132,9 +132,9 @@ namespace UnitsNet.NumberExtensions.NumberToDensity
         public static Density MilligramsPerMilliliter<T>(this T value) =>
             Density.FromMilligramsPerMilliliter(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Density.FromNanogramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density NanogramsPerDeciLiter<T>(this T value) =>
-            Density.FromNanogramsPerDeciLiter(Convert.ToDouble(value));
+        /// <inheritdoc cref="Density.FromNanogramsPerDeciliter(UnitsNet.QuantityValue)" />
+        public static Density NanogramsPerDeciliter<T>(this T value) =>
+            Density.FromNanogramsPerDeciliter(Convert.ToDouble(value));
 
         /// <inheritdoc cref="Density.FromNanogramsPerLiter(UnitsNet.QuantityValue)" />
         public static Density NanogramsPerLiter<T>(this T value) =>
@@ -144,9 +144,9 @@ namespace UnitsNet.NumberExtensions.NumberToDensity
         public static Density NanogramsPerMilliliter<T>(this T value) =>
             Density.FromNanogramsPerMilliliter(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="Density.FromPicogramsPerDeciLiter(UnitsNet.QuantityValue)" />
-        public static Density PicogramsPerDeciLiter<T>(this T value) =>
-            Density.FromPicogramsPerDeciLiter(Convert.ToDouble(value));
+        /// <inheritdoc cref="Density.FromPicogramsPerDeciliter(UnitsNet.QuantityValue)" />
+        public static Density PicogramsPerDeciliter<T>(this T value) =>
+            Density.FromPicogramsPerDeciliter(Convert.ToDouble(value));
 
         /// <inheritdoc cref="Density.FromPicogramsPerLiter(UnitsNet.QuantityValue)" />
         public static Density PicogramsPerLiter<T>(this T value) =>

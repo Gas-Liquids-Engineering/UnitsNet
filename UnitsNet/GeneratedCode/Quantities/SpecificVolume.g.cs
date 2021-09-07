@@ -715,12 +715,12 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case SpecificVolumeUnit.CubicFootPerPound: return _value/16.01846353;
+                case SpecificVolumeUnit.CubicFootPerPound: return _value*(0.3048*0.3048*0.3048*1/0.45359237);
                 case SpecificVolumeUnit.CubicMeterPerKilogram: return _value;
                 case SpecificVolumeUnit.LiterPerGram: return _value;
                 case SpecificVolumeUnit.MillicubicMeterPerKilogram: return (_value) * 1e-3d;
                 case SpecificVolumeUnit.MilliliterPerGram: return (_value) * 1e-3d;
-                case SpecificVolumeUnit.USGallonPerPound: return _value*0.008345;
+                case SpecificVolumeUnit.USGallonPerPound: return _value*(231*1/0.45359237*0.0254*0.0254*0.0254);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -746,12 +746,12 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case SpecificVolumeUnit.CubicFootPerPound: return baseUnitValue*16.01846353;
+                case SpecificVolumeUnit.CubicFootPerPound: return baseUnitValue/(0.3048*0.3048*0.3048*1/0.45359237);
                 case SpecificVolumeUnit.CubicMeterPerKilogram: return baseUnitValue;
                 case SpecificVolumeUnit.LiterPerGram: return baseUnitValue;
                 case SpecificVolumeUnit.MillicubicMeterPerKilogram: return (baseUnitValue) / 1e-3d;
                 case SpecificVolumeUnit.MilliliterPerGram: return (baseUnitValue) / 1e-3d;
-                case SpecificVolumeUnit.USGallonPerPound: return baseUnitValue/0.008345;
+                case SpecificVolumeUnit.USGallonPerPound: return baseUnitValue/(231*1/0.45359237*0.0254*0.0254*0.0254);
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

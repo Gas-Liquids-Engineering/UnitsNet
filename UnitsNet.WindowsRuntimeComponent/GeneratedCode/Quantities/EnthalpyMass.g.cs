@@ -156,9 +156,9 @@ namespace UnitsNet
         #region Conversion Properties
 
         /// <summary>
-        ///     Get EnthalpyMass in BtusPerPound.
+        ///     Get EnthalpyMass in BTUsPerPound.
         /// </summary>
-        public double BtusPerPound => As(EnthalpyMassUnit.BtuPerPound);
+        public double BTUsPerPound => As(EnthalpyMassUnit.BTUPerPound);
 
         /// <summary>
         ///     Get EnthalpyMass in CaloriesPerGram.
@@ -216,14 +216,14 @@ namespace UnitsNet
         #region Static Factory Methods
 
         /// <summary>
-        ///     Get EnthalpyMass from BtusPerPound.
+        ///     Get EnthalpyMass from BTUsPerPound.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
         [Windows.Foundation.Metadata.DefaultOverload]
-        public static EnthalpyMass FromBtusPerPound(double btusperpound)
+        public static EnthalpyMass FromBTUsPerPound(double btusperpound)
         {
             double value = (double) btusperpound;
-            return new EnthalpyMass(value, EnthalpyMassUnit.BtuPerPound);
+            return new EnthalpyMass(value, EnthalpyMassUnit.BTUPerPound);
         }
         /// <summary>
         ///     Get EnthalpyMass from CaloriesPerGram.
@@ -566,7 +566,7 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case EnthalpyMassUnit.BtuPerPound: return _value*2326;
+                case EnthalpyMassUnit.BTUPerPound: return _value*(1055.05585262/0.4535927);
                 case EnthalpyMassUnit.CaloriePerGram: return _value*4184;
                 case EnthalpyMassUnit.JoulePerKilogram: return _value;
                 case EnthalpyMassUnit.KilocaloriePerGram: return (_value*4184) * 1e3d;
@@ -586,7 +586,7 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case EnthalpyMassUnit.BtuPerPound: return baseUnitValue/2326;
+                case EnthalpyMassUnit.BTUPerPound: return baseUnitValue/(1055.05585262/0.4535927);
                 case EnthalpyMassUnit.CaloriePerGram: return baseUnitValue/4184;
                 case EnthalpyMassUnit.JoulePerKilogram: return baseUnitValue;
                 case EnthalpyMassUnit.KilocaloriePerGram: return (baseUnitValue/4184) / 1e3d;

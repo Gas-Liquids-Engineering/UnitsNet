@@ -37,7 +37,7 @@ namespace UnitsNet.Tests
 // ReSharper disable once PartialTypeWithSinglePart
     public abstract partial class EnthalpyMolarTestsBase : QuantityTestsBase
     {
-        protected abstract double BtusPerPoundInOneJoulePerMole { get; }
+        protected abstract double BTUsPerPoundInOneJoulePerMole { get; }
         protected abstract double CaloriesPerMoleInOneJoulePerMole { get; }
         protected abstract double JoulesPerKilomoleInOneJoulePerMole { get; }
         protected abstract double JoulesPerMoleInOneJoulePerMole { get; }
@@ -46,7 +46,7 @@ namespace UnitsNet.Tests
         protected abstract double MegajoulesPerMoleInOneJoulePerMole { get; }
 
 // ReSharper disable VirtualMemberNeverOverriden.Global
-        protected virtual double BtusPerPoundTolerance { get { return 1e-5; } }
+        protected virtual double BTUsPerPoundTolerance { get { return 1e-5; } }
         protected virtual double CaloriesPerMoleTolerance { get { return 1e-5; } }
         protected virtual double JoulesPerKilomoleTolerance { get { return 1e-5; } }
         protected virtual double JoulesPerMoleTolerance { get { return 1e-5; } }
@@ -127,7 +127,7 @@ namespace UnitsNet.Tests
         public void JoulePerMoleToEnthalpyMolarUnits()
         {
             EnthalpyMolar joulepermole = EnthalpyMolar.FromJoulesPerMole(1);
-            AssertEx.EqualTolerance(BtusPerPoundInOneJoulePerMole, joulepermole.BtusPerPound, BtusPerPoundTolerance);
+            AssertEx.EqualTolerance(BTUsPerPoundInOneJoulePerMole, joulepermole.BTUsPerPound, BTUsPerPoundTolerance);
             AssertEx.EqualTolerance(CaloriesPerMoleInOneJoulePerMole, joulepermole.CaloriesPerMole, CaloriesPerMoleTolerance);
             AssertEx.EqualTolerance(JoulesPerKilomoleInOneJoulePerMole, joulepermole.JoulesPerKilomole, JoulesPerKilomoleTolerance);
             AssertEx.EqualTolerance(JoulesPerMoleInOneJoulePerMole, joulepermole.JoulesPerMole, JoulesPerMoleTolerance);
@@ -139,9 +139,9 @@ namespace UnitsNet.Tests
         [Fact]
         public void From_ValueAndUnit_ReturnsQuantityWithSameValueAndUnit()
         {
-            var quantity00 = EnthalpyMolar.From(1, EnthalpyMolarUnit.BtuPerPound);
-            AssertEx.EqualTolerance(1, quantity00.BtusPerPound, BtusPerPoundTolerance);
-            Assert.Equal(EnthalpyMolarUnit.BtuPerPound, quantity00.Unit);
+            var quantity00 = EnthalpyMolar.From(1, EnthalpyMolarUnit.BTUPerPound);
+            AssertEx.EqualTolerance(1, quantity00.BTUsPerPound, BTUsPerPoundTolerance);
+            Assert.Equal(EnthalpyMolarUnit.BTUPerPound, quantity00.Unit);
 
             var quantity01 = EnthalpyMolar.From(1, EnthalpyMolarUnit.CaloriesPerMole);
             AssertEx.EqualTolerance(1, quantity01.CaloriesPerMole, CaloriesPerMoleTolerance);
@@ -186,7 +186,7 @@ namespace UnitsNet.Tests
         public void As()
         {
             var joulepermole = EnthalpyMolar.FromJoulesPerMole(1);
-            AssertEx.EqualTolerance(BtusPerPoundInOneJoulePerMole, joulepermole.As(EnthalpyMolarUnit.BtuPerPound), BtusPerPoundTolerance);
+            AssertEx.EqualTolerance(BTUsPerPoundInOneJoulePerMole, joulepermole.As(EnthalpyMolarUnit.BTUPerPound), BTUsPerPoundTolerance);
             AssertEx.EqualTolerance(CaloriesPerMoleInOneJoulePerMole, joulepermole.As(EnthalpyMolarUnit.CaloriesPerMole), CaloriesPerMoleTolerance);
             AssertEx.EqualTolerance(JoulesPerKilomoleInOneJoulePerMole, joulepermole.As(EnthalpyMolarUnit.JoulePerKilomole), JoulesPerKilomoleTolerance);
             AssertEx.EqualTolerance(JoulesPerMoleInOneJoulePerMole, joulepermole.As(EnthalpyMolarUnit.JoulePerMole), JoulesPerMoleTolerance);
@@ -217,9 +217,9 @@ namespace UnitsNet.Tests
         {
             var joulepermole = EnthalpyMolar.FromJoulesPerMole(1);
 
-            var btuperpoundQuantity = joulepermole.ToUnit(EnthalpyMolarUnit.BtuPerPound);
-            AssertEx.EqualTolerance(BtusPerPoundInOneJoulePerMole, (double)btuperpoundQuantity.Value, BtusPerPoundTolerance);
-            Assert.Equal(EnthalpyMolarUnit.BtuPerPound, btuperpoundQuantity.Unit);
+            var btuperpoundQuantity = joulepermole.ToUnit(EnthalpyMolarUnit.BTUPerPound);
+            AssertEx.EqualTolerance(BTUsPerPoundInOneJoulePerMole, (double)btuperpoundQuantity.Value, BTUsPerPoundTolerance);
+            Assert.Equal(EnthalpyMolarUnit.BTUPerPound, btuperpoundQuantity.Unit);
 
             var caloriespermoleQuantity = joulepermole.ToUnit(EnthalpyMolarUnit.CaloriesPerMole);
             AssertEx.EqualTolerance(CaloriesPerMoleInOneJoulePerMole, (double)caloriespermoleQuantity.Value, CaloriesPerMoleTolerance);
@@ -257,7 +257,7 @@ namespace UnitsNet.Tests
         public void ConversionRoundTrip()
         {
             EnthalpyMolar joulepermole = EnthalpyMolar.FromJoulesPerMole(1);
-            AssertEx.EqualTolerance(1, EnthalpyMolar.FromBtusPerPound(joulepermole.BtusPerPound).JoulesPerMole, BtusPerPoundTolerance);
+            AssertEx.EqualTolerance(1, EnthalpyMolar.FromBTUsPerPound(joulepermole.BTUsPerPound).JoulesPerMole, BTUsPerPoundTolerance);
             AssertEx.EqualTolerance(1, EnthalpyMolar.FromCaloriesPerMole(joulepermole.CaloriesPerMole).JoulesPerMole, CaloriesPerMoleTolerance);
             AssertEx.EqualTolerance(1, EnthalpyMolar.FromJoulesPerKilomole(joulepermole.JoulesPerKilomole).JoulesPerMole, JoulesPerKilomoleTolerance);
             AssertEx.EqualTolerance(1, EnthalpyMolar.FromJoulesPerMole(joulepermole.JoulesPerMole).JoulesPerMole, JoulesPerMoleTolerance);
@@ -422,7 +422,7 @@ namespace UnitsNet.Tests
             var prevCulture = Thread.CurrentThread.CurrentUICulture;
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
             try {
-                Assert.Equal("1 btu/lb-mol", new EnthalpyMolar(1, EnthalpyMolarUnit.BtuPerPound).ToString());
+                Assert.Equal("1 BTU/lbmol", new EnthalpyMolar(1, EnthalpyMolarUnit.BTUPerPound).ToString());
                 Assert.Equal("1 cal/mol", new EnthalpyMolar(1, EnthalpyMolarUnit.CaloriesPerMole).ToString());
                 Assert.Equal("1 J/kmol", new EnthalpyMolar(1, EnthalpyMolarUnit.JoulePerKilomole).ToString());
                 Assert.Equal("1 J/mol", new EnthalpyMolar(1, EnthalpyMolarUnit.JoulePerMole).ToString());
@@ -442,7 +442,7 @@ namespace UnitsNet.Tests
             // Chose this culture, because we don't currently have any abbreviations mapped for that culture and we expect the en-US to be used as fallback.
             var swedishCulture = CultureInfo.GetCultureInfo("sv-SE");
 
-            Assert.Equal("1 btu/lb-mol", new EnthalpyMolar(1, EnthalpyMolarUnit.BtuPerPound).ToString(swedishCulture));
+            Assert.Equal("1 BTU/lbmol", new EnthalpyMolar(1, EnthalpyMolarUnit.BTUPerPound).ToString(swedishCulture));
             Assert.Equal("1 cal/mol", new EnthalpyMolar(1, EnthalpyMolarUnit.CaloriesPerMole).ToString(swedishCulture));
             Assert.Equal("1 J/kmol", new EnthalpyMolar(1, EnthalpyMolarUnit.JoulePerKilomole).ToString(swedishCulture));
             Assert.Equal("1 J/mol", new EnthalpyMolar(1, EnthalpyMolarUnit.JoulePerMole).ToString(swedishCulture));

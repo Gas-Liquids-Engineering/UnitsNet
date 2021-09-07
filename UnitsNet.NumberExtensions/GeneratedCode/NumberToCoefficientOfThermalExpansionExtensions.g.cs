@@ -40,5 +40,9 @@ namespace UnitsNet.NumberExtensions.NumberToCoefficientOfThermalExpansion
         public static CoefficientOfThermalExpansion InverseKelvin<T>(this T value) =>
             CoefficientOfThermalExpansion.FromInverseKelvin(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="CoefficientOfThermalExpansion.FromInverseRankine(UnitsNet.QuantityValue)" />
+        public static CoefficientOfThermalExpansion InverseRankine<T>(this T value) =>
+            CoefficientOfThermalExpansion.FromInverseRankine(Convert.ToDouble(value));
+
     }
 }

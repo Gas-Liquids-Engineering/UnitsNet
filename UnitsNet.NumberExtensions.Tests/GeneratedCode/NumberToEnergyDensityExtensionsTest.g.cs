@@ -25,8 +25,8 @@ namespace UnitsNet.Tests
     public class NumberToEnergyDensityExtensionsTests
     {
         [Fact]
-        public void NumberToBtusPerCubicFeetTest() =>
-            Assert.Equal(EnergyDensity.FromBtusPerCubicFeet(2), 2.BtusPerCubicFeet());
+        public void NumberToBTUsPerCubicFeetTest() =>
+            Assert.Equal(EnergyDensity.FromBTUsPerCubicFeet(2), 2.BTUsPerCubicFeet());
 
         [Fact]
         public void NumberToCaloriesPerCubicMeterTest() =>

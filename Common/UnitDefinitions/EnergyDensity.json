@@ -1,6 +1,6 @@
 {
   "Name": "EnergyDensity",
-  "BaseUnit": "JoulesPerCubicMeter",
+  "BaseUnit": "JoulePerCubicMeter",
   "XmlDoc": "Energy density, in physics, is the amount of energy contained per unit of volume of an object.",
   "BaseDimensions": {
     "L": -1,

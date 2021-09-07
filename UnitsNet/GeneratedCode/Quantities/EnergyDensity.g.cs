@@ -52,12 +52,12 @@ namespace UnitsNet
 
             Info = new QuantityInfo<EnergyDensityUnit>("EnergyDensity",
                 new UnitInfo<EnergyDensityUnit>[] {
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.BtusPerCubicFoot, new BaseUnits(length: LengthUnit.Foot, mass: MassUnit.Pound, time: DurationUnit.Second)),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.CaloriesPerCubicMeter, new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Second)),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.JoulesPerCubicMeter, new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Second)),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.KilocaloriesPerCubicMeter, BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.KilojoulesPerCubicMeter, BaseUnits.Undefined),
-                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.MegajoulesPerCubicMeter, BaseUnits.Undefined),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.BTUPerCubicFoot, new BaseUnits(length: LengthUnit.Foot, mass: MassUnit.Pound, time: DurationUnit.Second)),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.CaloriePerCubicMeter, new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Second)),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.JoulePerCubicMeter, new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Gram, time: DurationUnit.Second)),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.KilocaloriePerCubicMeter, BaseUnits.Undefined),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.KilojoulePerCubicMeter, BaseUnits.Undefined),
+                    new UnitInfo<EnergyDensityUnit>(EnergyDensityUnit.MegajoulePerCubicMeter, BaseUnits.Undefined),
                 },
                 BaseUnit, Zero, BaseDimensions, QuantityType.EnergyDensity);
         }
@@ -107,9 +107,9 @@ namespace UnitsNet
         public static BaseDimensions BaseDimensions { get; }
 
         /// <summary>
-        ///     The base unit of EnergyDensity, which is JoulesPerCubicMeter. All conversions go via this value.
+        ///     The base unit of EnergyDensity, which is JoulePerCubicMeter. All conversions go via this value.
         /// </summary>
-        public static EnergyDensityUnit BaseUnit { get; } = EnergyDensityUnit.JoulesPerCubicMeter;
+        public static EnergyDensityUnit BaseUnit { get; } = EnergyDensityUnit.JoulePerCubicMeter;
 
         /// <summary>
         /// Represents the largest possible value of EnergyDensity
@@ -135,7 +135,7 @@ namespace UnitsNet
         public static EnergyDensityUnit[] Units { get; } = Enum.GetValues(typeof(EnergyDensityUnit)).Cast<EnergyDensityUnit>().Except(new EnergyDensityUnit[]{ EnergyDensityUnit.Undefined }).ToArray();
 
         /// <summary>
-        ///     Gets an instance of this quantity with a value of 0 in the base unit JoulesPerCubicMeter.
+        ///     Gets an instance of this quantity with a value of 0 in the base unit JoulePerCubicMeter.
         /// </summary>
         public static EnergyDensity Zero { get; } = new EnergyDensity(0, BaseUnit);
 
@@ -174,34 +174,34 @@ namespace UnitsNet
         #region Conversion Properties
 
         /// <summary>
-        ///     Get EnergyDensity in BtusPerCubicFeet.
+        ///     Get EnergyDensity in BTUsPerCubicFeet.
         /// </summary>
-        public double BtusPerCubicFeet => As(EnergyDensityUnit.BtusPerCubicFoot);
+        public double BTUsPerCubicFeet => As(EnergyDensityUnit.BTUPerCubicFoot);
 
         /// <summary>
         ///     Get EnergyDensity in CaloriesPerCubicMeter.
         /// </summary>
-        public double CaloriesPerCubicMeter => As(EnergyDensityUnit.CaloriesPerCubicMeter);
+        public double CaloriesPerCubicMeter => As(EnergyDensityUnit.CaloriePerCubicMeter);
 
         /// <summary>
         ///     Get EnergyDensity in JoulesPerCubicMeter.
         /// </summary>
-        public double JoulesPerCubicMeter => As(EnergyDensityUnit.JoulesPerCubicMeter);
+        public double JoulesPerCubicMeter => As(EnergyDensityUnit.JoulePerCubicMeter);
 
         /// <summary>
         ///     Get EnergyDensity in KilocaloriesPerCubicMeter.
         /// </summary>
-        public double KilocaloriesPerCubicMeter => As(EnergyDensityUnit.KilocaloriesPerCubicMeter);
+        public double KilocaloriesPerCubicMeter => As(EnergyDensityUnit.KilocaloriePerCubicMeter);
 
         /// <summary>
         ///     Get EnergyDensity in KilojoulesPerCubicMeter.
         /// </summary>
-        public double KilojoulesPerCubicMeter => As(EnergyDensityUnit.KilojoulesPerCubicMeter);
+        public double KilojoulesPerCubicMeter => As(EnergyDensityUnit.KilojoulePerCubicMeter);
 
         /// <summary>
         ///     Get EnergyDensity in MegajoulesPerCubicMeter.
         /// </summary>
-        public double MegajoulesPerCubicMeter => As(EnergyDensityUnit.MegajoulesPerCubicMeter);
+        public double MegajoulesPerCubicMeter => As(EnergyDensityUnit.MegajoulePerCubicMeter);
 
         #endregion
 
@@ -233,13 +233,13 @@ namespace UnitsNet
         #region Static Factory Methods
 
         /// <summary>
-        ///     Get EnergyDensity from BtusPerCubicFeet.
+        ///     Get EnergyDensity from BTUsPerCubicFeet.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
-        public static EnergyDensity FromBtusPerCubicFeet(QuantityValue btuspercubicfeet)
+        public static EnergyDensity FromBTUsPerCubicFeet(QuantityValue btuspercubicfeet)
         {
             double value = (double) btuspercubicfeet;
-            return new EnergyDensity(value, EnergyDensityUnit.BtusPerCubicFoot);
+            return new EnergyDensity(value, EnergyDensityUnit.BTUPerCubicFoot);
         }
         /// <summary>
         ///     Get EnergyDensity from CaloriesPerCubicMeter.
@@ -248,7 +248,7 @@ namespace UnitsNet
         public static EnergyDensity FromCaloriesPerCubicMeter(QuantityValue caloriespercubicmeter)
         {
             double value = (double) caloriespercubicmeter;
-            return new EnergyDensity(value, EnergyDensityUnit.CaloriesPerCubicMeter);
+            return new EnergyDensity(value, EnergyDensityUnit.CaloriePerCubicMeter);
         }
         /// <summary>
         ///     Get EnergyDensity from JoulesPerCubicMeter.
@@ -257,7 +257,7 @@ namespace UnitsNet
         public static EnergyDensity FromJoulesPerCubicMeter(QuantityValue joulespercubicmeter)
         {
             double value = (double) joulespercubicmeter;
-            return new EnergyDensity(value, EnergyDensityUnit.JoulesPerCubicMeter);
+            return new EnergyDensity(value, EnergyDensityUnit.JoulePerCubicMeter);
         }
         /// <summary>
         ///     Get EnergyDensity from KilocaloriesPerCubicMeter.
@@ -266,7 +266,7 @@ namespace UnitsNet
         public static EnergyDensity FromKilocaloriesPerCubicMeter(QuantityValue kilocaloriespercubicmeter)
         {
             double value = (double) kilocaloriespercubicmeter;
-            return new EnergyDensity(value, EnergyDensityUnit.KilocaloriesPerCubicMeter);
+            return new EnergyDensity(value, EnergyDensityUnit.KilocaloriePerCubicMeter);
         }
         /// <summary>
         ///     Get EnergyDensity from KilojoulesPerCubicMeter.
@@ -275,7 +275,7 @@ namespace UnitsNet
         public static EnergyDensity FromKilojoulesPerCubicMeter(QuantityValue kilojoulespercubicmeter)
         {
             double value = (double) kilojoulespercubicmeter;
-            return new EnergyDensity(value, EnergyDensityUnit.KilojoulesPerCubicMeter);
+            return new EnergyDensity(value, EnergyDensityUnit.KilojoulePerCubicMeter);
         }
         /// <summary>
         ///     Get EnergyDensity from MegajoulesPerCubicMeter.
@@ -284,7 +284,7 @@ namespace UnitsNet
         public static EnergyDensity FromMegajoulesPerCubicMeter(QuantityValue megajoulespercubicmeter)
         {
             double value = (double) megajoulespercubicmeter;
-            return new EnergyDensity(value, EnergyDensityUnit.MegajoulesPerCubicMeter);
+            return new EnergyDensity(value, EnergyDensityUnit.MegajoulePerCubicMeter);
         }
 
         /// <summary>
@@ -715,12 +715,12 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case EnergyDensityUnit.BtusPerCubicFoot: return _value*37258.9;
-                case EnergyDensityUnit.CaloriesPerCubicMeter: return _value*4184;
-                case EnergyDensityUnit.JoulesPerCubicMeter: return _value;
-                case EnergyDensityUnit.KilocaloriesPerCubicMeter: return (_value*4184) * 1e3d;
-                case EnergyDensityUnit.KilojoulesPerCubicMeter: return (_value) * 1e3d;
-                case EnergyDensityUnit.MegajoulesPerCubicMeter: return (_value) * 1e6d;
+                case EnergyDensityUnit.BTUPerCubicFoot: return _value*(1055.05585262*1/0.3048*1/0.3048*1/0.3048);
+                case EnergyDensityUnit.CaloriePerCubicMeter: return _value*4184;
+                case EnergyDensityUnit.JoulePerCubicMeter: return _value;
+                case EnergyDensityUnit.KilocaloriePerCubicMeter: return (_value*4184) * 1e3d;
+                case EnergyDensityUnit.KilojoulePerCubicMeter: return (_value) * 1e3d;
+                case EnergyDensityUnit.MegajoulePerCubicMeter: return (_value) * 1e6d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -746,12 +746,12 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case EnergyDensityUnit.BtusPerCubicFoot: return baseUnitValue/37258.9;
-                case EnergyDensityUnit.CaloriesPerCubicMeter: return baseUnitValue/4184;
-                case EnergyDensityUnit.JoulesPerCubicMeter: return baseUnitValue;
-                case EnergyDensityUnit.KilocaloriesPerCubicMeter: return (baseUnitValue/4184) / 1e3d;
-                case EnergyDensityUnit.KilojoulesPerCubicMeter: return (baseUnitValue) / 1e3d;
-                case EnergyDensityUnit.MegajoulesPerCubicMeter: return (baseUnitValue) / 1e6d;
+                case EnergyDensityUnit.BTUPerCubicFoot: return baseUnitValue/(1055.05585262*1/0.3048*1/0.3048*1/0.3048);
+                case EnergyDensityUnit.CaloriePerCubicMeter: return baseUnitValue/4184;
+                case EnergyDensityUnit.JoulePerCubicMeter: return baseUnitValue;
+                case EnergyDensityUnit.KilocaloriePerCubicMeter: return (baseUnitValue/4184) / 1e3d;
+                case EnergyDensityUnit.KilojoulePerCubicMeter: return (baseUnitValue) / 1e3d;
+                case EnergyDensityUnit.MegajoulePerCubicMeter: return (baseUnitValue) / 1e6d;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

@@ -28,9 +28,9 @@ namespace UnitsNet.NumberExtensions.NumberToEnthalpyMass
     /// </summary>
     public static class NumberToEnthalpyMassExtensions
     {
-        /// <inheritdoc cref="EnthalpyMass.FromBtusPerPound(UnitsNet.QuantityValue)" />
-        public static EnthalpyMass BtusPerPound<T>(this T value) =>
-            EnthalpyMass.FromBtusPerPound(Convert.ToDouble(value));
+        /// <inheritdoc cref="EnthalpyMass.FromBTUsPerPound(UnitsNet.QuantityValue)" />
+        public static EnthalpyMass BTUsPerPound<T>(this T value) =>
+            EnthalpyMass.FromBTUsPerPound(Convert.ToDouble(value));
 
         /// <inheritdoc cref="EnthalpyMass.FromCaloriesPerGram(UnitsNet.QuantityValue)" />
         public static EnthalpyMass CaloriesPerGram<T>(this T value) =>

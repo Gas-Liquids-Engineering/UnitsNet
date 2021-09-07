@@ -688,7 +688,7 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case ThermalConductivityUnit.BtuPerHourFootFahrenheit: return _value*1.73073467;
+                case ThermalConductivityUnit.BtuPerHourFootFahrenheit: return _value*(1055.05585262*1/0.3048*9/5*1/3600);
                 case ThermalConductivityUnit.CaloriePerSecondCentimeterDegreeCelsius: return _value*418.4;
                 case ThermalConductivityUnit.JoulePerSecondMeterKelvin: return _value;
                 case ThermalConductivityUnit.WattPerMeterKelvin: return _value;
@@ -717,7 +717,7 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case ThermalConductivityUnit.BtuPerHourFootFahrenheit: return baseUnitValue/1.73073467;
+                case ThermalConductivityUnit.BtuPerHourFootFahrenheit: return baseUnitValue/(1055.05585262*1/0.3048*9/5*1/3600);
                 case ThermalConductivityUnit.CaloriePerSecondCentimeterDegreeCelsius: return baseUnitValue/418.4;
                 case ThermalConductivityUnit.JoulePerSecondMeterKelvin: return baseUnitValue;
                 case ThermalConductivityUnit.WattPerMeterKelvin: return baseUnitValue;

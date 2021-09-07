@@ -1003,7 +1003,7 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case SpecificEnergyUnit.BtuPerPound: return _value*2326.000075362;
+                case SpecificEnergyUnit.BtuPerPound: return _value*2326;
                 case SpecificEnergyUnit.CaloriePerGram: return _value*4.184e3;
                 case SpecificEnergyUnit.GigawattDayPerKilogram: return (_value*(24*3.6e3)) * 1e9d;
                 case SpecificEnergyUnit.GigawattDayPerShortTon: return (_value*((24*3.6e3)/9.0718474e2)) * 1e9d;
@@ -1053,7 +1053,7 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case SpecificEnergyUnit.BtuPerPound: return baseUnitValue/2326.000075362;
+                case SpecificEnergyUnit.BtuPerPound: return baseUnitValue/2326;
                 case SpecificEnergyUnit.CaloriePerGram: return baseUnitValue/4.184e3;
                 case SpecificEnergyUnit.GigawattDayPerKilogram: return (baseUnitValue/(24*3.6e3)) / 1e9d;
                 case SpecificEnergyUnit.GigawattDayPerShortTon: return (baseUnitValue/((24*3.6e3)/9.0718474e2)) / 1e9d;

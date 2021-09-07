@@ -87,8 +87,8 @@
     {
       "SingularName": "PoundForcePerCubicInch",
       "PluralName": "PoundsForcePerCubicInch",
-      "FromUnitToBaseFunc": "x*2.714471375263134e5",
-      "FromBaseToUnitFunc": "x/2.714471375263134e5",
+      "FromUnitToBaseFunc": "x*(32.174*0.3048*1/0.0254*1/0.0254*1/0.0254*0.45359237)",
+      "FromBaseToUnitFunc": "x/(32.174*0.3048*1/0.0254*1/0.0254*1/0.0254*0.45359237)",
       "Prefixes": [ "Kilo" ],
       "Localization": [
         {
@@ -101,8 +101,8 @@
     {
       "SingularName": "PoundForcePerCubicFoot",
       "PluralName": "PoundsForcePerCubicFoot",
-      "FromUnitToBaseFunc": "x*1.570874638462462e2",
-      "FromBaseToUnitFunc": "x/1.570874638462462e2",
+      "FromUnitToBaseFunc": "x*(32.174*0.45359237*1/0.3048*1/0.3048)",
+      "FromBaseToUnitFunc": "x/(32.174*0.45359237*1/0.3048*1/0.3048)",
       "Prefixes": [ "Kilo" ],
       "Localization": [
         {
