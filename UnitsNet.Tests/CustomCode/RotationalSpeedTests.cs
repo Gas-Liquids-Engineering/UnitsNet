@@ -35,27 +35,27 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double DegreesPerMinuteInOneRadianPerSecond => 3437.74677;
 
-        protected override double CentiradiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException(); //TODO
+        protected override double CentiradiansPerMinuteInOneRadianPerSecond => 6.0e3; 
 
-        protected override double DeciradiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException();
+        protected override double DeciradiansPerMinuteInOneRadianPerSecond => 6.0e2;
 
-        protected override double DegreesPerHourInOneRadianPerSecond => throw new NotImplementedException();
+        protected override double DegreesPerHourInOneRadianPerSecond => 206265;
 
-        protected override double MicrodegreesPerHourInOneRadianPerSecond => throw new NotImplementedException();
+        protected override double MicrodegreesPerHourInOneRadianPerSecond => 206265e6;
 
-        protected override double MicroradiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException();
+        protected override double MicroradiansPerMinuteInOneRadianPerSecond => 6.0e7;
 
-        protected override double MillidegreesPerHourInOneRadianPerSecond => throw new NotImplementedException();
+        protected override double MillidegreesPerHourInOneRadianPerSecond => 2.06265e8;
 
-        protected override double MilliradiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException();
+        protected override double MilliradiansPerMinuteInOneRadianPerSecond => 6.0e4;
 
-        protected override double NanodegreesPerHourInOneRadianPerSecond => throw new NotImplementedException();
+        protected override double NanodegreesPerHourInOneRadianPerSecond => 2.06265e14;
 
-        protected override double NanoradiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException();
+        protected override double NanoradiansPerMinuteInOneRadianPerSecond => 6.0e10;
 
-        protected override double RadiansPerMinuteInOneRadianPerSecond => throw new NotImplementedException();
+        protected override double RadiansPerMinuteInOneRadianPerSecond => 6.0e1;
 
-        protected override double RevolutionsPerHourInOneRadianPerSecond => throw new NotImplementedException();
+        protected override double RevolutionsPerHourInOneRadianPerSecond => 572.95780;
 
         [Fact]
         public void DurationTimesRotationalSpeedEqualsAngle()

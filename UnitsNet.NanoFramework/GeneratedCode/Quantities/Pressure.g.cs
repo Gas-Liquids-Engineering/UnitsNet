@@ -607,7 +607,7 @@ namespace UnitsNet
                 case PressureUnit.Gigapascal: return (_value) * 1e9d;
                 case PressureUnit.Hectopascal: return (_value) * 1e2d;
                 case PressureUnit.InchOfMercury: return _value*(133.322387415*25.4);
-                case PressureUnit.InchOfWaterColumn: return _value*(98066.5*0.0254);
+                case PressureUnit.InchOfWaterColumn: return _value*(9806.65*0.0254);
                 case PressureUnit.Kilobar: return (_value*1e5) * 1e3d;
                 case PressureUnit.KilogramForcePerSquareCentimeter: return _value*9.80665e4;
                 case PressureUnit.KilogramForcePerSquareMeter: return _value*9.80665;
@@ -664,7 +664,7 @@ namespace UnitsNet
                 case PressureUnit.Gigapascal: return (baseUnitValue) / 1e9d;
                 case PressureUnit.Hectopascal: return (baseUnitValue) / 1e2d;
                 case PressureUnit.InchOfMercury: return baseUnitValue/(133.322387415*25.4);
-                case PressureUnit.InchOfWaterColumn: return baseUnitValue/(98066.5*0.0254);
+                case PressureUnit.InchOfWaterColumn: return baseUnitValue/(9806.65*0.0254);
                 case PressureUnit.Kilobar: return (baseUnitValue/1e5) / 1e3d;
                 case PressureUnit.KilogramForcePerSquareCentimeter: return baseUnitValue/9.80665e4;
                 case PressureUnit.KilogramForcePerSquareMeter: return baseUnitValue/9.80665;

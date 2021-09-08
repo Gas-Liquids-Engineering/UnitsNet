@@ -24,44 +24,44 @@ namespace UnitsNet.Tests.CustomCode
     public class PressureDeltaPerUnitLengthTests : PressureDeltaPerUnitLengthTestsBase
     {
         // Override properties in base class here
-        protected override double DecapascalsDeltaPerKilometerInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double DecapascalsDeltaPerKilometerInOnePascalDeltaPerMeter => 1.0e2;
 
-        protected override double DecapascalsDeltaPerMeterInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double DecapascalsDeltaPerMeterInOnePascalDeltaPerMeter => 1.0e-1;
 
-        protected override double GigapascalsDeltaPerKilometerInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double GigapascalsDeltaPerKilometerInOnePascalDeltaPerMeter => 1.0e-6;
 
-        protected override double GigapascalsDeltaPerMeterInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double GigapascalsDeltaPerMeterInOnePascalDeltaPerMeter => 1.0e-9;
 
-        protected override double HectopascalsDeltaPerKilometerInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double HectopascalsDeltaPerKilometerInOnePascalDeltaPerMeter => 1.0e1;
 
-        protected override double HectopascalsDeltaPerMeterInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double HectopascalsDeltaPerMeterInOnePascalDeltaPerMeter => 1.0e-2;
 
-        protected override double KilopascalsDeltaPerKilometerInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double KilopascalsDeltaPerKilometerInOnePascalDeltaPerMeter => 1.0e0;
 
-        protected override double KilopascalsDeltaPerMeterInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double KilopascalsDeltaPerMeterInOnePascalDeltaPerMeter => 1.0e-3;
 
-        protected override double MegapascalsDeltaPerKilometerInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double MegapascalsDeltaPerKilometerInOnePascalDeltaPerMeter => 1.0e-3;
 
-        protected override double MegapascalsDeltaPerMeterInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double MegapascalsDeltaPerMeterInOnePascalDeltaPerMeter => 1.0e-6;
 
-        protected override double MicropascalsDeltaPerKilometerInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double MicropascalsDeltaPerKilometerInOnePascalDeltaPerMeter => 1.0e9;
 
-        protected override double MicropascalsDeltaPerMeterInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double MicropascalsDeltaPerMeterInOnePascalDeltaPerMeter => 1.0e6;
 
-        protected override double MillipascalsDeltaPerKilometerInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double MillipascalsDeltaPerKilometerInOnePascalDeltaPerMeter => 1.0e6;
 
-        protected override double MillipascalsDeltaPerMeterInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double MillipascalsDeltaPerMeterInOnePascalDeltaPerMeter => 1.0e3;
 
-        protected override double PascalsDeltaPerKilometerInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double PascalsDeltaPerKilometerInOnePascalDeltaPerMeter => 1.0e3;
 
-        protected override double PascalsDeltaPerMeterInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double PascalsDeltaPerMeterInOnePascalDeltaPerMeter => 1.0e0;
 
-        protected override double PoundsPerSquareInchDeltaPerFootInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double PoundsPerSquareInchDeltaPerFootInOnePascalDeltaPerMeter => 4.420767e-5;
 
-        protected override double PoundsPerSquareInchDeltaPerHundredFeetInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double PoundsPerSquareInchDeltaPerHundredFeetInOnePascalDeltaPerMeter => 4.420767e-3;
 
-        protected override double PoundsPerSquareInchDeltaPerMileInOnePascalDeltaPerMeter => throw new NotImplementedException();
+        protected override double PoundsPerSquareInchDeltaPerMileInOnePascalDeltaPerMeter => 0.233416;
 
-        protected override bool SupportsSIUnitSystem => throw new NotImplementedException();
+        protected override bool SupportsSIUnitSystem => false;
     }
 }

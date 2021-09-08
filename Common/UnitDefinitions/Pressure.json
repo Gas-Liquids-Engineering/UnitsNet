@@ -354,8 +354,8 @@
     {
       "SingularName": "InchOfWaterColumn",
       "PluralName": "InchesOfWaterColumn",
-      "FromUnitToBaseFunc": "x*(98066.5*0.0254)",
-      "FromBaseToUnitFunc": "x/(98066.5*0.0254)",
+      "FromUnitToBaseFunc": "x*(9806.65*0.0254)",
+      "FromBaseToUnitFunc": "x/(9806.65*0.0254)",
       "Localization": [
         {
           "Culture": "en-US",
