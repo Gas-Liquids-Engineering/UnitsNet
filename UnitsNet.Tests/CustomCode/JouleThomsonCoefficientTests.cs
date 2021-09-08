@@ -24,12 +24,12 @@ namespace UnitsNet.Tests.CustomCode
     public class JouleThomsonCoefficientTests : JouleThomsonCoefficientTestsBase
     {
         // Override properties in base class here
-        protected override double DegreesFahrenheitPerPoundsForcePerSquareInchInOneKelvinPerKilopascal => throw new NotImplementedException();
+        protected override double DegreesFahrenheitPerPoundsForcePerSquareInchInOneKelvinPerKilopascal => 12.411;
 
-        protected override double KelvinsPerBarInOneKelvinPerKilopascal => throw new NotImplementedException();
+        protected override double KelvinsPerBarInOneKelvinPerKilopascal => 1e2;
 
-        protected override double KelvinsPerKilopascalInOneKelvinPerKilopascal => throw new NotImplementedException();
+        protected override double KelvinsPerKilopascalInOneKelvinPerKilopascal => 1.0;
 
-        protected override bool SupportsSIUnitSystem => throw new NotImplementedException();
+        protected override bool SupportsSIUnitSystem => false;
     }
 }
