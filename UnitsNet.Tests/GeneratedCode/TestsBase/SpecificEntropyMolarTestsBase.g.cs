@@ -37,7 +37,7 @@ namespace UnitsNet.Tests
 // ReSharper disable once PartialTypeWithSinglePart
     public abstract partial class SpecificEntropyMolarTestsBase : QuantityTestsBase
     {
-        protected abstract double BtusPerPoundMoleFahrenheitInOneJoulePerMoleKelvin { get; }
+        protected abstract double BTUsPerPoundMoleFahrenheitInOneJoulePerMoleKelvin { get; }
         protected abstract double CaloriesPerMoleKelvinInOneJoulePerMoleKelvin { get; }
         protected abstract double JoulesPerKilomoleKelvinInOneJoulePerMoleKelvin { get; }
         protected abstract double JoulesPerMoleKelvinInOneJoulePerMoleKelvin { get; }
@@ -47,7 +47,7 @@ namespace UnitsNet.Tests
         protected abstract double MegajoulesPerMoleKelvinInOneJoulePerMoleKelvin { get; }
 
 // ReSharper disable VirtualMemberNeverOverriden.Global
-        protected virtual double BtusPerPoundMoleFahrenheitTolerance { get { return 1e-5; } }
+        protected virtual double BTUsPerPoundMoleFahrenheitTolerance { get { return 1e-5; } }
         protected virtual double CaloriesPerMoleKelvinTolerance { get { return 1e-5; } }
         protected virtual double JoulesPerKilomoleKelvinTolerance { get { return 1e-5; } }
         protected virtual double JoulesPerMoleKelvinTolerance { get { return 1e-5; } }
@@ -129,7 +129,7 @@ namespace UnitsNet.Tests
         public void JoulePerMoleKelvinToSpecificEntropyMolarUnits()
         {
             SpecificEntropyMolar joulepermolekelvin = SpecificEntropyMolar.FromJoulesPerMoleKelvin(1);
-            AssertEx.EqualTolerance(BtusPerPoundMoleFahrenheitInOneJoulePerMoleKelvin, joulepermolekelvin.BtusPerPoundMoleFahrenheit, BtusPerPoundMoleFahrenheitTolerance);
+            AssertEx.EqualTolerance(BTUsPerPoundMoleFahrenheitInOneJoulePerMoleKelvin, joulepermolekelvin.BTUsPerPoundMoleFahrenheit, BTUsPerPoundMoleFahrenheitTolerance);
             AssertEx.EqualTolerance(CaloriesPerMoleKelvinInOneJoulePerMoleKelvin, joulepermolekelvin.CaloriesPerMoleKelvin, CaloriesPerMoleKelvinTolerance);
             AssertEx.EqualTolerance(JoulesPerKilomoleKelvinInOneJoulePerMoleKelvin, joulepermolekelvin.JoulesPerKilomoleKelvin, JoulesPerKilomoleKelvinTolerance);
             AssertEx.EqualTolerance(JoulesPerMoleKelvinInOneJoulePerMoleKelvin, joulepermolekelvin.JoulesPerMoleKelvin, JoulesPerMoleKelvinTolerance);
@@ -142,9 +142,9 @@ namespace UnitsNet.Tests
         [Fact]
         public void From_ValueAndUnit_ReturnsQuantityWithSameValueAndUnit()
         {
-            var quantity00 = SpecificEntropyMolar.From(1, SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit);
-            AssertEx.EqualTolerance(1, quantity00.BtusPerPoundMoleFahrenheit, BtusPerPoundMoleFahrenheitTolerance);
-            Assert.Equal(SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit, quantity00.Unit);
+            var quantity00 = SpecificEntropyMolar.From(1, SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit);
+            AssertEx.EqualTolerance(1, quantity00.BTUsPerPoundMoleFahrenheit, BTUsPerPoundMoleFahrenheitTolerance);
+            Assert.Equal(SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit, quantity00.Unit);
 
             var quantity01 = SpecificEntropyMolar.From(1, SpecificEntropyMolarUnit.CaloriePerMoleKelvin);
             AssertEx.EqualTolerance(1, quantity01.CaloriesPerMoleKelvin, CaloriesPerMoleKelvinTolerance);
@@ -193,7 +193,7 @@ namespace UnitsNet.Tests
         public void As()
         {
             var joulepermolekelvin = SpecificEntropyMolar.FromJoulesPerMoleKelvin(1);
-            AssertEx.EqualTolerance(BtusPerPoundMoleFahrenheitInOneJoulePerMoleKelvin, joulepermolekelvin.As(SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit), BtusPerPoundMoleFahrenheitTolerance);
+            AssertEx.EqualTolerance(BTUsPerPoundMoleFahrenheitInOneJoulePerMoleKelvin, joulepermolekelvin.As(SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit), BTUsPerPoundMoleFahrenheitTolerance);
             AssertEx.EqualTolerance(CaloriesPerMoleKelvinInOneJoulePerMoleKelvin, joulepermolekelvin.As(SpecificEntropyMolarUnit.CaloriePerMoleKelvin), CaloriesPerMoleKelvinTolerance);
             AssertEx.EqualTolerance(JoulesPerKilomoleKelvinInOneJoulePerMoleKelvin, joulepermolekelvin.As(SpecificEntropyMolarUnit.JoulePerKilomoleKelvin), JoulesPerKilomoleKelvinTolerance);
             AssertEx.EqualTolerance(JoulesPerMoleKelvinInOneJoulePerMoleKelvin, joulepermolekelvin.As(SpecificEntropyMolarUnit.JoulePerMoleKelvin), JoulesPerMoleKelvinTolerance);
@@ -225,9 +225,9 @@ namespace UnitsNet.Tests
         {
             var joulepermolekelvin = SpecificEntropyMolar.FromJoulesPerMoleKelvin(1);
 
-            var btuperpoundmolefahrenheitQuantity = joulepermolekelvin.ToUnit(SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit);
-            AssertEx.EqualTolerance(BtusPerPoundMoleFahrenheitInOneJoulePerMoleKelvin, (double)btuperpoundmolefahrenheitQuantity.Value, BtusPerPoundMoleFahrenheitTolerance);
-            Assert.Equal(SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit, btuperpoundmolefahrenheitQuantity.Unit);
+            var btuperpoundmolefahrenheitQuantity = joulepermolekelvin.ToUnit(SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit);
+            AssertEx.EqualTolerance(BTUsPerPoundMoleFahrenheitInOneJoulePerMoleKelvin, (double)btuperpoundmolefahrenheitQuantity.Value, BTUsPerPoundMoleFahrenheitTolerance);
+            Assert.Equal(SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit, btuperpoundmolefahrenheitQuantity.Unit);
 
             var caloriepermolekelvinQuantity = joulepermolekelvin.ToUnit(SpecificEntropyMolarUnit.CaloriePerMoleKelvin);
             AssertEx.EqualTolerance(CaloriesPerMoleKelvinInOneJoulePerMoleKelvin, (double)caloriepermolekelvinQuantity.Value, CaloriesPerMoleKelvinTolerance);
@@ -269,7 +269,7 @@ namespace UnitsNet.Tests
         public void ConversionRoundTrip()
         {
             SpecificEntropyMolar joulepermolekelvin = SpecificEntropyMolar.FromJoulesPerMoleKelvin(1);
-            AssertEx.EqualTolerance(1, SpecificEntropyMolar.FromBtusPerPoundMoleFahrenheit(joulepermolekelvin.BtusPerPoundMoleFahrenheit).JoulesPerMoleKelvin, BtusPerPoundMoleFahrenheitTolerance);
+            AssertEx.EqualTolerance(1, SpecificEntropyMolar.FromBTUsPerPoundMoleFahrenheit(joulepermolekelvin.BTUsPerPoundMoleFahrenheit).JoulesPerMoleKelvin, BTUsPerPoundMoleFahrenheitTolerance);
             AssertEx.EqualTolerance(1, SpecificEntropyMolar.FromCaloriesPerMoleKelvin(joulepermolekelvin.CaloriesPerMoleKelvin).JoulesPerMoleKelvin, CaloriesPerMoleKelvinTolerance);
             AssertEx.EqualTolerance(1, SpecificEntropyMolar.FromJoulesPerKilomoleKelvin(joulepermolekelvin.JoulesPerKilomoleKelvin).JoulesPerMoleKelvin, JoulesPerKilomoleKelvinTolerance);
             AssertEx.EqualTolerance(1, SpecificEntropyMolar.FromJoulesPerMoleKelvin(joulepermolekelvin.JoulesPerMoleKelvin).JoulesPerMoleKelvin, JoulesPerMoleKelvinTolerance);
@@ -435,7 +435,7 @@ namespace UnitsNet.Tests
             var prevCulture = Thread.CurrentThread.CurrentUICulture;
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
             try {
-                Assert.Equal("1 Btu/lb-mol.°F", new SpecificEntropyMolar(1, SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit).ToString());
+                Assert.Equal("1 BTU/lb-mol.°F", new SpecificEntropyMolar(1, SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit).ToString());
                 Assert.Equal("1 cal/mol-K", new SpecificEntropyMolar(1, SpecificEntropyMolarUnit.CaloriePerMoleKelvin).ToString());
                 Assert.Equal("1 J/kmol.K", new SpecificEntropyMolar(1, SpecificEntropyMolarUnit.JoulePerKilomoleKelvin).ToString());
                 Assert.Equal("1 J/mol.K", new SpecificEntropyMolar(1, SpecificEntropyMolarUnit.JoulePerMoleKelvin).ToString());
@@ -456,7 +456,7 @@ namespace UnitsNet.Tests
             // Chose this culture, because we don't currently have any abbreviations mapped for that culture and we expect the en-US to be used as fallback.
             var swedishCulture = CultureInfo.GetCultureInfo("sv-SE");
 
-            Assert.Equal("1 Btu/lb-mol.°F", new SpecificEntropyMolar(1, SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit).ToString(swedishCulture));
+            Assert.Equal("1 BTU/lb-mol.°F", new SpecificEntropyMolar(1, SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit).ToString(swedishCulture));
             Assert.Equal("1 cal/mol-K", new SpecificEntropyMolar(1, SpecificEntropyMolarUnit.CaloriePerMoleKelvin).ToString(swedishCulture));
             Assert.Equal("1 J/kmol.K", new SpecificEntropyMolar(1, SpecificEntropyMolarUnit.JoulePerKilomoleKelvin).ToString(swedishCulture));
             Assert.Equal("1 J/mol.K", new SpecificEntropyMolar(1, SpecificEntropyMolarUnit.JoulePerMoleKelvin).ToString(swedishCulture));

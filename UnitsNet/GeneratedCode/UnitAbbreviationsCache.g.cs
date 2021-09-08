@@ -1395,7 +1395,7 @@ namespace UnitsNet
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.KilojoulePerKilogramKelvin, new string[]{"kJ/kg.K", "kJ/kg·K"}),
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.MegajoulePerKilogramDegreeCelsius, new string[]{"MJ/kg.C", "MJ/kg·C"}),
                 ("en-US", typeof(SpecificEntropyUnit), (int)SpecificEntropyUnit.MegajoulePerKilogramKelvin, new string[]{"MJ/kg.K", "MJ/kg·K"}),
-                ("en-US", typeof(SpecificEntropyMolarUnit), (int)SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit, new string[]{"Btu/lb-mol.°F", "Btu/lb-mol·°F"}),
+                ("en-US", typeof(SpecificEntropyMolarUnit), (int)SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit, new string[]{"BTU/lb-mol.°F", "BTU/lb-mol·°F"}),
                 ("en-US", typeof(SpecificEntropyMolarUnit), (int)SpecificEntropyMolarUnit.CaloriePerMoleKelvin, new string[]{"cal/mol-K", "cal/mol·K"}),
                 ("en-US", typeof(SpecificEntropyMolarUnit), (int)SpecificEntropyMolarUnit.JoulePerKilomoleKelvin, new string[]{"J/kmol.K", "J/kmol·K"}),
                 ("en-US", typeof(SpecificEntropyMolarUnit), (int)SpecificEntropyMolarUnit.JoulePerMoleKelvin, new string[]{"J/mol.K", "J/mol·K"}),

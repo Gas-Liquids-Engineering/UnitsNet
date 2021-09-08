@@ -25,8 +25,8 @@ namespace UnitsNet.Tests
     public class NumberToSpecificEntropyMolarExtensionsTests
     {
         [Fact]
-        public void NumberToBtusPerPoundMoleFahrenheitTest() =>
-            Assert.Equal(SpecificEntropyMolar.FromBtusPerPoundMoleFahrenheit(2), 2.BtusPerPoundMoleFahrenheit());
+        public void NumberToBTUsPerPoundMoleFahrenheitTest() =>
+            Assert.Equal(SpecificEntropyMolar.FromBTUsPerPoundMoleFahrenheit(2), 2.BTUsPerPoundMoleFahrenheit());
 
         [Fact]
         public void NumberToCaloriesPerMoleKelvinTest() =>

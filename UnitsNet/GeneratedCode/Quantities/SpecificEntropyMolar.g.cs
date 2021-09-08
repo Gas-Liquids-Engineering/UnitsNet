@@ -52,7 +52,7 @@ namespace UnitsNet
 
             Info = new QuantityInfo<SpecificEntropyMolarUnit>("SpecificEntropyMolar",
                 new UnitInfo<SpecificEntropyMolarUnit>[] {
-                    new UnitInfo<SpecificEntropyMolarUnit>(SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit, BaseUnits.Undefined),
+                    new UnitInfo<SpecificEntropyMolarUnit>(SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit, BaseUnits.Undefined),
                     new UnitInfo<SpecificEntropyMolarUnit>(SpecificEntropyMolarUnit.CaloriePerMoleKelvin, BaseUnits.Undefined),
                     new UnitInfo<SpecificEntropyMolarUnit>(SpecificEntropyMolarUnit.JoulePerKilomoleKelvin, BaseUnits.Undefined),
                     new UnitInfo<SpecificEntropyMolarUnit>(SpecificEntropyMolarUnit.JoulePerMoleKelvin, BaseUnits.Undefined),
@@ -176,9 +176,9 @@ namespace UnitsNet
         #region Conversion Properties
 
         /// <summary>
-        ///     Get SpecificEntropyMolar in BtusPerPoundMoleFahrenheit.
+        ///     Get SpecificEntropyMolar in BTUsPerPoundMoleFahrenheit.
         /// </summary>
-        public double BtusPerPoundMoleFahrenheit => As(SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit);
+        public double BTUsPerPoundMoleFahrenheit => As(SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit);
 
         /// <summary>
         ///     Get SpecificEntropyMolar in CaloriesPerMoleKelvin.
@@ -245,13 +245,13 @@ namespace UnitsNet
         #region Static Factory Methods
 
         /// <summary>
-        ///     Get SpecificEntropyMolar from BtusPerPoundMoleFahrenheit.
+        ///     Get SpecificEntropyMolar from BTUsPerPoundMoleFahrenheit.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
-        public static SpecificEntropyMolar FromBtusPerPoundMoleFahrenheit(QuantityValue btusperpoundmolefahrenheit)
+        public static SpecificEntropyMolar FromBTUsPerPoundMoleFahrenheit(QuantityValue btusperpoundmolefahrenheit)
         {
             double value = (double) btusperpoundmolefahrenheit;
-            return new SpecificEntropyMolar(value, SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit);
+            return new SpecificEntropyMolar(value, SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit);
         }
         /// <summary>
         ///     Get SpecificEntropyMolar from CaloriesPerMoleKelvin.
@@ -745,7 +745,7 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit: return _value*4.187;
+                case SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit: return _value*(1/453.59237*1055.05585262*9/5);
                 case SpecificEntropyMolarUnit.CaloriePerMoleKelvin: return _value * 4184;
                 case SpecificEntropyMolarUnit.JoulePerKilomoleKelvin: return _value*1000;
                 case SpecificEntropyMolarUnit.JoulePerMoleKelvin: return _value;
@@ -778,7 +778,7 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit: return baseUnitValue/4.187;
+                case SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit: return baseUnitValue/(1/453.59237*1055.05585262*9/5);
                 case SpecificEntropyMolarUnit.CaloriePerMoleKelvin: return baseUnitValue / 4184;
                 case SpecificEntropyMolarUnit.JoulePerKilomoleKelvin: return baseUnitValue/1000;
                 case SpecificEntropyMolarUnit.JoulePerMoleKelvin: return baseUnitValue;
