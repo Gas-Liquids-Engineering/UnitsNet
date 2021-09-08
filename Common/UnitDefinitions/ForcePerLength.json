@@ -129,8 +129,8 @@
 	{
       "SingularName": "TonneForcePerMillimeter",
       "PluralName": "TonnesForcePerMillimeter",
-      "FromUnitToBaseFunc": "x*980665.0",
-      "FromBaseToUnitFunc": "x/980665.0",
+      "FromUnitToBaseFunc": "x*9806650.0",
+      "FromBaseToUnitFunc": "x/9806650.0",
       "Localization": [
         {
           "Culture": "en-US",

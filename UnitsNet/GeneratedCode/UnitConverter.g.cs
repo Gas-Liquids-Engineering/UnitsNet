@@ -636,8 +636,8 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<EnthalpyMass>(EnthalpyMassUnit.KilojoulePerKilogram, EnthalpyMass.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<EnthalpyMass>(EnthalpyMass.BaseUnit, EnthalpyMassUnit.MegajoulePerKilogram, q => q.ToUnit(EnthalpyMassUnit.MegajoulePerKilogram));
             unitConverter.SetConversionFunction<EnthalpyMass>(EnthalpyMassUnit.MegajoulePerKilogram, EnthalpyMass.BaseUnit, q => q.ToBaseUnit());
-            unitConverter.SetConversionFunction<EnthalpyMolar>(EnthalpyMolar.BaseUnit, EnthalpyMolarUnit.BTUPerPound, q => q.ToUnit(EnthalpyMolarUnit.BTUPerPound));
-            unitConverter.SetConversionFunction<EnthalpyMolar>(EnthalpyMolarUnit.BTUPerPound, EnthalpyMolar.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<EnthalpyMolar>(EnthalpyMolar.BaseUnit, EnthalpyMolarUnit.BTUPerPoundMole, q => q.ToUnit(EnthalpyMolarUnit.BTUPerPoundMole));
+            unitConverter.SetConversionFunction<EnthalpyMolar>(EnthalpyMolarUnit.BTUPerPoundMole, EnthalpyMolar.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<EnthalpyMolar>(EnthalpyMolar.BaseUnit, EnthalpyMolarUnit.CaloriesPerMole, q => q.ToUnit(EnthalpyMolarUnit.CaloriesPerMole));
             unitConverter.SetConversionFunction<EnthalpyMolar>(EnthalpyMolarUnit.CaloriesPerMole, EnthalpyMolar.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<EnthalpyMolar>(EnthalpyMolar.BaseUnit, EnthalpyMolarUnit.JoulePerKilomole, q => q.ToUnit(EnthalpyMolarUnit.JoulePerKilomole));

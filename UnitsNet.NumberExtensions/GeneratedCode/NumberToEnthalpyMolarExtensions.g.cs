@@ -28,9 +28,9 @@ namespace UnitsNet.NumberExtensions.NumberToEnthalpyMolar
     /// </summary>
     public static class NumberToEnthalpyMolarExtensions
     {
-        /// <inheritdoc cref="EnthalpyMolar.FromBTUsPerPound(UnitsNet.QuantityValue)" />
-        public static EnthalpyMolar BTUsPerPound<T>(this T value) =>
-            EnthalpyMolar.FromBTUsPerPound(Convert.ToDouble(value));
+        /// <inheritdoc cref="EnthalpyMolar.FromBTUsPerPoundMole(UnitsNet.QuantityValue)" />
+        public static EnthalpyMolar BTUsPerPoundMole<T>(this T value) =>
+            EnthalpyMolar.FromBTUsPerPoundMole(Convert.ToDouble(value));
 
         /// <inheritdoc cref="EnthalpyMolar.FromCaloriesPerMole(UnitsNet.QuantityValue)" />
         public static EnthalpyMolar CaloriesPerMole<T>(this T value) =>

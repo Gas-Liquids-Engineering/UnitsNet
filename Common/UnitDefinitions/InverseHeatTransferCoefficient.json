@@ -59,8 +59,8 @@
     {
       "SingularName": "SquareCentimeterSecondKelvinPerCalorie",
       "PluralName": "SquareCentimeterSecondKelvinsPerCalorie",
-      "FromUnitToBaseFunc": "x*(1/4184)",
-      "FromBaseToUnitFunc": "x/(1/4184)",
+      "FromUnitToBaseFunc": "x*(1.0/4184.0)",
+      "FromBaseToUnitFunc": "x/(1.0/4184.0)",
       "Localization": [
         {
           "Culture": "en-US",
@@ -83,8 +83,8 @@
     {
       "SingularName": "SquareMeterHourKelvinPerKilocalorie",
       "PluralName": "SquareMeterHourKelvinsPerKilocalorie",
-      "FromUnitToBaseFunc": "x * (3600/4184)",
-      "FromBaseToUnitFunc": "x / (3600/4184)",
+      "FromUnitToBaseFunc": "x * (3600.0/4184.0)",
+      "FromBaseToUnitFunc": "x / (3600.0/4184.0)",
 	  "Prefixes": [  ],
       "Localization": [
         {

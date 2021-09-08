@@ -32,10 +32,10 @@ namespace UnitsNet.Tests.CustomCode
         protected override double WattsPerSquareMeterKelvinInOneWattPerSquareMeterKelvin => 1;
         protected override double BtusPerSquareFootDegreeFahrenheitInOneWattPerSquareMeterKelvin => 1.7611018368230584e-1;
 
-        protected override double CaloriePerSquareCentimeterKelvinInOneWattPerSquareMeterKelvin => throw new NotImplementedException(); //TODO
+        protected override double CaloriePerSquareCentimeterKelvinInOneWattPerSquareMeterKelvin => 2.39006e-5;
 
-        protected override double KilocaloriesPerSquareMeterKelvinInOneWattPerSquareMeterKelvin => throw new NotImplementedException();
+        protected override double KilocaloriesPerSquareMeterKelvinInOneWattPerSquareMeterKelvin => 0.86042;
 
-        protected override double WattsPerSquareCentimeterKelvinInOneWattPerSquareMeterKelvin => throw new NotImplementedException();
+        protected override double WattsPerSquareCentimeterKelvinInOneWattPerSquareMeterKelvin => 1e-4;
     }
 }

@@ -731,10 +731,10 @@ namespace UnitsNet
             switch(Unit)
             {
                 case InverseHeatTransferCoefficientUnit.SquareCentimeterKelvinPerWatt: return _value/10000;
-                case InverseHeatTransferCoefficientUnit.SquareCentimeterSecondKelvinPerCalorie: return _value*(1/4184);
+                case InverseHeatTransferCoefficientUnit.SquareCentimeterSecondKelvinPerCalorie: return _value*(1.0/4184.0);
                 case InverseHeatTransferCoefficientUnit.SquareFootHourFahrenheitPerBtu: return _value*(0.3048*0.3048*5/9*3600/1055);
                 case InverseHeatTransferCoefficientUnit.SquareMeterCelsiusPerWatt: return _value;
-                case InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie: return _value * (3600/4184);
+                case InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie: return _value * (3600.0/4184.0);
                 case InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerKilowatt: return _value*1000;
                 case InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerWatt: return _value;
                 default:
@@ -763,10 +763,10 @@ namespace UnitsNet
             switch(unit)
             {
                 case InverseHeatTransferCoefficientUnit.SquareCentimeterKelvinPerWatt: return baseUnitValue*10000;
-                case InverseHeatTransferCoefficientUnit.SquareCentimeterSecondKelvinPerCalorie: return baseUnitValue/(1/4184);
+                case InverseHeatTransferCoefficientUnit.SquareCentimeterSecondKelvinPerCalorie: return baseUnitValue/(1.0/4184.0);
                 case InverseHeatTransferCoefficientUnit.SquareFootHourFahrenheitPerBtu: return baseUnitValue/(0.3048*0.3048*5/9*3600/1055);
                 case InverseHeatTransferCoefficientUnit.SquareMeterCelsiusPerWatt: return baseUnitValue;
-                case InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie: return baseUnitValue / (3600/4184);
+                case InverseHeatTransferCoefficientUnit.SquareMeterHourKelvinPerKilocalorie: return baseUnitValue / (3600.0/4184.0);
                 case InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerKilowatt: return baseUnitValue/1000;
                 case InverseHeatTransferCoefficientUnit.SquareMeterKelvinPerWatt: return baseUnitValue;
                 default:

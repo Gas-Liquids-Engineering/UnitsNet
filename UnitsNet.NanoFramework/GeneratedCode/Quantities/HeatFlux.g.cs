@@ -329,7 +329,7 @@ namespace UnitsNet
                 case HeatFluxUnit.CaloriePerSecondSquareCentimeter: return _value*41840;
                 case HeatFluxUnit.CentiwattPerSquareMeter: return (_value) * 1e-2d;
                 case HeatFluxUnit.DeciwattPerSquareMeter: return (_value) * 1e-1d;
-                case HeatFluxUnit.KilocaloriePerHourSquareMeter: return _value*(4184/3600);
+                case HeatFluxUnit.KilocaloriePerHourSquareMeter: return _value*(4184.0/3600.0);
                 case HeatFluxUnit.KilocaloriePerSecondSquareCentimeter: return (_value*41840) * 1e3d;
                 case HeatFluxUnit.KilowattPerSquareMeter: return (_value) * 1e3d;
                 case HeatFluxUnit.MicrowattPerSquareMeter: return (_value) * 1e-6d;
@@ -361,7 +361,7 @@ namespace UnitsNet
                 case HeatFluxUnit.CaloriePerSecondSquareCentimeter: return baseUnitValue/41840;
                 case HeatFluxUnit.CentiwattPerSquareMeter: return (baseUnitValue) / 1e-2d;
                 case HeatFluxUnit.DeciwattPerSquareMeter: return (baseUnitValue) / 1e-1d;
-                case HeatFluxUnit.KilocaloriePerHourSquareMeter: return baseUnitValue/(4184/3600);
+                case HeatFluxUnit.KilocaloriePerHourSquareMeter: return baseUnitValue/(4184.0/3600.0);
                 case HeatFluxUnit.KilocaloriePerSecondSquareCentimeter: return (baseUnitValue/41840) / 1e3d;
                 case HeatFluxUnit.KilowattPerSquareMeter: return (baseUnitValue) / 1e3d;
                 case HeatFluxUnit.MicrowattPerSquareMeter: return (baseUnitValue) / 1e-6d;

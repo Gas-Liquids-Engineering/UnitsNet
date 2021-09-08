@@ -26,7 +26,7 @@ namespace UnitsNet.Units
     public enum EnthalpyMolarUnit
     {
         Undefined = 0,
-        BTUPerPound,
+        BTUPerPoundMole,
         CaloriesPerMole,
         JoulePerKilomole,
         JoulePerMole,

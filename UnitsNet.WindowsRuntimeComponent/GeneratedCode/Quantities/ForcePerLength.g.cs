@@ -1083,7 +1083,7 @@ namespace UnitsNet
                 case ForcePerLengthUnit.PoundForcePerYard: return _value*(32.174*0.45359237*0.3048*12/0.3048)/36;
                 case ForcePerLengthUnit.TonneForcePerCentimeter: return _value*980665;
                 case ForcePerLengthUnit.TonneForcePerMeter: return _value*9806.65;
-                case ForcePerLengthUnit.TonneForcePerMillimeter: return _value*980665.0;
+                case ForcePerLengthUnit.TonneForcePerMillimeter: return _value*9806650.0;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -1135,7 +1135,7 @@ namespace UnitsNet
                 case ForcePerLengthUnit.PoundForcePerYard: return baseUnitValue/(32.174*0.45359237*0.3048*12/0.3048)*36;
                 case ForcePerLengthUnit.TonneForcePerCentimeter: return baseUnitValue/980665;
                 case ForcePerLengthUnit.TonneForcePerMeter: return baseUnitValue/9806.65;
-                case ForcePerLengthUnit.TonneForcePerMillimeter: return baseUnitValue/980665.0;
+                case ForcePerLengthUnit.TonneForcePerMillimeter: return baseUnitValue/9806650.0;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }

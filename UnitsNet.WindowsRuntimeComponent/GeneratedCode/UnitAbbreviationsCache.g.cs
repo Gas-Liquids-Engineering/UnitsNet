@@ -442,7 +442,7 @@ namespace UnitsNet
                 ("en-US", typeof(EnthalpyMassUnit), (int)EnthalpyMassUnit.KilocaloriePerGram, new string[]{"kcal/g"}),
                 ("en-US", typeof(EnthalpyMassUnit), (int)EnthalpyMassUnit.KilojoulePerKilogram, new string[]{"kJ/kg"}),
                 ("en-US", typeof(EnthalpyMassUnit), (int)EnthalpyMassUnit.MegajoulePerKilogram, new string[]{"MJ/kg"}),
-                ("en-US", typeof(EnthalpyMolarUnit), (int)EnthalpyMolarUnit.BTUPerPound, new string[]{"BTU/lbmol"}),
+                ("en-US", typeof(EnthalpyMolarUnit), (int)EnthalpyMolarUnit.BTUPerPoundMole, new string[]{"BTU/lbmol"}),
                 ("en-US", typeof(EnthalpyMolarUnit), (int)EnthalpyMolarUnit.CaloriesPerMole, new string[]{"cal/mol"}),
                 ("en-US", typeof(EnthalpyMolarUnit), (int)EnthalpyMolarUnit.JoulePerKilomole, new string[]{"J/kmol"}),
                 ("en-US", typeof(EnthalpyMolarUnit), (int)EnthalpyMolarUnit.JoulePerMole, new string[]{"J/mol"}),

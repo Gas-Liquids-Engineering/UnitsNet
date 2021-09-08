@@ -112,8 +112,8 @@
     {
       "SingularName": "KilocaloriePerHourSquareMeter",
       "PluralName": "KilocaloriesPerHourSquareMeter",
-      "FromUnitToBaseFunc": "x*(4184/3600)",
-      "FromBaseToUnitFunc": "x/(4184/3600)",
+      "FromUnitToBaseFunc": "x*(4184.0/3600.0)",
+      "FromBaseToUnitFunc": "x/(4184.0/3600.0)",
       "Localization": [
         {
           "Culture": "en-US",

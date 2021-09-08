@@ -25,20 +25,22 @@ namespace UnitsNet.Tests.CustomCode
     {
         // Override properties in base class here
 
-        protected override double BTUsPerPoundInOneJoulePerMole => throw new NotImplementedException();
+        protected override double BTUsPerPoundMoleInOneJoulePerMole => 0.42992;
 
-        protected override double CaloriesPerMoleInOneJoulePerMole => throw new NotImplementedException();
+        protected override double CaloriesPerMoleInOneJoulePerMole => 2.39006e-4;
 
-        protected override double JoulesPerKilomoleInOneJoulePerMole => throw new NotImplementedException();
+        protected override double JoulesPerKilomoleInOneJoulePerMole => 1e3;
 
-        protected override double JoulesPerMoleInOneJoulePerMole => throw new NotImplementedException();
+        protected override double JoulesPerMoleInOneJoulePerMole => 1.0;
 
-        protected override double KilojoulesPerKilomoleInOneJoulePerMole => throw new NotImplementedException();
+        protected override double KilojoulesPerKilomoleInOneJoulePerMole => 1.0;
 
-        protected override double KilojoulesPerMoleInOneJoulePerMole => throw new NotImplementedException();
+        protected override double KilojoulesPerMoleInOneJoulePerMole => 1e-3;
 
-        protected override double MegajoulesPerMoleInOneJoulePerMole => throw new NotImplementedException();
+        protected override double MegajoulesPerMoleInOneJoulePerMole => 1e-6;
 
-        protected override bool SupportsSIUnitSystem => throw new NotImplementedException();
+        protected override bool SupportsSIUnitSystem => false;
+
+ 
     }
 }

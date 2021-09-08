@@ -24,20 +24,20 @@ namespace UnitsNet.Tests.CustomCode
     public class InverseHeatTransferCoefficientTests : InverseHeatTransferCoefficientTestsBase
     {
         // Override properties in base class here
-        protected override double SquareCentimeterKelvinsPerWattInOneSquareMeterKelvinPerWatt => throw new NotImplementedException();
+        protected override double SquareCentimeterKelvinsPerWattInOneSquareMeterKelvinPerWatt => 1e4;
 
-        protected override double SquareCentimeterSecondKelvinsPerCalorieInOneSquareMeterKelvinPerWatt => throw new NotImplementedException();
+        protected override double SquareCentimeterSecondKelvinsPerCalorieInOneSquareMeterKelvinPerWatt => 4184;
 
-        protected override double SquareFootHourFahrenheitsPerBtuInOneSquareMeterKelvinPerWatt => throw new NotImplementedException();
+        protected override double SquareFootHourFahrenheitsPerBtuInOneSquareMeterKelvinPerWatt => 5.67796;
 
-        protected override double SquareMetersCelsiusPerWattInOneSquareMeterKelvinPerWatt => throw new NotImplementedException();
+        protected override double SquareMetersCelsiusPerWattInOneSquareMeterKelvinPerWatt => 1.0;
 
-        protected override double SquareMeterHourKelvinsPerKilocalorieInOneSquareMeterKelvinPerWatt => throw new NotImplementedException();
+        protected override double SquareMeterHourKelvinsPerKilocalorieInOneSquareMeterKelvinPerWatt => 1.16222;
 
-        protected override double SquareMetersKelvinPerKilowattInOneSquareMeterKelvinPerWatt => throw new NotImplementedException();
+        protected override double SquareMetersKelvinPerKilowattInOneSquareMeterKelvinPerWatt => 1e-3;
 
-        protected override double SquareMetersKelvinPerWattInOneSquareMeterKelvinPerWatt => throw new NotImplementedException();
+        protected override double SquareMetersKelvinPerWattInOneSquareMeterKelvinPerWatt => 1.0;
 
-        protected override bool SupportsSIUnitSystem => throw new NotImplementedException();
+        protected override bool SupportsSIUnitSystem => false;
     }
 }
