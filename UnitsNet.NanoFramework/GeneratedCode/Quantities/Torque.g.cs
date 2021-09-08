@@ -402,7 +402,7 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case TorqueUnit.KilogramForceCentimeter: return baseUnitValue/0.0989665;
+                case TorqueUnit.KilogramForceCentimeter: return baseUnitValue/0.0980665;
                 case TorqueUnit.KilogramForceMeter: return baseUnitValue/9.80665;
                 case TorqueUnit.KilogramForceMillimeter: return baseUnitValue/0.00980665;
                 case TorqueUnit.KilonewtonCentimeter: return (baseUnitValue*100) / 1e3d;

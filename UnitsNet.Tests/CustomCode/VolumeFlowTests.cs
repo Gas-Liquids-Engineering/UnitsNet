@@ -133,11 +133,11 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double CubicCentimetersPerMinuteInOneCubicMeterPerSecond => 6e7;
 
-        protected override double CubicFeetPerDayInOneCubicMeterPerSecond => throw new NotImplementedException(); //TODO
+        protected override double CubicFeetPerDayInOneCubicMeterPerSecond => 3.051187e6; 
 
-        protected override double DecsPerDayInOneCubicMeterPerSecond => throw new NotImplementedException();
+        protected override double DecsPerDayInOneCubicMeterPerSecond => 86.4;
 
-        protected override double ThousandCubicFeetPerDayInOneCubicMeterPerSecond => throw new NotImplementedException();
+        protected override double ThousandCubicFeetPerDayInOneCubicMeterPerSecond => 3.051187e3;
 
         [Theory]
         [InlineData(20, 2, 40)]

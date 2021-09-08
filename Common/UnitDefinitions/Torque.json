@@ -107,7 +107,7 @@
       "SingularName": "KilogramForceCentimeter",
       "PluralName": "KilogramForceCentimeters",
       "FromUnitToBaseFunc": "x*0.0980665",
-      "FromBaseToUnitFunc": "x/0.0989665",
+      "FromBaseToUnitFunc": "x/0.0980665",
       "Localization": [
         {
           "Culture": "en-US",

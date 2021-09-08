@@ -62,6 +62,6 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double PoundsPerSquareInchDeltaPerMileInOnePascalDeltaPerMeter => 0.233416;
 
-        protected override bool SupportsSIUnitSystem => false;
+        protected override bool SupportsSIUnitSystem => true;
     }
 }
