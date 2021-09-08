@@ -36,8 +36,8 @@
     {
       "SingularName": "BTUPerPound",
       "PluralName": "BTUsPerPound",
-      "FromUnitToBaseFunc": "x*(1055.05585262/0.4535927)",
-      "FromBaseToUnitFunc": "x/(1055.05585262/0.4535927)",
+      "FromUnitToBaseFunc": "x*(1055.05585262/0.45359237)",
+      "FromBaseToUnitFunc": "x/(1055.05585262/0.45359237)",
       "Localization": [
         {
           "Culture": "en-US",

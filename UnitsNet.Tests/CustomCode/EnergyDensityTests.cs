@@ -25,18 +25,18 @@ namespace UnitsNet.Tests.CustomCode
     {
         // Override properties in base class here
 
-        protected override bool SupportsSIUnitSystem => throw new NotImplementedException();
+        protected override bool SupportsSIUnitSystem => false;
 
-        protected override double BTUsPerCubicFeetInOneJoulePerCubicMeter => throw new NotImplementedException();
+        protected override double BTUsPerCubicFeetInOneJoulePerCubicMeter => 2.68392e-5;
 
-        protected override double CaloriesPerCubicMeterInOneJoulePerCubicMeter => throw new NotImplementedException();
+        protected override double CaloriesPerCubicMeterInOneJoulePerCubicMeter => 0.239006;
 
-        protected override double JoulesPerCubicMeterInOneJoulePerCubicMeter => throw new NotImplementedException();
+        protected override double JoulesPerCubicMeterInOneJoulePerCubicMeter => 1.0;
 
-        protected override double KilocaloriesPerCubicMeterInOneJoulePerCubicMeter => throw new NotImplementedException();
+        protected override double KilocaloriesPerCubicMeterInOneJoulePerCubicMeter => 2.39006e-4;
 
-        protected override double KilojoulesPerCubicMeterInOneJoulePerCubicMeter => throw new NotImplementedException();
+        protected override double KilojoulesPerCubicMeterInOneJoulePerCubicMeter => 0.001;
 
-        protected override double MegajoulesPerCubicMeterInOneJoulePerCubicMeter => throw new NotImplementedException();
+        protected override double MegajoulesPerCubicMeterInOneJoulePerCubicMeter => 1e-6;
     }
 }

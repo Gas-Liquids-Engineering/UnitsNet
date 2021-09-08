@@ -191,9 +191,9 @@ namespace UnitsNet
             switch(Unit)
             {
                 case EnergyDensityUnit.BTUPerCubicFoot: return _value*(1055.05585262*1/0.3048*1/0.3048*1/0.3048);
-                case EnergyDensityUnit.CaloriePerCubicMeter: return _value*4184;
+                case EnergyDensityUnit.CaloriePerCubicMeter: return _value*4.184;
                 case EnergyDensityUnit.JoulePerCubicMeter: return _value;
-                case EnergyDensityUnit.KilocaloriePerCubicMeter: return (_value*4184) * 1e3d;
+                case EnergyDensityUnit.KilocaloriePerCubicMeter: return (_value*4.184) * 1e3d;
                 case EnergyDensityUnit.KilojoulePerCubicMeter: return (_value) * 1e3d;
                 case EnergyDensityUnit.MegajoulePerCubicMeter: return (_value) * 1e6d;
                 default:
@@ -211,9 +211,9 @@ namespace UnitsNet
             switch(unit)
             {
                 case EnergyDensityUnit.BTUPerCubicFoot: return baseUnitValue/(1055.05585262*1/0.3048*1/0.3048*1/0.3048);
-                case EnergyDensityUnit.CaloriePerCubicMeter: return baseUnitValue/4184;
+                case EnergyDensityUnit.CaloriePerCubicMeter: return baseUnitValue/4.184;
                 case EnergyDensityUnit.JoulePerCubicMeter: return baseUnitValue;
-                case EnergyDensityUnit.KilocaloriePerCubicMeter: return (baseUnitValue/4184) / 1e3d;
+                case EnergyDensityUnit.KilocaloriePerCubicMeter: return (baseUnitValue/4.184) / 1e3d;
                 case EnergyDensityUnit.KilojoulePerCubicMeter: return (baseUnitValue) / 1e3d;
                 case EnergyDensityUnit.MegajoulePerCubicMeter: return (baseUnitValue) / 1e6d;
                 default:

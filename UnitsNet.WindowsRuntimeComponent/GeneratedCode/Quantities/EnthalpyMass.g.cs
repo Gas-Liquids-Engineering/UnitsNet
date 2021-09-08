@@ -566,7 +566,7 @@ namespace UnitsNet
         {
             switch(Unit)
             {
-                case EnthalpyMassUnit.BTUPerPound: return _value*(1055.05585262/0.4535927);
+                case EnthalpyMassUnit.BTUPerPound: return _value*(1055.05585262/0.45359237);
                 case EnthalpyMassUnit.CaloriePerGram: return _value*4184;
                 case EnthalpyMassUnit.JoulePerKilogram: return _value;
                 case EnthalpyMassUnit.KilocaloriePerGram: return (_value*4184) * 1e3d;
@@ -586,7 +586,7 @@ namespace UnitsNet
 
             switch(unit)
             {
-                case EnthalpyMassUnit.BTUPerPound: return baseUnitValue/(1055.05585262/0.4535927);
+                case EnthalpyMassUnit.BTUPerPound: return baseUnitValue/(1055.05585262/0.45359237);
                 case EnthalpyMassUnit.CaloriePerGram: return baseUnitValue/4184;
                 case EnthalpyMassUnit.JoulePerKilogram: return baseUnitValue;
                 case EnthalpyMassUnit.KilocaloriePerGram: return (baseUnitValue/4184) / 1e3d;

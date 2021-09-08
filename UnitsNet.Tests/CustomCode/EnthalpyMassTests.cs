@@ -25,18 +25,18 @@ namespace UnitsNet.Tests.CustomCode
     {
         // Override properties in base class here
 
-        protected override double CaloriesPerGramInOneJoulePerKilogram => throw new NotImplementedException();
+        protected override double CaloriesPerGramInOneJoulePerKilogram => 2.39005e-4;
 
-        protected override double JoulesPerKilogramInOneJoulePerKilogram => throw new NotImplementedException();
+        protected override double JoulesPerKilogramInOneJoulePerKilogram => 1.0;
 
-        protected override double KilocaloriesPerGramInOneJoulePerKilogram => throw new NotImplementedException();
+        protected override double KilocaloriesPerGramInOneJoulePerKilogram => 2.39005e-7;
 
-        protected override double KilojoulesPerKilogramInOneJoulePerKilogram => throw new NotImplementedException();
+        protected override double KilojoulesPerKilogramInOneJoulePerKilogram => 1e-3;
 
-        protected override double MegajoulesPerKilogramInOneJoulePerKilogram => throw new NotImplementedException();
+        protected override double MegajoulesPerKilogramInOneJoulePerKilogram => 1e-6;
 
-        protected override bool SupportsSIUnitSystem => throw new NotImplementedException();
+        protected override bool SupportsSIUnitSystem => false;
 
-        protected override double BTUsPerPoundInOneJoulePerKilogram => throw new NotImplementedException();
+        protected override double BTUsPerPoundInOneJoulePerKilogram => 4.29923e-4;
     }
 }
