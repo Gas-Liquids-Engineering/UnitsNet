@@ -41,11 +41,11 @@ namespace UnitsNet.Tests.CustomCode
         protected override double NanomolesPerLiterInOneMolesPerCubicMeter => 1e6;
         protected override double PicomolesPerLiterInOneMolesPerCubicMeter => 1e9;
 
-        protected override double PoundMolesPerCubicFootInOneMolesPerCubicMeter => throw new NotImplementedException(); //TODO
+        protected override double PoundMolesPerCubicFootInOneMolesPerCubicMeter => 6.2428e-5;
 
-        protected override double PoundMolesPerCubicMeterInOneMolesPerCubicMeter => throw new NotImplementedException();
+        protected override double PoundMolesPerCubicMeterInOneMolesPerCubicMeter => 2.20462e-3;
 
-        protected override double KilomolesPerCubicMeterInOneMolesPerCubicMeter => throw new NotImplementedException();
+        protected override double KilomolesPerCubicMeterInOneMolesPerCubicMeter => 1e-3;
         #endregion
 
         [Theory]
