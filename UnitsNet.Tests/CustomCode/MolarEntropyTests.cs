@@ -32,22 +32,22 @@ namespace UnitsNet.Tests.CustomCode
         protected override double KilojoulesPerMoleKelvinInOneJoulePerMoleKelvin => 1e-3;
         protected override double MegajoulesPerMoleKelvinInOneJoulePerMoleKelvin => 1e-6;
 
-        protected override double BtusPerPoundMoleDegreeFahrenheitInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double BtusPerPoundMoleDegreeFahrenheitInOneJoulePerMoleKelvin => 0.23885;
 
-        protected override double CaloriePerMoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double CaloriePerMoleKelvinInOneJoulePerMoleKelvin => 0.239006;
 
-        protected override double JoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double JoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => 1e3;
 
-        protected override double KilobtusPerPoundMoleDegreeFahrenheitInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double KilobtusPerPoundMoleDegreeFahrenheitInOneJoulePerMoleKelvin => 0.23885e-3;
 
-        protected override double KilocaloriePerMoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double KilocaloriePerMoleKelvinInOneJoulePerMoleKelvin => 0.239006e-3;
 
-        protected override double KilojoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double KilojoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => 1.0;
 
-        protected override double MegabtusPerPoundMoleDegreeFahrenheitInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double MegabtusPerPoundMoleDegreeFahrenheitInOneJoulePerMoleKelvin => 0.23885e-6;
 
-        protected override double MegacaloriePerMoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double MegacaloriePerMoleKelvinInOneJoulePerMoleKelvin => 0.239006e-6;
 
-        protected override double MegajoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double MegajoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => 1.0e-3;
     }
 }

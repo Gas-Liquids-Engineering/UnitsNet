@@ -24,24 +24,24 @@ namespace UnitsNet.Tests.CustomCode
     public class MolarFlowTests : MolarFlowTestsBase
     {
         // Override properties in base class here
-        protected override double GramMolesPerHourInOneGramMolePerHour => throw new NotImplementedException(); //TODO
+        protected override double GramMolesPerHourInOneGramMolePerHour => 1.0;
 
-        protected override double GramMolesPerMinuteInOneGramMolePerHour => throw new NotImplementedException();
+        protected override double GramMolesPerMinuteInOneGramMolePerHour => 0.0166667;
 
-        protected override double GramMolesPerSecondInOneGramMolePerHour => throw new NotImplementedException();
+        protected override double GramMolesPerSecondInOneGramMolePerHour => 2.77778e-4;
 
-        protected override double KilogramMolesPerHourInOneGramMolePerHour => throw new NotImplementedException();
+        protected override double KilogramMolesPerHourInOneGramMolePerHour => 1e-3;
 
-        protected override double KilogramMolesPerMinuteInOneGramMolePerHour => throw new NotImplementedException();
+        protected override double KilogramMolesPerMinuteInOneGramMolePerHour => 1.66667e-5;
 
-        protected override double KilogramMolesPerSecondInOneGramMolePerHour => throw new NotImplementedException();
+        protected override double KilogramMolesPerSecondInOneGramMolePerHour => 2.77778e-7;
 
-        protected override double PoundMolesPerHourInOneGramMolePerHour => throw new NotImplementedException();
+        protected override double PoundMolesPerHourInOneGramMolePerHour => 2.20462e-3;
 
-        protected override double PoundMolesPerMinuteInOneGramMolePerHour => throw new NotImplementedException();
+        protected override double PoundMolesPerMinuteInOneGramMolePerHour => 3.67437e-5;
 
-        protected override double PoundMolesPerSecondInOneGramMolePerHour => throw new NotImplementedException();
+        protected override double PoundMolesPerSecondInOneGramMolePerHour => 6.124e-7;
 
-        protected override bool SupportsSIUnitSystem => throw new NotImplementedException();
+        protected override bool SupportsSIUnitSystem => false;
     }
 }

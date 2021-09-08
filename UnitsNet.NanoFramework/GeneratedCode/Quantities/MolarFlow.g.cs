@@ -229,9 +229,9 @@ namespace UnitsNet
                 case MolarFlowUnit.KilogramMolePerHour: return (_value) * 1e3d;
                 case MolarFlowUnit.KilogramMolePerMinute: return (_value*60) * 1e3d;
                 case MolarFlowUnit.KilogramMolePerSecond: return (_value*3600) * 1e3d;
-                case MolarFlowUnit.PoundMolePerHour: return _value*453.69237;
-                case MolarFlowUnit.PoundMolePerMinute: return _value*60*453.69237;
-                case MolarFlowUnit.PoundMolePerSecond: return _value*3600*453.69237;
+                case MolarFlowUnit.PoundMolePerHour: return _value*453.59237;
+                case MolarFlowUnit.PoundMolePerMinute: return _value*60*453.59237;
+                case MolarFlowUnit.PoundMolePerSecond: return _value*3600*453.59237;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to base units.");
             }
@@ -252,9 +252,9 @@ namespace UnitsNet
                 case MolarFlowUnit.KilogramMolePerHour: return (baseUnitValue) / 1e3d;
                 case MolarFlowUnit.KilogramMolePerMinute: return (baseUnitValue/60) / 1e3d;
                 case MolarFlowUnit.KilogramMolePerSecond: return (baseUnitValue/3600) / 1e3d;
-                case MolarFlowUnit.PoundMolePerHour: return baseUnitValue/453.69237;
-                case MolarFlowUnit.PoundMolePerMinute: return baseUnitValue/60/453.69237;
-                case MolarFlowUnit.PoundMolePerSecond: return baseUnitValue/3600/453.69237;
+                case MolarFlowUnit.PoundMolePerHour: return baseUnitValue/453.59237;
+                case MolarFlowUnit.PoundMolePerMinute: return baseUnitValue/60/453.59237;
+                case MolarFlowUnit.PoundMolePerSecond: return baseUnitValue/3600/453.59237;
                 default:
                     throw new NotImplementedException($"Can not convert {Unit} to {unit}.");
             }
