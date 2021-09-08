@@ -51,8 +51,8 @@
 		"M": "Gram",
         "T": "Second"
       },
-      "FromUnitToBaseFunc": "x*4184",
-      "FromBaseToUnitFunc": "x/4184",
+      "FromUnitToBaseFunc": "x*4.184",
+      "FromBaseToUnitFunc": "x/4.184",
 	  "Prefixes": [ "Kilo"],
       "Localization": [
         {
