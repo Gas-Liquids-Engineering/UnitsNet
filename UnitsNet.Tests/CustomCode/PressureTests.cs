@@ -35,7 +35,7 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double MegapascalsInOnePascal => 1E-6;
 
-        protected override double MetersOfHeadInOnePascal => 0.00010199773339984054;
+        protected override double MetersOfHeadInOnePascal => 0.0001019716212977928;
 
         protected override double MeganewtonsPerSquareMeterInOnePascal => 1E-6;
 
@@ -51,15 +51,15 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double PoundsForcePerSquareInchInOnePascal => 1.450377377302092e-4;
 
-        protected override double TechnicalAtmospheresInOnePascal => 1.0197 * 1E-5;
+        protected override double TechnicalAtmospheresInOnePascal => 1.019716212 * 1E-5;
 
         protected override double TonnesForcePerSquareCentimeterInOnePascal => 1.019716212977928e-8;
 
-        protected override double TonnesForcePerSquareMeterInOnePascal => 1.019716212977928e-4;
+        protected override double TonnesForcePerSquareMeterInOnePascal => 1.019716212979928e-4;
 
         protected override double TonnesForcePerSquareMillimeterInOnePascal => 1.019716212977928e-10;
 
-        protected override double TorrsInOnePascal => 7.5006 * 1E-3;
+        protected override double TorrsInOnePascal => 7.5188 * 1E-3;
 
         protected override double CentibarsInOnePascal => 1e-3;
 
@@ -94,11 +94,7 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double MillipascalsInOnePascal => 1e3;
 
-        //protected override double MetersOfElevationInOnePascal => 39364.9129730686;
-
-        //protected override double FeetOfElevationInOnePascal => 129149.976945763;
-
-        protected override double MillimetersOfWaterColumnInOnePascal => throw new NotImplementedException();
+        protected override double MillimetersOfWaterColumnInOnePascal => 0.1019716;
 
         [Fact]
         public void Absolute_WithAbsolutePressureReference_IsEqual()

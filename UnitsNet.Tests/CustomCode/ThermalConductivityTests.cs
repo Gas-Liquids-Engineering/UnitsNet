@@ -31,8 +31,8 @@ namespace UnitsNet.Tests.CustomCode
         protected override double WattsPerMeterKelvinInOneWattPerMeterKelvin => 1;
         protected override double BtusPerHourFootFahrenheitInOneWattPerMeterKelvin => 5.77789317e-1;
 
-        protected override double CaloriesPerSecondCentimeterDegreeCelsiusInOneWattPerMeterKelvin => throw new NotImplementedException();
+        protected override double CaloriesPerSecondCentimeterDegreeCelsiusInOneWattPerMeterKelvin => 2.39005e-3;
 
-        protected override double JoulesPerSecondMeterKelvinInOneWattPerMeterKelvin => throw new NotImplementedException();
+        protected override double JoulesPerSecondMeterKelvinInOneWattPerMeterKelvin => 1.0;
     }
 }

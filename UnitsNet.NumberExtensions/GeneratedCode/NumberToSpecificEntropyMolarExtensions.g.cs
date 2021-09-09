@@ -28,9 +28,9 @@ namespace UnitsNet.NumberExtensions.NumberToSpecificEntropyMolar
     /// </summary>
     public static class NumberToSpecificEntropyMolarExtensions
     {
-        /// <inheritdoc cref="SpecificEntropyMolar.FromBtusPerPoundMoleFahrenheit(UnitsNet.QuantityValue)" />
-        public static SpecificEntropyMolar BtusPerPoundMoleFahrenheit<T>(this T value) =>
-            SpecificEntropyMolar.FromBtusPerPoundMoleFahrenheit(Convert.ToDouble(value));
+        /// <inheritdoc cref="SpecificEntropyMolar.FromBTUsPerPoundMoleFahrenheit(UnitsNet.QuantityValue)" />
+        public static SpecificEntropyMolar BTUsPerPoundMoleFahrenheit<T>(this T value) =>
+            SpecificEntropyMolar.FromBTUsPerPoundMoleFahrenheit(Convert.ToDouble(value));
 
         /// <inheritdoc cref="SpecificEntropyMolar.FromCaloriesPerMoleKelvin(UnitsNet.QuantityValue)" />
         public static SpecificEntropyMolar CaloriesPerMoleKelvin<T>(this T value) =>

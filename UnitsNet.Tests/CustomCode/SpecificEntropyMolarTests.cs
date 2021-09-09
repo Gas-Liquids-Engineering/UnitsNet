@@ -24,22 +24,22 @@ namespace UnitsNet.Tests.CustomCode
     public class SpecificEntropyMolarTests : SpecificEntropyMolarTestsBase
     {
         // Override properties in base class here
-        protected override double BtusPerPoundMoleFahrenheitInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double BTUsPerPoundMoleFahrenheitInOneJoulePerMoleKelvin => 2.388459e-1;
 
-        protected override double CaloriesPerMoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double CaloriesPerMoleKelvinInOneJoulePerMoleKelvin => 2.39006e-4;
 
-        protected override double JoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double JoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => 1.0e-3;
 
-        protected override double JoulesPerMoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double JoulesPerMoleKelvinInOneJoulePerMoleKelvin => 1.0;
 
-        protected override double KilojoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double KilojoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => 1.0e-6;
 
-        protected override double KilojoulesPerMoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double KilojoulesPerMoleKelvinInOneJoulePerMoleKelvin => 1.0e-3;
 
-        protected override double MegajoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double MegajoulesPerKilomoleKelvinInOneJoulePerMoleKelvin => 1.0e-9;
 
-        protected override double MegajoulesPerMoleKelvinInOneJoulePerMoleKelvin => throw new NotImplementedException();
+        protected override double MegajoulesPerMoleKelvinInOneJoulePerMoleKelvin => 1.0e-6;
 
-        protected override bool SupportsSIUnitSystem => throw new NotImplementedException();
+        protected override bool SupportsSIUnitSystem => false;
     }
 }

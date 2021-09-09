@@ -403,7 +403,7 @@ namespace UnitsNet
                 case MassUnit.Decagram: return (_value/1e3) * 1e1d;
                 case MassUnit.Decigram: return (_value/1e3) * 1e-1d;
                 case MassUnit.EarthMass: return _value * 5.9722E+24;
-                case MassUnit.Grain: return _value*(1000/0.0647989);
+                case MassUnit.Grain: return _value*(64.7891e-6);
                 case MassUnit.Gram: return _value/1e3;
                 case MassUnit.Hectogram: return (_value/1e3) * 1e2d;
                 case MassUnit.Kilogram: return (_value/1e3) * 1e3d;
@@ -416,7 +416,7 @@ namespace UnitsNet
                 case MassUnit.Microgram: return (_value/1e3) * 1e-6d;
                 case MassUnit.Milligram: return (_value/1e3) * 1e-3d;
                 case MassUnit.Nanogram: return (_value/1e3) * 1e-9d;
-                case MassUnit.Ounce: return _value*(16/0.45359237);
+                case MassUnit.Ounce: return _value*(0.45359237/16.0);
                 case MassUnit.Pound: return _value*0.45359237;
                 case MassUnit.ShortHundredweight: return _value*45.359237;
                 case MassUnit.ShortTon: return _value*9.0718474e2;
@@ -442,7 +442,7 @@ namespace UnitsNet
                 case MassUnit.Decagram: return (baseUnitValue*1e3) / 1e1d;
                 case MassUnit.Decigram: return (baseUnitValue*1e3) / 1e-1d;
                 case MassUnit.EarthMass: return baseUnitValue / 5.9722E+24;
-                case MassUnit.Grain: return baseUnitValue/(1000/0.0647989);
+                case MassUnit.Grain: return baseUnitValue/(64.7891e-6);
                 case MassUnit.Gram: return baseUnitValue*1e3;
                 case MassUnit.Hectogram: return (baseUnitValue*1e3) / 1e2d;
                 case MassUnit.Kilogram: return (baseUnitValue*1e3) / 1e3d;
@@ -455,7 +455,7 @@ namespace UnitsNet
                 case MassUnit.Microgram: return (baseUnitValue*1e3) / 1e-6d;
                 case MassUnit.Milligram: return (baseUnitValue*1e3) / 1e-3d;
                 case MassUnit.Nanogram: return (baseUnitValue*1e3) / 1e-9d;
-                case MassUnit.Ounce: return baseUnitValue/(16/0.45359237);
+                case MassUnit.Ounce: return baseUnitValue/(0.45359237/16.0);
                 case MassUnit.Pound: return baseUnitValue/0.45359237;
                 case MassUnit.ShortHundredweight: return baseUnitValue/45.359237;
                 case MassUnit.ShortTon: return baseUnitValue/9.0718474e2;

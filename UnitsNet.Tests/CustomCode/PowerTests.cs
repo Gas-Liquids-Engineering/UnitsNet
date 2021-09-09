@@ -59,15 +59,15 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double MetricHorsepowerInOneWatt => 0.00135962161730390432342679032425;
 
-        protected override double CaloriesPerHourInOneWatt => throw new NotImplementedException(); //TODO
+        protected override double CaloriesPerHourInOneWatt => 860.42065;
 
-        protected override double GigacaloriesPerHourInOneWatt => throw new NotImplementedException();
+        protected override double GigacaloriesPerHourInOneWatt => 860.42065e-9;
 
-        protected override double KilocaloriesPerHourInOneWatt => throw new NotImplementedException();
+        protected override double KilocaloriesPerHourInOneWatt => 860.42065e-3;
 
-        protected override double MegacaloriesPerHourInOneWatt => throw new NotImplementedException();
+        protected override double MegacaloriesPerHourInOneWatt => 860.42065e-6;
 
-        protected override double MillicaloriesPerHourInOneWatt => throw new NotImplementedException();
+        protected override double MillicaloriesPerHourInOneWatt => 860.42065e3;
 
         [Fact]
         public void DurationTimesPowerEqualsEnergy()

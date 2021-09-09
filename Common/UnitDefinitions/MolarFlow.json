@@ -49,8 +49,8 @@
     {
       "SingularName": "PoundMolePerHour",
       "PluralName": "PoundMolesPerHour",
-      "FromUnitToBaseFunc": "x*453.69237",
-      "FromBaseToUnitFunc": "x/453.69237",
+      "FromUnitToBaseFunc": "x*453.59237",
+      "FromBaseToUnitFunc": "x/453.59237",
       "Localization": [
         {
           "Culture": "en-US",
@@ -61,8 +61,8 @@
     {
       "SingularName": "PoundMolePerMinute",
       "PluralName": "PoundMolesPerMinute",
-      "FromUnitToBaseFunc": "x*60*453.69237",
-      "FromBaseToUnitFunc": "x/60/453.69237",
+      "FromUnitToBaseFunc": "x*60*453.59237",
+      "FromBaseToUnitFunc": "x/60/453.59237",
       "Localization": [
         {
           "Culture": "en-US",
@@ -73,8 +73,8 @@
     {
       "SingularName": "PoundMolePerSecond",
       "PluralName": "PoundMolesPerSecond",
-      "FromUnitToBaseFunc": "x*3600*453.69237",
-      "FromBaseToUnitFunc": "x/3600/453.69237",
+      "FromUnitToBaseFunc": "x*3600*453.59237",
+      "FromBaseToUnitFunc": "x/3600/453.59237",
       "Localization": [
         {
           "Culture": "en-US",

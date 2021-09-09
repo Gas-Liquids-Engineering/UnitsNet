@@ -33,11 +33,11 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double MillicubicMetersPerKilogramInOneCubicMeterPerKilogram => 1e3;
 
-        protected override double LitersPerGramInOneCubicMeterPerKilogram => throw new System.NotImplementedException(); //TODO
+        protected override double LitersPerGramInOneCubicMeterPerKilogram => 1.0;
 
-        protected override double MillilitersPerGramInOneCubicMeterPerKilogram => throw new System.NotImplementedException();
+        protected override double MillilitersPerGramInOneCubicMeterPerKilogram => 1.0e3;
 
-        protected override double USGallonsPerPoundInOneCubicMeterPerKilogram => throw new System.NotImplementedException();
+        protected override double USGallonsPerPoundInOneCubicMeterPerKilogram => 119.8264273;
 
         [Fact]
         public static void SpecificVolumeTimesMassEqualsVolume()

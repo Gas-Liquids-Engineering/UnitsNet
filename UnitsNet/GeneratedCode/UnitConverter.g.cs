@@ -2137,8 +2137,8 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<SpecificEntropy>(SpecificEntropyUnit.MegajoulePerKilogramDegreeCelsius, SpecificEntropy.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<SpecificEntropy>(SpecificEntropy.BaseUnit, SpecificEntropyUnit.MegajoulePerKilogramKelvin, q => q.ToUnit(SpecificEntropyUnit.MegajoulePerKilogramKelvin));
             unitConverter.SetConversionFunction<SpecificEntropy>(SpecificEntropyUnit.MegajoulePerKilogramKelvin, SpecificEntropy.BaseUnit, q => q.ToBaseUnit());
-            unitConverter.SetConversionFunction<SpecificEntropyMolar>(SpecificEntropyMolar.BaseUnit, SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit, q => q.ToUnit(SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit));
-            unitConverter.SetConversionFunction<SpecificEntropyMolar>(SpecificEntropyMolarUnit.BtuPerPoundMoleFahrenheit, SpecificEntropyMolar.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<SpecificEntropyMolar>(SpecificEntropyMolar.BaseUnit, SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit, q => q.ToUnit(SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit));
+            unitConverter.SetConversionFunction<SpecificEntropyMolar>(SpecificEntropyMolarUnit.BTUPerPoundMoleFahrenheit, SpecificEntropyMolar.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<SpecificEntropyMolar>(SpecificEntropyMolar.BaseUnit, SpecificEntropyMolarUnit.CaloriePerMoleKelvin, q => q.ToUnit(SpecificEntropyMolarUnit.CaloriePerMoleKelvin));
             unitConverter.SetConversionFunction<SpecificEntropyMolar>(SpecificEntropyMolarUnit.CaloriePerMoleKelvin, SpecificEntropyMolar.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<SpecificEntropyMolar>(SpecificEntropyMolar.BaseUnit, SpecificEntropyMolarUnit.JoulePerKilomoleKelvin, q => q.ToUnit(SpecificEntropyMolarUnit.JoulePerKilomoleKelvin));
