@@ -43,5 +43,28 @@ namespace UnitsNet.Tests.CustomCode
         protected override double NanogramsPerMoleInOneKilogramPerMole => 1e12;
         protected override double PoundsPerMoleInOneKilogramPerMole => 2.2046226218487757;
 
+        protected override double CentigramsPerKilomoleInOneKilogramPerMole => 1.0e8;
+
+        protected override double DecagramsPerKilomoleInOneKilogramPerMole => 1.0e5;
+
+        protected override double DecigramsPerKilomoleInOneKilogramPerMole => 1.0e7;
+
+        protected override double GramsPerKilomoleInOneKilogramPerMole => 1.0e6;
+
+        protected override double HectogramsPerKilomoleInOneKilogramPerMole => 1.0e4;
+
+        protected override double KilogramsPerKilomoleInOneKilogramPerMole => 1.0e3;
+
+        protected override double KilopoundsPerKilomoleInOneKilogramPerMole => 2.204623;
+
+        protected override double MegapoundsPerKilomoleInOneKilogramPerMole => 2.204623e-3;
+
+        protected override double MicrogramsPerKilomoleInOneKilogramPerMole => 1.0e12;
+
+        protected override double MilligramsPerKilomoleInOneKilogramPerMole => 1.0e9;
+
+        protected override double NanogramsPerKilomoleInOneKilogramPerMole => 1.0e15;
+
+        protected override double PoundsPerKilomoleInOneKilogramPerMole => 2204.623;
     }
 }
