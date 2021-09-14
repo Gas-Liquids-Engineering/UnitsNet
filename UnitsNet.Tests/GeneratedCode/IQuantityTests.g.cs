@@ -107,7 +107,7 @@ namespace UnitsNet.Tests
             Assertion(3, MolarEntropyUnit.MegajoulePerMoleKelvin, Quantity.From(3, MolarEntropyUnit.MegajoulePerMoleKelvin));
             Assertion(3, MolarFlowUnit.PoundMolePerSecond, Quantity.From(3, MolarFlowUnit.PoundMolePerSecond));
             Assertion(3, MolarityUnit.PoundMolesPerCubicMeter, Quantity.From(3, MolarityUnit.PoundMolesPerCubicMeter));
-            Assertion(3, MolarMassUnit.PoundPerMole, Quantity.From(3, MolarMassUnit.PoundPerMole));
+            Assertion(3, MolarMassUnit.PoundPerPoundMole, Quantity.From(3, MolarMassUnit.PoundPerPoundMole));
             Assertion(3, PermeabilityUnit.HenryPerMeter, Quantity.From(3, PermeabilityUnit.HenryPerMeter));
             Assertion(3, PermittivityUnit.FaradPerMeter, Quantity.From(3, PermittivityUnit.FaradPerMeter));
             Assertion(3, PowerUnit.Watt, Quantity.From(3, PowerUnit.Watt));

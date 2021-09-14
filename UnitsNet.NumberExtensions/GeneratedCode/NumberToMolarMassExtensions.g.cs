@@ -60,6 +60,10 @@ namespace UnitsNet.NumberExtensions.NumberToMolarMass
         public static MolarMass GramsPerMole<T>(this T value) =>
             MolarMass.FromGramsPerMole(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="MolarMass.FromGramsPerPoundMole(UnitsNet.QuantityValue)" />
+        public static MolarMass GramsPerPoundMole<T>(this T value) =>
+            MolarMass.FromGramsPerPoundMole(Convert.ToDouble(value));
+
         /// <inheritdoc cref="MolarMass.FromHectogramsPerKilomole(UnitsNet.QuantityValue)" />
         public static MolarMass HectogramsPerKilomole<T>(this T value) =>
             MolarMass.FromHectogramsPerKilomole(Convert.ToDouble(value));
@@ -76,6 +80,10 @@ namespace UnitsNet.NumberExtensions.NumberToMolarMass
         public static MolarMass KilogramsPerMole<T>(this T value) =>
             MolarMass.FromKilogramsPerMole(Convert.ToDouble(value));
 
+        /// <inheritdoc cref="MolarMass.FromKilogramsPerPoundMole(UnitsNet.QuantityValue)" />
+        public static MolarMass KilogramsPerPoundMole<T>(this T value) =>
+            MolarMass.FromKilogramsPerPoundMole(Convert.ToDouble(value));
+
         /// <inheritdoc cref="MolarMass.FromKilopoundsPerKilomole(UnitsNet.QuantityValue)" />
         public static MolarMass KilopoundsPerKilomole<T>(this T value) =>
             MolarMass.FromKilopoundsPerKilomole(Convert.ToDouble(value));
@@ -84,13 +92,9 @@ namespace UnitsNet.NumberExtensions.NumberToMolarMass
         public static MolarMass KilopoundsPerMole<T>(this T value) =>
             MolarMass.FromKilopoundsPerMole(Convert.ToDouble(value));
 
-        /// <inheritdoc cref="MolarMass.FromMegapoundsPerKilomole(UnitsNet.QuantityValue)" />
-        public static MolarMass MegapoundsPerKilomole<T>(this T value) =>
-            MolarMass.FromMegapoundsPerKilomole(Convert.ToDouble(value));
-
-        /// <inheritdoc cref="MolarMass.FromMegapoundsPerMole(UnitsNet.QuantityValue)" />
-        public static MolarMass MegapoundsPerMole<T>(this T value) =>
-            MolarMass.FromMegapoundsPerMole(Convert.ToDouble(value));
+        /// <inheritdoc cref="MolarMass.FromKilopoundsPerPoundMole(UnitsNet.QuantityValue)" />
+        public static MolarMass KilopoundsPerPoundMole<T>(this T value) =>
+            MolarMass.FromKilopoundsPerPoundMole(Convert.ToDouble(value));
 
         /// <inheritdoc cref="MolarMass.FromMicrogramsPerKilomole(UnitsNet.QuantityValue)" />
         public static MolarMass MicrogramsPerKilomole<T>(this T value) =>
@@ -123,6 +127,10 @@ namespace UnitsNet.NumberExtensions.NumberToMolarMass
         /// <inheritdoc cref="MolarMass.FromPoundsPerMole(UnitsNet.QuantityValue)" />
         public static MolarMass PoundsPerMole<T>(this T value) =>
             MolarMass.FromPoundsPerMole(Convert.ToDouble(value));
+
+        /// <inheritdoc cref="MolarMass.FromPoundsPerPoundMole(UnitsNet.QuantityValue)" />
+        public static MolarMass PoundsPerPoundMole<T>(this T value) =>
+            MolarMass.FromPoundsPerPoundMole(Convert.ToDouble(value));
 
     }
 }

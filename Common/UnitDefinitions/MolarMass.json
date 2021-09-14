@@ -38,7 +38,7 @@
       "PluralName": "PoundsPerMole",
       "FromUnitToBaseFunc": "x*0.45359237",
       "FromBaseToUnitFunc": "x/0.45359237",
-      "Prefixes": [ "Kilo", "Mega" ],
+      "Prefixes": [ "Kilo"],
       "Localization": [
         {
           "Culture": "en-US",
@@ -49,13 +49,39 @@
     {
       "SingularName": "PoundPerKilomole",
       "PluralName": "PoundsPerKilomole",
-      "FromUnitToBaseFunc": "x*(0.45359237*1e-3)",
-      "FromBaseToUnitFunc": "x/(0.45359237*1e-3)",
-      "Prefixes": [ "Kilo", "Mega" ],
+      "FromUnitToBaseFunc": "x*(0.45359237/1e3)",
+      "FromBaseToUnitFunc": "x/(0.45359237/1e3)",
+      "Prefixes": [ "Kilo"],
       "Localization": [
         {
           "Culture": "en-US",
           "Abbreviations": [ "lb/kgmol" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "GramPerPoundMole",
+      "PluralName": "GramsPerPoundMole",
+      "FromUnitToBaseFunc": "x*(1/1000.0*1/453.59237)",
+      "FromBaseToUnitFunc": "x/(1/1000.0*1/453.59237)",
+      "Prefixes": [ "Kilo"],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "g/lbmol" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "PoundPerPoundMole",
+      "PluralName": "PoundsPerPoundMole",
+      "FromUnitToBaseFunc": "x*1e-3",
+      "FromBaseToUnitFunc": "x/1e-3",
+      "Prefixes": [ "Kilo"],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "lb/lbmol" ]
         }
       ]
     }

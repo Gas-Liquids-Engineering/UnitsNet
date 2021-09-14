@@ -34,14 +34,15 @@ namespace UnitsNet.Units
         DecigramPerMole,
         GramPerKilomole,
         GramPerMole,
+        GramPerPoundMole,
         HectogramPerKilomole,
         HectogramPerMole,
         KilogramPerKilomole,
         KilogramPerMole,
+        KilogramPerPoundMole,
         KilopoundPerKilomole,
         KilopoundPerMole,
-        MegapoundPerKilomole,
-        MegapoundPerMole,
+        KilopoundPerPoundMole,
         MicrogramPerKilomole,
         MicrogramPerMole,
         MilligramPerKilomole,
@@ -50,6 +51,7 @@ namespace UnitsNet.Units
         NanogramPerMole,
         PoundPerKilomole,
         PoundPerMole,
+        PoundPerPoundMole,
     }
 
     #pragma warning restore 1591

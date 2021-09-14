@@ -57,6 +57,10 @@ namespace UnitsNet.Tests
             Assert.Equal(MolarMass.FromGramsPerMole(2), 2.GramsPerMole());
 
         [Fact]
+        public void NumberToGramsPerPoundMoleTest() =>
+            Assert.Equal(MolarMass.FromGramsPerPoundMole(2), 2.GramsPerPoundMole());
+
+        [Fact]
         public void NumberToHectogramsPerKilomoleTest() =>
             Assert.Equal(MolarMass.FromHectogramsPerKilomole(2), 2.HectogramsPerKilomole());
 
@@ -73,6 +77,10 @@ namespace UnitsNet.Tests
             Assert.Equal(MolarMass.FromKilogramsPerMole(2), 2.KilogramsPerMole());
 
         [Fact]
+        public void NumberToKilogramsPerPoundMoleTest() =>
+            Assert.Equal(MolarMass.FromKilogramsPerPoundMole(2), 2.KilogramsPerPoundMole());
+
+        [Fact]
         public void NumberToKilopoundsPerKilomoleTest() =>
             Assert.Equal(MolarMass.FromKilopoundsPerKilomole(2), 2.KilopoundsPerKilomole());
 
@@ -81,12 +89,8 @@ namespace UnitsNet.Tests
             Assert.Equal(MolarMass.FromKilopoundsPerMole(2), 2.KilopoundsPerMole());
 
         [Fact]
-        public void NumberToMegapoundsPerKilomoleTest() =>
-            Assert.Equal(MolarMass.FromMegapoundsPerKilomole(2), 2.MegapoundsPerKilomole());
-
-        [Fact]
-        public void NumberToMegapoundsPerMoleTest() =>
-            Assert.Equal(MolarMass.FromMegapoundsPerMole(2), 2.MegapoundsPerMole());
+        public void NumberToKilopoundsPerPoundMoleTest() =>
+            Assert.Equal(MolarMass.FromKilopoundsPerPoundMole(2), 2.KilopoundsPerPoundMole());
 
         [Fact]
         public void NumberToMicrogramsPerKilomoleTest() =>
@@ -119,6 +123,10 @@ namespace UnitsNet.Tests
         [Fact]
         public void NumberToPoundsPerMoleTest() =>
             Assert.Equal(MolarMass.FromPoundsPerMole(2), 2.PoundsPerMole());
+
+        [Fact]
+        public void NumberToPoundsPerPoundMoleTest() =>
+            Assert.Equal(MolarMass.FromPoundsPerPoundMole(2), 2.PoundsPerPoundMole());
 
     }
 }

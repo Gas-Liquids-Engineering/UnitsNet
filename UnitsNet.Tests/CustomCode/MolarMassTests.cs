@@ -36,7 +36,6 @@ namespace UnitsNet.Tests.CustomCode
         protected override double HectogramsPerMoleInOneKilogramPerMole => 10;
         protected override double KilogramsPerMoleInOneKilogramPerMole => 1;
         protected override double KilopoundsPerMoleInOneKilogramPerMole => 2.2046226218487757e-3;
-        protected override double MegapoundsPerMoleInOneKilogramPerMole => 2.2046226218487757e-6;
         protected override double MicrogramsPerMoleInOneKilogramPerMole => 1e9;
         protected override double MilligramsPerMoleInOneKilogramPerMole => 1e6;
         protected override double NanogramsPerMoleTolerance => 1e-3;
@@ -57,7 +56,6 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double KilopoundsPerKilomoleInOneKilogramPerMole => 2.204623;
 
-        protected override double MegapoundsPerKilomoleInOneKilogramPerMole => 2.204623e-3;
 
         protected override double MicrogramsPerKilomoleInOneKilogramPerMole => 1.0e12;
 
@@ -66,5 +64,14 @@ namespace UnitsNet.Tests.CustomCode
         protected override double NanogramsPerKilomoleInOneKilogramPerMole => 1.0e15;
 
         protected override double PoundsPerKilomoleInOneKilogramPerMole => 2204.623;
+
+        protected override double GramsPerPoundMoleInOneKilogramPerMole => 453592.37;
+
+        protected override double KilogramsPerPoundMoleInOneKilogramPerMole => 453.59237;
+
+        protected override double KilopoundsPerPoundMoleInOneKilogramPerMole => 1.0;
+
+
+        protected override double PoundsPerPoundMoleInOneKilogramPerMole => 1.0e3;
     }
 }
